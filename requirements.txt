@@ -1,0 +1,8 @@
+# Runtime dependencies (mirrors [project.dependencies] in pyproject.toml).
+httpx>=0.28,<1
+beautifulsoup4>=4.13
+lxml>=5.3
+pydantic>=2.10,<3
+pillow>=11
+rich>=13
+jsonschema>=4.23
