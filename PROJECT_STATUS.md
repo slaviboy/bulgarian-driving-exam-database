@@ -4,7 +4,8 @@ _Last updated: 2026-11-04_
 
 ## Current phase
 
-**Phase 5 — Public GitHub publication** (in progress). Phases 1–4 are complete.
+**Phases 1–5 complete.** The dataset `v1.0.0` is published; the Android application (separate private
+repository) continues with Phase 6.
 
 ## Completed work
 
@@ -20,13 +21,19 @@ _Last updated: 2026-11-04_
   `master.sqlite` (Room-compatible conventions), manifest with checksums/completeness/licensing,
   13 validation checks incl. exam-config feasibility, reports, AvtoIzpit source comparison,
   Android import specification.
-* **Phase 5 (partial):** README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, CHANGELOG, issue/PR
-  templates, workflows `tests`, `validation`, `release`, `docs/releasing.md`.
+* **Phase 5 — Publication:** README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, CHANGELOG, issue/PR
+  templates and labels, workflows `tests`, `validation`, `release`, `docs/releasing.md`.
+  * Media release [`media-2026.10.01`](https://github.com/slaviboy/bulgarian-driving-exam-database/releases/tag/media-2026.10.01):
+    59 assets, 604 MB.
+  * Dataset release [`v1.0.0`](https://github.com/slaviboy/bulgarian-driving-exam-database/releases/tag/v1.0.0)
+    (latest): 10 assets.
+  * Verified anonymously: `releases/latest/download/manifest.json` → v1.0.0; every data file, the
+    WebP pack and sample videos match their checksums. CI `tests` and `validation` green.
 
 ## Pending work
 
-* Final build `1.0.0` with complete copy verification, commit of exports and reports, push.
-* Media release `media-2026.10.01` and dataset release `v1.0.0`; anonymous download check; CI green.
+* None for this repository's first release. Future editions: the daily `validation` job opens an
+  issue when ИААА publishes a new array; then run the `release` workflow (docs/releasing.md).
 
 ## Tests
 
@@ -53,4 +60,4 @@ _Last updated: 2026-11-04_
 
 ## Next actions
 
-* Rebuild after the copy verification, commit, push, publish the two releases, verify CI.
+* Android application (private repository): pin dataset `v1.0.0` and build the app (Phase 6+).
