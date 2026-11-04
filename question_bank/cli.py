@@ -132,6 +132,67 @@ def cmd_avtoizpit_sample(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_avtoizpit_summarize(settings: Settings, args: argparse.Namespace) -> int:
+    """Reduce the raw samples (gitignored) to numbers only: counts, points mix, duration, videos."""
+    from collections import Counter
+
+    from question_bank.fsutil import read_json
+
+    samples = sorted((settings.data_dir / "avtoizpit" / "samples").glob("*.json"))
+    rows = []
+    for path in samples:
+        record = read_json(path)
+        test_set = record["test_set"]
+        questions = test_set["questions"]
+        result = (record.get("assessment") or {}).get("result") or {}
+        points = Counter(int(q["points"]) for q in questions)
+        rows.append(
+            {
+                "sample": path.stem,
+                "official_order": record["official_order"],
+                "sub_category": test_set["subCategory"]["name"],
+                "learning_plan_id": record["learning_plan_id"],
+                "generated_at": record["generated_at"],
+                "question_count": len(questions),
+                "total_points": sum(int(q["points"]) for q in questions),
+                "points_mix": {str(k): points[k] for k in sorted(points)},
+                "exam_duration_minutes": test_set["subCategory"].get("examDurationMinutes"),
+                "assessed_total_points": result.get("totalPoints"),
+                "video_questions": sum(1 for q in questions if q.get("videoFileId")),
+                "picture_questions": sum(1 for q in questions if q.get("pictureId")),
+                "multi_correct_questions": sum(1 for q in questions if int(q["correctAnswersCount"]) > 1),
+            }
+        )
+    out = settings.reports_dir / "investigation" / "avtoizpit-sample-summary.json"
+    _write_json(out, {"samples": len(rows), "rows": rows})
+    print(f"{len(rows)} samples summarised → {out}")
+    return 0
+
+
+def cmd_rules_methodology(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.exam_rules.methodology import METHODOLOGY_URL, extract_tables
+    from question_bank.fsutil import sha256_file
+
+    pdf = settings.cache_dir / "rules" / "Metodika_izpiti.pdf"
+    if not pdf.exists():
+        with _client(settings) as client:
+            client.download(METHODOLOGY_URL, pdf)
+    tables = extract_tables(pdf)
+    out = settings.reports_dir / "investigation" / "methodology-2024-tables.json"
+    _write_json(
+        out,
+        {
+            "source_url": METHODOLOGY_URL,
+            "source_sha256": sha256_file(pdf),
+            "document_status": "draft ('Проект!', approving order number left blank)",
+            "tables": tables,
+        },
+    )
+    inconsistent = [t["table"] for t in tables if not t["consistent"]]
+    print(f"{len(tables)} quota tables → {out}; internally inconsistent: {inconsistent or 'none'}")
+    return 0
+
+
 # ----------------------------------------------------------------------------- parser
 
 
@@ -160,6 +221,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sample.add_argument("--only", help="comma-separated official order numbers to sample")
     sample.set_defaults(func=cmd_avtoizpit_sample)
+    av_sub.add_parser("summarize", help="numbers-only summary of the collected samples").set_defaults(
+        func=cmd_avtoizpit_summarize
+    )
+
+    rules = sub.add_parser("rules", help="exam-rule research tools")
+    rules_sub = rules.add_subparsers(dest="rules_command", required=True)
+    rules_sub.add_parser(
+        "methodology", help="extract the per-section quota tables from the ИААА methodology PDF (dev extra)"
+    ).set_defaults(func=cmd_rules_methodology)
     return parser
 
 

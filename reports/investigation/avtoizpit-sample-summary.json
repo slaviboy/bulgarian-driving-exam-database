@@ -1,0 +1,837 @@
+{
+  "samples": 44,
+  "rows": [
+    {
+      "sample": "01-plan200-1",
+      "official_order": 1,
+      "sub_category": "A",
+      "learning_plan_id": 200,
+      "generated_at": "2026-11-04T20:09:00+00:00",
+      "question_count": 40,
+      "total_points": 90,
+      "points_mix": {
+        "1": 8,
+        "2": 14,
+        "3": 18
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 90,
+      "video_questions": 2,
+      "picture_questions": 14,
+      "multi_correct_questions": 19
+    },
+    {
+      "sample": "01-plan200-2",
+      "official_order": 1,
+      "sub_category": "A",
+      "learning_plan_id": 200,
+      "generated_at": "2026-11-04T20:09:04+00:00",
+      "question_count": 40,
+      "total_points": 90,
+      "points_mix": {
+        "1": 8,
+        "2": 14,
+        "3": 18
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 90,
+      "video_questions": 2,
+      "picture_questions": 23,
+      "multi_correct_questions": 9
+    },
+    {
+      "sample": "02-plan203-1",
+      "official_order": 2,
+      "sub_category": "A",
+      "learning_plan_id": 203,
+      "generated_at": "2026-11-04T20:09:08+00:00",
+      "question_count": 40,
+      "total_points": 90,
+      "points_mix": {
+        "1": 9,
+        "2": 12,
+        "3": 19
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 90,
+      "video_questions": 2,
+      "picture_questions": 17,
+      "multi_correct_questions": 18
+    },
+    {
+      "sample": "02-plan203-2",
+      "official_order": 2,
+      "sub_category": "A",
+      "learning_plan_id": 203,
+      "generated_at": "2026-11-04T20:09:12+00:00",
+      "question_count": 40,
+      "total_points": 90,
+      "points_mix": {
+        "1": 9,
+        "2": 12,
+        "3": 19
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 90,
+      "video_questions": 2,
+      "picture_questions": 22,
+      "multi_correct_questions": 17
+    },
+    {
+      "sample": "03-plan210-1",
+      "official_order": 3,
+      "sub_category": "A",
+      "learning_plan_id": 210,
+      "generated_at": "2026-11-04T20:09:15+00:00",
+      "question_count": 15,
+      "total_points": 31,
+      "points_mix": {
+        "1": 4,
+        "2": 6,
+        "3": 5
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 31,
+      "video_questions": 2,
+      "picture_questions": 0,
+      "multi_correct_questions": 7
+    },
+    {
+      "sample": "03-plan210-2",
+      "official_order": 3,
+      "sub_category": "A",
+      "learning_plan_id": 210,
+      "generated_at": "2026-11-04T20:09:19+00:00",
+      "question_count": 15,
+      "total_points": 31,
+      "points_mix": {
+        "1": 4,
+        "2": 6,
+        "3": 5
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 31,
+      "video_questions": 2,
+      "picture_questions": 3,
+      "multi_correct_questions": 7
+    },
+    {
+      "sample": "04-plan209-1",
+      "official_order": 4,
+      "sub_category": "A",
+      "learning_plan_id": 209,
+      "generated_at": "2026-11-04T20:09:23+00:00",
+      "question_count": 15,
+      "total_points": 31,
+      "points_mix": {
+        "2": 14,
+        "3": 1
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 31,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 2
+    },
+    {
+      "sample": "04-plan209-2",
+      "official_order": 4,
+      "sub_category": "A",
+      "learning_plan_id": 209,
+      "generated_at": "2026-11-04T20:09:27+00:00",
+      "question_count": 15,
+      "total_points": 31,
+      "points_mix": {
+        "2": 14,
+        "3": 1
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 31,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 1
+    },
+    {
+      "sample": "05-plan178-1",
+      "official_order": 5,
+      "sub_category": "AM",
+      "learning_plan_id": 178,
+      "generated_at": "2026-11-04T20:09:32+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 7,
+        "2": 13,
+        "3": 17
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 19,
+      "multi_correct_questions": 16
+    },
+    {
+      "sample": "05-plan178-2",
+      "official_order": 5,
+      "sub_category": "AM",
+      "learning_plan_id": 178,
+      "generated_at": "2026-11-04T20:09:36+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 7,
+        "2": 13,
+        "3": 17
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 19,
+      "multi_correct_questions": 17
+    },
+    {
+      "sample": "06-plan179-1",
+      "official_order": 6,
+      "sub_category": "AM",
+      "learning_plan_id": 179,
+      "generated_at": "2026-11-04T20:09:40+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 10,
+        "2": 7,
+        "3": 20
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 21,
+      "multi_correct_questions": 14
+    },
+    {
+      "sample": "06-plan179-2",
+      "official_order": 6,
+      "sub_category": "AM",
+      "learning_plan_id": 179,
+      "generated_at": "2026-11-04T20:09:44+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 10,
+        "2": 7,
+        "3": 20
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 16,
+      "multi_correct_questions": 15
+    },
+    {
+      "sample": "07-plan226-1",
+      "official_order": 7,
+      "sub_category": "B",
+      "learning_plan_id": 226,
+      "generated_at": "2026-11-04T20:08:45+00:00",
+      "question_count": 45,
+      "total_points": 97,
+      "points_mix": {
+        "1": 12,
+        "2": 14,
+        "3": 19
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 97,
+      "video_questions": 2,
+      "picture_questions": 21,
+      "multi_correct_questions": 16
+    },
+    {
+      "sample": "07-plan226-2",
+      "official_order": 7,
+      "sub_category": "B",
+      "learning_plan_id": 226,
+      "generated_at": "2026-11-04T20:09:48+00:00",
+      "question_count": 45,
+      "total_points": 97,
+      "points_mix": {
+        "1": 12,
+        "2": 14,
+        "3": 19
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 97,
+      "video_questions": 2,
+      "picture_questions": 24,
+      "multi_correct_questions": 18
+    },
+    {
+      "sample": "08-plan229-1",
+      "official_order": 8,
+      "sub_category": "B",
+      "learning_plan_id": 229,
+      "generated_at": "2026-11-04T20:09:52+00:00",
+      "question_count": 45,
+      "total_points": 97,
+      "points_mix": {
+        "1": 9,
+        "2": 20,
+        "3": 16
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 97,
+      "video_questions": 2,
+      "picture_questions": 29,
+      "multi_correct_questions": 10
+    },
+    {
+      "sample": "08-plan229-2",
+      "official_order": 8,
+      "sub_category": "B",
+      "learning_plan_id": 229,
+      "generated_at": "2026-11-04T20:09:56+00:00",
+      "question_count": 45,
+      "total_points": 97,
+      "points_mix": {
+        "1": 9,
+        "2": 20,
+        "3": 16
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 97,
+      "video_questions": 2,
+      "picture_questions": 30,
+      "multi_correct_questions": 15
+    },
+    {
+      "sample": "09-plan233-1",
+      "official_order": 9,
+      "sub_category": "B",
+      "learning_plan_id": 233,
+      "generated_at": "2026-11-04T20:09:59+00:00",
+      "question_count": 25,
+      "total_points": 55,
+      "points_mix": {
+        "1": 8,
+        "2": 4,
+        "3": 13
+      },
+      "exam_duration_minutes": 35,
+      "assessed_total_points": 55,
+      "video_questions": 2,
+      "picture_questions": 9,
+      "multi_correct_questions": 11
+    },
+    {
+      "sample": "09-plan233-2",
+      "official_order": 9,
+      "sub_category": "B",
+      "learning_plan_id": 233,
+      "generated_at": "2026-11-04T20:10:03+00:00",
+      "question_count": 25,
+      "total_points": 55,
+      "points_mix": {
+        "1": 8,
+        "2": 4,
+        "3": 13
+      },
+      "exam_duration_minutes": 35,
+      "assessed_total_points": 55,
+      "video_questions": 2,
+      "picture_questions": 10,
+      "multi_correct_questions": 11
+    },
+    {
+      "sample": "10-plan231-1",
+      "official_order": 10,
+      "sub_category": "B",
+      "learning_plan_id": 231,
+      "generated_at": "2026-11-04T20:10:08+00:00",
+      "question_count": 45,
+      "total_points": 97,
+      "points_mix": {
+        "1": 12,
+        "2": 14,
+        "3": 19
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 97,
+      "video_questions": 2,
+      "picture_questions": 18,
+      "multi_correct_questions": 19
+    },
+    {
+      "sample": "10-plan231-2",
+      "official_order": 10,
+      "sub_category": "B",
+      "learning_plan_id": 231,
+      "generated_at": "2026-11-04T20:10:12+00:00",
+      "question_count": 45,
+      "total_points": 97,
+      "points_mix": {
+        "1": 12,
+        "2": 14,
+        "3": 19
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 97,
+      "video_questions": 2,
+      "picture_questions": 21,
+      "multi_correct_questions": 12
+    },
+    {
+      "sample": "11-plan249-1",
+      "official_order": 11,
+      "sub_category": "C",
+      "learning_plan_id": 249,
+      "generated_at": "2026-11-04T20:10:15+00:00",
+      "question_count": 30,
+      "total_points": 66,
+      "points_mix": {
+        "1": 2,
+        "2": 20,
+        "3": 8
+      },
+      "exam_duration_minutes": 30,
+      "assessed_total_points": 66,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 11
+    },
+    {
+      "sample": "11-plan249-2",
+      "official_order": 11,
+      "sub_category": "C",
+      "learning_plan_id": 249,
+      "generated_at": "2026-11-04T20:10:19+00:00",
+      "question_count": 30,
+      "total_points": 66,
+      "points_mix": {
+        "1": 2,
+        "2": 20,
+        "3": 8
+      },
+      "exam_duration_minutes": 30,
+      "assessed_total_points": 66,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 9
+    },
+    {
+      "sample": "12-plan303-1",
+      "official_order": 12,
+      "sub_category": "C+E",
+      "learning_plan_id": 303,
+      "generated_at": "2026-11-04T20:10:23+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 1,
+        "2": 14
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 0
+    },
+    {
+      "sample": "12-plan303-2",
+      "official_order": 12,
+      "sub_category": "C+E",
+      "learning_plan_id": 303,
+      "generated_at": "2026-11-04T20:10:27+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 1,
+        "2": 14
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 0
+    },
+    {
+      "sample": "13-plan255-1",
+      "official_order": 13,
+      "sub_category": "C1",
+      "learning_plan_id": 255,
+      "generated_at": "2026-11-04T20:10:31+00:00",
+      "question_count": 15,
+      "total_points": 35,
+      "points_mix": {
+        "1": 2,
+        "2": 6,
+        "3": 7
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 35,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 1
+    },
+    {
+      "sample": "13-plan255-2",
+      "official_order": 13,
+      "sub_category": "C1",
+      "learning_plan_id": 255,
+      "generated_at": "2026-11-04T20:10:35+00:00",
+      "question_count": 15,
+      "total_points": 35,
+      "points_mix": {
+        "1": 2,
+        "2": 6,
+        "3": 7
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 35,
+      "video_questions": 0,
+      "picture_questions": 1,
+      "multi_correct_questions": 3
+    },
+    {
+      "sample": "15-plan301-1",
+      "official_order": 15,
+      "sub_category": "C+E",
+      "learning_plan_id": 301,
+      "generated_at": "2026-11-04T20:10:39+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 4,
+        "2": 8,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 2,
+      "multi_correct_questions": 1
+    },
+    {
+      "sample": "15-plan301-2",
+      "official_order": 15,
+      "sub_category": "C+E",
+      "learning_plan_id": 301,
+      "generated_at": "2026-11-04T20:10:43+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 4,
+        "2": 8,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 0
+    },
+    {
+      "sample": "16-plan299-1",
+      "official_order": 16,
+      "sub_category": "C+E",
+      "learning_plan_id": 299,
+      "generated_at": "2026-11-04T20:10:47+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 4,
+        "2": 8,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 1
+    },
+    {
+      "sample": "16-plan299-2",
+      "official_order": 16,
+      "sub_category": "C+E",
+      "learning_plan_id": 299,
+      "generated_at": "2026-11-04T20:10:51+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 4,
+        "2": 8,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 1
+    },
+    {
+      "sample": "17-plan340-1",
+      "official_order": 17,
+      "sub_category": "D",
+      "learning_plan_id": 340,
+      "generated_at": "2026-11-04T20:10:55+00:00",
+      "question_count": 15,
+      "total_points": 32,
+      "points_mix": {
+        "1": 4,
+        "2": 5,
+        "3": 6
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 32,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 6
+    },
+    {
+      "sample": "17-plan340-2",
+      "official_order": 17,
+      "sub_category": "D",
+      "learning_plan_id": 340,
+      "generated_at": "2026-11-04T20:10:59+00:00",
+      "question_count": 15,
+      "total_points": 32,
+      "points_mix": {
+        "1": 4,
+        "2": 5,
+        "3": 6
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 32,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 5
+    },
+    {
+      "sample": "18-plan333-1",
+      "official_order": 18,
+      "sub_category": "D",
+      "learning_plan_id": 333,
+      "generated_at": "2026-11-04T20:11:03+00:00",
+      "question_count": 15,
+      "total_points": 32,
+      "points_mix": {
+        "1": 4,
+        "2": 5,
+        "3": 6
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 32,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 4
+    },
+    {
+      "sample": "18-plan333-2",
+      "official_order": 18,
+      "sub_category": "D",
+      "learning_plan_id": 333,
+      "generated_at": "2026-11-04T20:11:07+00:00",
+      "question_count": 15,
+      "total_points": 32,
+      "points_mix": {
+        "1": 4,
+        "2": 5,
+        "3": 6
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 32,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 6
+    },
+    {
+      "sample": "19-plan285-1",
+      "official_order": 19,
+      "sub_category": "D (103)",
+      "learning_plan_id": 285,
+      "generated_at": "2026-11-04T20:11:11+00:00",
+      "question_count": 15,
+      "total_points": 32,
+      "points_mix": {
+        "1": 5,
+        "2": 3,
+        "3": 7
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 32,
+      "video_questions": 0,
+      "picture_questions": 1,
+      "multi_correct_questions": 3
+    },
+    {
+      "sample": "19-plan285-2",
+      "official_order": 19,
+      "sub_category": "D (103)",
+      "learning_plan_id": 285,
+      "generated_at": "2026-11-04T20:11:15+00:00",
+      "question_count": 15,
+      "total_points": 32,
+      "points_mix": {
+        "1": 5,
+        "2": 3,
+        "3": 7
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 32,
+      "video_questions": 0,
+      "picture_questions": 1,
+      "multi_correct_questions": 3
+    },
+    {
+      "sample": "20-plan313-1",
+      "official_order": 20,
+      "sub_category": "D+E",
+      "learning_plan_id": 313,
+      "generated_at": "2026-11-04T20:11:19+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 4,
+        "2": 8,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 0
+    },
+    {
+      "sample": "20-plan313-2",
+      "official_order": 20,
+      "sub_category": "D+E",
+      "learning_plan_id": 313,
+      "generated_at": "2026-11-04T20:11:23+00:00",
+      "question_count": 15,
+      "total_points": 29,
+      "points_mix": {
+        "1": 4,
+        "2": 8,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 29,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 0
+    },
+    {
+      "sample": "21-plan277-1",
+      "official_order": 21,
+      "sub_category": "Ттм",
+      "learning_plan_id": 277,
+      "generated_at": "2026-11-04T20:11:28+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 7,
+        "2": 13,
+        "3": 17
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 18,
+      "multi_correct_questions": 13
+    },
+    {
+      "sample": "21-plan277-2",
+      "official_order": 21,
+      "sub_category": "Ттм",
+      "learning_plan_id": 277,
+      "generated_at": "2026-11-04T20:11:32+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 7,
+        "2": 13,
+        "3": 17
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 16,
+      "multi_correct_questions": 15
+    },
+    {
+      "sample": "22-plan279-1",
+      "official_order": 22,
+      "sub_category": "Ттм",
+      "learning_plan_id": 279,
+      "generated_at": "2026-11-04T20:11:35+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 6,
+        "2": 15,
+        "3": 16
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 20,
+      "multi_correct_questions": 14
+    },
+    {
+      "sample": "22-plan279-2",
+      "official_order": 22,
+      "sub_category": "Ттм",
+      "learning_plan_id": 279,
+      "generated_at": "2026-11-04T20:11:39+00:00",
+      "question_count": 37,
+      "total_points": 84,
+      "points_mix": {
+        "1": 6,
+        "2": 15,
+        "3": 16
+      },
+      "exam_duration_minutes": 40,
+      "assessed_total_points": 84,
+      "video_questions": 2,
+      "picture_questions": 23,
+      "multi_correct_questions": 17
+    },
+    {
+      "sample": "23-plan280-1",
+      "official_order": 23,
+      "sub_category": "Ттм",
+      "learning_plan_id": 280,
+      "generated_at": "2026-11-04T20:11:43+00:00",
+      "question_count": 15,
+      "total_points": 31,
+      "points_mix": {
+        "1": 2,
+        "2": 10,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 31,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 3
+    },
+    {
+      "sample": "23-plan280-2",
+      "official_order": 23,
+      "sub_category": "Ттм",
+      "learning_plan_id": 280,
+      "generated_at": "2026-11-04T20:11:47+00:00",
+      "question_count": 15,
+      "total_points": 31,
+      "points_mix": {
+        "1": 2,
+        "2": 10,
+        "3": 3
+      },
+      "exam_duration_minutes": 20,
+      "assessed_total_points": 31,
+      "video_questions": 0,
+      "picture_questions": 0,
+      "multi_correct_questions": 3
+    }
+  ]
+}
