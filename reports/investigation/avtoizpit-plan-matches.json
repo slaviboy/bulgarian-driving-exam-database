@@ -1,0 +1,209 @@
+[
+  {
+    "official_order": 1,
+    "official_file": "1_A_без_правоспособност_или_с_правоспособност_за_категория_АМ_01.10.2026.html",
+    "avtoizpit_sub_category": "A",
+    "sub_category_id": 2,
+    "learning_plan_id": 200,
+    "learning_plan": "без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 2,
+    "official_file": "2_A_загуба_на_правоспособност_по_реда_на_чл_157_ал_4_ЗДвП_01.10.2026.html",
+    "avtoizpit_sub_category": "A",
+    "sub_category_id": 2,
+    "learning_plan_id": 203,
+    "learning_plan": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 3,
+    "official_file": "3_A_притежаващ_правоспособност_за_категория_Ткт_или_Ттм_01.10.2026.html",
+    "avtoizpit_sub_category": "A",
+    "sub_category_id": 2,
+    "learning_plan_id": 210,
+    "learning_plan": "притежаващ правоспособност за категория Ткт или Ттм (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 4,
+    "official_file": "4_A_притежаващ_правоспособност_за_категория_В1_или_В_01.10.2026.html",
+    "avtoizpit_sub_category": "A",
+    "sub_category_id": 2,
+    "learning_plan_id": 209,
+    "learning_plan": "притежаващ правоспособност за категория В1 или В (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 5,
+    "official_file": "5_AM_без_правоспособност_01.10.2026.html",
+    "avtoizpit_sub_category": "AM",
+    "sub_category_id": 1,
+    "learning_plan_id": 178,
+    "learning_plan": "без правоспособност (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 6,
+    "official_file": "6_AM_загуба_на_правоспособност_по_реда_на_чл_157_ал_4_ЗДвП_01.10.2026.html",
+    "avtoizpit_sub_category": "AM",
+    "sub_category_id": 1,
+    "learning_plan_id": 179,
+    "learning_plan": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 7,
+    "official_file": "7_B_без_правоспособност_или_с_правоспособност_за_категория_АМ_01.10.2026.html",
+    "avtoizpit_sub_category": "B",
+    "sub_category_id": 3,
+    "learning_plan_id": 226,
+    "learning_plan": "без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 8,
+    "official_file": "8_B_загуба_на_правоспособност_по_реда_на_чл_157_ЗДвП_01.10.2026.html",
+    "avtoizpit_sub_category": "B",
+    "sub_category_id": 3,
+    "learning_plan_id": 229,
+    "learning_plan": "загуба на правоспособност по реда на чл. 157 ЗДвП (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 9,
+    "official_file": "9_B_с_правоспособност_за_категория_А_А1_или_А2_01.10.2026.html",
+    "avtoizpit_sub_category": "B",
+    "sub_category_id": 3,
+    "learning_plan_id": 233,
+    "learning_plan": "с правоспособност за категория А, А1 или А2 (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 10,
+    "official_file": "10_B_притежаващ_правоспособност_за_категория_В1_01.10.2026.html",
+    "avtoizpit_sub_category": "B",
+    "sub_category_id": 3,
+    "learning_plan_id": 231,
+    "learning_plan": "притежаващ правоспособност за категория В1 (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 11,
+    "official_file": "11_C_с_правоспособност_за_категория_В_B78_01.10.2026.html",
+    "avtoizpit_sub_category": "C",
+    "sub_category_id": 9,
+    "learning_plan_id": 249,
+    "learning_plan": "с правоспособност за категория В/B(78) (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 12,
+    "official_file": "12_CE_с_правоспособност_за_категория_D1E_01.10.2026.html",
+    "avtoizpit_sub_category": "C+E",
+    "sub_category_id": 13,
+    "learning_plan_id": 303,
+    "learning_plan": "с правоспособност за категория D1E (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 13,
+    "official_file": "13_C1_с_правоспособност_за_категория_В_01.10.2026.html",
+    "avtoizpit_sub_category": "C1",
+    "sub_category_id": 10,
+    "learning_plan_id": 255,
+    "learning_plan": "с правоспособност за категория В (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 14,
+    "official_file": "14_C1E_с_правоспособност_за_категория_D1E_01.10.2026.html",
+    "avtoizpit_sub_category": null,
+    "sub_category_id": null,
+    "learning_plan_id": null,
+    "learning_plan": null,
+    "candidates": 0
+  },
+  {
+    "official_order": 15,
+    "official_file": "15_CE_с_правоспособност_за_категория_С_01.10.2026.html",
+    "avtoizpit_sub_category": "C+E",
+    "sub_category_id": 13,
+    "learning_plan_id": 301,
+    "learning_plan": "с правоспособност за категория С (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 16,
+    "official_file": "16_CE_загуба_на_правоспособност_по_реда_на_чл_157_ал_4_ЗДвП_01.10.2026.html",
+    "avtoizpit_sub_category": "C+E",
+    "sub_category_id": 13,
+    "learning_plan_id": 299,
+    "learning_plan": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 17,
+    "official_file": "17_D_с_правоспособност_за_категория_С1_С_и_категория_В_със_стаж_2г_01.10.2026.html",
+    "avtoizpit_sub_category": "D",
+    "sub_category_id": 11,
+    "learning_plan_id": 340,
+    "learning_plan": "с правоспособност за категория С1/С и категория В със стаж 2г.(След 07.02.26г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 18,
+    "official_file": "18_D_загуба_на_правоспособност_по_реда_на_чл_157_ал_4_ЗДвП_и_УПК_01.10.2026.html",
+    "avtoizpit_sub_category": "D",
+    "sub_category_id": 11,
+    "learning_plan_id": 333,
+    "learning_plan": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. и УПК (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 19,
+    "official_file": "19_D_103_с_правоспособност_за_кат_D_и_допълнително_обучение_за_управление_на_тролейбус_01.10.2026.html",
+    "avtoizpit_sub_category": "D (103)",
+    "sub_category_id": 19,
+    "learning_plan_id": 285,
+    "learning_plan": "с правоспособност за кат. D и допълнително обучение за управление на тролейбус (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 20,
+    "official_file": "20_DE_с_правоспособност_за_категория_D_01.10.2026.html",
+    "avtoizpit_sub_category": "D+E",
+    "sub_category_id": 14,
+    "learning_plan_id": 313,
+    "learning_plan": "с правоспособност за категория D (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 21,
+    "official_file": "21_Ттм_без_правоспособност_или_с_правоспособност_за_категория_АМ_01.10.2026.html",
+    "avtoizpit_sub_category": "Ттм",
+    "sub_category_id": 6,
+    "learning_plan_id": 277,
+    "learning_plan": "без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 22,
+    "official_file": "22_Ттм_загуба_на_правоспособност_по_реда_на_чл_157_ал_4_ЗДвП_01.10.2026.html",
+    "avtoizpit_sub_category": "Ттм",
+    "sub_category_id": 6,
+    "learning_plan_id": 279,
+    "learning_plan": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+    "candidates": 1
+  },
+  {
+    "official_order": 23,
+    "official_file": "23_Ттм_притежаващ_правоспособност_за_категория_А_А1_А2_Ткт_В1_В_или_В78_01.10.2026.html",
+    "avtoizpit_sub_category": "Ттм",
+    "sub_category_id": 6,
+    "learning_plan_id": 280,
+    "learning_plan": "притежаващ правоспособност за категория А, А1, А2, Ткт, В1, В или В(78) (След 12.12.24г.)",
+    "candidates": 1
+  }
+]
