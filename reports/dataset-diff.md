@@ -1,3 +1,3 @@
-# Dataset diff — 1.0.0
+# Dataset diff — 1.0.0 → 1.0.0
 
-First build: 2476 questions, no previous export.
+* added: 0 · removed: 0 · changed content: 0

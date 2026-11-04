@@ -41,3 +41,7 @@ Source: https://public-eis.rta.government.bg/exam-questions/ (ИААА). Every n
 * Asset names with byte-identical content (merged into one media record): 156 names → 61 records
 * Questions with identical content under different IDs: 25 groups
 * Explanations: none — the source publishes none, so `explanation` is always null.
+
+## Copies of assets in other variant directories
+
+536 copies verified (range: 536), **0 mismatches**. Every video copy and a seeded sample of picture copies are compared with the downloaded file (ETag and size, or SHA-256 after download).

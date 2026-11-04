@@ -4,47 +4,53 @@ _Last updated: 2026-11-04_
 
 ## Current phase
 
-**Phase 3 — Extraction engine** (next). Phases 1 and 2 are complete.
+**Phase 5 — Public GitHub publication** (in progress). Phases 1–4 are complete.
 
 ## Completed work
 
-* **Phase 1 — Setup:** public repository, MIT licence (code only), `DATA_NOTICE.md`, data contract
-  v1 (`docs/data-contract.md`), architecture (`docs/architecture.md`).
-* **Phase 2 — Investigation:**
-  * Python project skeleton, polite HTTP client (rate limits, retries, conditional and resumable
-    downloads), discovery of the official manifest, AvtoIzpit metadata, Playwright network capture.
-  * `docs/source-investigation.md` — structure, counts and HTTP behaviour of both sources.
-  * `docs/licensing.md` — no licence found; publication by maintainer decision recorded.
-  * `docs/exam-rules.md` — rules for all 23 variants with citations (Наредба № 38, ИААА
-    methodology draft, AvtoIzpit observations).
-  * Evidence in `reports/investigation/` (network capture, AvtoIzpit sub-categories and plan
-    matches, sample summary, methodology quota tables).
+* **Phase 1 — Setup:** public repository, MIT licence (code only), `DATA_NOTICE.md`, data contract,
+  architecture.
+* **Phase 2 — Investigation:** source investigation, licensing record, exam rules with citations,
+  AvtoIzpit metadata and a 44-test-set sample, Playwright network capture.
+* **Phase 3 — Extraction:** polite HTTP client; strict official HTML parser (raw-count cross-check);
+  incremental, resumable download of the 23 files and 982 assets with a state journal; copy
+  verification of assets in other variant directories (one 64 KiB ranged request per copy).
+* **Phase 4 — Database and validation:** canonical builder (conflicting duplicate IDs fail the
+  build), content-addressed media with WebP derivatives and official-name aliases, JSON exports,
+  `master.sqlite` (Room-compatible conventions), manifest with checksums/completeness/licensing,
+  13 validation checks incl. exam-config feasibility, reports, AvtoIzpit source comparison,
+  Android import specification.
+* **Phase 5 (partial):** README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, CHANGELOG, issue/PR
+  templates, workflows `tests`, `validation`, `release`, `docs/releasing.md`.
 
 ## Pending work
 
-* Phase 3 — HTML parser, resumable download of all files and assets, normalised records.
-* Phase 4 — SQLite/JSON exports, manifest, schemas, validation, reports, source comparison,
-  exam configurations with feasibility checks.
-* Phase 5 — Documentation, CI, media release and dataset release `v1.0.0`.
+* Final build `1.0.0` with complete copy verification, commit of exports and reports, push.
+* Media release `media-2026.10.01` and dataset release `v1.0.0`; anonymous download check; CI green.
 
 ## Tests
 
-* Passed: 30 (HTTP client, discovery, normalisation/IDs).
+* Passed: 105 (HTTP client, discovery, normalisation/IDs, parser on real excerpt, generator over
+  many seeds, offline end-to-end build, content-hash vectors, Room-compatibility conventions, media
+  copy checks).
 * Failed: none.
 
-## Data counts
+## Data counts (edition 2026-10-01, measured by the pipeline)
 
-From the investigation of edition 2026-10-01 (pipeline output follows in Phase 4):
-23 variant files · 13,763 question rows · 2,476 unique question IDs · 925 PNG (239.0 MB) ·
-57 MP4 (350.2 MB) · AvtoIzpit: 25 sub-categories, 22/23 variants matched, 44 test sets sampled.
+* 23 exam variants in 11 categories · 103 sections · 30 topics
+* 2,476 unique questions · 13,763 question rows (assignments) · 7,893 answers
+* 830 distinct pictures (925 official file names; 234 MB PNG, 20 MB WebP) · 57 videos (350 MB)
+* 25 groups of identical content under different ИААА IDs (reported, not merged)
+* AvtoIzpit cross-check: 1,166 questions, 0 differences; section quotas observed for 22 variants
 
 ## Known limitations
 
-* The source grants no licence; content is published by maintainer decision (see DATA_NOTICE.md).
+* The source grants no licence; content is published by maintainer decision (DATA_NOTICE.md).
 * Pass marks of the six loss-of-licence variants follow the category rule (not stated separately).
-* Methodology Таблица 17 (C1) is internally inconsistent; C1 section quotas await observation mapping.
-* C1+E has no AvtoIzpit counterpart (law-only parameters, no observed points mix).
+* C1 and D (103) section quotas follow the live simulator (the draft methodology differs).
+* C1+E has no AvtoIzpit counterpart: law-only parameters, no observed points mix.
+* No explanations exist in the source.
 
 ## Next actions
 
-* Implement the strict official HTML parser with fixtures, then the full download.
+* Rebuild after the copy verification, commit, push, publish the two releases, verify CI.

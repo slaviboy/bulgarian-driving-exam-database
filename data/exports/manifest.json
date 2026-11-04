@@ -3,11 +3,11 @@
   "dataset_version": "1.0.0",
   "source_edition": "2026-10-01",
   "rules_version": "2024-12-12",
-  "built_at": "2026-11-04T21:01:33+00:00",
+  "built_at": "2026-11-04T21:03:43+00:00",
   "generator": {
     "name": "bulgarian-driving-exam-database",
     "version": "0.1.0",
-    "git_commit": "d0c86185c15bd71f3d5bff575135bf197c08046a"
+    "git_commit": "7c123e0a01289b21a48afd7abbf0945bc2764a1d"
   },
   "content_fingerprint": "2206aa6d2156ebd65fa42a07167e47a7c02e9ffe2dd8d8cb984937a7b97948e1",
   "sources": [
@@ -289,8 +289,8 @@
     },
     {
       "path": "questions.json",
-      "bytes": 7652161,
-      "sha256": "d2d6c70c9d684d6babc7a3fd693760233a5d2c51ed44277c3db7a324072a53c8",
+      "bytes": 7673337,
+      "sha256": "1ff51fd70e16f6c3d2cfb937c4fbb5b289c3608c6c6de6827b3d50d4c61b6507",
       "media_type": "application/json"
     },
     {
@@ -301,8 +301,8 @@
     },
     {
       "path": "master.sqlite",
-      "bytes": 7970816,
-      "sha256": "6f3917c465a667b39653a961084ae29f6ca8a28d0126480fb94708544f2b0d19",
+      "bytes": 7979008,
+      "sha256": "dde954f003b449d8ded6d6c6ea742b7b5789665ba51f14934975f36dd84c1593",
       "media_type": "application/vnd.sqlite3"
     }
   ],
@@ -332,7 +332,7 @@
     "notice_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/blob/main/DATA_NOTICE.md"
   },
   "completeness": {
-    "status": "partial",
+    "status": "complete",
     "checks": [
       {
         "name": "missing_questions",
@@ -411,8 +411,8 @@
       },
       {
         "name": "asset_copies_identical",
-        "passed": false,
-        "detail": "copy verification has not been run"
+        "passed": true,
+        "detail": "536 copies in other variant directories compared, 0 mismatches"
       }
     ]
   }
