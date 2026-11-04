@@ -1,0 +1,415 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/slaviboy/bulgarian-driving-exam-database/contract/schemas/manifest.schema.json",
+  "$defs": {
+    "Completeness": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "complete",
+            "partial"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/CompletenessCheck"
+          },
+          "title": "Checks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "checks"
+      ],
+      "title": "Completeness",
+      "type": "object"
+    },
+    "CompletenessCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "passed",
+        "detail"
+      ],
+      "title": "CompletenessCheck",
+      "type": "object"
+    },
+    "Generator": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "git_commit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Git Commit"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "git_commit"
+      ],
+      "title": "Generator",
+      "type": "object"
+    },
+    "Licensing": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution": {
+          "title": "Attribution",
+          "type": "string"
+        },
+        "license": {
+          "title": "License",
+          "type": "string"
+        },
+        "redistribution_status": {
+          "enum": [
+            "published_by_maintainer_decision",
+            "permitted",
+            "restricted",
+            "unknown"
+          ],
+          "title": "Redistribution Status",
+          "type": "string"
+        },
+        "notice_url": {
+          "title": "Notice Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "attribution",
+        "license",
+        "redistribution_status",
+        "notice_url"
+      ],
+      "title": "Licensing",
+      "type": "object"
+    },
+    "ManifestFile": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "bytes": {
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "media_type": {
+          "title": "Media Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "bytes",
+        "sha256",
+        "media_type"
+      ],
+      "title": "ManifestFile",
+      "type": "object"
+    },
+    "MediaPack": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "images-webp",
+            "images-original",
+            "videos"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "bytes": {
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "file_count": {
+          "title": "File Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "url",
+        "bytes",
+        "sha256",
+        "file_count"
+      ],
+      "title": "MediaPack",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "attribution": {
+          "title": "Attribution",
+          "type": "string"
+        },
+        "license": {
+          "title": "License",
+          "type": "string"
+        },
+        "redistribution_status": {
+          "title": "Redistribution Status",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrieved At"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "source_url",
+        "attribution",
+        "license",
+        "redistribution_status"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "SourceSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "etag": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Etag"
+        },
+        "last_modified": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Last Modified"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "bytes": {
+          "title": "Bytes",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "url",
+        "etag",
+        "last_modified",
+        "sha256",
+        "bytes"
+      ],
+      "title": "SourceSnapshot",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "source_edition": {
+      "title": "Source Edition",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "built_at": {
+      "title": "Built At",
+      "type": "string"
+    },
+    "generator": {
+      "$ref": "#/$defs/Generator"
+    },
+    "content_fingerprint": {
+      "title": "Content Fingerprint",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "source_snapshot": {
+      "items": {
+        "$ref": "#/$defs/SourceSnapshot"
+      },
+      "title": "Source Snapshot",
+      "type": "array"
+    },
+    "counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Counts",
+      "type": "object"
+    },
+    "category_counts": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "type": "object"
+      },
+      "title": "Category Counts",
+      "type": "object"
+    },
+    "variant_counts": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Variant Counts",
+      "type": "object"
+    },
+    "dataset_base_url": {
+      "description": "release download URL that `files[].path` is relative to",
+      "title": "Dataset Base Url",
+      "type": "string"
+    },
+    "files": {
+      "items": {
+        "$ref": "#/$defs/ManifestFile"
+      },
+      "title": "Files",
+      "type": "array"
+    },
+    "media_base_url": {
+      "description": "media release download URL; single videos are '<media id>.mp4'",
+      "title": "Media Base Url",
+      "type": "string"
+    },
+    "media_packs": {
+      "items": {
+        "$ref": "#/$defs/MediaPack"
+      },
+      "title": "Media Packs",
+      "type": "array"
+    },
+    "licensing": {
+      "$ref": "#/$defs/Licensing"
+    },
+    "completeness": {
+      "$ref": "#/$defs/Completeness"
+    }
+  },
+  "required": [
+    "dataset_version",
+    "source_edition",
+    "rules_version",
+    "built_at",
+    "generator",
+    "content_fingerprint",
+    "sources",
+    "source_snapshot",
+    "counts",
+    "category_counts",
+    "variant_counts",
+    "dataset_base_url",
+    "files",
+    "media_base_url",
+    "media_packs",
+    "licensing",
+    "completeness"
+  ],
+  "title": "Manifest",
+  "type": "object"
+}

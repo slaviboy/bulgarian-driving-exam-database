@@ -1,0 +1,389 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/slaviboy/bulgarian-driving-exam-database/contract/schemas/questions.schema.json",
+  "$defs": {
+    "Answer": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "position": {
+          "minimum": 1,
+          "title": "Position",
+          "type": "integer"
+        },
+        "text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Text"
+        },
+        "media_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Media Id"
+        },
+        "is_correct": {
+          "title": "Is Correct",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "position",
+        "text",
+        "media_id",
+        "is_correct"
+      ],
+      "title": "Answer",
+      "type": "object"
+    },
+    "Assignment": {
+      "additionalProperties": false,
+      "properties": {
+        "variant_id": {
+          "title": "Variant Id",
+          "type": "string"
+        },
+        "category_id": {
+          "title": "Category Id",
+          "type": "string"
+        },
+        "section_id": {
+          "title": "Section Id",
+          "type": "string"
+        },
+        "points": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Points",
+          "type": "integer"
+        },
+        "position": {
+          "minimum": 1,
+          "title": "Position",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "variant_id",
+        "category_id",
+        "section_id",
+        "points",
+        "position"
+      ],
+      "title": "Assignment",
+      "type": "object"
+    },
+    "Media": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "image",
+            "video"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "original_name": {
+          "title": "Original Name",
+          "type": "string"
+        },
+        "relative_path": {
+          "title": "Relative Path",
+          "type": "string"
+        },
+        "mime_type": {
+          "title": "Mime Type",
+          "type": "string"
+        },
+        "bytes": {
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "width": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Width"
+        },
+        "height": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Height"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "derivatives": {
+          "items": {
+            "$ref": "#/$defs/MediaDerivative"
+          },
+          "title": "Derivatives",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "original_name",
+        "relative_path",
+        "mime_type",
+        "bytes",
+        "width",
+        "height",
+        "sha256",
+        "source_url",
+        "source_id"
+      ],
+      "title": "Media",
+      "type": "object"
+    },
+    "MediaDerivative": {
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "const": "webp",
+          "title": "Format",
+          "type": "string"
+        },
+        "relative_path": {
+          "title": "Relative Path",
+          "type": "string"
+        },
+        "mime_type": {
+          "title": "Mime Type",
+          "type": "string"
+        },
+        "bytes": {
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "width": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Width"
+        },
+        "height": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Height"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "format",
+        "relative_path",
+        "mime_type",
+        "bytes",
+        "width",
+        "height",
+        "sha256"
+      ],
+      "title": "MediaDerivative",
+      "type": "object"
+    },
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "original_id": {
+          "title": "Original Id",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "explanation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Explanation"
+        },
+        "answer_format": {
+          "enum": [
+            "text",
+            "image",
+            "mixed"
+          ],
+          "title": "Answer Format",
+          "type": "string"
+        },
+        "correct_count": {
+          "minimum": 0,
+          "title": "Correct Count",
+          "type": "integer"
+        },
+        "content_hash": {
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "media": {
+          "items": {
+            "$ref": "#/$defs/QuestionMediaRef"
+          },
+          "title": "Media",
+          "type": "array"
+        },
+        "answers": {
+          "items": {
+            "$ref": "#/$defs/Answer"
+          },
+          "title": "Answers",
+          "type": "array"
+        },
+        "assignments": {
+          "items": {
+            "$ref": "#/$defs/Assignment"
+          },
+          "title": "Assignments",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "original_id",
+        "source_id",
+        "text",
+        "answer_format",
+        "correct_count",
+        "content_hash",
+        "media",
+        "answers",
+        "assignments"
+      ],
+      "title": "Question",
+      "type": "object"
+    },
+    "QuestionMediaRef": {
+      "additionalProperties": false,
+      "properties": {
+        "media_id": {
+          "title": "Media Id",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "image",
+            "video"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "position": {
+          "minimum": 1,
+          "title": "Position",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "media_id",
+        "role",
+        "position"
+      ],
+      "title": "QuestionMediaRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "media": {
+      "items": {
+        "$ref": "#/$defs/Media"
+      },
+      "title": "Media",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "$ref": "#/$defs/Question"
+      },
+      "title": "Questions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "dataset_version",
+    "media",
+    "questions"
+  ],
+  "title": "QuestionsFile",
+  "type": "object"
+}

@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/slaviboy/bulgarian-driving-exam-database/contract/schemas/exam-configs.schema.json",
+  "$defs": {
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "law",
+            "methodology",
+            "observation"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "document": {
+          "title": "Document",
+          "type": "string"
+        },
+        "reference": {
+          "title": "Reference",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "kind",
+        "document",
+        "reference"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "ExamConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "variant_id": {
+          "title": "Variant Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "official",
+            "unofficial"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "question_count": {
+          "minimum": 1,
+          "title": "Question Count",
+          "type": "integer"
+        },
+        "max_points": {
+          "minimum": 1,
+          "title": "Max Points",
+          "type": "integer"
+        },
+        "pass_points": {
+          "minimum": 1,
+          "title": "Pass Points",
+          "type": "integer"
+        },
+        "duration_minutes": {
+          "minimum": 1,
+          "title": "Duration Minutes",
+          "type": "integer"
+        },
+        "video_questions": {
+          "minimum": 0,
+          "title": "Video Questions",
+          "type": "integer"
+        },
+        "max_video_plays": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Max Video Plays"
+        },
+        "scoring": {
+          "const": "all_or_nothing",
+          "title": "Scoring",
+          "type": "string"
+        },
+        "show_correct_count": {
+          "title": "Show Correct Count",
+          "type": "boolean"
+        },
+        "section_quotas": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/SectionQuota"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Section Quotas"
+        },
+        "points_mix": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "integer"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "number of questions worth '1', '2', '3' points",
+          "title": "Points Mix"
+        },
+        "verification": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "parameter → basis (law, methodology, observation, …)",
+          "title": "Verification",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "variant_id",
+        "status",
+        "question_count",
+        "max_points",
+        "pass_points",
+        "duration_minutes",
+        "video_questions",
+        "max_video_plays",
+        "scoring",
+        "show_correct_count",
+        "section_quotas",
+        "points_mix",
+        "verification",
+        "evidence"
+      ],
+      "title": "ExamConfig",
+      "type": "object"
+    },
+    "SectionQuota": {
+      "additionalProperties": false,
+      "properties": {
+        "section_number": {
+          "minimum": 1,
+          "title": "Section Number",
+          "type": "integer"
+        },
+        "count": {
+          "minimum": 0,
+          "title": "Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "section_number",
+        "count"
+      ],
+      "title": "SectionQuota",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "configs": {
+      "items": {
+        "$ref": "#/$defs/ExamConfig"
+      },
+      "title": "Configs",
+      "type": "array"
+    }
+  },
+  "required": [
+    "dataset_version",
+    "rules_version",
+    "configs"
+  ],
+  "title": "ExamConfigsFile",
+  "type": "object"
+}
