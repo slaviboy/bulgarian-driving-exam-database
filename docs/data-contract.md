@@ -72,7 +72,7 @@ All text is UTF-8. Booleans are `INTEGER` 0/1. No SQLite extensions, no
 | `variant_questions` | `variant_id` FK + `question_id` FK PK, `section_id` FK, `points` (1–3), `position` | `position` = order inside the official file |
 | `exam_configs` | `id` TEXT PK, `variant_id` FK, `status` (`official`/`unofficial`), `question_count`, `max_points`, `pass_points`, `duration_minutes`, `video_questions`, `max_video_plays`, `scoring`, `show_correct_count`, `section_quotas_json`, `points_mix_json`, `verification_json`, `evidence_json`, `notes_json` | JSON columns hold the same values as `exam-configs.json` |
 
-Indexes: every FK column, plus `variant_questions(variant_id, section_id)` and
+Indexes: every foreign-key column (as the first column of an index), plus
 `answers(question_id, position)`.
 
 ## 5. Files of a dataset release

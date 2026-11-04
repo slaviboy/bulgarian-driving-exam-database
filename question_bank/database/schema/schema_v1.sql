@@ -24,6 +24,7 @@ CREATE TABLE categories (
     source_id   TEXT    NOT NULL REFERENCES sources (id),
     position    INTEGER NOT NULL
 );
+CREATE INDEX idx_categories_source ON categories (source_id);
 
 CREATE TABLE variants (
     id             TEXT    NOT NULL PRIMARY KEY,
@@ -130,7 +131,7 @@ CREATE TABLE variant_questions (
     UNIQUE (variant_id, position)
 );
 CREATE INDEX idx_variant_questions_question ON variant_questions (question_id);
-CREATE INDEX idx_variant_questions_section ON variant_questions (variant_id, section_id);
+CREATE INDEX idx_variant_questions_section ON variant_questions (section_id);
 
 CREATE TABLE exam_configs (
     id                  TEXT    NOT NULL PRIMARY KEY,
