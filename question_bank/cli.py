@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import logging
 import sys
 from dataclasses import asdict
@@ -13,14 +12,14 @@ from typing import Any
 
 from question_bank import __version__
 from question_bank.config import Settings, load_settings
+from question_bank.fsutil import write_json
 from question_bank.logging_setup import configure_logging
 
 log = logging.getLogger("qb")
 
 
 def _write_json(path: Path, payload: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
+    write_json(path, payload)
 
 
 def _client(settings: Settings):

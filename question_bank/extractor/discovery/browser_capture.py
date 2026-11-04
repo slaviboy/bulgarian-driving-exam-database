@@ -7,11 +7,12 @@ Requires the `browser` extra and `python -m playwright install chromium`.
 
 from __future__ import annotations
 
-import json
 import logging
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+
+from question_bank.fsutil import write_json
 
 log = logging.getLogger(__name__)
 
@@ -62,6 +63,5 @@ def capture_network(pages: tuple[str, ...] = DEFAULT_PAGES, settle_ms: int = 400
 
 
 def write_capture(records: list[dict[str, Any]], out_file: Path) -> None:
-    out_file.parent.mkdir(parents=True, exist_ok=True)
     payload = {"captured_at": datetime.now(UTC).isoformat(timespec="seconds"), "requests": records}
-    out_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_json(out_file, payload)
