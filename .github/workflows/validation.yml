@@ -1,0 +1,73 @@
+name: validation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/exports/**"
+      - "contract/**"
+      - "question_bank/**"
+  pull_request:
+    paths:
+      - "data/exports/**"
+      - "contract/**"
+  schedule:
+    - cron: "17 5 * * *" # daily: watch the official array for a new edition
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verify-exports:
+    name: Verify committed exports
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt && pip install -e .
+      - name: Checksums, JSON Schemas, SQLite integrity, licensing gate
+        run: qb verify
+
+  watch-source:
+    name: Watch the official source
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt && pip install -e .
+      - name: Compare the live manifest with the published dataset
+        id: compare
+        run: |
+          qb discover > discover.txt
+          python - <<'EOF'
+          import json, os
+          live = json.load(open("data/cache/official-manifest.json", encoding="utf-8"))
+          published = json.load(open("data/exports/manifest.json", encoding="utf-8"))
+          live_urls = sorted(f["url"] for f in live["files"])
+          published_urls = sorted(s["url"] for s in published["source_snapshot"])
+          changed = live_urls != published_urls
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"changed={'true' if changed else 'false'}\n")
+              out.write(f"editions={','.join(live['editions'])}\n")
+          print("changed:", changed, "live editions:", live["editions"])
+          EOF
+      - name: Open an issue for a new edition
+        if: steps.compare.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="New official edition detected (${{ steps.compare.outputs.editions }})"
+          if ! gh issue list --state open --search "$title in:title" --json number --jq '.[0].number' | grep -q .; then
+            gh issue create --title "$title" --body "The file list of https://public-eis.rta.government.bg/exam-questions/manifest.txt differs from the published dataset. Run \`qb extract\`, \`qb media\`, \`qb build\` and review the dataset diff before releasing."
+          fi

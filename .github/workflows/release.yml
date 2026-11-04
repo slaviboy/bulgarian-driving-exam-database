@@ -1,0 +1,97 @@
+name: release
+
+# Builds the dataset from the official source and publishes it — only when validation, completeness and
+# the licensing gate pass. Media packs are published once per source edition (tag media-YYYY.MM.DD).
+
+on:
+  workflow_dispatch:
+    inputs:
+      dataset_version:
+        description: "Dataset version to publish (semver, without the v prefix)"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      VERSION: ${{ inputs.dataset_version }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt && pip install -e .
+
+      - name: Validate the version
+        run: |
+          echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' || { echo "not semver: $VERSION"; exit 1; }
+          if gh release view "v$VERSION" >/dev/null 2>&1; then echo "v$VERSION already exists"; exit 1; fi
+
+      - name: Restore downloaded sources
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/raw
+            data/cache/state.json
+          key: official-sources-${{ hashFiles('data/exports/manifest.json') }}
+          restore-keys: official-sources-
+
+      - name: Extract (incremental, polite)
+        run: qb extract
+      - name: Download and verify media
+        run: qb media
+      - name: Build, validate, package
+        run: qb build --dataset-version "$VERSION"
+      - name: Re-verify exports and licensing gate
+        run: qb verify
+
+      - name: Publish the media release (once per edition)
+        run: |
+          tag=$(python -c "import json;print(json.load(open('data/exports/manifest.json'))['media_base_url'].rstrip('/').rsplit('/',1)[1])")
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" release/$tag/* --latest=false \
+              --title "Media $tag" \
+              --notes "Images (original PNG and WebP derivatives) and videos of the ИААА question array, edition ${tag#media-}. Source: Изпълнителна агенция „Автомобилна администрация“. See DATA_NOTICE.md."
+          fi
+
+      - name: Publish the dataset release
+        run: |
+          python - > release-notes.md <<'EOF'
+          import json
+          m = json.load(open("data/exports/manifest.json", encoding="utf-8"))
+          c = m["counts"]
+          print(f"Dataset **{m['dataset_version']}** · edition {m['source_edition']} · rules {m['rules_version']}")
+          print()
+          print(f"{c['questions']} questions · {c['answers']} answers · {c['variants']} exam variants "
+                f"in {c['categories']} categories · {c['images']} images · {c['videos']} videos")
+          print()
+          print(f"Completeness: **{m['completeness']['status']}**. {m['licensing']['attribution']}")
+          print()
+          print("The source grants no licence; read DATA_NOTICE.md before reusing the content.")
+          EOF
+          gh release create "v$VERSION" release/v$VERSION/* reports/validation-report.md reports/extraction-report.md             --title "Dataset v$VERSION" --latest --notes-file release-notes.md
+
+      - name: Open a pull request with the published exports and reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="release/v$VERSION"
+          git switch -c "$branch"
+          git add data/exports reports contract
+          if git diff --cached --quiet; then echo "exports unchanged"; exit 0; fi
+          git commit -m "Dataset v$VERSION: exports and reports"
+          git push origin "$branch"
+          gh pr create --head "$branch" --title "Dataset v$VERSION exports" \
+            --body "Exports and reports of the published release v$VERSION (built by the release workflow)."

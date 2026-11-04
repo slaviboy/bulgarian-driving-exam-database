@@ -1,0 +1,29 @@
+name: Data issue
+description: A question, answer, picture or exam rule in the dataset looks wrong or differs from the official source
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The dataset mirrors the official ИААА array exactly. Please check the official file first
+        (https://public-eis.rta.government.bg/exam-questions/) — if the error is in the official source,
+        we document it but do not change the content.
+  - type: input
+    id: question
+    attributes:
+      label: Question ID
+      description: e.g. iaaa-5300 (or the official number 5300)
+  - type: input
+    id: version
+    attributes:
+      label: Dataset version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: What the dataset says and what the official source says (with a link).
+    validations:
+      required: true

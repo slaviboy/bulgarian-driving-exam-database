@@ -1,0 +1,24 @@
+name: Rights holder / takedown request
+description: You hold rights in published content and want it removed or attributed differently
+labels: ["rights"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for getting in touch. Requests are handled in the next release and recorded in
+        CHANGELOG.md. If you prefer not to write publicly, contact the maintainer through
+        https://github.com/slaviboy and only mention here that you did so.
+  - type: textarea
+    id: content
+    attributes:
+      label: Which content?
+      description: Question IDs, media IDs or file names, or a description of the material.
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: Your request
+      description: Removal, different attribution, or another change — and your relationship to the content.
+    validations:
+      required: true

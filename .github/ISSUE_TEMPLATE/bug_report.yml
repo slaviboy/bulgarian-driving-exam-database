@@ -1,0 +1,22 @@
+name: Bug report
+description: The tooling (qb commands, parser, build, validation, workflows) does not work as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Command you ran, what you expected, what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Output / logs
+      description: Console output or the JSON log from data/cache/logs/.
+      render: text
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Windows 11, Python 3.12.10, commit abc1234"

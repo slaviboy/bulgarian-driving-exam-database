@@ -155,7 +155,7 @@ of all assignments and exam configs — it does not depend on build time.
 * Dataset release tag `vX.Y.Z` (marked *latest*): `manifest.json`,
   `dataset-core-vX.Y.Z.zip` (all files of §5), the loose files, the reports.
 * Media release tag `media-YYYY.MM.DD` (never *latest*): `images-original.zip`,
-  `images-webp.zip`, `videos.zip`, and every video as `video-<sha16>.mp4`.
+  `images-webp.zip`, and every video as a single file `<media id>.mp4` (on-demand downloads).
   A dataset manifest references its media packs by absolute URL and SHA-256, so a
   media release is reused until the media change.
 * Consumers discover the newest dataset through

@@ -224,7 +224,7 @@ class ManifestFile(_Model):
 
 class MediaPack(_Model):
     id: str
-    kind: Literal["images-webp", "images-original", "videos"]
+    kind: Literal["images-webp", "images-original"]
     url: str
     bytes: int
     sha256: Sha256

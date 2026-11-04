@@ -51,11 +51,11 @@ def build_media_release(
     tag = media_release_tag(source_edition)
     out = release_root / tag
     base = release_download_base(tag)
-    groups: dict[str, list[tuple[str, Path]]] = {"images-original": [], "images-webp": [], "videos": []}
+    # Videos are published one by one (<media id>.mp4) for on-demand download; no second copy in a zip.
+    groups: dict[str, list[tuple[str, Path]]] = {"images-original": [], "images-webp": []}
     singles: list[Path] = []
     for m in sorted(media, key=lambda m: m.id):
         if m.kind == "video":
-            groups["videos"].append((m.relative_path, media_dir / m.relative_path))
             single = out / f"{m.id}.mp4"
             if not single.exists() or sha256_file(single) != m.sha256:
                 single.parent.mkdir(parents=True, exist_ok=True)

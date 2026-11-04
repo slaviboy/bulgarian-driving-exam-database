@@ -157,8 +157,7 @@
         "kind": {
           "enum": [
             "images-webp",
-            "images-original",
-            "videos"
+            "images-original"
           ],
           "title": "Kind",
           "type": "string"

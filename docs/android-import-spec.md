@@ -25,9 +25,9 @@ verify and import a dataset release. It complements `data-contract.md`; MUST/SHO
 
 * Every entry of `files[]` is downloaded from `dataset_base_url + path` (or taken from the core zip)
   and MUST match `bytes` and `sha256` before anything is parsed.
-* Media packs (`media_packs[]`) MUST match their `sha256`. Apps use `images-webp.zip`; `videos.zip`
-  or single videos `media_base_url + "<media id>.mp4"` are downloaded on demand and verified against
-  the video's `sha256` in `questions.json`.
+* Media packs (`media_packs[]`) MUST match their `sha256`. Apps use `images-webp.zip`. Videos are
+  single files `media_base_url + "<media id>.mp4"`, downloaded on demand (or all at once) and verified
+  against the video's `sha256` in `questions.json`.
 * Downloads SHOULD resume with HTTP Range requests and MUST be written to a staging directory; a
   partial download is never visible to the rest of the app.
 

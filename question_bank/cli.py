@@ -17,6 +17,9 @@ from question_bank.logging_setup import configure_logging
 
 log = logging.getLogger("qb")
 
+# Release gate: content is only published when its source status is in this allow-list (docs/licensing.md).
+ALLOWED_REDISTRIBUTION = {"published_by_maintainer_decision", "permitted"}
+
 
 def _write_json(path: Path, payload: Any) -> None:
     write_json(path, payload)
@@ -114,6 +117,45 @@ def cmd_schemas(settings: Settings, args: argparse.Namespace) -> int:
     for path in write_schemas():
         print(f"wrote {path}")
     return 0
+
+
+def cmd_verify(settings: Settings, args: argparse.Namespace) -> int:
+    """Offline re-verification of the committed exports (used by CI)."""
+    import jsonschema
+
+    from question_bank.build import SCHEMAS_DIR, schema_documents
+    from question_bank.exporter.json_export import FILE_NAMES
+    from question_bank.fsutil import read_json
+    from question_bank.processor.validation.validators import (
+        ValidationReport,
+        validate_exports,
+        validate_manifest,
+    )
+
+    exports = settings.exports_dir
+    problems = [i.message for i in validate_manifest(exports / FILE_NAMES["manifest"], exports)]
+    for name, text in schema_documents().items():
+        if (SCHEMAS_DIR / name).read_text(encoding="utf-8") != text:
+            problems.append(f"contract/schemas/{name} is out of date (run `qb schemas`)")
+    manifest = read_json(exports / FILE_NAMES["manifest"])
+    jsonschema.validate(manifest, read_json(SCHEMAS_DIR / "manifest.schema.json"))
+    if manifest["licensing"]["redistribution_status"] not in ALLOWED_REDISTRIBUTION:
+        problems.append(
+            f"redistribution status {manifest['licensing']['redistribution_status']!r} not allowed"
+        )
+    if manifest["completeness"]["status"] != "complete":
+        problems.append("manifest completeness is not 'complete'")
+    report = ValidationReport()
+    paths = {k: exports / FILE_NAMES[k] for k in ("categories", "questions", "exam_configs", "sqlite")}
+    validate_exports(report, paths, SCHEMAS_DIR)
+    problems += [i.message for i in report.issues if i.severity == "error"]
+    for problem in problems:
+        print(f"FAIL {problem}")
+    print(
+        f"verified {len(manifest['files'])} files of dataset {manifest['dataset_version']}: "
+        f"{'OK' if not problems else f'{len(problems)} problems'}"
+    )
+    return 1 if problems else 0
 
 
 def cmd_build(settings: Settings, args: argparse.Namespace) -> int:
@@ -322,6 +364,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("compare", help="compare AvtoIzpit samples with the official array").set_defaults(
         func=cmd_compare
     )
+    sub.add_parser("verify", help="re-verify committed exports offline (CI)").set_defaults(func=cmd_verify)
     build = sub.add_parser("build", help="build exports, media packs, manifest and reports; validate")
     build.add_argument("--dataset-version", required=True, help="semantic version of this dataset build")
     build.add_argument("--no-webp", action="store_true", help="skip WebP derivatives (faster, for testing)")
