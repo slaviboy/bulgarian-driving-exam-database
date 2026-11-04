@@ -343,7 +343,16 @@ def build_dataset(
             for cid, c in categories.items()
         ],
         topics=sorted(topics.values(), key=lambda t: t.id),
-        media=[prepared.media[m] for m in sorted(used_media)],
+        media=[
+            prepared.media[m].model_copy(
+                update={
+                    "aliases": sorted(
+                        n for n in prepared.duplicate_names.get(m, []) if n != prepared.media[m].original_name
+                    )
+                }
+            )
+            for m in sorted(used_media)
+        ],
         questions=questions,
         exam_configs=configs,
         duplicate_content=[sorted(v) for v in by_hash.values() if len(v) > 1],

@@ -75,6 +75,12 @@ CREATE TABLE media (
 );
 CREATE INDEX idx_media_source ON media (source_id);
 
+CREATE TABLE media_aliases (
+    media_id TEXT NOT NULL REFERENCES media (id),
+    name     TEXT NOT NULL,
+    PRIMARY KEY (media_id, name)
+);
+
 CREATE TABLE media_derivatives (
     media_id      TEXT    NOT NULL REFERENCES media (id),
     format        TEXT    NOT NULL,

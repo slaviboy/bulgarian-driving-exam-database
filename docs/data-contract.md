@@ -67,6 +67,7 @@ All text is UTF-8. Booleans are `INTEGER` 0/1. No SQLite extensions, no
 | `questions` | `id` TEXT PK, `original_id`, `source_id` FK, `question_text`, `explanation` (NULL — the source has none), `answer_format` (`text`/`image`), `correct_count`, `content_hash` | |
 | `answers` | `id` TEXT PK, `question_id` FK, `position`, `answer_text` (NULL for picture answers), `media_id` FK NULL, `is_correct` | |
 | `media` | `id` TEXT PK, `kind` (`image`/`video`), `original_name`, `relative_path`, `mime_type`, `bytes`, `width`, `height`, `sha256`, `source_url`, `source_id` FK | media may be shared by several questions |
+| `media_aliases` | `media_id` FK + `name` PK | other official file names with byte-identical content (the same picture is published under several names) |
 | `media_derivatives` | `media_id` FK + `format` PK, `relative_path`, `mime_type`, `bytes`, `width`, `height`, `sha256` | e.g. WebP versions of PNG images for the app |
 | `question_media` | `question_id` FK + `media_id` FK + `role` PK, `position` | `role` = `image` or `video` |
 | `variant_questions` | `variant_id` FK + `question_id` FK PK, `section_id` FK, `points` (1–3), `position` | `position` = order inside the official file |

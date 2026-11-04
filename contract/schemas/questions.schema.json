@@ -153,6 +153,14 @@
           "title": "Source Id",
           "type": "string"
         },
+        "aliases": {
+          "description": "other official file names with byte-identical content",
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
         "derivatives": {
           "items": {
             "$ref": "#/$defs/MediaDerivative"

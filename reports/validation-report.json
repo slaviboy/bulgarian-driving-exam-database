@@ -1,0 +1,347 @@
+{
+  "dataset_version": "1.0.0",
+  "source_edition": "2026-10-01",
+  "summary": {
+    "checks": 13,
+    "checks_passed": 13,
+    "errors": 0,
+    "warnings": 25
+  },
+  "checks": [
+    {
+      "name": "missing_questions",
+      "description": "every variant has all of its questions",
+      "passed": true,
+      "checked": 23,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "missing_answers",
+      "description": "every question has ≥2 answers with text or picture",
+      "passed": true,
+      "checked": 2476,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "invalid_correct_answers",
+      "description": "≥1 correct answer, correct_count consistent",
+      "passed": true,
+      "checked": 2476,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "broken_media_references",
+      "description": "every media reference resolves",
+      "passed": true,
+      "checked": 887,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "missing_media_files",
+      "description": "every media file exists with its SHA-256",
+      "passed": true,
+      "checked": 1717,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "duplicate_questions",
+      "description": "no identical content under different IDs",
+      "passed": true,
+      "checked": 2476,
+      "errors": 0,
+      "warnings": 25
+    },
+    {
+      "name": "duplicate_answers",
+      "description": "no repeated answer inside a question",
+      "passed": true,
+      "checked": 2476,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "invalid_references",
+      "description": "assignments point at existing variant/category/section",
+      "passed": true,
+      "checked": 13763,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "incorrect_ordering",
+      "description": "answers, questions, sections and variants keep source order",
+      "passed": true,
+      "checked": 13763,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "invalid_attribution",
+      "description": "every record has a known, attributed source",
+      "passed": true,
+      "checked": 2476,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "exam_feasibility",
+      "description": "every exam configuration can be generated (20 seeds each)",
+      "passed": true,
+      "checked": 23,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "json_schema",
+      "description": "exports conform to contract/schemas",
+      "passed": true,
+      "checked": 3,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "sqlite_integrity",
+      "description": "master.sqlite integrity, foreign keys, user_version",
+      "passed": true,
+      "checked": 1,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "issues": [
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-5304, iaaa-7041",
+      "refs": [
+        "iaaa-5304",
+        "iaaa-7041"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-5319, iaaa-7047, iaaa-7275",
+      "refs": [
+        "iaaa-5319",
+        "iaaa-7047",
+        "iaaa-7275"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-5333, iaaa-7045, iaaa-7273",
+      "refs": [
+        "iaaa-5333",
+        "iaaa-7045",
+        "iaaa-7273"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-5354, iaaa-7053, iaaa-7281",
+      "refs": [
+        "iaaa-5354",
+        "iaaa-7053",
+        "iaaa-7281"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-5357, iaaa-7054, iaaa-7055",
+      "refs": [
+        "iaaa-5357",
+        "iaaa-7054",
+        "iaaa-7055"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6267, iaaa-6268",
+      "refs": [
+        "iaaa-6267",
+        "iaaa-6268"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6766, iaaa-6767",
+      "refs": [
+        "iaaa-6766",
+        "iaaa-6767"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6816, iaaa-7081",
+      "refs": [
+        "iaaa-6816",
+        "iaaa-7081"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6844, iaaa-7135",
+      "refs": [
+        "iaaa-6844",
+        "iaaa-7135"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6848, iaaa-7140",
+      "refs": [
+        "iaaa-6848",
+        "iaaa-7140"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6850, iaaa-7142",
+      "refs": [
+        "iaaa-6850",
+        "iaaa-7142"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6854, iaaa-7144",
+      "refs": [
+        "iaaa-6854",
+        "iaaa-7144"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6874, iaaa-7283",
+      "refs": [
+        "iaaa-6874",
+        "iaaa-7283"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6875, iaaa-7284",
+      "refs": [
+        "iaaa-6875",
+        "iaaa-7284"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6960, iaaa-6961",
+      "refs": [
+        "iaaa-6960",
+        "iaaa-6961"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-6970, iaaa-6971",
+      "refs": [
+        "iaaa-6970",
+        "iaaa-6971"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-7042, iaaa-7274",
+      "refs": [
+        "iaaa-7042",
+        "iaaa-7274"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-7043, iaaa-7269",
+      "refs": [
+        "iaaa-7043",
+        "iaaa-7269"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-7482, iaaa-7483",
+      "refs": [
+        "iaaa-7482",
+        "iaaa-7483"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-7654, iaaa-7655",
+      "refs": [
+        "iaaa-7654",
+        "iaaa-7655"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-8340, iaaa-8343",
+      "refs": [
+        "iaaa-8340",
+        "iaaa-8343"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-11680, iaaa-11682",
+      "refs": [
+        "iaaa-11680",
+        "iaaa-11682"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-11817, iaaa-11833",
+      "refs": [
+        "iaaa-11817",
+        "iaaa-11833"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-11820, iaaa-11836",
+      "refs": [
+        "iaaa-11820",
+        "iaaa-11836"
+      ]
+    },
+    {
+      "check": "duplicate_questions",
+      "severity": "warning",
+      "message": "identical content under IDs iaaa-11827, iaaa-11840",
+      "refs": [
+        "iaaa-11827",
+        "iaaa-11840"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "dataset_version": "1.0.0",
+  "source_edition": "2026-10-01",
+  "rules_version": "2024-12-12",
+  "built_at": "2026-11-04T21:01:33+00:00",
+  "generator": {
+    "name": "bulgarian-driving-exam-database",
+    "version": "0.1.0",
+    "git_commit": "d0c86185c15bd71f3d5bff575135bf197c08046a"
+  },
+  "content_fingerprint": "2206aa6d2156ebd65fa42a07167e47a7c02e9ffe2dd8d8cb984937a7b97948e1",
+  "sources": [
+    {
+      "id": "iaaa-eis",
+      "name": "ИААА — Масив от изпитни въпроси за теоретичните изпити",
+      "source_url": "https://public-eis.rta.government.bg/exam-questions/",
+      "attribution": "Източник: Изпълнителна агенция „Автомобилна администрация“ — https://public-eis.rta.government.bg/exam-questions/",
+      "license": "none granted by source",
+      "redistribution_status": "published_by_maintainer_decision",
+      "retrieved_at": "2026-11-04T20:23:37+00:00"
+    }
+  ],
+  "source_snapshot": [
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/1_A_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026/1_A_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026.html",
+      "etag": "\"57200e-65cb9ada15300\"",
+      "last_modified": "Wed, 30 Sep 2026 21:06:52 GMT",
+      "sha256": "1de71156df6ff0df270b908300ee7a9adda72f9770faad0e542a030abc7790d1",
+      "bytes": 5709838
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/2_A_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/2_A_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+      "etag": "\"4362e8-65cb9c4fec500\"",
+      "last_modified": "Wed, 30 Sep 2026 21:13:24 GMT",
+      "sha256": "72bf676f62cccc00d22a7ef8f94420372c1cd5f6606edd1bbced70282b42f2cf",
+      "bytes": 4416232
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/3_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A2%D0%BA%D1%82_%D0%B8%D0%BB%D0%B8_%D0%A2%D1%82%D0%BC_01.10.2026/3_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A2%D0%BA%D1%82_%D0%B8%D0%BB%D0%B8_%D0%A2%D1%82%D0%BC_01.10.2026.html",
+      "etag": "\"c289c-65cb9cbabc100\"",
+      "last_modified": "Wed, 30 Sep 2026 21:15:16 GMT",
+      "sha256": "bbd37a53a84285fe1a82431f069bada6b4882c5fe185069c63fe8f2bf29ca7cb",
+      "bytes": 796828
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/4_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_%D0%B8%D0%BB%D0%B8_%D0%92_01.10.2026/4_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_%D0%B8%D0%BB%D0%B8_%D0%92_01.10.2026.html",
+      "etag": "\"1be4f-65cb9ccfb7280\"",
+      "last_modified": "Wed, 30 Sep 2026 21:15:38 GMT",
+      "sha256": "1f2e88f2bb1c41e1df22939f424652c8e936cfb3269650e2cb43db6963afa3d6",
+      "bytes": 114255
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/5_AM_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_01.10.2026/5_AM_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_01.10.2026.html",
+      "etag": "\"51a8b6-65cb9e3fd5700\"",
+      "last_modified": "Wed, 30 Sep 2026 21:22:04 GMT",
+      "sha256": "580232cb8fa72dcd7f43ab52afc32ddcb02f395460fda624ee2518ea9a1112b7",
+      "bytes": 5351606
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/6_AM_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/6_AM_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+      "etag": "\"3f4338-65cb9faa3ae00\"",
+      "last_modified": "Wed, 30 Sep 2026 21:28:24 GMT",
+      "sha256": "b4e61fb2e893c1f00f147dc56719cd2442d9ffb8e54c3b20e8979b421e25476c",
+      "bytes": 4145976
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/7_B_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026/7_B_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026.html",
+      "etag": "\"614be0-65cba204f3c00\"",
+      "last_modified": "Wed, 30 Sep 2026 21:38:56 GMT",
+      "sha256": "4b9a46edba43c0bbe97cb2740b0ae298c81ce62db2db2c596108f143050b2d0b",
+      "bytes": 6376416
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/8_B_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/8_B_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+      "etag": "\"4b942b-65cba43f3fd80\"",
+      "last_modified": "Wed, 30 Sep 2026 21:48:54 GMT",
+      "sha256": "3a6b8ded4c2c4b67400846431449296d3c2eea6fe6a1681977a5a95a5699b346",
+      "bytes": 4953131
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/9_B_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%B8%D0%BB%D0%B8_%D0%902_01.10.2026/9_B_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%B8%D0%BB%D0%B8_%D0%902_01.10.2026.html",
+      "etag": "\"339086-65cba6165d500\"",
+      "last_modified": "Wed, 30 Sep 2026 21:57:08 GMT",
+      "sha256": "253249f8769f8fe071c2df1e1c6394c71333b38928567929cd03c411855ee874",
+      "bytes": 3379334
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/10_B_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_01.10.2026/10_B_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_01.10.2026.html",
+      "etag": "\"614bc4-65cba87116300\"",
+      "last_modified": "Wed, 30 Sep 2026 22:07:40 GMT",
+      "sha256": "b63a7a744c9ad0589d0c31179dc00ed3c39de3a1c9b8458b749257316076732e",
+      "bytes": 6376388
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/11_C_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_B78_01.10.2026/11_C_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_B78_01.10.2026.html",
+      "etag": "\"28327b-65cba909acb00\"",
+      "last_modified": "Wed, 30 Sep 2026 22:10:20 GMT",
+      "sha256": "e4047feae1e6e719ab50433dce3cdbb0be3ef14d1048e46e8faf3592b254ecb5",
+      "bytes": 2634363
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/12_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026/12_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026.html",
+      "etag": "\"350f3-65cba90f65880\"",
+      "last_modified": "Wed, 30 Sep 2026 22:10:26 GMT",
+      "sha256": "23252f31e12c6ecfea2a5b4f78a233acef703237ae7438dcbe29dc56f5fc982d",
+      "bytes": 217331
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/13_C1_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_01.10.2026/13_C1_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_01.10.2026.html",
+      "etag": "\"283276-65cba92dea080\"",
+      "last_modified": "Wed, 30 Sep 2026 22:10:58 GMT",
+      "sha256": "20bb385664769ec453ebbeb5337c46cf4097840a566e8dfabc073ad26bc83ad2",
+      "bytes": 2634358
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/14_C1E_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026/14_C1E_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026.html",
+      "etag": "\"350f4-65cba933a2e00\"",
+      "last_modified": "Wed, 30 Sep 2026 22:11:04 GMT",
+      "sha256": "2130ef935f75833de47087737faff33bec46126233905e43859171cc2e8f3c81",
+      "bytes": 217332
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/15_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A1_01.10.2026/15_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A1_01.10.2026.html",
+      "etag": "\"76562-65cba946b5b00\"",
+      "last_modified": "Wed, 30 Sep 2026 22:11:24 GMT",
+      "sha256": "0518ca8747910be599748c955cdf67e94c114b9db83d6bdc2061a6369579f5b7",
+      "bytes": 484706
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/16_CE_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/16_CE_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+      "etag": "\"76586-65cba955f7f00\"",
+      "last_modified": "Wed, 30 Sep 2026 22:11:40 GMT",
+      "sha256": "9d8363148b59b650a35f2ad161605a3c4297404088e74625bddaf5d2c48458d9",
+      "bytes": 484742
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/17_D_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A11_%D0%A1_%D0%B8_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_%D1%81%D1%8A%D1%81_%D1%81%D1%82%D0%B0%D0%B6_2%D0%B3_01.10.2026/17_D_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A11_%D0%A1_%D0%B8_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_%D1%81%D1%8A%D1%81_%D1%81%D1%82%D0%B0%D0%B6_2%D0%B3_01.10.2026.html",
+      "etag": "\"17f315-65cba9690ac00\"",
+      "last_modified": "Wed, 30 Sep 2026 22:12:00 GMT",
+      "sha256": "a29b3ecd6e4d62c531a5f0a258412b2365820de967c5b8ffed454f1b31946d11",
+      "bytes": 1569557
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/18_D_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_%D0%B8_%D0%A3%D0%9F%D0%9A_01.10.2026/18_D_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_%D0%B8_%D0%A3%D0%9F%D0%9A_01.10.2026.html",
+      "etag": "\"177a43-65cba9784d000\"",
+      "last_modified": "Wed, 30 Sep 2026 22:12:16 GMT",
+      "sha256": "6794fb6fc25c4fe0258305a1d8cb4823191c2a0824ab548b51d3d2125dcb8fe9",
+      "bytes": 1538627
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/19_D_103_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82_D_%D0%B8_%D0%B4%D0%BE%D0%BF%D1%8A%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE_%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D0%B9%D0%B1%D1%83%D1%81_01.10.2026/19_D_103_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82_D_%D0%B8_%D0%B4%D0%BE%D0%BF%D1%8A%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE_%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D0%B9%D0%B1%D1%83%D1%81_01.10.2026.html",
+      "etag": "\"586c0-65cba98b5fd00\"",
+      "last_modified": "Wed, 30 Sep 2026 22:12:36 GMT",
+      "sha256": "d8ad94588c5ddf5f4b06597734f676338527eae01138f8fbf11e204ba0c27973",
+      "bytes": 362176
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/20_DE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D_01.10.2026/20_DE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D_01.10.2026.html",
+      "etag": "\"5f88c-65cba996d1800\"",
+      "last_modified": "Wed, 30 Sep 2026 22:12:48 GMT",
+      "sha256": "4071f496d042d85fd632adbaf88afa6f1c52b8585b8e138e3dfd023645056d37",
+      "bytes": 391308
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/21_%D0%A2%D1%82%D0%BC_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026/21_%D0%A2%D1%82%D0%BC_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026.html",
+      "etag": "\"42288d-65cbaad370300\"",
+      "last_modified": "Wed, 30 Sep 2026 22:18:20 GMT",
+      "sha256": "fce4908e7098cfbc0bac66bc214986c0a495c20ada87b8b8eb146d7450fd0d67",
+      "bytes": 4335757
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/22_%D0%A2%D1%82%D0%BC_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/22_%D0%A2%D1%82%D0%BC_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+      "etag": "\"2dd2eb-65cbabe248200\"",
+      "last_modified": "Wed, 30 Sep 2026 22:23:04 GMT",
+      "sha256": "014c4dce7cef590a9aba6cd03e3045cd5ddb7d975989c25d4a579a8fe7b39db9",
+      "bytes": 3003115
+    },
+    {
+      "url": "https://public-eis.rta.government.bg/exam-questions/23_%D0%A2%D1%82%D0%BC_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%902_%D0%A2%D0%BA%D1%82_%D0%921_%D0%92_%D0%B8%D0%BB%D0%B8_%D0%9278_01.10.2026/23_%D0%A2%D1%82%D0%BC_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%902_%D0%A2%D0%BA%D1%82_%D0%921_%D0%92_%D0%B8%D0%BB%D0%B8_%D0%9278_01.10.2026.html",
+      "etag": "\"32887-65cbac13df700\"",
+      "last_modified": "Wed, 30 Sep 2026 22:23:56 GMT",
+      "sha256": "8a963cbb0ed84f5497f33d396ce67cce88bdd7be0b1592a6a89258fc9ec9b67b",
+      "bytes": 206983
+    }
+  ],
+  "counts": {
+    "categories": 11,
+    "variants": 23,
+    "sections": 103,
+    "topics": 30,
+    "questions": 2476,
+    "answers": 7893,
+    "assignments": 13763,
+    "media": 887,
+    "images": 830,
+    "videos": 57,
+    "exam_configs": 23
+  },
+  "category_counts": {
+    "A": {
+      "variants": 4,
+      "questions": 1284,
+      "assignments": 2504
+    },
+    "AM": {
+      "variants": 2,
+      "questions": 1203,
+      "assignments": 2160
+    },
+    "B": {
+      "variants": 4,
+      "questions": 1440,
+      "assignments": 4820
+    },
+    "C": {
+      "variants": 1,
+      "questions": 635,
+      "assignments": 635
+    },
+    "C1": {
+      "variants": 1,
+      "questions": 635,
+      "assignments": 635
+    },
+    "C1E": {
+      "variants": 1,
+      "questions": 58,
+      "assignments": 58
+    },
+    "CE": {
+      "variants": 3,
+      "questions": 125,
+      "assignments": 308
+    },
+    "D": {
+      "variants": 2,
+      "questions": 388,
+      "assignments": 768
+    },
+    "D103": {
+      "variants": 1,
+      "questions": 87,
+      "assignments": 87
+    },
+    "DE": {
+      "variants": 1,
+      "questions": 101,
+      "assignments": 101
+    },
+    "TTM": {
+      "variants": 3,
+      "questions": 959,
+      "assignments": 1687
+    }
+  },
+  "variant_counts": {
+    "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am": 1284,
+    "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": 1018,
+    "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm": 179,
+    "A.pritezhavasht-pravosposobnost-za-kategoria-v1-ili-v": 23,
+    "AM.bez-pravosposobnost": 1203,
+    "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": 957,
+    "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am": 1440,
+    "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp": 1145,
+    "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2": 795,
+    "B.pritezhavasht-pravosposobnost-za-kategoria-v1": 1440,
+    "C.s-pravosposobnost-za-kategoria-v-b-78": 635,
+    "CE.s-pravosposobnost-za-kategoria-d1e": 58,
+    "CE.s-pravosposobnost-za-kategoria-s": 125,
+    "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": 125,
+    "C1.s-pravosposobnost-za-kategoria-v": 635,
+    "C1E.s-pravosposobnost-za-kategoria-d1e": 58,
+    "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g": 388,
+    "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk": 380,
+    "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus": 87,
+    "DE.s-pravosposobnost-za-kategoria-d": 101,
+    "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am": 959,
+    "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": 680,
+    "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78": 48
+  },
+  "dataset_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/v1.0.0/",
+  "files": [
+    {
+      "path": "categories.json",
+      "bytes": 93701,
+      "sha256": "ed00dd0bc9c62eef1f8b03c0675580f4b1e3d2f8f5de956e127e972fed1ba302",
+      "media_type": "application/json"
+    },
+    {
+      "path": "questions.json",
+      "bytes": 7652161,
+      "sha256": "d2d6c70c9d684d6babc7a3fd693760233a5d2c51ed44277c3db7a324072a53c8",
+      "media_type": "application/json"
+    },
+    {
+      "path": "exam-configs.json",
+      "bytes": 58759,
+      "sha256": "9b9b5a53fa3d7676d5109f84917b2643a2359c2ac5721143a69bdc2bd550904e",
+      "media_type": "application/json"
+    },
+    {
+      "path": "master.sqlite",
+      "bytes": 7970816,
+      "sha256": "6f3917c465a667b39653a961084ae29f6ca8a28d0126480fb94708544f2b0d19",
+      "media_type": "application/vnd.sqlite3"
+    }
+  ],
+  "media_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01/",
+  "media_packs": [
+    {
+      "id": "media-2026.10.01/images-original",
+      "kind": "images-original",
+      "url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01/images-original.zip",
+      "bytes": 233970544,
+      "sha256": "9e17b01935b5eef7df9100480b53607f26ef01a890721a6641849d8431962f64",
+      "file_count": 830
+    },
+    {
+      "id": "media-2026.10.01/images-webp",
+      "kind": "images-webp",
+      "url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01/images-webp.zip",
+      "bytes": 19817012,
+      "sha256": "fc6986e91d3df1eace2f5791cd4b332e91a8c1a86ed7f6010906de300c41b760",
+      "file_count": 830
+    }
+  ],
+  "licensing": {
+    "attribution": "Източник: Изпълнителна агенция „Автомобилна администрация“ — https://public-eis.rta.government.bg/exam-questions/",
+    "license": "none granted by source",
+    "redistribution_status": "published_by_maintainer_decision",
+    "notice_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/blob/main/DATA_NOTICE.md"
+  },
+  "completeness": {
+    "status": "partial",
+    "checks": [
+      {
+        "name": "missing_questions",
+        "passed": true,
+        "detail": "23 checked, 0 errors, 0 warnings — every variant has all of its questions"
+      },
+      {
+        "name": "missing_answers",
+        "passed": true,
+        "detail": "2476 checked, 0 errors, 0 warnings — every question has ≥2 answers with text or picture"
+      },
+      {
+        "name": "invalid_correct_answers",
+        "passed": true,
+        "detail": "2476 checked, 0 errors, 0 warnings — ≥1 correct answer, correct_count consistent"
+      },
+      {
+        "name": "broken_media_references",
+        "passed": true,
+        "detail": "887 checked, 0 errors, 0 warnings — every media reference resolves"
+      },
+      {
+        "name": "missing_media_files",
+        "passed": true,
+        "detail": "1717 checked, 0 errors, 0 warnings — every media file exists with its SHA-256"
+      },
+      {
+        "name": "duplicate_questions",
+        "passed": true,
+        "detail": "2476 checked, 0 errors, 25 warnings — no identical content under different IDs"
+      },
+      {
+        "name": "duplicate_answers",
+        "passed": true,
+        "detail": "2476 checked, 0 errors, 0 warnings — no repeated answer inside a question"
+      },
+      {
+        "name": "invalid_references",
+        "passed": true,
+        "detail": "13763 checked, 0 errors, 0 warnings — assignments point at existing variant/category/section"
+      },
+      {
+        "name": "incorrect_ordering",
+        "passed": true,
+        "detail": "13763 checked, 0 errors, 0 warnings — answers, questions, sections and variants keep source order"
+      },
+      {
+        "name": "invalid_attribution",
+        "passed": true,
+        "detail": "2476 checked, 0 errors, 0 warnings — every record has a known, attributed source"
+      },
+      {
+        "name": "exam_feasibility",
+        "passed": true,
+        "detail": "23 checked, 0 errors, 0 warnings — every exam configuration can be generated (20 seeds each)"
+      },
+      {
+        "name": "json_schema",
+        "passed": true,
+        "detail": "3 checked, 0 errors, 0 warnings — exports conform to contract/schemas"
+      },
+      {
+        "name": "sqlite_integrity",
+        "passed": true,
+        "detail": "1 checked, 0 errors, 0 warnings — master.sqlite integrity, foreign keys, user_version"
+      },
+      {
+        "name": "all_official_files_extracted",
+        "passed": true,
+        "detail": "23 of 23 files listed in manifest.txt"
+      },
+      {
+        "name": "all_referenced_media_downloaded",
+        "passed": true,
+        "detail": "982 of 982 referenced assets downloaded and checksummed"
+      },
+      {
+        "name": "asset_copies_identical",
+        "passed": false,
+        "detail": "copy verification has not been run"
+      }
+    ]
+  }
+}

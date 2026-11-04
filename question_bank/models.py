@@ -111,6 +111,9 @@ class Media(_Model):
     sha256: Sha256
     source_url: str
     source_id: Id
+    aliases: list[str] = Field(
+        default_factory=list, description="other official file names with byte-identical content"
+    )
     derivatives: list[MediaDerivative] = Field(default_factory=list)
 
 

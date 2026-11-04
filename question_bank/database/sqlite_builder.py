@@ -115,6 +115,10 @@ def write_sqlite(dataset: Dataset, dest: Path, *, info: dict[str, str]) -> None:
                 ],
             )
             con.executemany(
+                "INSERT INTO media_aliases VALUES (?, ?)",
+                [(m.id, alias) for m in dataset.media for alias in m.aliases],
+            )
+            con.executemany(
                 "INSERT INTO media_derivatives VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                 [
                     (m.id, d.format, d.relative_path, d.mime_type, d.bytes, d.width, d.height, d.sha256)

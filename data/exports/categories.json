@@ -1,0 +1,1487 @@
+{
+  "schema_version": 1,
+  "dataset_version": "1.0.0",
+  "sources": [
+    {
+      "id": "iaaa-eis",
+      "name": "ИААА — Масив от изпитни въпроси за теоретичните изпити",
+      "source_url": "https://public-eis.rta.government.bg/exam-questions/",
+      "attribution": "Източник: Изпълнителна агенция „Автомобилна администрация“ — https://public-eis.rta.government.bg/exam-questions/",
+      "license": "none granted by source",
+      "redistribution_status": "published_by_maintainer_decision",
+      "retrieved_at": "2026-11-04T20:23:37+00:00"
+    }
+  ],
+  "categories": [
+    {
+      "id": "A",
+      "name": "A",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 1,
+      "variants": [
+        {
+          "id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+          "category_id": "A",
+          "title": "A. без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+          "description": "без правоспособност или с правоспособност за категория АМ",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/1_A_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026/1_A_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026.html",
+          "source_sha256": "1de71156df6ff0df270b908300ee7a9adda72f9770faad0e542a030abc7790d1",
+          "source_edition": "2026-10-01",
+          "position": 1,
+          "question_count": 1284,
+          "sections": [
+            {
+              "id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s1",
+              "variant_id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 1,
+              "name": "Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА МОТОЦИКЛЕТА",
+              "topic_id": "obshti-svedenia-za-mototsikleta",
+              "position": 1,
+              "question_count": 23
+            },
+            {
+              "id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s2",
+              "variant_id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 2,
+              "name": "Раздел 2. ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ",
+              "topic_id": "zapoznavane-s-patishtata-prevoznite-sredstva-i-uchastnitsite-v-patnoto-dvizhenie",
+              "position": 2,
+              "question_count": 243
+            },
+            {
+              "id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s3",
+              "variant_id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 3,
+              "name": "Раздел 3. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 3,
+              "question_count": 202
+            },
+            {
+              "id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s4",
+              "variant_id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 4,
+              "question_count": 609
+            },
+            {
+              "id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s5",
+              "variant_id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 5,
+              "name": "Раздел 5. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 5,
+              "question_count": 104
+            },
+            {
+              "id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s6",
+              "variant_id": "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 6,
+              "question_count": 103
+            }
+          ]
+        },
+        {
+          "id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+          "category_id": "A",
+          "title": "A. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+          "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП.",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/2_A_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/2_A_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+          "source_sha256": "72bf676f62cccc00d22a7ef8f94420372c1cd5f6606edd1bbced70282b42f2cf",
+          "source_edition": "2026-10-01",
+          "position": 2,
+          "question_count": 1018,
+          "sections": [
+            {
+              "id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s3",
+              "variant_id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 3,
+              "name": "Раздел 3. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 1,
+              "question_count": 202
+            },
+            {
+              "id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s4",
+              "variant_id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 2,
+              "question_count": 609
+            },
+            {
+              "id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s5",
+              "variant_id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 5,
+              "name": "Раздел 5. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 3,
+              "question_count": 104
+            },
+            {
+              "id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s6",
+              "variant_id": "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 4,
+              "question_count": 103
+            }
+          ]
+        },
+        {
+          "id": "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm",
+          "category_id": "A",
+          "title": "A. притежаващ правоспособност за категория Ткт или Ттм (След 12.12.24г.)",
+          "description": "притежаващ правоспособност за категория Ткт или Ттм",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/3_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A2%D0%BA%D1%82_%D0%B8%D0%BB%D0%B8_%D0%A2%D1%82%D0%BC_01.10.2026/3_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A2%D0%BA%D1%82_%D0%B8%D0%BB%D0%B8_%D0%A2%D1%82%D0%BC_01.10.2026.html",
+          "source_sha256": "bbd37a53a84285fe1a82431f069bada6b4882c5fe185069c63fe8f2bf29ca7cb",
+          "source_edition": "2026-10-01",
+          "position": 3,
+          "question_count": 179,
+          "sections": [
+            {
+              "id": "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm#s1",
+              "variant_id": "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm",
+              "number": 1,
+              "name": "Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА МОТОЦИКЛЕТА",
+              "topic_id": "obshti-svedenia-za-mototsikleta",
+              "position": 1,
+              "question_count": 23
+            },
+            {
+              "id": "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm#s4",
+              "variant_id": "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 2,
+              "question_count": 136
+            },
+            {
+              "id": "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm#s6",
+              "variant_id": "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 3,
+              "question_count": 20
+            }
+          ]
+        },
+        {
+          "id": "A.pritezhavasht-pravosposobnost-za-kategoria-v1-ili-v",
+          "category_id": "A",
+          "title": "A. притежаващ правоспособност за категория В1 или В (След 12.12.24г.)",
+          "description": "притежаващ правоспособност за категория В1 или В",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/4_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_%D0%B8%D0%BB%D0%B8_%D0%92_01.10.2026/4_A_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_%D0%B8%D0%BB%D0%B8_%D0%92_01.10.2026.html",
+          "source_sha256": "1f2e88f2bb1c41e1df22939f424652c8e936cfb3269650e2cb43db6963afa3d6",
+          "source_edition": "2026-10-01",
+          "position": 4,
+          "question_count": 23,
+          "sections": [
+            {
+              "id": "A.pritezhavasht-pravosposobnost-za-kategoria-v1-ili-v#s1",
+              "variant_id": "A.pritezhavasht-pravosposobnost-za-kategoria-v1-ili-v",
+              "number": 1,
+              "name": "Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА МОТОЦИКЛЕТА",
+              "topic_id": "obshti-svedenia-za-mototsikleta",
+              "position": 1,
+              "question_count": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AM",
+      "name": "AM",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 2,
+      "variants": [
+        {
+          "id": "AM.bez-pravosposobnost",
+          "category_id": "AM",
+          "title": "AM. без правоспособност (След 12.12.24г.)",
+          "description": "без правоспособност",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/5_AM_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_01.10.2026/5_AM_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_01.10.2026.html",
+          "source_sha256": "580232cb8fa72dcd7f43ab52afc32ddcb02f395460fda624ee2518ea9a1112b7",
+          "source_edition": "2026-10-01",
+          "position": 5,
+          "question_count": 1203,
+          "sections": [
+            {
+              "id": "AM.bez-pravosposobnost#s1",
+              "variant_id": "AM.bez-pravosposobnost",
+              "number": 1,
+              "name": "Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА МОТОПЕДА",
+              "topic_id": "obshti-svedenia-za-motopeda",
+              "position": 1,
+              "question_count": 15
+            },
+            {
+              "id": "AM.bez-pravosposobnost#s2",
+              "variant_id": "AM.bez-pravosposobnost",
+              "number": 2,
+              "name": "Раздел 2. ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ",
+              "topic_id": "zapoznavane-s-patishtata-prevoznite-sredstva-i-uchastnitsite-v-patnoto-dvizhenie",
+              "position": 2,
+              "question_count": 231
+            },
+            {
+              "id": "AM.bez-pravosposobnost#s3",
+              "variant_id": "AM.bez-pravosposobnost",
+              "number": 3,
+              "name": "Раздел 3. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 3,
+              "question_count": 202
+            },
+            {
+              "id": "AM.bez-pravosposobnost#s4",
+              "variant_id": "AM.bez-pravosposobnost",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 4,
+              "question_count": 548
+            },
+            {
+              "id": "AM.bez-pravosposobnost#s5",
+              "variant_id": "AM.bez-pravosposobnost",
+              "number": 5,
+              "name": "Раздел 5. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 5,
+              "question_count": 104
+            },
+            {
+              "id": "AM.bez-pravosposobnost#s6",
+              "variant_id": "AM.bez-pravosposobnost",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 6,
+              "question_count": 103
+            }
+          ]
+        },
+        {
+          "id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+          "category_id": "AM",
+          "title": "AM. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП (След 12.12.24г.)",
+          "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/6_AM_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/6_AM_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+          "source_sha256": "b4e61fb2e893c1f00f147dc56719cd2442d9ffb8e54c3b20e8979b421e25476c",
+          "source_edition": "2026-10-01",
+          "position": 6,
+          "question_count": 957,
+          "sections": [
+            {
+              "id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s3",
+              "variant_id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 3,
+              "name": "Раздел 3. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 1,
+              "question_count": 202
+            },
+            {
+              "id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s4",
+              "variant_id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 2,
+              "question_count": 548
+            },
+            {
+              "id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s5",
+              "variant_id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 5,
+              "name": "Раздел 5. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 3,
+              "question_count": 104
+            },
+            {
+              "id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s6",
+              "variant_id": "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 4,
+              "question_count": 103
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "B",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 3,
+      "variants": [
+        {
+          "id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+          "category_id": "B",
+          "title": "B. без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+          "description": "без правоспособност или с правоспособност за категория АМ",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/7_B_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026/7_B_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026.html",
+          "source_sha256": "4b9a46edba43c0bbe97cb2740b0ae298c81ce62db2db2c596108f143050b2d0b",
+          "source_edition": "2026-10-01",
+          "position": 7,
+          "question_count": 1440,
+          "sections": [
+            {
+              "id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s1",
+              "variant_id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 1,
+              "name": "Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА АВТОМОБИЛА",
+              "topic_id": "obshti-svedenia-za-avtomobila",
+              "position": 1,
+              "question_count": 48
+            },
+            {
+              "id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s2",
+              "variant_id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 2,
+              "name": "Раздел 2. ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ",
+              "topic_id": "zapoznavane-s-patishtata-prevoznite-sredstva-i-uchastnitsite-v-patnoto-dvizhenie",
+              "position": 2,
+              "question_count": 247
+            },
+            {
+              "id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s3",
+              "variant_id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 3,
+              "name": "Раздел 3. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 3,
+              "question_count": 202
+            },
+            {
+              "id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s4",
+              "variant_id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 4,
+              "question_count": 705
+            },
+            {
+              "id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s5",
+              "variant_id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 5,
+              "name": "Раздел 5. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 5,
+              "question_count": 110
+            },
+            {
+              "id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s6",
+              "variant_id": "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 6,
+              "question_count": 128
+            }
+          ]
+        },
+        {
+          "id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp",
+          "category_id": "B",
+          "title": "B. загуба на правоспособност по реда на чл. 157 ЗДвП (След 12.12.24г.)",
+          "description": "загуба на правоспособност по реда на чл. 157 ЗДвП",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/8_B_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/8_B_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+          "source_sha256": "3a6b8ded4c2c4b67400846431449296d3c2eea6fe6a1681977a5a95a5699b346",
+          "source_edition": "2026-10-01",
+          "position": 8,
+          "question_count": 1145,
+          "sections": [
+            {
+              "id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp#s3",
+              "variant_id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp",
+              "number": 3,
+              "name": "Раздел 3. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 1,
+              "question_count": 202
+            },
+            {
+              "id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp#s4",
+              "variant_id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 2,
+              "question_count": 705
+            },
+            {
+              "id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp#s5",
+              "variant_id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp",
+              "number": 5,
+              "name": "Раздел 5. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 3,
+              "question_count": 110
+            },
+            {
+              "id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp#s6",
+              "variant_id": "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 4,
+              "question_count": 128
+            }
+          ]
+        },
+        {
+          "id": "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2",
+          "category_id": "B",
+          "title": "B. с правоспособност за категория А, А1 или А2 (След 12.12.24г.)",
+          "description": "с правоспособност за категория А, А1 или А2",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/9_B_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%B8%D0%BB%D0%B8_%D0%902_01.10.2026/9_B_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%B8%D0%BB%D0%B8_%D0%902_01.10.2026.html",
+          "source_sha256": "253249f8769f8fe071c2df1e1c6394c71333b38928567929cd03c411855ee874",
+          "source_edition": "2026-10-01",
+          "position": 9,
+          "question_count": 795,
+          "sections": [
+            {
+              "id": "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2#s1",
+              "variant_id": "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2",
+              "number": 1,
+              "name": "Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА АВТОМОБИЛА",
+              "topic_id": "obshti-svedenia-za-avtomobila",
+              "position": 1,
+              "question_count": 48
+            },
+            {
+              "id": "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2#s4",
+              "variant_id": "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 2,
+              "question_count": 705
+            },
+            {
+              "id": "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2#s6",
+              "variant_id": "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 3,
+              "question_count": 42
+            }
+          ]
+        },
+        {
+          "id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1",
+          "category_id": "B",
+          "title": "B. притежаващ правоспособност за категория В1 (След 12.12.24г.)",
+          "description": "притежаващ правоспособност за категория В1",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/10_B_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_01.10.2026/10_B_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%921_01.10.2026.html",
+          "source_sha256": "b63a7a744c9ad0589d0c31179dc00ed3c39de3a1c9b8458b749257316076732e",
+          "source_edition": "2026-10-01",
+          "position": 10,
+          "question_count": 1440,
+          "sections": [
+            {
+              "id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1#s1",
+              "variant_id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1",
+              "number": 1,
+              "name": "Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА АВТОМОБИЛА",
+              "topic_id": "obshti-svedenia-za-avtomobila",
+              "position": 1,
+              "question_count": 48
+            },
+            {
+              "id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1#s2",
+              "variant_id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1",
+              "number": 2,
+              "name": "Раздел 2. ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ",
+              "topic_id": "zapoznavane-s-patishtata-prevoznite-sredstva-i-uchastnitsite-v-patnoto-dvizhenie",
+              "position": 2,
+              "question_count": 247
+            },
+            {
+              "id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1#s3",
+              "variant_id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1",
+              "number": 3,
+              "name": "Раздел 3. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 3,
+              "question_count": 202
+            },
+            {
+              "id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1#s4",
+              "variant_id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1",
+              "number": 4,
+              "name": "Раздел 4. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 4,
+              "question_count": 705
+            },
+            {
+              "id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1#s5",
+              "variant_id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1",
+              "number": 5,
+              "name": "Раздел 5. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 5,
+              "question_count": 110
+            },
+            {
+              "id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1#s6",
+              "variant_id": "B.pritezhavasht-pravosposobnost-za-kategoria-v1",
+              "number": 6,
+              "name": "Раздел 6. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 6,
+              "question_count": 128
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "C",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 4,
+      "variants": [
+        {
+          "id": "C.s-pravosposobnost-za-kategoria-v-b-78",
+          "category_id": "C",
+          "title": "C. с правоспособност за категория В/B(78) (След 12.12.24г.)",
+          "description": "с правоспособност за категория В/B(78)",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/11_C_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_B78_01.10.2026/11_C_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_B78_01.10.2026.html",
+          "source_sha256": "e4047feae1e6e719ab50433dce3cdbb0be3ef14d1048e46e8faf3592b254ecb5",
+          "source_edition": "2026-10-01",
+          "position": 11,
+          "question_count": 635,
+          "sections": [
+            {
+              "id": "C.s-pravosposobnost-za-kategoria-v-b-78#s1",
+              "variant_id": "C.s-pravosposobnost-za-kategoria-v-b-78",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА АВТОМОБИЛА, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-agregati-vazli-i-sistemi-na-avtomobila-tyahnoto-076e0a",
+              "position": 1,
+              "question_count": 242
+            },
+            {
+              "id": "C.s-pravosposobnost-za-kategoria-v-b-78#s2",
+              "variant_id": "C.s-pravosposobnost-za-kategoria-v-b-78",
+              "number": 2,
+              "name": "Раздел 2. ПОДДЪРЖАНЕ НА АВТОМОБИЛА В ТЕХНИЧЕСКА ИЗПРАВНОСТ",
+              "topic_id": "poddarzhane-na-avtomobila-v-tehnicheska-izpravnost",
+              "position": 2,
+              "question_count": 85
+            },
+            {
+              "id": "C.s-pravosposobnost-za-kategoria-v-b-78#s3",
+              "variant_id": "C.s-pravosposobnost-za-kategoria-v-b-78",
+              "number": 3,
+              "name": "Раздел 3. ПРЕВОЗ НА ТОВАРИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ",
+              "topic_id": "prevoz-na-tovari-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz",
+              "position": 3,
+              "question_count": 158
+            },
+            {
+              "id": "C.s-pravosposobnost-za-kategoria-v-b-78#s4",
+              "variant_id": "C.s-pravosposobnost-za-kategoria-v-b-78",
+              "number": 4,
+              "name": "Раздел 4. ВИДОВЕ ТОВАРИ И СПЕЦИФИЧНИТЕ ОСОБЕНОСТИ, ОКАЗВАЩИ ВЛИЯНИЕ ВЪРХУ БЕЗОПАСНОТО ИМ ТРАНСПОРТИРАНЕ",
+              "topic_id": "vidove-tovari-i-spetsifichnite-osobenosti-okazvashti-vliyanie-5abc99",
+              "position": 4,
+              "question_count": 64
+            },
+            {
+              "id": "C.s-pravosposobnost-za-kategoria-v-b-78#s5",
+              "variant_id": "C.s-pravosposobnost-za-kategoria-v-b-78",
+              "number": 5,
+              "name": "Раздел 5. ИЗИСКВАНИЯ КЪМ МПС ВЪВ ВРЪЗКА С ПРЕВОЗА. ОБХВАТ НА ВИДИМОСТТА В ЗАВИСИМОСТ ОТ ГАБАРИТНИТЕ РАЗМЕРИ",
+              "topic_id": "iziskvania-kam-mps-vav-vrazka-s-prevoza-obhvat-na-vidimostta-v-514996",
+              "position": 5,
+              "question_count": 67
+            },
+            {
+              "id": "C.s-pravosposobnost-za-kategoria-v-b-78#s6",
+              "variant_id": "C.s-pravosposobnost-za-kategoria-v-b-78",
+              "number": 6,
+              "name": "Раздел 6. ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ ВЪВ ВРЪЗКА С ВИДА И ХАРАКТЕРА НА ПРЕВОЗВАНИЯ ТОВАР. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА",
+              "topic_id": "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-f3ed92",
+              "position": 6,
+              "question_count": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CE",
+      "name": "C+E",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 5,
+      "variants": [
+        {
+          "id": "CE.s-pravosposobnost-za-kategoria-d1e",
+          "category_id": "CE",
+          "title": "C+E. с правоспособност за категория D1E (След 12.12.24г.)",
+          "description": "с правоспособност за категория D1E",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/12_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026/12_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026.html",
+          "source_sha256": "23252f31e12c6ecfea2a5b4f78a233acef703237ae7438dcbe29dc56f5fc982d",
+          "source_edition": "2026-10-01",
+          "position": 12,
+          "question_count": 58,
+          "sections": [
+            {
+              "id": "CE.s-pravosposobnost-za-kategoria-d1e#s3",
+              "variant_id": "CE.s-pravosposobnost-za-kategoria-d1e",
+              "number": 3,
+              "name": "Раздел 3. СИСТЕМИ ЗА ПРИКАЧВАНЕ, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "sistemi-za-prikachvane-naimenovanie-i-prednaznachenie",
+              "position": 1,
+              "question_count": 44
+            },
+            {
+              "id": "CE.s-pravosposobnost-za-kategoria-d1e#s4",
+              "variant_id": "CE.s-pravosposobnost-za-kategoria-d1e",
+              "number": 4,
+              "name": "Раздел 4. ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ И ОСНОВНИ ОПЕРАЦИИ, ЗА ДА СЕ ПОДДЪРЖА ТЕХНИЧЕСКИ ИЗПРАВЕН СЪСТАВ",
+              "topic_id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-i-osnovni-554798",
+              "position": 2,
+              "question_count": 14
+            }
+          ]
+        },
+        {
+          "id": "CE.s-pravosposobnost-za-kategoria-s",
+          "category_id": "CE",
+          "title": "C+E. с правоспособност за категория С (След 12.12.24г.)",
+          "description": "с правоспособност за категория С",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/15_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A1_01.10.2026/15_CE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A1_01.10.2026.html",
+          "source_sha256": "0518ca8747910be599748c955cdf67e94c114b9db83d6bdc2061a6369579f5b7",
+          "source_edition": "2026-10-01",
+          "position": 15,
+          "question_count": 125,
+          "sections": [
+            {
+              "id": "CE.s-pravosposobnost-za-kategoria-s#s1",
+              "variant_id": "CE.s-pravosposobnost-za-kategoria-s",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ ВИДОВЕ ТЕГЛЕЩИ МОТОРНИ ПРЕВОЗНИ СРЕДСТВА (ВЛЕКАЧИ), ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-vidove-tegleshti-motorni-prevozni-sredstva-vlekachi-a7dbdc",
+              "position": 1,
+              "question_count": 17
+            },
+            {
+              "id": "CE.s-pravosposobnost-za-kategoria-s#s2",
+              "variant_id": "CE.s-pravosposobnost-za-kategoria-s",
+              "number": 2,
+              "name": "Раздел 2. ОСНОВНИТЕ ВИДОВЕ РЕМАРКЕТА, ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovnite-vidove-remarketa-tyahnoto-naimenovanie-i-prednaznachenie",
+              "position": 2,
+              "question_count": 29
+            },
+            {
+              "id": "CE.s-pravosposobnost-za-kategoria-s#s3",
+              "variant_id": "CE.s-pravosposobnost-za-kategoria-s",
+              "number": 3,
+              "name": "Раздел 3. СИСТЕМИ ЗА ПРИКАЧВАНЕ, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "sistemi-za-prikachvane-naimenovanie-i-prednaznachenie",
+              "position": 3,
+              "question_count": 44
+            },
+            {
+              "id": "CE.s-pravosposobnost-za-kategoria-s#s4",
+              "variant_id": "CE.s-pravosposobnost-za-kategoria-s",
+              "number": 4,
+              "name": "Раздел 4. ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ И ОСНОВНИ ОПЕРАЦИИ, ЗА ДА СЕ ПОДДЪРЖА ТЕХНИЧЕСКИ ИЗПРАВЕН СЪСТАВ",
+              "topic_id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-i-osnovni-554798",
+              "position": 4,
+              "question_count": 18
+            },
+            {
+              "id": "CE.s-pravosposobnost-za-kategoria-s#s5",
+              "variant_id": "CE.s-pravosposobnost-za-kategoria-s",
+              "number": 5,
+              "name": "Раздел 5. ОСНОВНИТЕ ПРАВИЛА ПО ТЕХНИКА НА БЕЗОПАСНОСТ",
+              "topic_id": "osnovnite-pravila-po-tehnika-na-bezopasnost",
+              "position": 5,
+              "question_count": 17
+            }
+          ]
+        },
+        {
+          "id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+          "category_id": "CE",
+          "title": "C+E. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+          "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП.",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/16_CE_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/16_CE_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+          "source_sha256": "9d8363148b59b650a35f2ad161605a3c4297404088e74625bddaf5d2c48458d9",
+          "source_edition": "2026-10-01",
+          "position": 16,
+          "question_count": 125,
+          "sections": [
+            {
+              "id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s1",
+              "variant_id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ ВИДОВЕ ТЕГЛЕЩИ МОТОРНИ ПРЕВОЗНИ СРЕДСТВА (ВЛЕКАЧИ), ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-vidove-tegleshti-motorni-prevozni-sredstva-vlekachi-a7dbdc",
+              "position": 1,
+              "question_count": 17
+            },
+            {
+              "id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s2",
+              "variant_id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 2,
+              "name": "Раздел 2. ОСНОВНИТЕ ВИДОВЕ РЕМАРКЕТА, ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovnite-vidove-remarketa-tyahnoto-naimenovanie-i-prednaznachenie",
+              "position": 2,
+              "question_count": 29
+            },
+            {
+              "id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s3",
+              "variant_id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 3,
+              "name": "Раздел 3. СИСТЕМИ ЗА ПРИКАЧВАНЕ, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "sistemi-za-prikachvane-naimenovanie-i-prednaznachenie",
+              "position": 3,
+              "question_count": 44
+            },
+            {
+              "id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s4",
+              "variant_id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 4,
+              "name": "Раздел 4. ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ И ОСНОВНИ ОПЕРАЦИИ, ЗА ДА СЕ ПОДДЪРЖА ТЕХНИЧЕСКИ ИЗПРАВЕН СЪСТАВ",
+              "topic_id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-i-osnovni-554798",
+              "position": 4,
+              "question_count": 18
+            },
+            {
+              "id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s5",
+              "variant_id": "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 5,
+              "name": "Раздел 5. ОСНОВНИТЕ ПРАВИЛА ПО ТЕХНИКА НА БЕЗОПАСНОСТ",
+              "topic_id": "osnovnite-pravila-po-tehnika-na-bezopasnost",
+              "position": 5,
+              "question_count": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "C1",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 6,
+      "variants": [
+        {
+          "id": "C1.s-pravosposobnost-za-kategoria-v",
+          "category_id": "C1",
+          "title": "C1. с правоспособност за категория В (След 12.12.24г.)",
+          "description": "с правоспособност за категория В",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/13_C1_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_01.10.2026/13_C1_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_01.10.2026.html",
+          "source_sha256": "20bb385664769ec453ebbeb5337c46cf4097840a566e8dfabc073ad26bc83ad2",
+          "source_edition": "2026-10-01",
+          "position": 13,
+          "question_count": 635,
+          "sections": [
+            {
+              "id": "C1.s-pravosposobnost-za-kategoria-v#s1",
+              "variant_id": "C1.s-pravosposobnost-za-kategoria-v",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА АВТОМОБИЛА, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-agregati-vazli-i-sistemi-na-avtomobila-tyahnoto-076e0a",
+              "position": 1,
+              "question_count": 242
+            },
+            {
+              "id": "C1.s-pravosposobnost-za-kategoria-v#s2",
+              "variant_id": "C1.s-pravosposobnost-za-kategoria-v",
+              "number": 2,
+              "name": "Раздел 2. ПОДДЪРЖАНЕ НА АВТОМОБИЛА В ТЕХНИЧЕСКА ИЗПРАВНОСТ",
+              "topic_id": "poddarzhane-na-avtomobila-v-tehnicheska-izpravnost",
+              "position": 2,
+              "question_count": 85
+            },
+            {
+              "id": "C1.s-pravosposobnost-za-kategoria-v#s3",
+              "variant_id": "C1.s-pravosposobnost-za-kategoria-v",
+              "number": 3,
+              "name": "Раздел 3. ПРЕВОЗ НА ТОВАРИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ",
+              "topic_id": "prevoz-na-tovari-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz",
+              "position": 3,
+              "question_count": 158
+            },
+            {
+              "id": "C1.s-pravosposobnost-za-kategoria-v#s4",
+              "variant_id": "C1.s-pravosposobnost-za-kategoria-v",
+              "number": 4,
+              "name": "Раздел 4. ВИДОВЕ ТОВАРИ И СПЕЦИФИЧНИТЕ ОСОБЕНОСТИ, ОКАЗВАЩИ ВЛИЯНИЕ ВЪРХУ БЕЗОПАСНОТО ИМ ТРАНСПОРТИРАНЕ",
+              "topic_id": "vidove-tovari-i-spetsifichnite-osobenosti-okazvashti-vliyanie-5abc99",
+              "position": 4,
+              "question_count": 64
+            },
+            {
+              "id": "C1.s-pravosposobnost-za-kategoria-v#s5",
+              "variant_id": "C1.s-pravosposobnost-za-kategoria-v",
+              "number": 5,
+              "name": "Раздел 5. ИЗИСКВАНИЯ КЪМ МПС ВЪВ ВРЪЗКА С ПРЕВОЗА. ОБХВАТ НА ВИДИМОСТТА В ЗАВИСИМОСТ ОТ ГАБАРИТНИТЕ РАЗМЕРИ",
+              "topic_id": "iziskvania-kam-mps-vav-vrazka-s-prevoza-obhvat-na-vidimostta-v-514996",
+              "position": 5,
+              "question_count": 67
+            },
+            {
+              "id": "C1.s-pravosposobnost-za-kategoria-v#s6",
+              "variant_id": "C1.s-pravosposobnost-za-kategoria-v",
+              "number": 6,
+              "name": "Раздел 6. ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ ВЪВ ВРЪЗКА С ВИДА И ХАРАКТЕРА НА ПРЕВОЗВАНИЯ ТОВАР. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА",
+              "topic_id": "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-f3ed92",
+              "position": 6,
+              "question_count": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C1E",
+      "name": "C1+E",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 7,
+      "variants": [
+        {
+          "id": "C1E.s-pravosposobnost-za-kategoria-d1e",
+          "category_id": "C1E",
+          "title": "C1+E. с правоспособност за категория D1E (След 12.12.24г.)",
+          "description": "с правоспособност за категория D1E",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/14_C1E_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026/14_C1E_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D1E_01.10.2026.html",
+          "source_sha256": "2130ef935f75833de47087737faff33bec46126233905e43859171cc2e8f3c81",
+          "source_edition": "2026-10-01",
+          "position": 14,
+          "question_count": 58,
+          "sections": [
+            {
+              "id": "C1E.s-pravosposobnost-za-kategoria-d1e#s3",
+              "variant_id": "C1E.s-pravosposobnost-za-kategoria-d1e",
+              "number": 3,
+              "name": "Раздел 3. СИСТЕМИ ЗА ПРИКАЧВАНЕ, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "sistemi-za-prikachvane-naimenovanie-i-prednaznachenie",
+              "position": 1,
+              "question_count": 44
+            },
+            {
+              "id": "C1E.s-pravosposobnost-za-kategoria-d1e#s4",
+              "variant_id": "C1E.s-pravosposobnost-za-kategoria-d1e",
+              "number": 4,
+              "name": "Раздел 4. ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ И ОСНОВНИ ОПЕРАЦИИ, ЗА ДА СЕ ПОДДЪРЖА ТЕХНИЧЕСКИ ИЗПРАВЕН СЪСТАВ",
+              "topic_id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-i-osnovni-554798",
+              "position": 2,
+              "question_count": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "name": "D",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 8,
+      "variants": [
+        {
+          "id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g",
+          "category_id": "D",
+          "title": "D. с правоспособност за категория С1/С и категория В със стаж 2г.(След 07.02.26г.)",
+          "description": "с правоспособност за категория С1/С и категория В със стаж 2г.",
+          "effective_note": "След 07.02.26г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/17_D_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A11_%D0%A1_%D0%B8_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_%D1%81%D1%8A%D1%81_%D1%81%D1%82%D0%B0%D0%B6_2%D0%B3_01.10.2026/17_D_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%A11_%D0%A1_%D0%B8_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%92_%D1%81%D1%8A%D1%81_%D1%81%D1%82%D0%B0%D0%B6_2%D0%B3_01.10.2026.html",
+          "source_sha256": "a29b3ecd6e4d62c531a5f0a258412b2365820de967c5b8ffed454f1b31946d11",
+          "source_edition": "2026-10-01",
+          "position": 17,
+          "question_count": 388,
+          "sections": [
+            {
+              "id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g#s1",
+              "variant_id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА АВТОМОБИЛА, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-agregati-vazli-i-sistemi-na-avtomobila-tyahnoto-076e0a",
+              "position": 1,
+              "question_count": 140
+            },
+            {
+              "id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g#s2",
+              "variant_id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g",
+              "number": 2,
+              "name": "Раздел 2. ПОДДЪРЖАНЕ НА АВТОМОБИЛА В ТЕХНИЧЕСКА ИЗПРАВНОСТ",
+              "topic_id": "poddarzhane-na-avtomobila-v-tehnicheska-izpravnost",
+              "position": 2,
+              "question_count": 74
+            },
+            {
+              "id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g#s3",
+              "variant_id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g",
+              "number": 3,
+              "name": "Раздел 3. ПРЕВОЗ НА ПЪТНИЦИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ",
+              "topic_id": "prevoz-na-patnitsi-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz",
+              "position": 3,
+              "question_count": 68
+            },
+            {
+              "id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g#s4",
+              "variant_id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g",
+              "number": 4,
+              "name": "Раздел 4. ВИДОВЕ АВТОБУСНИ ПРЕВОЗИ. ТРАНСПОРТНИ СХЕМИ",
+              "topic_id": "vidove-avtobusni-prevozi-transportni-shemi",
+              "position": 4,
+              "question_count": 73
+            },
+            {
+              "id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g#s5",
+              "variant_id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g",
+              "number": 5,
+              "name": "Раздел 5. НОРМИ СВЪРЗАНИ С МАСАТА, РАЗМЕРИТЕ И КЛАСА НА ПРЕВОЗНИТЕ СРЕДСТВА ЗА ПРЕВОЗ НА ПЪТНИЦИ",
+              "topic_id": "normi-svarzani-s-masata-razmerite-i-klasa-na-prevoznite-209949",
+              "position": 5,
+              "question_count": 15
+            },
+            {
+              "id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g#s6",
+              "variant_id": "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g",
+              "number": 6,
+              "name": "Раздел 6. ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ СЛЕД ИНЦИДЕНТ. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА",
+              "topic_id": "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-386e8b",
+              "position": 6,
+              "question_count": 18
+            }
+          ]
+        },
+        {
+          "id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk",
+          "category_id": "D",
+          "title": "D. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. и УПК (След 12.12.24г.)",
+          "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. и УПК",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/18_D_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_%D0%B8_%D0%A3%D0%9F%D0%9A_01.10.2026/18_D_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_%D0%B8_%D0%A3%D0%9F%D0%9A_01.10.2026.html",
+          "source_sha256": "6794fb6fc25c4fe0258305a1d8cb4823191c2a0824ab548b51d3d2125dcb8fe9",
+          "source_edition": "2026-10-01",
+          "position": 18,
+          "question_count": 380,
+          "sections": [
+            {
+              "id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk#s1",
+              "variant_id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА АВТОМОБИЛА, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-agregati-vazli-i-sistemi-na-avtomobila-tyahnoto-076e0a",
+              "position": 1,
+              "question_count": 140
+            },
+            {
+              "id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk#s2",
+              "variant_id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk",
+              "number": 2,
+              "name": "Раздел 2. ПОДДЪРЖАНЕ НА АВТОМОБИЛА В ТЕХНИЧЕСКА ИЗПРАВНОСТ",
+              "topic_id": "poddarzhane-na-avtomobila-v-tehnicheska-izpravnost",
+              "position": 2,
+              "question_count": 66
+            },
+            {
+              "id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk#s3",
+              "variant_id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk",
+              "number": 3,
+              "name": "Раздел 3. ПРЕВОЗ НА ПЪТНИЦИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ",
+              "topic_id": "prevoz-na-patnitsi-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz",
+              "position": 3,
+              "question_count": 68
+            },
+            {
+              "id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk#s4",
+              "variant_id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk",
+              "number": 4,
+              "name": "Раздел 4. ВИДОВЕ АВТОБУСНИ ПРЕВОЗИ. ТРАНСПОРТНИ СХЕМИ",
+              "topic_id": "vidove-avtobusni-prevozi-transportni-shemi",
+              "position": 4,
+              "question_count": 73
+            },
+            {
+              "id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk#s5",
+              "variant_id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk",
+              "number": 5,
+              "name": "Раздел 5. НОРМИ СВЪРЗАНИ С МАСАТА, РАЗМЕРИТЕ И КЛАСА НА ПРЕВОЗНИТЕ СРЕДСТВА ЗА ПРЕВОЗ НА ПЪТНИЦИ",
+              "topic_id": "normi-svarzani-s-masata-razmerite-i-klasa-na-prevoznite-209949",
+              "position": 5,
+              "question_count": 15
+            },
+            {
+              "id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk#s6",
+              "variant_id": "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk",
+              "number": 6,
+              "name": "Раздел 6. ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ СЛЕД ИНЦИДЕНТ. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА",
+              "topic_id": "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-386e8b",
+              "position": 6,
+              "question_count": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D103",
+      "name": "D (103)",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 9,
+      "variants": [
+        {
+          "id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus",
+          "category_id": "D103",
+          "title": "D (103). с правоспособност за кат. D и допълнително обучение за управление на тролейбус (След 12.12.24г.)",
+          "description": "с правоспособност за кат. D и допълнително обучение за управление на тролейбус",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/19_D_103_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82_D_%D0%B8_%D0%B4%D0%BE%D0%BF%D1%8A%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE_%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D0%B9%D0%B1%D1%83%D1%81_01.10.2026/19_D_103_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82_D_%D0%B8_%D0%B4%D0%BE%D0%BF%D1%8A%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE_%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D1%82%D1%80%D0%BE%D0%BB%D0%B5%D0%B9%D0%B1%D1%83%D1%81_01.10.2026.html",
+          "source_sha256": "d8ad94588c5ddf5f4b06597734f676338527eae01138f8fbf11e204ba0c27973",
+          "source_edition": "2026-10-01",
+          "position": 19,
+          "question_count": 87,
+          "sections": [
+            {
+              "id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus#s1",
+              "variant_id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА ТРОЛЕЙБУС, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-agregati-vazli-i-sistemi-na-troleybus-tyahnoto-c7fbd3",
+              "position": 1,
+              "question_count": 16
+            },
+            {
+              "id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus#s2",
+              "variant_id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus",
+              "number": 2,
+              "name": "Раздел 2. ПОДДЪРЖАНЕ НА ТРОЛЕЙБУСА В ТЕХНИЧЕСКА ИЗПРАВНОСТ",
+              "topic_id": "poddarzhane-na-troleybusa-v-tehnicheska-izpravnost",
+              "position": 2,
+              "question_count": 31
+            },
+            {
+              "id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus#s3",
+              "variant_id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus",
+              "number": 3,
+              "name": "Раздел 3. ПРЕВОЗВАНЕ НА ПЪТНИЦИ С МАСОВ ГРАДСКИ ТРАНСПОРТ. ИЗИСКВАНИЯ КЪМ ТРОЛЕЙБУСА ВЪВ ВРЪЗКА С ПРЕВОЗА. ОБХВАТ НА ВИДИМОСТТА В ЗАВИСИМОСТ ОТ ГАБАРИТИТЕ",
+              "topic_id": "prevozvane-na-patnitsi-s-masov-gradski-transport-iziskvania-kam-02f8a7",
+              "position": 3,
+              "question_count": 36
+            },
+            {
+              "id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus#s4",
+              "variant_id": "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus",
+              "number": 4,
+              "name": "Раздел 4. ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ СЛЕД ИНЦИДЕНТ. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА",
+              "topic_id": "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-386e8b",
+              "position": 4,
+              "question_count": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DE",
+      "name": "D+E",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 10,
+      "variants": [
+        {
+          "id": "DE.s-pravosposobnost-za-kategoria-d",
+          "category_id": "DE",
+          "title": "D+E. с правоспособност за категория D (След 12.12.24г.)",
+          "description": "с правоспособност за категория D",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/20_DE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D_01.10.2026/20_DE_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_D_01.10.2026.html",
+          "source_sha256": "4071f496d042d85fd632adbaf88afa6f1c52b8585b8e138e3dfd023645056d37",
+          "source_edition": "2026-10-01",
+          "position": 20,
+          "question_count": 101,
+          "sections": [
+            {
+              "id": "DE.s-pravosposobnost-za-kategoria-d#s1",
+              "variant_id": "DE.s-pravosposobnost-za-kategoria-d",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ ВИДОВЕ ТЕГЛЕЩИ МОТОРНИ ПРЕВОЗНИ СРЕДСТВА (ВЛЕКАЧИ), ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovni-vidove-tegleshti-motorni-prevozni-sredstva-vlekachi-a7dbdc",
+              "position": 1,
+              "question_count": 6
+            },
+            {
+              "id": "DE.s-pravosposobnost-za-kategoria-d#s2",
+              "variant_id": "DE.s-pravosposobnost-za-kategoria-d",
+              "number": 2,
+              "name": "Раздел 2. ОСНОВНИТЕ ВИДОВЕ РЕМАРКЕТА, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "osnovnite-vidove-remarketa-naimenovanie-i-prednaznachenie",
+              "position": 2,
+              "question_count": 25
+            },
+            {
+              "id": "DE.s-pravosposobnost-za-kategoria-d#s3",
+              "variant_id": "DE.s-pravosposobnost-za-kategoria-d",
+              "number": 3,
+              "name": "Раздел 3. СИСТЕМИ ЗА ПРИКАЧВАНЕ, ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+              "topic_id": "sistemi-za-prikachvane-tyahnoto-naimenovanie-i-prednaznachenie",
+              "position": 3,
+              "question_count": 39
+            },
+            {
+              "id": "DE.s-pravosposobnost-za-kategoria-d#s4",
+              "variant_id": "DE.s-pravosposobnost-za-kategoria-d",
+              "number": 4,
+              "name": "Раздел 4. ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ И ОСНОВНИ ОПЕРАЦИИ, ЗА ДА СЕ ПОДДЪРЖА ТЕХНИЧЕСКИ ИЗПРАВЕН СЪСТАВ",
+              "topic_id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-i-osnovni-554798",
+              "position": 4,
+              "question_count": 14
+            },
+            {
+              "id": "DE.s-pravosposobnost-za-kategoria-d#s5",
+              "variant_id": "DE.s-pravosposobnost-za-kategoria-d",
+              "number": 5,
+              "name": "Раздел 5. ОСНОВНИТЕ ПРАВИЛА ПО ТЕХНИКА НА БЕЗОПАСНОСТ",
+              "topic_id": "osnovnite-pravila-po-tehnika-na-bezopasnost",
+              "position": 5,
+              "question_count": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TTM",
+      "name": "Ттм",
+      "description": null,
+      "source_id": "iaaa-eis",
+      "position": 11,
+      "variants": [
+        {
+          "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+          "category_id": "TTM",
+          "title": "Ттм. без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+          "description": "без правоспособност или с правоспособност за категория АМ",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/21_%D0%A2%D1%82%D0%BC_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026/21_%D0%A2%D1%82%D0%BC_%D0%B1%D0%B5%D0%B7_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B8%D0%BB%D0%B8_%D1%81_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90%D0%9C_01.10.2026.html",
+          "source_sha256": "fce4908e7098cfbc0bac66bc214986c0a495c20ada87b8b8eb146d7450fd0d67",
+          "source_edition": "2026-10-01",
+          "position": 21,
+          "question_count": 959,
+          "sections": [
+            {
+              "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s1",
+              "variant_id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ ВЪЗЛИ, АГРЕГАТИ И УРЕДБИ НА ТРАМВАЙНАТА МОТРИСА",
+              "topic_id": "osnovni-vazli-agregati-i-uredbi-na-tramvaynata-motrisa",
+              "position": 1,
+              "question_count": 32
+            },
+            {
+              "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s2",
+              "variant_id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 2,
+              "name": "Раздел 2. ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ ЗА ТЕХНИЧЕСКАТА ИЗПРАВНОСТ НА ТРАМВАЙНАТА МОТРИСА",
+              "topic_id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-za-cdb064",
+              "position": 2,
+              "question_count": 16
+            },
+            {
+              "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s3",
+              "variant_id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 3,
+              "name": "Раздел 3. ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ",
+              "topic_id": "zapoznavane-s-patishtata-prevoznite-sredstva-i-uchastnitsite-v-patnoto-dvizhenie",
+              "position": 3,
+              "question_count": 231
+            },
+            {
+              "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s4",
+              "variant_id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 4,
+              "name": "Раздел 4. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 4,
+              "question_count": 202
+            },
+            {
+              "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s5",
+              "variant_id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 5,
+              "name": "Раздел 5. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 5,
+              "question_count": 301
+            },
+            {
+              "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s6",
+              "variant_id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 6,
+              "name": "Раздел 6. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 6,
+              "question_count": 73
+            },
+            {
+              "id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am#s7",
+              "variant_id": "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am",
+              "number": 7,
+              "name": "Раздел 7. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 7,
+              "question_count": 104
+            }
+          ]
+        },
+        {
+          "id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+          "category_id": "TTM",
+          "title": "Ттм. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+          "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП.",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/22_%D0%A2%D1%82%D0%BC_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026/22_%D0%A2%D1%82%D0%BC_%D0%B7%D0%B0%D0%B3%D1%83%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%BF%D0%BE_%D1%80%D0%B5%D0%B4%D0%B0_%D0%BD%D0%B0_%D1%87%D0%BB_157_%D0%B0%D0%BB_4_%D0%97%D0%94%D0%B2%D0%9F_01.10.2026.html",
+          "source_sha256": "014c4dce7cef590a9aba6cd03e3045cd5ddb7d975989c25d4a579a8fe7b39db9",
+          "source_edition": "2026-10-01",
+          "position": 22,
+          "question_count": 680,
+          "sections": [
+            {
+              "id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s4",
+              "variant_id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 4,
+              "name": "Раздел 4. СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+              "topic_id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+              "position": 1,
+              "question_count": 202
+            },
+            {
+              "id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s5",
+              "variant_id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 5,
+              "name": "Раздел 5. ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+              "topic_id": "pravila-za-dvizhenieto-po-patishtata",
+              "position": 2,
+              "question_count": 301
+            },
+            {
+              "id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s6",
+              "variant_id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 6,
+              "name": "Раздел 6. ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+              "topic_id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+              "position": 3,
+              "question_count": 73
+            },
+            {
+              "id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp#s7",
+              "variant_id": "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp",
+              "number": 7,
+              "name": "Раздел 7. ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+              "topic_id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+              "position": 4,
+              "question_count": 104
+            }
+          ]
+        },
+        {
+          "id": "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78",
+          "category_id": "TTM",
+          "title": "Ттм. притежаващ правоспособност за категория А, А1, А2, Ткт, В1, В или В(78) (След 12.12.24г.)",
+          "description": "притежаващ правоспособност за категория А, А1, А2, Ткт, В1, В или В(78)",
+          "effective_note": "След 12.12.24г.",
+          "source_url": "https://public-eis.rta.government.bg/exam-questions/23_%D0%A2%D1%82%D0%BC_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%902_%D0%A2%D0%BA%D1%82_%D0%921_%D0%92_%D0%B8%D0%BB%D0%B8_%D0%9278_01.10.2026/23_%D0%A2%D1%82%D0%BC_%D0%BF%D1%80%D0%B8%D1%82%D0%B5%D0%B6%D0%B0%D0%B2%D0%B0%D1%89_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D1%81%D1%82_%D0%B7%D0%B0_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F_%D0%90_%D0%901_%D0%902_%D0%A2%D0%BA%D1%82_%D0%921_%D0%92_%D0%B8%D0%BB%D0%B8_%D0%9278_01.10.2026.html",
+          "source_sha256": "8a963cbb0ed84f5497f33d396ce67cce88bdd7be0b1592a6a89258fc9ec9b67b",
+          "source_edition": "2026-10-01",
+          "position": 23,
+          "question_count": 48,
+          "sections": [
+            {
+              "id": "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78#s1",
+              "variant_id": "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78",
+              "number": 1,
+              "name": "Раздел 1. ОСНОВНИ ВЪЗЛИ, АГРЕГАТИ И УРЕДБИ НА ТРАМВАЙНАТА МОТРИСА",
+              "topic_id": "osnovni-vazli-agregati-i-uredbi-na-tramvaynata-motrisa",
+              "position": 1,
+              "question_count": 32
+            },
+            {
+              "id": "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78#s2",
+              "variant_id": "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78",
+              "number": 2,
+              "name": "Раздел 2. ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ ЗА ТЕХНИЧЕСКАТА ИЗПРАВНОСТ НА ТРАМВАЙНАТА МОТРИСА",
+              "topic_id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-za-cdb064",
+              "position": 2,
+              "question_count": 16
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite",
+      "name": "ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ"
+    },
+    {
+      "id": "iziskvania-kam-mps-vav-vrazka-s-prevoza-obhvat-na-vidimostta-v-514996",
+      "name": "ИЗИСКВАНИЯ КЪМ МПС ВЪВ ВРЪЗКА С ПРЕВОЗА. ОБХВАТ НА ВИДИМОСТТА В ЗАВИСИМОСТ ОТ ГАБАРИТНИТЕ РАЗМЕРИ"
+    },
+    {
+      "id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-i-osnovni-554798",
+      "name": "ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ И ОСНОВНИ ОПЕРАЦИИ, ЗА ДА СЕ ПОДДЪРЖА ТЕХНИЧЕСКИ ИЗПРАВЕН СЪСТАВ"
+    },
+    {
+      "id": "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-za-cdb064",
+      "name": "ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ ЗА ТЕХНИЧЕСКАТА ИЗПРАВНОСТ НА ТРАМВАЙНАТА МОТРИСА"
+    },
+    {
+      "id": "normi-svarzani-s-masata-razmerite-i-klasa-na-prevoznite-209949",
+      "name": "НОРМИ СВЪРЗАНИ С МАСАТА, РАЗМЕРИТЕ И КЛАСА НА ПРЕВОЗНИТЕ СРЕДСТВА ЗА ПРЕВОЗ НА ПЪТНИЦИ"
+    },
+    {
+      "id": "obshti-svedenia-za-avtomobila",
+      "name": "ОБЩИ СВЕДЕНИЯ ЗА АВТОМОБИЛА"
+    },
+    {
+      "id": "obshti-svedenia-za-motopeda",
+      "name": "ОБЩИ СВЕДЕНИЯ ЗА МОТОПЕДА"
+    },
+    {
+      "id": "obshti-svedenia-za-mototsikleta",
+      "name": "ОБЩИ СВЕДЕНИЯ ЗА МОТОЦИКЛЕТА"
+    },
+    {
+      "id": "osnovni-agregati-vazli-i-sistemi-na-avtomobila-tyahnoto-076e0a",
+      "name": "ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА АВТОМОБИЛА, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ"
+    },
+    {
+      "id": "osnovni-agregati-vazli-i-sistemi-na-troleybus-tyahnoto-c7fbd3",
+      "name": "ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА ТРОЛЕЙБУС, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ"
+    },
+    {
+      "id": "osnovni-vazli-agregati-i-uredbi-na-tramvaynata-motrisa",
+      "name": "ОСНОВНИ ВЪЗЛИ, АГРЕГАТИ И УРЕДБИ НА ТРАМВАЙНАТА МОТРИСА"
+    },
+    {
+      "id": "osnovni-vidove-tegleshti-motorni-prevozni-sredstva-vlekachi-a7dbdc",
+      "name": "ОСНОВНИ ВИДОВЕ ТЕГЛЕЩИ МОТОРНИ ПРЕВОЗНИ СРЕДСТВА (ВЛЕКАЧИ), ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ"
+    },
+    {
+      "id": "osnovnite-pravila-po-tehnika-na-bezopasnost",
+      "name": "ОСНОВНИТЕ ПРАВИЛА ПО ТЕХНИКА НА БЕЗОПАСНОСТ"
+    },
+    {
+      "id": "osnovnite-vidove-remarketa-naimenovanie-i-prednaznachenie",
+      "name": "ОСНОВНИТЕ ВИДОВЕ РЕМАРКЕТА, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ"
+    },
+    {
+      "id": "osnovnite-vidove-remarketa-tyahnoto-naimenovanie-i-prednaznachenie",
+      "name": "ОСНОВНИТЕ ВИДОВЕ РЕМАРКЕТА, ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ"
+    },
+    {
+      "id": "poddarzhane-na-avtomobila-v-tehnicheska-izpravnost",
+      "name": "ПОДДЪРЖАНЕ НА АВТОМОБИЛА В ТЕХНИЧЕСКА ИЗПРАВНОСТ"
+    },
+    {
+      "id": "poddarzhane-na-troleybusa-v-tehnicheska-izpravnost",
+      "name": "ПОДДЪРЖАНЕ НА ТРОЛЕЙБУСА В ТЕХНИЧЕСКА ИЗПРАВНОСТ"
+    },
+    {
+      "id": "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-386e8b",
+      "name": "ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ СЛЕД ИНЦИДЕНТ. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА"
+    },
+    {
+      "id": "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-f3ed92",
+      "name": "ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ ВЪВ ВРЪЗКА С ВИДА И ХАРАКТЕРА НА ПРЕВОЗВАНИЯ ТОВАР. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА"
+    },
+    {
+      "id": "pravila-za-dvizhenieto-po-patishtata",
+      "name": "ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА"
+    },
+    {
+      "id": "prevoz-na-patnitsi-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz",
+      "name": "ПРЕВОЗ НА ПЪТНИЦИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ"
+    },
+    {
+      "id": "prevoz-na-tovari-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz",
+      "name": "ПРЕВОЗ НА ТОВАРИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ"
+    },
+    {
+      "id": "prevozvane-na-patnitsi-s-masov-gradski-transport-iziskvania-kam-02f8a7",
+      "name": "ПРЕВОЗВАНЕ НА ПЪТНИЦИ С МАСОВ ГРАДСКИ ТРАНСПОРТ. ИЗИСКВАНИЯ КЪМ ТРОЛЕЙБУСА ВЪВ ВРЪЗКА С ПРЕВОЗА. ОБХВАТ НА ВИДИМОСТТА В ЗАВИСИМОСТ ОТ ГАБАРИТИТЕ"
+    },
+    {
+      "id": "sistemi-za-prikachvane-naimenovanie-i-prednaznachenie",
+      "name": "СИСТЕМИ ЗА ПРИКАЧВАНЕ, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ"
+    },
+    {
+      "id": "sistemi-za-prikachvane-tyahnoto-naimenovanie-i-prednaznachenie",
+      "name": "СИСТЕМИ ЗА ПРИКАЧВАНЕ, ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ"
+    },
+    {
+      "id": "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto",
+      "name": "СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО"
+    },
+    {
+      "id": "vidove-avtobusni-prevozi-transportni-shemi",
+      "name": "ВИДОВЕ АВТОБУСНИ ПРЕВОЗИ. ТРАНСПОРТНИ СХЕМИ"
+    },
+    {
+      "id": "vidove-tovari-i-spetsifichnite-osobenosti-okazvashti-vliyanie-5abc99",
+      "name": "ВИДОВЕ ТОВАРИ И СПЕЦИФИЧНИТЕ ОСОБЕНОСТИ, ОКАЗВАЩИ ВЛИЯНИЕ ВЪРХУ БЕЗОПАСНОТО ИМ ТРАНСПОРТИРАНЕ"
+    },
+    {
+      "id": "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva",
+      "name": "ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА"
+    },
+    {
+      "id": "zapoznavane-s-patishtata-prevoznite-sredstva-i-uchastnitsite-v-patnoto-dvizhenie",
+      "name": "ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ"
+    }
+  ]
+}
