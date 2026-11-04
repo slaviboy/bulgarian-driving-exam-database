@@ -198,7 +198,8 @@ class HttpClient:
         return response.json()
 
     def head(self, url: str) -> httpx.Response:
-        return self.request("HEAD", url)
+        # Same representation as download(): identity encoding, so Content-Length and ETag match.
+        return self.request("HEAD", url, headers={"Accept-Encoding": "identity"})
 
     def conditional_get(
         self, url: str, *, etag: str | None = None, last_modified: str | None = None
@@ -240,7 +241,9 @@ class HttpClient:
             part.unlink(missing_ok=True)
 
         digest = hashlib.sha256()
-        headers: dict[str, str] = {}
+        # Ask for the stored bytes, not a gzip transfer encoding: Content-Length, byte ranges and the
+        # SHA-256 must all refer to the file exactly as it exists on the server.
+        headers: dict[str, str] = {"Accept-Encoding": "identity"}
         if offset:
             with part.open("rb") as existing:
                 for chunk in iter(lambda: existing.read(CHUNK_SIZE), b""):

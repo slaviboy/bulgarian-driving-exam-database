@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <style>
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+            blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+            em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
+            tt, var, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption,
+            tbody, tfoot, thead, tr, th, td, i, b {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-weight: 300;
+            font-style: inherit;
+            font-family: inherit;
+            text-decoration: none;
+            vertical-align: baseline;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: black;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        
+        body{
+            margin: 0 auto;
+            
+            max-width: 1140px;
+            padding-top: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-spacing: 0;
+            -fs-table-paginate: paginate;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        
+        table.header{
+            font-size: 16px;
+           
+            padding: 5px;
+            margin-bottom: 40px;
+        }
+        
+        
+        table.header td, 
+        table.header th {
+            border: none !important;
+        }
+        
+        
+        div.wrapper{
+		    position: relative;
+		    width: 100%;
+		    margin-bottom: 20px;
+        }
+        
+        
+        table.table-heading{
+            width: 100%;
+            background: white;
+            margin-bottom: 5px;
+            position: relative;
+            border: none!important;
+            padding: 5px;
+            padding-top: 10px;
+        }
+        
+        table.table-heading td,
+        table.table-heading th{
+            border: none !important;
+            font-size:13px;
+        }
+        
+        table.question{
+            width: 100%;
+            background: white;
+            padding: 5px;
+            position: relative;
+            border-radius: 3px;
+        }
+        table.question:nth-child(even) tbody{
+        	background: #f3f3f3;
+        }
+        
+        table.question:nth-child(odd) tbody{
+        	background: white;
+        }
+            
+        
+        table.video-frames{
+            border:1px solid #d6d6d6 !important;
+            margin-top:10px;
+            background: #f2f2f2;
+            border-radius: 3px;
+        }
+        
+        
+        h1 {
+            font-weight: bold;
+            line-height: 20px !important;
+            padding-bottom: 2px;
+            font-size: 17px !important;
+            text-transform: uppercase;
+        }
+        
+        h1.text-category{
+        	color: #0060aa;
+        	border-bottom: 3px solid #0060aa;
+        	padding-bottom: 20px;
+        	margin-top: 30px;
+        }
+        
+        .text-blue{
+        	color: #22A7F0;
+        }
+        
+        b {
+            font-weight: bold;
+        }
+        
+        @page {
+            size: A4;
+        }
+        
+        .tg th {
+            font-weight: bold;
+        }
+        
+        .tg {
+            border-collapse: separate;
+            border-spacing: 0px;
+        }
+        
+        .tg td, .tg th {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            padding: 2px 2px;
+            word-break: normal;
+            vertical-align: middle;
+        }
+        
+        td, th {
+            border: 1px solid #eeeeee !important;
+        }
+        
+        .tg {
+            text-align: left;
+        }
+        
+        .tg .tg-center {
+            text-align: center;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        .tg-right{
+        	text-align:right;
+        }
+        
+        .no-border td, .no-border th {
+            border: none !important;
+        }
+        
+        i.check {
+            vertical-align: middle;
+            display: inline-block;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #0060aa;
+            border-radius: 3px;
+            position: relative;
+        }
+        
+        i.check.correct {
+            background: #0060aa;
+        }
+        
+        i.check.correct:before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: inline-block;
+            color: white;
+            top: -2px;
+        }
+        
+        var {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        .qpictureWrp{
+	        display: table-cell;
+		    vertical-align: middle;
+		    height: 100%;
+		    position: relative;
+        }
+        
+  
+        
+        .qpicture{
+			width: 93%;
+		    height: 140px;
+		   /*  max-width:175px; */
+		    background-color: #fff;
+		   
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		    background-position: center;
+		    z-index: 2;
+		   
+		    box-sizing: border-box;
+		    display: inline-block;
+		    position: relative;
+		    
+		    border-radius: 4px;
+		    
+		    border: 1px solid #d6d6d6 !important;
+	    
+        }
+        
+        .qpictureWrp.small .qpicture{
+        	height:100px !important;
+        }
+        
+        .qFrame{
+        	height: 80px !important;
+        }
+       
+        
+        .p-b-14{
+            padding-bottom:14px !important;
+        }
+        
+        .text-right{
+            text-align:right;
+        }
+        
+        .f-13{
+        	font-size:13px;
+        }
+        
+        .f-11{
+            font-size:11px;
+        }
+        
+        .m-b-10{
+        	margin-bottom:10px;
+        }
+        
+        
+        .sectionTitle{
+		    padding: 20px;
+		   	font-weight: bold;
+		    font-size: 15px;
+		    background: #f8f8f8 !important;
+		    border-bottom: 1px solid #dee2e6;
+		     margin-top: 30px;
+        }
+        
+         .sectionSubTitle{
+          	border-top: 2px solid black;
+         	font-weight: bold;
+		    font-size: 14px;
+		   	padding: 10px;
+         }
+        
+        #footer{
+            text-align:right;
+        }
+        
+        @page {
+            @bottom-right { content:element(footer);
+    
+            }
+          
+        }
+        
+        #footer {
+            position: running(footer);
+            text-align: left;
+        }
+        
+        #pagenumber:before {
+            content: counter(page);
+        }
+        
+        #pagecount:before {
+            content: counter(pages);
+        }
+        
+        
+        /* Width % */
+        [class*=" w-"], [class^="w-"] {
+            flex-basis: auto !important;
+            flex-grow: 0 !important;
+        }
+        
+        @media only screen and (max-width: 1200px) {
+            [class*=" w-"], [class^="w-"] {
+                flex-basis: 1%;
+                flex-grow: 1 !important;
+            }
+        }
+        
+        @media only screen and (max-width: 900px) {
+            [class*=" w-"], [class^="w-"] {
+                word-break: break-all;
+            }
+        }
+        
+        .w-1    {width: 1% !important;}
+        .w-2    {width: 2% !important;}
+        .w-3    {width: 3% !important;}
+        .w-4    {width: 4% !important;}
+        .w-5    {width: 5% !important;}
+        .w-6    {width: 6% !important;}
+        .w-7    {width: 7% !important;}
+        .w-8    {width: 8% !important;}
+        .w-9    {width: 9% !important;}
+        .w-10    {width: 10% !important;}
+        .w-11    {width: 11% !important;}
+        .w-12    {width: 12% !important;}
+        .w-13    {width: 13% !important;}
+        .w-14    {width: 14% !important;}
+        .w-15    {width: 15% !important;}
+        .w-16    {width: 16% !important;}
+        .w-17    {width: 17% !important;}
+        .w-18    {width: 18% !important;}
+        .w-19    {width: 19% !important;}
+        .w-20    {width: 20% !important;}
+        .w-21    {width: 21% !important;}
+        .w-22    {width: 22% !important;}
+        .w-23    {width: 23% !important;}
+        .w-24    {width: 24% !important;}
+        .w-25    {width: 25% !important;}
+        .w-26    {width: 26% !important;}
+        .w-27    {width: 27% !important;}
+        .w-28    {width: 28% !important;}
+        .w-29    {width: 29% !important;}
+        .w-30    {width: 30% !important;}
+        .w-31    {width: 31% !important;}
+        .w-32    {width: 32% !important;}
+        .w-33    {width: 33% !important;}
+        .w-34    {width: 34% !important;}
+        .w-35    {width: 35% !important;}
+        .w-36    {width: 36% !important;}
+        .w-37    {width: 37% !important;}
+        .w-38    {width: 38% !important;}
+        .w-39    {width: 39% !important;}
+        .w-40    {width: 40% !important;}
+        .w-41    {width: 41% !important;}
+        .w-42    {width: 42% !important;}
+        .w-43    {width: 43% !important;}
+        .w-44    {width: 44% !important;}
+        .w-45    {width: 45% !important;}
+        .w-46    {width: 46% !important;}
+        .w-47    {width: 47% !important;}
+        .w-48    {width: 48% !important;}
+        .w-49    {width: 49% !important;}
+        .w-50    {width: 50% !important;}
+        .w-51    {width: 51% !important;}
+        .w-52    {width: 52% !important;}
+        .w-53    {width: 53% !important;}
+        .w-54    {width: 54% !important;}
+        .w-55    {width: 55% !important;}
+        .w-56    {width: 56% !important;}
+        .w-57    {width: 57% !important;}
+        .w-58    {width: 58% !important;}
+        .w-59    {width: 59% !important;}
+        .w-60    {width: 60% !important;}
+        .w-61    {width: 61% !important;}
+        .w-62    {width: 62% !important;}
+        .w-63    {width: 63% !important;}
+        .w-64    {width: 64% !important;}
+        .w-65    {width: 65% !important;}
+        .w-66    {width: 66% !important;}
+        .w-67    {width: 67% !important;}
+        .w-68    {width: 68% !important;}
+        .w-69    {width: 69% !important;}
+        .w-70    {width: 70% !important;}
+        .w-71    {width: 71% !important;}
+        .w-72    {width: 72% !important;}
+        .w-73    {width: 73% !important;}
+        .w-74    {width: 74% !important;}
+        .w-75    {width: 75% !important;}
+        .w-76    {width: 76% !important;}
+        .w-77    {width: 77% !important;}
+        .w-78    {width: 78% !important;}
+        .w-79    {width: 79% !important;}
+        .w-80    {width: 80% !important;}
+        .w-81    {width: 81% !important;}
+        .w-82    {width: 82% !important;}
+        .w-83    {width: 83% !important;}
+        .w-84    {width: 84% !important;}
+        .w-85    {width: 85% !important;}
+        .w-86    {width: 86% !important;}
+        .w-87    {width: 87% !important;}
+        .w-88    {width: 88% !important;}
+        .w-89    {width: 89% !important;}
+        .w-90    {width: 90% !important;}
+        .w-91    {width: 91% !important;}
+        .w-92    {width: 92% !important;}
+        .w-93    {width: 93% !important;}
+        .w-94    {width: 94% !important;}
+        .w-95    {width: 95% !important;}
+        .w-96    {width: 96% !important;}
+        .w-97    {width: 97% !important;}
+        .w-98    {width: 98% !important;}
+        .w-99    {width: 99% !important;}
+        .w-100    {width: 100% !important;}
+        div.logo {
+			display: flex;
+			margin-top: 30px;
+		}
+		
+		div.logo div.left {
+			display: flex;
+			align-items: center;
+		}
+		
+		div.logo div.left i.gerb-logo {
+			width: 80px;
+			height: 60px;
+			background-image:
+				url("https://rta.government.bg/assets/images/svg/gerb_lion_80x75.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		
+		div.logo div.left div.iaaa-text {
+			display: flex;
+			color: black;
+			font-size: 19px;
+			flex-direction: column;
+			margin-right: 20px;
+		}
+		
+		div.logo div.left div.iaaa-text span {
+			font-weight: normal;
+			margin-bottom: 10px;
+		}
+		
+		div.logo div.left div.iaaa-text p {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		
+		div.logo i.iaaa-logo {
+			width: 60px;
+			height: 60px;
+			background-image:
+				url("https://rta.government.bg/assets/images/svg/logo_header_80x80.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+        
+        
+    </style>
+</head>
+ 
+ 
+ 
+<body style="font-family: 'Ubuntu';" >
+    
+    
+    <table class="header">
+        <tbody>
+            <tr>
+                <td>
+                    <table class="tg">
+                        <tbody>
+                        	 <tr>
+                                <td>
+                                	<div class="logo">
+										<div class="left">
+											<i class="gerb-logo"></i>
+											<div class="iaaa-text">
+												<span>Министерство на транспорта и съобщенията</span>
+												<p>Изпълнителна агенция</p>
+												<p>"Автомобилна администрация"</p>
+											</div>
+											
+										</div>
+										<i class="iaaa-logo"></i>
+									</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                 <h1 class="text-category">B. без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="wrapper">
+      	<p class="sectionTitle">Раздел 1. ОБЩИ СВЕДЕНИЯ ЗА АВТОМОБИЛА</p>
+    	<div>
+		
+        <table class="tg table-heading">
+            <thead>
+                <tr>
+                	<th class="tg-center w-7">ID</th>
+                    
+                    
+                    <th class="tg-center w-7">Точки</th>
+                    <th class="w-79">Въпрос и отговори</th>
+                </tr>
+            </thead>
+        </table>
+        
+        <table class="tg question" id="q5300">    
+            <tbody>
+                <tr>
+                	<td class="tg-center w-7">
+                        <b>5300</b>
+                    </td>
+                    
+                    
+                    <td class="tg-center w-7">
+                        <var>1</var>
+                    </td>
+                    <td class="w-79">
+                        <table class="tg no-border">
+                            <thead>
+                                <tr>
+                                    <td colspan="${question.entry.picture} == null ? _ : 2">
+                                        <table class="tg">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-b-14" colspan="2">
+                                                        <b>Съединителят е предназначен:</b>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table class="tg">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check correct"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">да прекъсва силовата връзка между двигателя и предавателната кутия</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">да осъществява връзка между двигателя и карданното предаване</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">да съединява елементите на трансмисията с рамата</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">да прекъсва връзката между предавателната кутия и карданното предаване</var>
+                                                    </td>
+                                                </tr>
+    
+                                                <tr>
+	                                                
+	                                                
+	                                                
+	                                                	
+                               
+                                                </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>
+        
+        <table class="tg question" id="q5452">    
+            <tbody>
+                <tr>
+                	<td class="tg-center w-7">
+                        <b>5452</b>
+                    </td>
+                    
+                    
+                    <td class="tg-center w-7">
+                        <var>1</var>
+                    </td>
+                    <td class="w-79">
+                        <table class="tg no-border">
+                            <thead>
+                                <tr>
+                                    <td colspan="${question.entry.picture} == null ? _ : 2">
+                                        <table class="tg">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-b-14" colspan="2">
+                                                        <b>По какво се различават зимните от летните гуми? </b>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table class="tg">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">по налягането на въздуха </var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check correct"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">по материала, от който е изработен протекторът</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check correct"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">по шарките на протектора</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">по цвета</var>
+                                                    </td>
+                                                </tr>
+    
+                                                <tr>
+	                                                
+	                                                
+	                                                
+	                                                	
+                               
+                                                </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>
+        
+        <table class="tg question" id="q6164">    
+            <tbody>
+                <tr>
+                	<td class="tg-center w-7">
+                        <b>6164</b>
+                    </td>
+                    
+                    
+                    <td class="tg-center w-7">
+                        <var>1</var>
+                    </td>
+                    <td class="w-79">
+                        <table class="tg no-border">
+                            <thead>
+                                <tr>
+                                    <td colspan="${question.entry.picture} == null ? _ : 2">
+                                        <table class="tg">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-b-14" colspan="2">
+                                                        <b>Ако при работещ двигател индикаторът на провобуксуващата система (ASR) свети постоянно, това означава че: </b>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table class="tg">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check correct"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">има технически проблем в системата</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">спирачните накладки са износени</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">системата е готова за използване</var>
+                                                    </td>
+                                                </tr>
+    
+                                                <tr>
+	                                                
+	                                                
+	                                                	
+                               
+                                                </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="qpictureWrp w-30 small">
+										<div class="qpicture" style="background-image: url(./assets/30115.png);"></div>     
+                                    </td>
+                                     
+                                    
+                                </tr>
+                                
+                                
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>
+        
+        <table class="tg question" id="q5480">    
+            <tbody>
+                <tr>
+                	<td class="tg-center w-7">
+                        <b>5480</b>
+                    </td>
+                    
+                    
+                    <td class="tg-center w-7">
+                        <var>1</var>
+                    </td>
+                    <td class="w-79">
+                        <table class="tg no-border">
+                            <thead>
+                                <tr>
+                                    <td colspan="${question.entry.picture} == null ? _ : 2">
+                                        <table class="tg">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-b-14" colspan="2">
+                                                        <b>При светване на кой от символите върху арматурното табло има опасност от сериозна повреда в двигателя, ако не преустановите движението?</b>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table class="tg">
+                                            <tbody>
+                                                
+                                                
+                                                
+                                                
+    
+                                                <tr>
+	                                                <td class="w-40">
+	                                                	 <table class="tg tg-center">
+				                                            <thead>
+				                                                <tr>
+				                                                    <th class="p-b-14" >
+				                                                        <i class="check correct"></i>
+				                                                    </th>
+				                                                </tr>
+				                                                 <tr>
+				                                                    <th class="qpictureWrp small p-b-14">
+				                                                       <div class="qpicture" style="background-image: url(./assets/334684.png);"></div>
+				                                                    </th>
+				                                                </tr>
+				                                            </thead>
+				                                        </table>
+	                                                </td>
+	                                                <td class="w-40">
+	                                                	 <table class="tg tg-center">
+				                                            <thead>
+				                                                <tr>
+				                                                    <th class="p-b-14" >
+				                                                        <i class="check"></i>
+				                                                    </th>
+				                                                </tr>
+				                                                 <tr>
+				                                                    <th class="qpictureWrp small p-b-14">
+				                                                       <div class="qpicture" style="background-image: url(./assets/29956.png);"></div>
+				                                                    </th>
+				                                                </tr>
+				                                            </thead>
+				                                        </table>
+	                                                </td>
+	                                                <td class="w-40">
+	                                                	 <table class="tg tg-center">
+				                                            <thead>
+				                                                <tr>
+				                                                    <th class="p-b-14" >
+				                                                        <i class="check"></i>
+				                                                    </th>
+				                                                </tr>
+				                                                 <tr>
+				                                                    <th class="qpictureWrp small p-b-14">
+				                                                       <div class="qpicture" style="background-image: url(./assets/334683.png);"></div>
+				                                                    </th>
+				                                                </tr>
+				                                            </thead>
+				                                        </table>
+	                                                </td>
+	                                                <td class="w-40">
+	                                                	 <table class="tg tg-center">
+				                                            <thead>
+				                                                <tr>
+				                                                    <th class="p-b-14" >
+				                                                        <i class="check"></i>
+				                                                    </th>
+				                                                </tr>
+				                                                 <tr>
+				                                                    <th class="qpictureWrp small p-b-14">
+				                                                       <div class="qpicture" style="background-image: url(./assets/29958.png);"></div>
+				                                                    </th>
+				                                                </tr>
+				                                            </thead>
+				                                        </table>
+	                                                </td>	
+                               
+                                                </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>
+        
+        </div>
+     </div>
+<div class="wrapper">
+      	<p class="sectionTitle">Раздел 2. ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ</p>
+    	<div>
+		
+        <table class="tg table-heading">
+            <thead>
+                <tr>
+                	<th class="tg-center w-7">ID</th>
+                    
+                    
+                    <th class="tg-center w-7">Точки</th>
+                    <th class="w-79">Въпрос и отговори</th>
+                </tr>
+            </thead>
+        </table>
+        
+        <table class="tg question" id="q5244">    
+            <tbody>
+                <tr>
+                	<td class="tg-center w-7">
+                        <b>5244</b>
+                    </td>
+                    
+                    
+                    <td class="tg-center w-7">
+                        <var>2</var>
+                    </td>
+                    <td class="w-79">
+                        <table class="tg no-border">
+                            <thead>
+                                <tr>
+                                    <td colspan="${question.entry.picture} == null ? _ : 2">
+                                        <table class="tg">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-b-14" colspan="2">
+                                                        <b>Линията, с която се очертава “ВUS”-лентата, е граница на платното за движение.</b>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table class="tg">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check correct"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">правилно</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">неправилно</var>
+                                                    </td>
+                                                </tr>
+    
+                                                <tr>
+	                                                
+	                                                	
+                               
+                                                </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    
+                                     <td class="qpictureWrp w-30">
+										<div class="qpicture" style="background-image: url(./assets/20243.png);"></div>     
+                                    </td>
+                                    
+                                </tr>
+                                
+                                
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>
+        
+        <table class="tg question" id="q12004">    
+            <tbody>
+                <tr>
+                	<td class="tg-center w-7">
+                        <b>12004</b>
+                    </td>
+                    
+                    
+                    <td class="tg-center w-7">
+                        <var>2</var>
+                    </td>
+                    <td class="w-79">
+                        <table class="tg no-border">
+                            <thead>
+                                <tr>
+                                    <td colspan="${question.entry.picture} == null ? _ : 2">
+                                        <table class="tg">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-b-14" colspan="2">
+                                                        <b>Какво трябва да направите в тази ситуация?</b>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table class="tg">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">подавам звуков сигнал на велосипедиста, за да ме пропусне</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">изпреварвам велосипедиста</var>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="w-6">
+                                                        <i class=" check correct"></i>
+                                                    </td>
+                                                    <td class="w-94">
+                                                        <var class="f-13">продължавам движението си зад велосипедиста</var>
+                                                    </td>
+                                                </tr>
+    
+                                                <tr>
+	                                                
+	                                                
+	                                                	
+                               
+                                                </tr>
+    
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    
+                                     
+                                    <td class="w-42 tg-right">
+										<video width="320" height="240" controls>
+													<source src="./assets/5_video.mp4" type="video/mp4">
+										</video>
+									</td>
+                                </tr>
+                                
+                                
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>
+        
+        </div>
+     </div>
+
+</body>
+</html>

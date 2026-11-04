@@ -137,6 +137,19 @@ def test_download_rejects_wrong_checksum_and_cleans_up(fast_settings, tmp_path):
 
 
 @respx.mock
+def test_download_requests_identity_encoding(fast_settings, tmp_path):
+    """Regression: a gzip transfer would make Content-Length, ranges and checksums refer to other bytes."""
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        assert request.headers["Accept-Encoding"] == "identity"
+        return httpx.Response(200, content=BODY, headers={"Content-Length": str(len(BODY))})
+
+    respx.get(URL).mock(side_effect=handler)
+    with make_client(fast_settings) as client:
+        assert client.download(URL, tmp_path / "f.bin").sha256 == SHA
+
+
+@respx.mock
 def test_conditional_get_returns_not_modified(fast_settings):
     def handler(request: httpx.Request) -> httpx.Response:
         assert request.headers["If-None-Match"] == '"abc"'

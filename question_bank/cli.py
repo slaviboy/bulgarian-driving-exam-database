@@ -51,6 +51,23 @@ def cmd_discover(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_extract(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.extractor.pipeline import extract_official
+
+    with _client(settings) as client:
+        _manifest, extracted = extract_official(settings, client, force=args.force)
+        requests = client.request_count
+    total = sum(len(e.parsed.questions) for e in extracted)
+    unique = len({q.original_id for e in extracted for q in e.parsed.questions})
+    warnings = sum(len(e.parsed.warnings) for e in extracted)
+    for e in extracted:
+        counts = f"q={len(e.parsed.questions):>5}  s={len(e.parsed.sections)}"
+        print(f"{e.source.order:>3}  {counts}  {e.parsed.title}")
+    print(f"{len(extracted)} files · {total} question rows · {unique} unique IDs · {warnings} warnings")
+    print(f"HTTP requests: {requests}")
+    return 0
+
+
 def cmd_capture(settings: Settings, args: argparse.Namespace) -> int:
     from question_bank.extractor.discovery.browser_capture import capture_network, write_capture
 
@@ -205,6 +222,9 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("discover", help="read the official index and manifest.txt").set_defaults(
         func=cmd_discover
     )
+    extract = sub.add_parser("extract", help="download (incrementally) and parse every official variant file")
+    extract.add_argument("--force", action="store_true", help="download again even if unchanged")
+    extract.set_defaults(func=cmd_extract)
     sub.add_parser("capture", help="record the source pages' network requests (Playwright)").set_defaults(
         func=cmd_capture
     )
