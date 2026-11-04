@@ -3,14 +3,14 @@
 Every variant directory carries its own `assets/` folder; the same file name appears in up to 11 of
 them. Each unique name is downloaded once (from the first variant that references it) and copies in
 other directories are verified: all video copies (their names, e.g. `5_video.mp4`, are generic) and a
-seeded sample of picture copies. A copy that differs in content fails the build.
+seeded sample of picture copies, each by total size and a 64 KiB content slice fetched with one ranged
+request. A copy that differs fails the build.
 """
 
 from __future__ import annotations
 
 import logging
 import random
-import tempfile
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -22,6 +22,8 @@ from question_bank.extractor.downloaders.fetch import fetch
 from question_bank.extractor.downloaders.state import FetchRecord, StateJournal
 
 log = logging.getLogger(__name__)
+
+RANGE_BYTES = 64 * 1024  # bytes compared per copy of an asset in another variant directory
 
 
 def asset_url(directory: str, name: str) -> str:
@@ -117,16 +119,34 @@ def verify_copies(
     checks: list[CopyCheck] = []
     for name, directory in sorted(pairs):
         record = records[name]
-        head = client.head(asset_url(directory, name))
-        size = int(head.headers.get("Content-Length", "-1"))
-        if size != record.bytes:
-            checks.append(CopyCheck(name, directory, "head", False, f"size {size} != {record.bytes}"))
-            continue
-        if head.headers.get("ETag") == record.etag:
-            checks.append(CopyCheck(name, directory, "head", True))
-            continue
-        with tempfile.TemporaryDirectory() as tmp:
-            copy = client.download(asset_url(directory, name), Path(tmp) / name)
-        same = copy.sha256 == record.sha256
-        checks.append(CopyCheck(name, directory, "sha256", same, "" if same else "content differs"))
+        local = settings.data_dir / record.path
+        checks.append(compare_copy(client, asset_url(directory, name), local, name, directory))
     return checks
+
+
+def compare_copy(client: HttpClient, url: str, local: Path, name: str, directory: str) -> CopyCheck:
+    """One ranged GET (≤ RANGE_BYTES from the middle of the file): compare total size and content bytes.
+
+    ETags cannot be used — the server derives them from modification times, which differ per directory
+    even for identical files — and full downloads of every copy would be impolite to the source.
+    """
+    size = local.stat().st_size
+    start = max(0, size // 2 - RANGE_BYTES // 2)
+    end = min(size, start + RANGE_BYTES) - 1
+    response = client.request(
+        "GET",
+        url,
+        headers={"Range": f"bytes={start}-{end}", "Accept-Encoding": "identity"},
+        ok_status=frozenset({200, 206}),
+    )
+    with local.open("rb") as handle:
+        if response.status_code == 200:  # range ignored: whole body returned
+            same = response.content == handle.read()
+            return CopyCheck(name, directory, "full", same, "" if same else "content differs")
+        content_range = response.headers.get("Content-Range", "")
+        total = int(content_range.rsplit("/", 1)[-1]) if "/" in content_range else -1
+        if total != size:
+            return CopyCheck(name, directory, "range", False, f"size {total} != {size}")
+        handle.seek(start)
+        same = response.content == handle.read(end - start + 1)
+    return CopyCheck(name, directory, "range", same, "" if same else f"bytes {start}-{end} differ")
