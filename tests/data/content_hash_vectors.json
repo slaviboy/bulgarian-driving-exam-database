@@ -1,0 +1,68 @@
+{
+  "description": "content_hash test vectors — see docs/data-contract.md §5.3",
+  "vectors": [
+    {
+      "name": "text answers, one correct (ИААА 5300)",
+      "text": "Съединителят е предназначен:",
+      "answers": [
+        {
+          "position": 1,
+          "text": "да прекъсва силовата връзка между двигателя и предавателната кутия",
+          "media_sha256": null,
+          "correct": true
+        },
+        {
+          "position": 2,
+          "text": "да осъществява връзка между двигателя и карданното предаване",
+          "media_sha256": null,
+          "correct": false
+        },
+        {
+          "position": 3,
+          "text": "да съединява елементите на трансмисията с рамата",
+          "media_sha256": null,
+          "correct": false
+        },
+        {
+          "position": 4,
+          "text": "да прекъсва връзката между предавателната кутия и карданното предаване",
+          "media_sha256": null,
+          "correct": false
+        }
+      ],
+      "media": [],
+      "expected_content_hash": "a21f5814d72aa53aa9df5a0f5803d539c87009820b41fd4fd62014c2fbad4a26"
+    },
+    {
+      "name": "picture answers and a video; irregular whitespace and answer order in the input",
+      "text": "  Какво трябва\n да направите  в тази ситуация? ",
+      "answers": [
+        {
+          "position": 2,
+          "text": null,
+          "media_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "correct": false
+        },
+        {
+          "position": 1,
+          "text": null,
+          "media_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "correct": true
+        }
+      ],
+      "media": [
+        {
+          "role": "video",
+          "position": 1,
+          "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        {
+          "role": "image",
+          "position": 1,
+          "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "expected_content_hash": "8df70f9c227c49123018606e68b475afec67e36dde58c72fb5aea5dbb8a9fcfb"
+    }
+  ]
+}

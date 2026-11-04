@@ -1,0 +1,1123 @@
+{
+  "1": {
+    "samples": [
+      {
+        "sample": "01-plan200-1",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 5,
+          "4": 23,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "01-plan200-2",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 5,
+          "4": 23,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "A. без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 5,
+      "4": 23,
+      "5": 3,
+      "6": 3
+    },
+    "configured_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 5,
+      "4": 23,
+      "5": 3,
+      "6": 3
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 5,
+      "4": 23,
+      "5": 3,
+      "6": 3
+    }
+  },
+  "2": {
+    "samples": [
+      {
+        "sample": "02-plan203-1",
+        "per_section": {
+          "3": 6,
+          "4": 26,
+          "5": 4,
+          "6": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "02-plan203-2",
+        "per_section": {
+          "3": 6,
+          "4": 26,
+          "5": 4,
+          "6": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "A. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+    "methodology_quotas": {
+      "3": 6,
+      "4": 26,
+      "5": 4,
+      "6": 4
+    },
+    "configured_quotas": {
+      "3": 6,
+      "4": 26,
+      "5": 4,
+      "6": 4
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "3": 6,
+      "4": 26,
+      "5": 4,
+      "6": 4
+    }
+  },
+  "3": {
+    "samples": [
+      {
+        "sample": "03-plan210-1",
+        "per_section": {
+          "1": 3,
+          "4": 11,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "03-plan210-2",
+        "per_section": {
+          "1": 3,
+          "4": 11,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "A. притежаващ правоспособност за категория Ткт или Ттм (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 3,
+      "4": 11,
+      "6": 1
+    },
+    "configured_quotas": {
+      "1": 3,
+      "4": 11,
+      "6": 1
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 3,
+      "4": 11,
+      "6": 1
+    }
+  },
+  "4": {
+    "samples": [
+      {
+        "sample": "04-plan209-1",
+        "per_section": {
+          "1": 15
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "04-plan209-2",
+        "per_section": {
+          "1": 15
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "A. притежаващ правоспособност за категория В1 или В (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 15
+    },
+    "configured_quotas": {
+      "1": 15
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 15
+    }
+  },
+  "5": {
+    "samples": [
+      {
+        "sample": "05-plan178-1",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 5,
+          "4": 20,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "05-plan178-2",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 5,
+          "4": 20,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "AM. без правоспособност (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 5,
+      "4": 20,
+      "5": 3,
+      "6": 3
+    },
+    "configured_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 5,
+      "4": 20,
+      "5": 3,
+      "6": 3
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 5,
+      "4": 20,
+      "5": 3,
+      "6": 3
+    }
+  },
+  "6": {
+    "samples": [
+      {
+        "sample": "06-plan179-1",
+        "per_section": {
+          "3": 7,
+          "4": 24,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "06-plan179-2",
+        "per_section": {
+          "3": 7,
+          "4": 24,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "AM. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП (След 12.12.24г.)",
+    "methodology_quotas": {
+      "3": 7,
+      "4": 24,
+      "5": 3,
+      "6": 3
+    },
+    "configured_quotas": {
+      "3": 7,
+      "4": 24,
+      "5": 3,
+      "6": 3
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "3": 7,
+      "4": 24,
+      "5": 3,
+      "6": 3
+    }
+  },
+  "7": {
+    "samples": [
+      {
+        "sample": "07-plan226-1",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 8,
+          "4": 25,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "07-plan226-2",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 8,
+          "4": 25,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "B. без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 8,
+      "4": 25,
+      "5": 3,
+      "6": 3
+    },
+    "configured_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 8,
+      "4": 25,
+      "5": 3,
+      "6": 3
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 8,
+      "4": 25,
+      "5": 3,
+      "6": 3
+    }
+  },
+  "8": {
+    "samples": [
+      {
+        "sample": "08-plan229-1",
+        "per_section": {
+          "3": 16,
+          "4": 23,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "08-plan229-2",
+        "per_section": {
+          "3": 16,
+          "4": 23,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "B. загуба на правоспособност по реда на чл. 157 ЗДвП (След 12.12.24г.)",
+    "methodology_quotas": {
+      "3": 16,
+      "4": 23,
+      "5": 3,
+      "6": 3
+    },
+    "configured_quotas": {
+      "3": 16,
+      "4": 23,
+      "5": 3,
+      "6": 3
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "3": 16,
+      "4": 23,
+      "5": 3,
+      "6": 3
+    }
+  },
+  "9": {
+    "samples": [
+      {
+        "sample": "09-plan233-1",
+        "per_section": {
+          "1": 4,
+          "4": 16,
+          "6": 5
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "09-plan233-2",
+        "per_section": {
+          "1": 4,
+          "4": 16,
+          "6": 5
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "B. с правоспособност за категория А, А1 или А2 (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 4,
+      "4": 16,
+      "6": 5
+    },
+    "configured_quotas": {
+      "1": 4,
+      "4": 16,
+      "6": 5
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 4,
+      "4": 16,
+      "6": 5
+    }
+  },
+  "10": {
+    "samples": [
+      {
+        "sample": "10-plan231-1",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 8,
+          "4": 25,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "10-plan231-2",
+        "per_section": {
+          "1": 1,
+          "2": 5,
+          "3": 8,
+          "4": 25,
+          "5": 3,
+          "6": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "B. притежаващ правоспособност за категория В1 (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 8,
+      "4": 25,
+      "5": 3,
+      "6": 3
+    },
+    "configured_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 8,
+      "4": 25,
+      "5": 3,
+      "6": 3
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 1,
+      "2": 5,
+      "3": 8,
+      "4": 25,
+      "5": 3,
+      "6": 3
+    }
+  },
+  "11": {
+    "samples": [
+      {
+        "sample": "11-plan249-1",
+        "per_section": {
+          "1": 2,
+          "2": 13,
+          "3": 10,
+          "4": 2,
+          "5": 2,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "11-plan249-2",
+        "per_section": {
+          "1": 2,
+          "2": 13,
+          "3": 10,
+          "4": 2,
+          "5": 2,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "C. с правоспособност за категория В/B(78) (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 2,
+      "2": 13,
+      "3": 10,
+      "4": 2,
+      "5": 2,
+      "6": 1
+    },
+    "configured_quotas": {
+      "1": 2,
+      "2": 13,
+      "3": 10,
+      "4": 2,
+      "5": 2,
+      "6": 1
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 2,
+      "2": 13,
+      "3": 10,
+      "4": 2,
+      "5": 2,
+      "6": 1
+    }
+  },
+  "12": {
+    "samples": [
+      {
+        "sample": "12-plan303-1",
+        "per_section": {
+          "3": 6,
+          "4": 9
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "12-plan303-2",
+        "per_section": {
+          "3": 6,
+          "4": 9
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "C+E. с правоспособност за категория D1E (След 12.12.24г.)",
+    "methodology_quotas": {
+      "3": 6,
+      "4": 9
+    },
+    "configured_quotas": {
+      "3": 6,
+      "4": 9
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "3": 6,
+      "4": 9
+    }
+  },
+  "13": {
+    "samples": [
+      {
+        "sample": "13-plan255-1",
+        "per_section": {
+          "1": 2,
+          "2": 8,
+          "3": 1,
+          "4": 2,
+          "5": 1,
+          "6": 1
+        },
+        "matches_methodology": false,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "13-plan255-2",
+        "per_section": {
+          "1": 2,
+          "2": 8,
+          "3": 1,
+          "4": 2,
+          "5": 1,
+          "6": 1
+        },
+        "matches_methodology": false,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "C1. с правоспособност за категория В (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 1,
+      "2": 9,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "configured_quotas": {
+      "1": 2,
+      "2": 8,
+      "3": 1,
+      "4": 2,
+      "5": 1,
+      "6": 1
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 2,
+      "2": 8,
+      "3": 1,
+      "4": 2,
+      "5": 1,
+      "6": 1
+    }
+  },
+  "15": {
+    "samples": [
+      {
+        "sample": "15-plan301-1",
+        "per_section": {
+          "1": 2,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "15-plan301-2",
+        "per_section": {
+          "1": 2,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "C+E. с правоспособност за категория С (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    },
+    "configured_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    }
+  },
+  "16": {
+    "samples": [
+      {
+        "sample": "16-plan299-1",
+        "per_section": {
+          "1": 2,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "16-plan299-2",
+        "per_section": {
+          "1": 2,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "C+E. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    },
+    "configured_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    }
+  },
+  "17": {
+    "samples": [
+      {
+        "sample": "17-plan340-1",
+        "per_section": {
+          "1": 2,
+          "2": 4,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "17-plan340-2",
+        "per_section": {
+          "1": 2,
+          "2": 4,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "D. с правоспособност за категория С1/С и категория В със стаж 2г.(След 07.02.26г.)",
+    "methodology_quotas": {
+      "1": 2,
+      "2": 4,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1
+    },
+    "configured_quotas": {
+      "1": 2,
+      "2": 4,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 2,
+      "2": 4,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1
+    }
+  },
+  "18": {
+    "samples": [
+      {
+        "sample": "18-plan333-1",
+        "per_section": {
+          "1": 2,
+          "2": 4,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "18-plan333-2",
+        "per_section": {
+          "1": 2,
+          "2": 4,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "D. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. и УПК (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 2,
+      "2": 4,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1
+    },
+    "configured_quotas": {
+      "1": 2,
+      "2": 4,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 2,
+      "2": 4,
+      "3": 3,
+      "4": 3,
+      "5": 2,
+      "6": 1
+    }
+  },
+  "19": {
+    "samples": [
+      {
+        "sample": "19-plan285-1",
+        "per_section": {
+          "1": 3,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "matches_methodology": false,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "19-plan285-2",
+        "per_section": {
+          "1": 3,
+          "2": 4,
+          "3": 4,
+          "4": 4
+        },
+        "matches_methodology": false,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "D (103). с правоспособност за кат. D и допълнително обучение за управление на тролейбус (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 3,
+      "2": 3,
+      "3": 5,
+      "4": 4
+    },
+    "configured_quotas": {
+      "1": 3,
+      "2": 4,
+      "3": 4,
+      "4": 4
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 3,
+      "2": 4,
+      "3": 4,
+      "4": 4
+    }
+  },
+  "20": {
+    "samples": [
+      {
+        "sample": "20-plan313-1",
+        "per_section": {
+          "1": 2,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "20-plan313-2",
+        "per_section": {
+          "1": 2,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "5": 4
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "D+E. с правоспособност за категория D (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    },
+    "configured_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 4
+    }
+  },
+  "21": {
+    "samples": [
+      {
+        "sample": "21-plan277-1",
+        "per_section": {
+          "1": 1,
+          "2": 1,
+          "3": 5,
+          "4": 7,
+          "5": 18,
+          "6": 2,
+          "7": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "21-plan277-2",
+        "per_section": {
+          "1": 1,
+          "2": 1,
+          "3": 5,
+          "4": 7,
+          "5": 18,
+          "6": 2,
+          "7": 3
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "Ттм. без правоспособност или с правоспособност за категория АМ (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 1,
+      "2": 1,
+      "3": 5,
+      "4": 7,
+      "5": 18,
+      "6": 2,
+      "7": 3
+    },
+    "configured_quotas": {
+      "1": 1,
+      "2": 1,
+      "3": 5,
+      "4": 7,
+      "5": 18,
+      "6": 2,
+      "7": 3
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 1,
+      "2": 1,
+      "3": 5,
+      "4": 7,
+      "5": 18,
+      "6": 2,
+      "7": 3
+    }
+  },
+  "22": {
+    "samples": [
+      {
+        "sample": "22-plan279-1",
+        "per_section": {
+          "4": 10,
+          "5": 19,
+          "6": 3,
+          "7": 5
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "22-plan279-2",
+        "per_section": {
+          "4": 10,
+          "5": 19,
+          "6": 3,
+          "7": 5
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "Ттм. загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. (След 12.12.24г.)",
+    "methodology_quotas": {
+      "4": 10,
+      "5": 19,
+      "6": 3,
+      "7": 5
+    },
+    "configured_quotas": {
+      "4": 10,
+      "5": 19,
+      "6": 3,
+      "7": 5
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "4": 10,
+      "5": 19,
+      "6": 3,
+      "7": 5
+    }
+  },
+  "23": {
+    "samples": [
+      {
+        "sample": "23-plan280-1",
+        "per_section": {
+          "1": 5,
+          "2": 10
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      },
+      {
+        "sample": "23-plan280-2",
+        "per_section": {
+          "1": 5,
+          "2": 10
+        },
+        "matches_methodology": true,
+        "matches_configuration": true,
+        "ordered_by_section": true
+      }
+    ],
+    "variant": "Ттм. притежаващ правоспособност за категория А, А1, А2, Ткт, В1, В или В(78) (След 12.12.24г.)",
+    "methodology_quotas": {
+      "1": 5,
+      "2": 10
+    },
+    "configured_quotas": {
+      "1": 5,
+      "2": 10
+    },
+    "observed_quotas_identical": true,
+    "observed_quotas": {
+      "1": 5,
+      "2": 10
+    }
+  }
+}

@@ -68,6 +68,94 @@ def cmd_extract(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_media(settings: Settings, args: argparse.Namespace) -> int:
+    from dataclasses import asdict as _asdict
+
+    from rich.progress import BarColumn, MofNCompleteColumn, Progress, TextColumn, TimeRemainingColumn
+
+    from question_bank.extractor.downloaders.media import collect_asset_refs, download_assets, verify_copies
+    from question_bank.extractor.pipeline import load_extracted
+
+    extracted = load_extracted(settings)
+    if not extracted:
+        raise SystemExit("run `qb extract` first")
+    refs = collect_asset_refs(extracted)
+    stats = {"downloaded": 0, "resumed": 0, "cached": 0, "bytes": 0}
+    with _client(settings) as client:
+        columns = [TextColumn("{task.description}"), BarColumn(), MofNCompleteColumn(), TimeRemainingColumn()]
+        with Progress(*columns) as progress:
+            task = progress.add_task("media", total=len(refs))
+
+            def on_item(name, outcome):
+                stats["downloaded" if outcome.downloaded else "cached"] += 1
+                stats["resumed"] += int(outcome.resumed)
+                stats["bytes"] += outcome.record.bytes
+                progress.update(task, advance=1, description=name[:24].ljust(24))
+
+            records = download_assets(settings, client, refs, progress=on_item)
+        checks = [] if args.skip_verify else verify_copies(settings, client, refs, records)
+        requests = client.request_count
+    mismatches = [c for c in checks if not c.identical]
+    _write_json(
+        settings.cache_dir / "media-copy-checks.json",
+        {"checked": len(checks), "mismatches": len(mismatches), "checks": [_asdict(c) for c in checks]},
+    )
+    print(
+        f"{len(refs)} assets ({stats['bytes'] / 1e6:.1f} MB): {stats['downloaded']} downloaded "
+        f"({stats['resumed']} resumed), {stats['cached']} already present; HTTP requests: {requests}"
+    )
+    print(f"copies verified: {len(checks)}, mismatches: {len(mismatches)}")
+    return 1 if mismatches else 0
+
+
+def cmd_schemas(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.build import write_schemas
+
+    for path in write_schemas():
+        print(f"wrote {path}")
+    return 0
+
+
+def cmd_build(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.build import run_build
+
+    result = run_build(settings, args.dataset_version, webp=not args.no_webp)
+    m = result.manifest
+    print(f"dataset {m.dataset_version} · edition {m.source_edition} · completeness: {m.completeness.status}")
+    print("counts: " + ", ".join(f"{k}={v}" for k, v in m.counts.items()))
+    print(
+        f"validation: {result.report.error_count} errors, {result.report.warning_count} warnings · "
+        f"diff vs previous export: {result.diff}"
+    )
+    for check in m.completeness.checks:
+        if not check.passed:
+            print(f"  FAILED {check.name}: {check.detail}")
+    print("release folders: " + ", ".join(str(p) for p in result.release_dirs))
+    return 0 if result.report.ok and m.completeness.status == "complete" else 1
+
+
+def cmd_compare(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.build import EXAM_RULES
+    from question_bank.extractor.pipeline import load_extracted
+    from question_bank.fsutil import read_json
+    from question_bank.reports.comparison import compare_samples, write_comparison
+
+    tables_path = settings.reports_dir / "investigation" / "methodology-2024-tables.json"
+    result = compare_samples(
+        load_extracted(settings),
+        settings.data_dir / "avtoizpit" / "samples",
+        read_json(EXAM_RULES),
+        read_json(tables_path) if tables_path.exists() else None,
+    )
+    write_comparison(result, settings.reports_dir)
+    print(result["summary"])
+    for order, item in result["evidence"].items():
+        method = [s["matches_methodology"] for s in item["samples"]]
+        config = [s["matches_configuration"] for s in item["samples"]]
+        print(f"#{order:>2} methodology {method} configured {config} observed {item['observed_quotas']}")
+    return 0
+
+
 def cmd_capture(settings: Settings, args: argparse.Namespace) -> int:
     from question_bank.extractor.discovery.browser_capture import capture_network, write_capture
 
@@ -225,6 +313,19 @@ def build_parser() -> argparse.ArgumentParser:
     extract = sub.add_parser("extract", help="download (incrementally) and parse every official variant file")
     extract.add_argument("--force", action="store_true", help="download again even if unchanged")
     extract.set_defaults(func=cmd_extract)
+    media = sub.add_parser("media", help="download all referenced pictures and videos, verify copies")
+    media.add_argument("--skip-verify", action="store_true", help="skip the cross-directory copy check")
+    media.set_defaults(func=cmd_media)
+    sub.add_parser("schemas", help="(re)generate contract/schemas from the models").set_defaults(
+        func=cmd_schemas
+    )
+    sub.add_parser("compare", help="compare AvtoIzpit samples with the official array").set_defaults(
+        func=cmd_compare
+    )
+    build = sub.add_parser("build", help="build exports, media packs, manifest and reports; validate")
+    build.add_argument("--dataset-version", required=True, help="semantic version of this dataset build")
+    build.add_argument("--no-webp", action="store_true", help="skip WebP derivatives (faster, for testing)")
+    build.set_defaults(func=cmd_build)
     sub.add_parser("capture", help="record the source pages' network requests (Playwright)").set_defaults(
         func=cmd_capture
     )

@@ -21,17 +21,33 @@ class FetchOutcome:
 
 
 def fetch(
-    client: HttpClient, journal: StateJournal, url: str, dest: Path, *, force: bool = False
+    client: HttpClient,
+    journal: StateJournal,
+    url: str,
+    dest: Path,
+    *,
+    force: bool = False,
+    revalidate: bool = True,
 ) -> FetchOutcome:
     """Return a verified local copy of `url` at `dest`.
 
     A cached copy is reused when the journal has it, the file on disk still has the recorded SHA-256 and
-    a HEAD request reports the same ETag and Content-Length. Otherwise the file is (re)downloaded,
-    resuming a partial `.part` download if one exists.
+    (unless `revalidate` is False) a HEAD request reports the same ETag and Content-Length. Otherwise the
+    file is (re)downloaded, resuming a partial `.part` download if one exists. `revalidate=False` suits
+    edition-specific URLs (media assets) whose content never changes under the same URL.
     """
     relative = dest.relative_to(journal.data_dir).as_posix()
     cached = journal.get(url)
-    if cached and not force and dest.exists():
+    unchanged_on_disk = (
+        cached is not None
+        and not force
+        and dest.exists()
+        and dest.stat().st_size == cached.bytes
+        and sha256_file(dest) == cached.sha256
+    )
+    if unchanged_on_disk and not revalidate:
+        return FetchOutcome(cached, downloaded=False, resumed=False)
+    if cached and not force and dest.exists() and revalidate:
         head = client.head(url)
         same_etag = head.headers.get("ETag") == cached.etag
         length = head.headers.get("Content-Length")
