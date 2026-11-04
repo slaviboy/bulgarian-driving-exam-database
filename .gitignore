@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Local configuration and secrets
+.env
+
+# Large or regenerable data (published through GitHub Releases, never committed)
+data/cache/
+data/media/
+data/raw/
+data/avtoizpit/
+release/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

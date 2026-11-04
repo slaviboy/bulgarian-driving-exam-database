@@ -1,0 +1,13 @@
+# Normalize text files to LF in the repository.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary data
+*.sqlite binary
+*.png binary
+*.webp binary
+*.jpg binary
+*.mp4 binary
+*.zip binary
+*.pdf binary
