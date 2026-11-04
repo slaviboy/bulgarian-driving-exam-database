@@ -150,8 +150,18 @@ def write_dataset_diff(previous: dict[str, Any] | None, dataset: Dataset, out_di
     added = sorted(set(current) - set(before))
     removed = sorted(set(before) - set(current))
     changed = sorted(q for q in set(current) & set(before) if current[q] != before[q])
+    same_version = previous.get("dataset_version") == dataset.dataset_version
+    title = (
+        f"# Dataset diff — rebuild of {dataset.dataset_version}"
+        if same_version
+        else f"# Dataset diff — {previous.get('dataset_version')} → {dataset.dataset_version}"
+    )
     lines = [
-        f"# Dataset diff — {previous.get('dataset_version')} → {dataset.dataset_version}",
+        title,
+        "",
+        f"{len(current)} questions in this build. Compared with the previously committed export"
+        + (" of the same version" if same_version else "")
+        + ":",
         "",
         f"* added: {len(added)} · removed: {len(removed)} · changed content: {len(changed)}",
     ]

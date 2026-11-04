@@ -3,11 +3,11 @@
   "dataset_version": "1.0.0",
   "source_edition": "2026-10-01",
   "rules_version": "2024-12-12",
-  "built_at": "2026-11-04T21:03:43+00:00",
+  "built_at": "2026-11-04T21:04:43+00:00",
   "generator": {
     "name": "bulgarian-driving-exam-database",
     "version": "0.1.0",
-    "git_commit": "7c123e0a01289b21a48afd7abbf0945bc2764a1d"
+    "git_commit": "b892fd41cac2f1bdff1a8655ff4307b28c28fa43"
   },
   "content_fingerprint": "2206aa6d2156ebd65fa42a07167e47a7c02e9ffe2dd8d8cb984937a7b97948e1",
   "sources": [
