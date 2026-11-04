@@ -1,11 +1,11 @@
 # Project status — bulgarian-driving-exam-database
 
-_Last updated: 2026-11-04_
+_Last updated: 2026-11-05_
 
 ## Current phase
 
-**Phases 1–5 complete.** The dataset `v1.0.0` is published; the Android application (separate private
-repository) continues with Phase 6.
+**Phases 1–5 complete.** The dataset `v1.0.0` is published. The Android application (separate private
+repository, Phases 6–10) consumes it; see "Consumers" below.
 
 ## Completed work
 
@@ -29,6 +29,15 @@ repository) continues with Phase 6.
     (latest): 10 assets.
   * Verified anonymously: `releases/latest/download/manifest.json` → v1.0.0; every data file, the
     WebP pack and sample videos match their checksums. CI `tests` and `validation` green.
+
+## Consumers
+
+* The Android application bundles `v1.0.0` (core package and WebP images pinned by SHA-256) and installs newer
+  releases from `releases/latest/download/manifest.json`, verifying the core package against `SHA256SUMS`. Its
+  tests import the real `v1.0.0` and a synthetic `v1.0.1` derived from it; on devices it reported 2,476 questions,
+  23 variants and 830 verified pictures, matching this repository's counts.
+* Compatibility promise for consumers: `schema_version` 1 stays readable; a breaking change increases it (MAJOR
+  release), which the app reports as "app update required" instead of installing.
 
 ## Pending work
 
@@ -60,4 +69,4 @@ repository) continues with Phase 6.
 
 ## Next actions
 
-* Android application (private repository): pin dataset `v1.0.0` and build the app (Phase 6+).
+* Keep publishing editions through the `release` workflow when the daily `validation` job reports a new array.
