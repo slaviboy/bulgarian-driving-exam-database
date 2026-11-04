@@ -57,7 +57,7 @@ Q = questions, Max = maximum points, Pass = minimum points to pass, Min = minute
 | 16 | C+E — загуба по чл. 157, ал. 4 | 15 | 29 | 26 ¹ | 20 | чл. 41 ал. 1 т. 4, ал. 2 | 2.8.4 (Т19) | ✔ | 4/8/3 | 0 |
 | 17 | D — с С1/С и В, стаж 2 г. ⁴ | 15 | 32 | 28 | 20 | чл. 41 ал. 1 т. 3, ал. 2 | 2.7.2–2.7.3 (Т18) | ✔ | 4/5/6 | 0 |
 | 18 | D — загуба по чл. 157, ал. 4 и УПК | 15 | 32 | 28 ¹ | 20 | чл. 41 ал. 1 т. 3, ал. 2 | 2.7.4 (Т18) | ✔ | 4/5/6 | 0 |
-| 19 | D (103) — тролейбус | 15 | 32 | 28 | 20 | чл. 41 ал. 4 | 2.10.2–2.10.3 (Т22) | ✔ | 5/3/7 | 0 |
+| 19 | D (103) — тролейбус | 15 | 32 | 28 | 20 | чл. 41 ал. 4 | 2.10.2–2.10.3 (Т22 ⁵) | ✔ | 5/3/7 | 0 |
 | 20 | D+E — с D | 15 | 29 | 26 | 20 | чл. 41 ал. 1 т. 4, ал. 2 | 2.9.2–2.9.3 (Т21) | ✔ | 4/8/3 | 0 |
 | 21 | Ттм — без правоспособност / с АМ | 37 | 84 | 75 | 40 | чл. 39 ал. 8, 10 | 2.5.2–2.5.3 (Т13) | ✔ | 7/13/17 | 2 |
 | 22 | Ттм — загуба по чл. 157, ал. 4 | 37 | 84 | 75 ¹ | 40 | чл. 39 ал. 8, 10 | 2.5.7 (Т15) | ✔ | 6/15/16 | 2 |
@@ -72,8 +72,10 @@ values in the table.
    `pass_points_basis = "category-rule"` in the configuration. An unanswered assessment cannot
    reveal a threshold, so this was not observed.
 2. **Таблица 17 is internally inconsistent** in the draft (sections 1+9+1+1+1+1 = 14, stated total
-   15). The section quotas for C1 are taken from the simulator observation once the samples are
-   mapped to sections (Phase 4); the total of 15 is confirmed by N38 and OBS.
+   15). Both simulator samples show **2·8·1·2·1·1** (= 15); the configuration uses the observation
+   (`section_quotas` basis `observation`).
+5. **D (103) trolleybus:** draft Таблица 22 gives 3·3·5·4, but both simulator samples show
+   **3·4·4·4**. The configuration follows ИААА's live simulator and records the discrepancy.
 3. AvtoIzpit has no C1+E sub-category. Count, maximum, pass mark and duration come from N38 only,
    the section quotas from MET Т20; the points mix is unknown, so the generator only enforces the
    total of 29 points.
@@ -98,17 +100,25 @@ values in the table.
 | Т14 | Ттм притежаващ | 1:5 · 2:10 | 15 |
 | Т15 | Ттм загуба | 4:10 · 5:19 · 6:3 · 7:5 | 37 |
 | Т16 | C | 1:2 · 2:13 · 3:10 · 4:2 · 5:2 · 6:1 | 30 |
-| Т17 | C1 | 1:1 · 2:9 · 3:1 · 4:1 · 5:1 · 6:1 (= 14, see note 2) | 15 |
+| Т17 | C1 | 1:1 · 2:9 · 3:1 · 4:1 · 5:1 · 6:1 (= 14, see note 2; observed 2·8·1·2·1·1) | 15 |
 | Т18 | D, D загуба | 1:2 · 2:4 · 3:3 · 4:3 · 5:2 · 6:1 | 15 |
 | Т19 | C+E, C+E загуба | 1:2 · 2:2 · 3:4 · 4:3 · 5:4 | 15 |
 | Т20 | C1+E / C+E с D1E | 3:6 · 4:9 | 15 |
 | Т21 | D+E | 1:2 · 2:2 · 3:4 · 4:3 · 5:4 | 15 |
-| Т22 | D (103) | 1:3 · 2:3 · 3:5 · 4:4 | 15 |
+| Т22 | D (103) | 1:3 · 2:3 · 3:5 · 4:4 (observed 3·4·4·4, see note 5) | 15 |
 
 Т10–Т12 (Ткт) have no official question file and are not used. The sections listed in each table
 are exactly the sections present in the corresponding official file.
 
-## 5. How the rules become data
+## 5. Cross-check with the simulator
+
+`qb compare` maps the 1,166 questions of the 44 sampled test sets to the official array by ИААА
+question ID (all matched; 0 differences in wording, answers, correct answers, points or
+illustrations) and counts them per section (`reports/exam-rules-evidence.json`). The observed section
+composition equals the methodology tables for 20 of the 22 observed variants and is identical in both
+samples of every variant; all sampled tests list their questions grouped by section.
+
+## 6. How the rules become data
 
 `data/exam-rules/exam-configs.source.json` holds one entry per variant with: question count, max
 points, pass points, duration, section quotas, points mix (when observed), video questions, video

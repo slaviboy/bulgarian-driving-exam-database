@@ -70,7 +70,7 @@ All text is UTF-8. Booleans are `INTEGER` 0/1. No SQLite extensions, no
 | `media_derivatives` | `media_id` FK + `format` PK, `relative_path`, `mime_type`, `bytes`, `width`, `height`, `sha256` | e.g. WebP versions of PNG images for the app |
 | `question_media` | `question_id` FK + `media_id` FK + `role` PK, `position` | `role` = `image` or `video` |
 | `variant_questions` | `variant_id` FK + `question_id` FK PK, `section_id` FK, `points` (1–3), `position` | `position` = order inside the official file |
-| `exam_configs` | `id` TEXT PK, `variant_id` FK, `status` (`official`/`unofficial`), `question_count`, `max_points`, `pass_points`, `duration_minutes`, `video_questions`, `max_video_plays`, `scoring`, `section_quotas_json`, `evidence_json`, `verification_json` | |
+| `exam_configs` | `id` TEXT PK, `variant_id` FK, `status` (`official`/`unofficial`), `question_count`, `max_points`, `pass_points`, `duration_minutes`, `video_questions`, `max_video_plays`, `scoring`, `show_correct_count`, `section_quotas_json`, `points_mix_json`, `verification_json`, `evidence_json`, `notes_json` | JSON columns hold the same values as `exam-configs.json` |
 
 Indexes: every FK column, plus `variant_questions(variant_id, section_id)` and
 `answers(question_id, position)`.
@@ -125,8 +125,9 @@ Required top-level fields: `schema_version`, `dataset_version`, `source_edition`
 `source_snapshot[]` {`url`, `etag`, `last_modified`, `sha256`, `bytes`},
 `counts` {`categories`, `variants`, `sections`, `topics`, `questions`, `answers`,
 `assignments`, `media`, `images`, `videos`}, `category_counts` {category →
-{`variants`, `questions`}}, `variant_counts`, `files[]` {`path`, `bytes`,
-`sha256`, `media_type`}, `media_packs[]` {`id`, `kind`, `url`, `bytes`, `sha256`,
+{`variants`, `questions`}}, `variant_counts`, `dataset_base_url` (download URL that `files[].path` is relative to), `files[]`
+{`path`, `bytes`, `sha256`, `media_type`}, `media_base_url` (media release download URL; single
+videos are `<media id>.mp4`), `media_packs[]` {`id`, `kind`, `url`, `bytes`, `sha256`,
 `file_count`}, `licensing` {`attribution`, `license`, `redistribution_status`,
 `notice_url`}, `completeness` {`status` = `complete`/`partial`, `checks[]`}.
 
