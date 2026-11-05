@@ -10,7 +10,6 @@ who prepare for the Bulgarian theory exam but do not read Bulgarian well:
 | es | Spanish of Spain |
 | de | German |
 | fr | French |
-| hi | Hindi |
 | pt | European Portuguese |
 | el | Greek |
 | tr | Turkish |

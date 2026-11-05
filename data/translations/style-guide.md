@@ -75,7 +75,6 @@ can make a correct answer wrong. When fluency and precision conflict, choose pre
   | el | « » |
   | tr | “ ” |
   | ro | „ ” |
-  | hi | “ ” |
 
 ## 3. Terminology
 
@@ -96,7 +95,6 @@ can make a correct answer wrong. When fluency and precision conflict, choose pre
   | ro | Codul rutier, OUG 195/2002 |
   | tr | 2918 Karayolları Trafik Kanunu |
   | ru | ПДД and the Vienna Convention RU text |
-  | hi | Motor Vehicles Act 1988, Hindi version (मोटर यान अधिनियम) |
   | en | EU and UK usage (Highway Code), British spelling |
 
 * **Build your glossary before translating, then follow it.** One Bulgarian term maps to one target term everywhere.
@@ -165,10 +163,9 @@ can make a correct answer wrong. When fluency and precision conflict, choose pre
 ## 5. Numbers, units, dates
 
 * **Values never change.**
-  * Use your decimal separator: "." in en and hi, "," in all other languages.
+  * Use your decimal separator: "." in en, "," in all other languages.
   * Thousands may be grouped as your language does.
   * Digits stay digits and number words stay words.
-  * Hindi uses the digits 0–9, not Devanagari digits.
 * **Units** keep the SI symbols of the source: km/h, km, m, cm, kg, t, kW, ‰, %, °C, bar.
   * Russian may use its standard Cyrillic symbols (км/ч, м, кг, т); decide once.
   * Never convert to other units.

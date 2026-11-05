@@ -25,7 +25,7 @@ it up to date.
 | Answers | 7,893 — multi-correct questions included, every question has ≥ 1 correct answer |
 | Media | 830 pictures (234 MB PNG / 20 MB WebP) and 57 videos (350 MB) |
 | Exam rules | official parameters for all 23 variants, each value cited (Наредба № 38, ИААА methodology, simulator observation) |
-| Translations (from v1.1.0) | unofficial translations of every question and answer into English, Russian, Spanish, German, French, Hindi, Portuguese, Greek, Turkish and Romanian — the Bulgarian original prevails ([docs/translations.md](docs/translations.md)) |
+| Translations (from v1.1.0) | unofficial translations of every question and answer into English, Russian, Spanish, German, French, Portuguese, Greek, Turkish and Romanian — the Bulgarian original prevails ([docs/translations.md](docs/translations.md)) |
 
 Download the latest release:
 

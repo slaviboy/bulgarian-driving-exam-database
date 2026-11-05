@@ -57,7 +57,6 @@ LANGUAGES: dict[str, Language] = {
     "es": Language("es", "es-ES", "Español", "Spanish", "latin", ",", ("one", "many", "other")),
     "de": Language("de", "de-DE", "Deutsch", "German", "latin", ",", ("one", "other")),
     "fr": Language("fr", "fr-FR", "Français", "French", "latin", ",", ("one", "many", "other")),
-    "hi": Language("hi", "hi-IN", "हिन्दी", "Hindi", "devanagari", ".", ("one", "other")),
     "pt": Language("pt", "pt-PT", "Português", "Portuguese", "latin", ",", ("one", "many", "other")),
     "el": Language("el", "el-GR", "Ελληνικά", "Greek", "greek", ",", ("one", "other")),
     "tr": Language("tr", "tr-TR", "Türkçe", "Turkish", "latin", ",", ("one", "other")),
@@ -331,7 +330,7 @@ def check_string(
     starts_with_abbreviation = len(first_word) >= 2 and first_word.isupper()
     if (
         kind in {"answer", "question"}
-        and lang.code not in {"de", "hi"}
+        and lang.code != "de"
         and first_s
         and first_t
         and not starts_with_abbreviation

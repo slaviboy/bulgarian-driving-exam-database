@@ -38,7 +38,7 @@ by the Executive Director of ИААА. Every record in the dataset keeps its ori
 
 ## Translations
 
-The dataset also contains **unofficial translations** of the questions, the answers and their labels into ten
+The dataset also contains **unofficial translations** of the questions, the answers and their labels into nine
 languages (`translation-<lang>.json`, see docs/translations.md):
 * they were made with AI from the Bulgarian original and checked automatically and by an independent AI review;
 * they are not approved by ИААА and may contain errors;
