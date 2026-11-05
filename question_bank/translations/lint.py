@@ -122,6 +122,9 @@ CATEGORY_REF = re.compile(
     r"(Т[тк][мтб]|[ABCDАВС](?:[MМ]|[12])?(?:\s*\+?\s*[EЕ])?)"
     r"(?![A-Za-zА-Яа-я0-9])"
 )
+# A final "." that belongs to a Bulgarian abbreviation ("След 12.12.24г.", "стаж 2г.", "над 3,5 т.") is not
+# sentence punctuation the translation has to keep.
+BG_ABBREVIATION_END = re.compile(r"(?<![^\W\d_])(?:г|гр|чл|ал|т|м|км|мин|ч|напр|др|вкл|ок)\.\s*$|\dг\.\s*$")
 RU_BULGARIAN_WORDS = {
     "е",
     "са",
@@ -312,7 +315,7 @@ def check_string(
             "end_punct",
             f"the Bulgarian is a question; end with {' or '.join(sorted(question_marks))}",
         )
-    elif se == "." and te not in {".", "।", "…"} and kind != "ui":
+    elif se == "." and te not in {".", "।", "…"} and kind != "ui" and not BG_ABBREVIATION_END.search(s):
         result.add(WARNING, item, "end_punct", "the Bulgarian ends with '.'")
     elif se not in {".", ":", "?", "!", "…", ";", ")", "»", "”", '"'} and te in {".", ":"} and kind != "ui":
         result.add(WARNING, item, "end_punct", f"punctuation '{te}' added at the end")

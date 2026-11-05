@@ -417,3 +417,17 @@ def test_prepare_writes_parts_labels_and_index(tmp_path):
     labels = json.loads((tmp_path / "work" / "source" / "labels.bg.json").read_text(encoding="utf-8"))
     assert labels["variants"] == {"B.v": {"description": "без правоспособност", "effective_note": None}}
     assert list(labels["topics"]) == ["car", "rules"]
+
+
+def test_a_final_abbreviation_dot_need_not_be_kept():
+    for source in ("След 12.12.24г.", "със стаж 2г.", "над 3,5 т."):
+        result = lint.Result()
+        lint.check_string(
+            result, LANG["en"], "x", source, "After 12.12.24 / 2 years / over 3.5 t", kind="label"
+        )
+        assert ("x", "end_punct") not in checks(result, lint.WARNING), source
+    result = lint.Result()
+    lint.check_string(
+        result, LANG["en"], "x", "Водачът е длъжен да спре.", "The driver must stop", kind="answer"
+    )
+    assert ("x", "end_punct") in checks(result, lint.WARNING)
