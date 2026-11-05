@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/slaviboy/bulgarian-driving-exam-database/contract/schemas/translation.schema.json",
+  "$defs": {
+    "TranslatedAnswer": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "TranslatedAnswer",
+      "type": "object"
+    },
+    "TranslatedLabel": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "TranslatedLabel",
+      "type": "object"
+    },
+    "TranslatedQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source_hash": {
+          "description": "content_hash of the Bulgarian question that was translated",
+          "title": "Source Hash",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "answers": {
+          "description": "every answer that has text, in position order",
+          "items": {
+            "$ref": "#/$defs/TranslatedAnswer"
+          },
+          "title": "Answers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "source_hash",
+        "text",
+        "answers"
+      ],
+      "title": "TranslatedQuestion",
+      "type": "object"
+    },
+    "TranslatedVariant": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "effective_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Effective Note"
+        }
+      },
+      "required": [
+        "id",
+        "description",
+        "effective_note"
+      ],
+      "title": "TranslatedVariant",
+      "type": "object"
+    },
+    "TranslationInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "const": "unofficial",
+          "default": "unofficial",
+          "title": "Status",
+          "type": "string"
+        },
+        "method": {
+          "description": "how the translation was made and reviewed",
+          "title": "Method",
+          "type": "string"
+        },
+        "authoritative": {
+          "description": "which text prevails when they differ",
+          "title": "Authoritative",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "authoritative"
+      ],
+      "title": "TranslationInfo",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One language. Only translations of the current Bulgarian content are exported: a question whose\ncontent_hash changed is left out until it is translated again, and consumers show the Bulgarian text.",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "language": {
+      "description": "ISO 639-1 code, e.g. 'en'",
+      "title": "Language",
+      "type": "string"
+    },
+    "language_tag": {
+      "description": "BCP 47 tag of the wording, e.g. 'pt-PT'",
+      "title": "Language Tag",
+      "type": "string"
+    },
+    "source_language": {
+      "const": "bg",
+      "default": "bg",
+      "title": "Source Language",
+      "type": "string"
+    },
+    "translation": {
+      "$ref": "#/$defs/TranslationInfo"
+    },
+    "categories": {
+      "items": {
+        "$ref": "#/$defs/TranslatedLabel"
+      },
+      "title": "Categories",
+      "type": "array"
+    },
+    "variants": {
+      "items": {
+        "$ref": "#/$defs/TranslatedVariant"
+      },
+      "title": "Variants",
+      "type": "array"
+    },
+    "topics": {
+      "items": {
+        "$ref": "#/$defs/TranslatedLabel"
+      },
+      "title": "Topics",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "$ref": "#/$defs/TranslatedQuestion"
+      },
+      "title": "Questions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "dataset_version",
+    "language",
+    "language_tag",
+    "translation",
+    "categories",
+    "variants",
+    "topics",
+    "questions"
+  ],
+  "title": "TranslationFile",
+  "type": "object"
+}

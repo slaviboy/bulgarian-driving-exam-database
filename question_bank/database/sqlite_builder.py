@@ -5,11 +5,16 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+from collections.abc import Sequence
 from importlib import resources
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-from question_bank.models import SCHEMA_VERSION
+from question_bank.models import SCHEMA_VERSION, LanguageInfo
 from question_bank.processor.builder import Dataset
+
+if TYPE_CHECKING:
+    from question_bank.translations.export import LanguageExport
 
 
 def schema_sql() -> str:
@@ -30,7 +35,14 @@ def _j(value) -> str | None:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 
 
-def write_sqlite(dataset: Dataset, dest: Path, *, info: dict[str, str]) -> None:
+def write_sqlite(
+    dataset: Dataset,
+    dest: Path,
+    *,
+    info: dict[str, str],
+    languages: Sequence[LanguageInfo] = (),
+    translations: Sequence[LanguageExport] = (),
+) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_name(dest.name + ".tmp")
     tmp.unlink(missing_ok=True)
@@ -186,6 +198,44 @@ def write_sqlite(dataset: Dataset, dest: Path, *, info: dict[str, str]) -> None:
                     for c in dataset.exam_configs
                 ],
             )
+            con.executemany(
+                "INSERT INTO languages VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                [
+                    (
+                        lang.code,
+                        lang.tag,
+                        lang.native_name,
+                        lang.english_name,
+                        lang.kind,
+                        lang.status,
+                        lang.questions,
+                        lang.coverage,
+                    )
+                    for lang in languages
+                ],
+            )
+            for export in translations:
+                code = export.language.code
+                questions = export.file.questions
+                con.executemany(
+                    "INSERT INTO question_translations VALUES (?, ?, ?, ?)",
+                    [(q.id, code, q.source_hash, q.text) for q in questions],
+                )
+                con.executemany(
+                    "INSERT INTO answer_translations VALUES (?, ?, ?)",
+                    [(a.id, code, a.text) for q in questions for a in q.answers],
+                )
+                labels = (
+                    [("category", c.id, code, c.text) for c in export.file.categories]
+                    + [("variant_description", v.id, code, v.description) for v in export.file.variants]
+                    + [
+                        ("variant_note", v.id, code, v.effective_note)
+                        for v in export.file.variants
+                        if v.effective_note is not None
+                    ]
+                    + [("topic", t.id, code, t.text) for t in export.file.topics]
+                )
+                con.executemany("INSERT INTO label_translations VALUES (?, ?, ?, ?)", labels)
         problems = con.execute("PRAGMA foreign_key_check").fetchall()
         if problems:
             raise ValueError(f"foreign key violations: {problems[:5]}")

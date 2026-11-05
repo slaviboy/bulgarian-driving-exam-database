@@ -201,6 +201,54 @@ class ExamConfigsFile(_Model):
     configs: list[ExamConfig]
 
 
+# --------------------------------------------------------------------- translation-<language>.json
+
+
+class TranslatedAnswer(_Model):
+    id: Id
+    text: str
+
+
+class TranslatedQuestion(_Model):
+    id: Id
+    source_hash: Sha256 = Field(description="content_hash of the Bulgarian question that was translated")
+    text: str
+    answers: list[TranslatedAnswer] = Field(description="every answer that has text, in position order")
+
+
+class TranslatedLabel(_Model):
+    id: Id
+    text: str
+
+
+class TranslatedVariant(_Model):
+    id: Id
+    description: str
+    effective_note: str | None
+
+
+class TranslationInfo(_Model):
+    status: Literal["unofficial"] = "unofficial"
+    method: str = Field(description="how the translation was made and reviewed")
+    authoritative: str = Field(description="which text prevails when they differ")
+
+
+class TranslationFile(_Model):
+    """One language. Only translations of the current Bulgarian content are exported: a question whose
+    content_hash changed is left out until it is translated again, and consumers show the Bulgarian text."""
+
+    schema_version: Literal[1] = SCHEMA_VERSION
+    dataset_version: str
+    language: str = Field(description="ISO 639-1 code, e.g. 'en'")
+    language_tag: str = Field(description="BCP 47 tag of the wording, e.g. 'pt-PT'")
+    source_language: Literal["bg"] = "bg"
+    translation: TranslationInfo
+    categories: list[TranslatedLabel]
+    variants: list[TranslatedVariant]
+    topics: list[TranslatedLabel]
+    questions: list[TranslatedQuestion]
+
+
 # ---------------------------------------------------------------------------------- manifest.json
 
 
@@ -245,6 +293,18 @@ class Completeness(_Model):
     checks: list[CompletenessCheck]
 
 
+class LanguageInfo(_Model):
+    code: str = Field(description="ISO 639-1 code")
+    tag: str = Field(description="BCP 47 tag of the wording, e.g. 'pt-PT'")
+    native_name: str
+    english_name: str
+    kind: Literal["source", "translation"]
+    status: Literal["official", "unofficial"]
+    file: str | None = Field(description="translation file (a `files[].path`); null for the source language")
+    questions: int = Field(ge=0, description="questions available in this language")
+    coverage: float = Field(ge=0, le=1, description="questions / all questions")
+
+
 class Manifest(_Model):
     schema_version: Literal[1] = SCHEMA_VERSION
     dataset_version: str
@@ -264,11 +324,15 @@ class Manifest(_Model):
     media_packs: list[MediaPack]
     licensing: Licensing
     completeness: Completeness
+    languages: list[LanguageInfo] = Field(
+        default_factory=list, description="Bulgarian (the source) and the available translations"
+    )
 
 
 SCHEMA_MODELS = {
     "categories": CategoriesFile,
     "questions": QuestionsFile,
     "exam-configs": ExamConfigsFile,
+    "translation": TranslationFile,
     "manifest": Manifest,
 }

@@ -83,11 +83,22 @@ def build_media_release(
 
 
 def build_core_package(
-    exports_dir: Path, release_root: Path, dataset_version: str, extra: list[Path]
+    exports_dir: Path,
+    release_root: Path,
+    dataset_version: str,
+    extra: list[Path],
+    translations: list[str] = (),
 ) -> Path:
     tag = f"v{dataset_version}"
     out = release_root / tag
-    names = ["manifest.json", "categories.json", "questions.json", "exam-configs.json", "master.sqlite"]
+    names = [
+        "manifest.json",
+        "categories.json",
+        "questions.json",
+        "exam-configs.json",
+        *translations,
+        "master.sqlite",
+    ]
     entries = [(name, exports_dir / name) for name in names] + [(p.name, p) for p in extra]
     archive = out / f"dataset-core-{tag}.zip"
     deterministic_zip(archive, entries, compress=True)

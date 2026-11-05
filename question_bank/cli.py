@@ -358,6 +358,40 @@ def cmd_translations_lint(settings: Settings, args: argparse.Namespace) -> int:
     return lint.main(argv)
 
 
+def cmd_translations_merge(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.translations.curated import MergeRefused, merge
+
+    try:
+        for code in args.lang.split(","):
+            stats = merge(args.work, code.strip(), settings.exports_dir)
+            print(
+                f"{stats['language']}: {stats['questions']} questions, {stats['answers']} answers merged "
+                f"({stats['warnings']} lint warnings, {stats['accepted_exceptions']} accepted exceptions)"
+            )
+    except MergeRefused as e:
+        print(f"refused: {e}")
+        return 1
+    return 0
+
+
+def cmd_translations_status(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.fsutil import read_json
+    from question_bank.translations import curated
+    from question_bank.translations.lint import LANGUAGES
+
+    bank = {
+        q["id"]: q["content_hash"] for q in read_json(settings.exports_dir / "questions.json")["questions"]
+    }
+    print(f"{'lang':<5} {'current':>8} {'stale':>6} {'missing':>8}")
+    for code in curated.languages():
+        hashes = {qid: e["source_hash"] for qid, e in curated.load(code).questions.items()}
+        current = sum(1 for qid, h in bank.items() if hashes.get(qid) == h)
+        stale = sum(1 for qid, h in bank.items() if qid in hashes and hashes[qid] != h)
+        missing = len(bank) - current - stale
+        print(f"{code:<5} {current:>8} {stale:>6} {missing:>8}  {LANGUAGES[code].english_name}")
+    return 0
+
+
 # ----------------------------------------------------------------------------- parser
 
 
@@ -428,6 +462,13 @@ def build_parser() -> argparse.ArgumentParser:
         "rest", nargs=argparse.REMAINDER, help="--part N | --labels | --ui | --all | --coverage"
     )
     lint_p.set_defaults(func=cmd_translations_lint)
+    merge_p = tr_sub.add_parser("merge", help="write data/translations/<lang>/ from a finished work package")
+    merge_p.add_argument("--work", type=Path, required=True)
+    merge_p.add_argument("--lang", required=True, help="language code(s), comma-separated")
+    merge_p.set_defaults(func=cmd_translations_merge)
+    tr_sub.add_parser("status", help="current, stale and missing translations per language").set_defaults(
+        func=cmd_translations_status
+    )
     return parser
 
 

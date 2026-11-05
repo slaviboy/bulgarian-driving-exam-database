@@ -158,3 +158,42 @@ CREATE TABLE exam_configs (
     notes_json          TEXT    NOT NULL
 );
 CREATE INDEX idx_exam_configs_variant ON exam_configs (variant_id);
+
+-- Translations (unofficial; Bulgarian is the source and prevails). Only translations of the current Bulgarian text
+-- are stored: source_hash equals the content_hash of the question that was translated.
+CREATE TABLE languages (
+    code         TEXT    NOT NULL PRIMARY KEY,
+    tag          TEXT    NOT NULL,
+    native_name  TEXT    NOT NULL,
+    english_name TEXT    NOT NULL,
+    kind         TEXT    NOT NULL CHECK (kind IN ('source', 'translation')),
+    status       TEXT    NOT NULL CHECK (status IN ('official', 'unofficial')),
+    questions    INTEGER NOT NULL,
+    coverage     REAL    NOT NULL
+);
+
+CREATE TABLE question_translations (
+    question_id   TEXT NOT NULL REFERENCES questions (id),
+    language      TEXT NOT NULL REFERENCES languages (code),
+    source_hash   TEXT NOT NULL,
+    question_text TEXT NOT NULL,
+    PRIMARY KEY (question_id, language)
+);
+CREATE INDEX idx_question_translations_language ON question_translations (language);
+
+CREATE TABLE answer_translations (
+    answer_id   TEXT NOT NULL REFERENCES answers (id),
+    language    TEXT NOT NULL REFERENCES languages (code),
+    answer_text TEXT NOT NULL,
+    PRIMARY KEY (answer_id, language)
+);
+CREATE INDEX idx_answer_translations_language ON answer_translations (language);
+
+CREATE TABLE label_translations (
+    kind       TEXT NOT NULL CHECK (kind IN ('category', 'variant_description', 'variant_note', 'topic')),
+    label_id   TEXT NOT NULL,
+    language   TEXT NOT NULL REFERENCES languages (code),
+    label_text TEXT NOT NULL,
+    PRIMARY KEY (kind, label_id, language)
+);
+CREATE INDEX idx_label_translations_language ON label_translations (language);

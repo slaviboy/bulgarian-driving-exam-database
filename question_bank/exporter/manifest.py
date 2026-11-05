@@ -15,6 +15,7 @@ from question_bank.models import (
     Completeness,
     CompletenessCheck,
     Generator,
+    LanguageInfo,
     Manifest,
     ManifestFile,
     MediaPack,
@@ -64,6 +65,7 @@ def build_manifest(
     report: ValidationReport,
     coverage_checks: list[CompletenessCheck],
     built_at: str | None = None,
+    languages: list[LanguageInfo] | None = None,
 ) -> Manifest:
     files = [
         ManifestFile(
@@ -138,4 +140,5 @@ def build_manifest(
         completeness=Completeness(
             status="complete" if all(c.passed for c in checks) else "partial", checks=checks
         ),
+        languages=languages or [],
     )

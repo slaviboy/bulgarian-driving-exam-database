@@ -26,6 +26,12 @@ from question_bank.reports.writers import (
     write_extraction_report,
     write_validation_report,
 )
+from question_bank.translations.export import (
+    build_translations,
+    language_infos,
+    validate_translation_exports,
+    write_translation_exports,
+)
 
 log = logging.getLogger(__name__)
 
@@ -86,6 +92,9 @@ def run_build(settings: Settings, dataset_version: str, *, webp: bool = True) ->
         retrieved_at=max(e.source.fetched_at for e in extracted),
     )
     paths = write_json_exports(dataset, exports)
+    translations, translation_issues, translation_checked = build_translations(dataset)
+    translation_paths = write_translation_exports(translations, exports)
+    languages = language_infos(dataset, translations)
     sqlite_path = exports / FILE_NAMES["sqlite"]
     write_sqlite(
         dataset,
@@ -97,13 +106,27 @@ def run_build(settings: Settings, dataset_version: str, *, webp: bool = True) ->
             "rules_version": dataset.rules_version,
             "content_fingerprint": dataset_fingerprint(dataset),
         },
+        languages=languages,
+        translations=translations,
     )
     paths["sqlite"] = sqlite_path
 
     write_schemas()
     rows = sum(len(e.parsed.questions) for e in extracted)
     report = validate_dataset(dataset, settings.media_dir, expected_rows=rows)
+    report.run(
+        "translations",
+        "translations match the current Bulgarian text (stale or missing ones are left out)",
+        translation_checked,
+        translation_issues,
+    )
     validate_exports(report, paths, SCHEMAS_DIR)
+    report.run(
+        "translation_schema",
+        "translation files conform to contract/schemas",
+        len(translation_paths),
+        validate_translation_exports(translation_paths, SCHEMAS_DIR),
+    )
 
     release_root = settings.data_dir.parent / "release"
     media_release = build_media_release(
@@ -137,13 +160,14 @@ def run_build(settings: Settings, dataset_version: str, *, webp: bool = True) ->
     manifest = build_manifest(
         dataset,
         extracted,
-        [paths["categories"], paths["questions"], paths["exam_configs"], paths["sqlite"]],
+        [paths["categories"], paths["questions"], paths["exam_configs"], *translation_paths, paths["sqlite"]],
         exports,
         media_release.packs,
         dataset_base_url=release_download_base(f"v{dataset_version}"),
         media_base_url=release_download_base(media_release.tag),
         report=report,
         coverage_checks=coverage,
+        languages=languages,
     )
     write_json(exports / FILE_NAMES["manifest"], manifest.model_dump(mode="json"))
 
@@ -157,5 +181,6 @@ def run_build(settings: Settings, dataset_version: str, *, webp: bool = True) ->
         release_root,
         dataset_version,
         extra=[REPO_ROOT / "DATA_NOTICE.md", reports / "validation-report.md"],
+        translations=[p.name for p in translation_paths],
     )
     return BuildResult(manifest, report, diff, [media_release.directory, core.parent])

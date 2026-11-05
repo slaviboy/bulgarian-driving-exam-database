@@ -83,6 +83,83 @@
       "title": "Generator",
       "type": "object"
     },
+    "LanguageInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "description": "ISO 639-1 code",
+          "title": "Code",
+          "type": "string"
+        },
+        "tag": {
+          "description": "BCP 47 tag of the wording, e.g. 'pt-PT'",
+          "title": "Tag",
+          "type": "string"
+        },
+        "native_name": {
+          "title": "Native Name",
+          "type": "string"
+        },
+        "english_name": {
+          "title": "English Name",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "source",
+            "translation"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "official",
+            "unofficial"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "translation file (a `files[].path`); null for the source language",
+          "title": "File"
+        },
+        "questions": {
+          "description": "questions available in this language",
+          "minimum": 0,
+          "title": "Questions",
+          "type": "integer"
+        },
+        "coverage": {
+          "description": "questions / all questions",
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Coverage",
+          "type": "number"
+        }
+      },
+      "required": [
+        "code",
+        "tag",
+        "native_name",
+        "english_name",
+        "kind",
+        "status",
+        "file",
+        "questions",
+        "coverage"
+      ],
+      "title": "LanguageInfo",
+      "type": "object"
+    },
     "Licensing": {
       "additionalProperties": false,
       "properties": {
@@ -388,6 +465,14 @@
     },
     "completeness": {
       "$ref": "#/$defs/Completeness"
+    },
+    "languages": {
+      "description": "Bulgarian (the source) and the available translations",
+      "items": {
+        "$ref": "#/$defs/LanguageInfo"
+      },
+      "title": "Languages",
+      "type": "array"
     }
   },
   "required": [
