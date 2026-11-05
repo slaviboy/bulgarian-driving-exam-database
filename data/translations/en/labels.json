@@ -1,0 +1,403 @@
+{
+  "language": "en",
+  "categories": {
+    "A": {
+      "source": "A",
+      "text": "A"
+    },
+    "AM": {
+      "source": "AM",
+      "text": "AM"
+    },
+    "B": {
+      "source": "B",
+      "text": "B"
+    },
+    "C": {
+      "source": "C",
+      "text": "C"
+    },
+    "CE": {
+      "source": "C+E",
+      "text": "C+E"
+    },
+    "C1": {
+      "source": "C1",
+      "text": "C1"
+    },
+    "C1E": {
+      "source": "C1+E",
+      "text": "C1+E"
+    },
+    "D": {
+      "source": "D",
+      "text": "D"
+    },
+    "D103": {
+      "source": "D (103)",
+      "text": "D (103)"
+    },
+    "DE": {
+      "source": "D+E",
+      "text": "D+E"
+    },
+    "TTM": {
+      "source": "Ттм",
+      "text": "Ttm"
+    }
+  },
+  "variants": {
+    "A.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am": {
+      "source": {
+        "description": "без правоспособност или с правоспособност за категория АМ",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "without a driving entitlement or with a driving entitlement for category AM",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "A.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": {
+      "source": {
+        "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП.",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "loss of driving entitlement under Art. 157(4) of the Road Traffic Act.",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "A.pritezhavasht-pravosposobnost-za-kategoria-tkt-ili-ttm": {
+      "source": {
+        "description": "притежаващ правоспособност за категория Ткт или Ттм",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "holding a driving entitlement for category Tkt or Ttm",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "A.pritezhavasht-pravosposobnost-za-kategoria-v1-ili-v": {
+      "source": {
+        "description": "притежаващ правоспособност за категория В1 или В",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "holding a driving entitlement for category B1 or B",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "AM.bez-pravosposobnost": {
+      "source": {
+        "description": "без правоспособност",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "without a driving entitlement",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "AM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": {
+      "source": {
+        "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "loss of driving entitlement under Art. 157(4) of the Road Traffic Act",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "B.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am": {
+      "source": {
+        "description": "без правоспособност или с правоспособност за категория АМ",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "without a driving entitlement or with a driving entitlement for category AM",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "B.zaguba-na-pravosposobnost-po-reda-na-chl-157-zdvp": {
+      "source": {
+        "description": "загуба на правоспособност по реда на чл. 157 ЗДвП",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "loss of driving entitlement under Art. 157 of the Road Traffic Act",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "B.s-pravosposobnost-za-kategoria-a-a1-ili-a2": {
+      "source": {
+        "description": "с правоспособност за категория А, А1 или А2",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category A, A1 or A2",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "B.pritezhavasht-pravosposobnost-za-kategoria-v1": {
+      "source": {
+        "description": "притежаващ правоспособност за категория В1",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "holding a driving entitlement for category B1",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "C.s-pravosposobnost-za-kategoria-v-b-78": {
+      "source": {
+        "description": "с правоспособност за категория В/B(78)",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category B/B(78)",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "CE.s-pravosposobnost-za-kategoria-d1e": {
+      "source": {
+        "description": "с правоспособност за категория D1E",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category D1E",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "CE.s-pravosposobnost-za-kategoria-s": {
+      "source": {
+        "description": "с правоспособност за категория С",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category C",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "CE.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": {
+      "source": {
+        "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП.",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "loss of driving entitlement under Art. 157(4) of the Road Traffic Act.",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "C1.s-pravosposobnost-za-kategoria-v": {
+      "source": {
+        "description": "с правоспособност за категория В",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category B",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "C1E.s-pravosposobnost-za-kategoria-d1e": {
+      "source": {
+        "description": "с правоспособност за категория D1E",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category D1E",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "D.s-pravosposobnost-za-kategoria-s1-s-i-kategoria-v-sas-stazh-2g": {
+      "source": {
+        "description": "с правоспособност за категория С1/С и категория В със стаж 2г.",
+        "effective_note": "След 07.02.26г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category C1/C and category B with 2 years' experience.",
+        "effective_note": "After 07.02.26."
+      }
+    },
+    "D.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp-i-upk": {
+      "source": {
+        "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП. и УПК",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "loss of driving entitlement under Art. 157(4) of the Road Traffic Act and CPC",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "D103.s-pravosposobnost-za-kat-d-i-dopalnitelno-obuchenie-za-upravlenie-na-troleybus": {
+      "source": {
+        "description": "с правоспособност за кат. D и допълнително обучение за управление на тролейбус",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for cat. D and additional training to drive a trolleybus",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "DE.s-pravosposobnost-za-kategoria-d": {
+      "source": {
+        "description": "с правоспособност за категория D",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "with a driving entitlement for category D",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "TTM.bez-pravosposobnost-ili-s-pravosposobnost-za-kategoria-am": {
+      "source": {
+        "description": "без правоспособност или с правоспособност за категория АМ",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "without a driving entitlement or with a driving entitlement for category AM",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": {
+      "source": {
+        "description": "загуба на правоспособност по реда на чл. 157, ал. 4 ЗДвП.",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "loss of driving entitlement under Art. 157(4) of the Road Traffic Act.",
+        "effective_note": "After 12.12.24."
+      }
+    },
+    "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78": {
+      "source": {
+        "description": "притежаващ правоспособност за категория А, А1, А2, Ткт, В1, В или В(78)",
+        "effective_note": "След 12.12.24г."
+      },
+      "text": {
+        "description": "holding a driving entitlement for category A, A1, A2, Tkt, B1, B or B(78)",
+        "effective_note": "After 12.12.24."
+      }
+    }
+  },
+  "topics": {
+    "faktorite-koito-okazvat-vliyanie-varhu-povedenieto-na-vodachite": {
+      "source": "ФАКТОРИТЕ, КОИТО ОКАЗВАТ ВЛИЯНИЕ ВЪРХУ ПОВЕДЕНИЕТО НА ВОДАЧИТЕ",
+      "text": "Factors that influence drivers' behaviour"
+    },
+    "iziskvania-kam-mps-vav-vrazka-s-prevoza-obhvat-na-vidimostta-v-514996": {
+      "source": "ИЗИСКВАНИЯ КЪМ МПС ВЪВ ВРЪЗКА С ПРЕВОЗА. ОБХВАТ НА ВИДИМОСТТА В ЗАВИСИМОСТ ОТ ГАБАРИТНИТЕ РАЗМЕРИ",
+      "text": "Requirements for motor vehicles in connection with the carriage. Field of vision depending on the overall dimensions"
+    },
+    "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-i-osnovni-554798": {
+      "source": "ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ И ОСНОВНИ ОПЕРАЦИИ, ЗА ДА СЕ ПОДДЪРЖА ТЕХНИЧЕСКИ ИЗПРАВЕН СЪСТАВ",
+      "text": "Carrying out the mandatory daily checks and basic operations to keep the vehicle combination in good technical condition"
+    },
+    "izvarshvane-na-zadalzhitelni-ezhednevni-pregledi-za-cdb064": {
+      "source": "ИЗВЪРШВАНЕ НА ЗАДЪЛЖИТЕЛНИ ЕЖЕДНЕВНИ ПРЕГЛЕДИ ЗА ТЕХНИЧЕСКАТА ИЗПРАВНОСТ НА ТРАМВАЙНАТА МОТРИСА",
+      "text": "Carrying out the mandatory daily checks of the technical condition of the tram motor car"
+    },
+    "normi-svarzani-s-masata-razmerite-i-klasa-na-prevoznite-209949": {
+      "source": "НОРМИ СВЪРЗАНИ С МАСАТА, РАЗМЕРИТЕ И КЛАСА НА ПРЕВОЗНИТЕ СРЕДСТВА ЗА ПРЕВОЗ НА ПЪТНИЦИ",
+      "text": "Standards relating to the mass, dimensions and class of vehicles for the carriage of passengers"
+    },
+    "obshti-svedenia-za-avtomobila": {
+      "source": "ОБЩИ СВЕДЕНИЯ ЗА АВТОМОБИЛА",
+      "text": "General information about the vehicle"
+    },
+    "obshti-svedenia-za-motopeda": {
+      "source": "ОБЩИ СВЕДЕНИЯ ЗА МОТОПЕДА",
+      "text": "General information about the moped"
+    },
+    "obshti-svedenia-za-mototsikleta": {
+      "source": "ОБЩИ СВЕДЕНИЯ ЗА МОТОЦИКЛЕТА",
+      "text": "General information about the motorcycle"
+    },
+    "osnovni-agregati-vazli-i-sistemi-na-avtomobila-tyahnoto-076e0a": {
+      "source": "ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА АВТОМОБИЛА, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+      "text": "Main assemblies, components and systems of the vehicle, their location and purpose"
+    },
+    "osnovni-agregati-vazli-i-sistemi-na-troleybus-tyahnoto-c7fbd3": {
+      "source": "ОСНОВНИ АГРЕГАТИ, ВЪЗЛИ И СИСТЕМИ НА ТРОЛЕЙБУС, ТЯХНОТО РАЗПОЛОЖЕНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+      "text": "Main assemblies, components and systems of the trolleybus, their location and purpose"
+    },
+    "osnovni-vazli-agregati-i-uredbi-na-tramvaynata-motrisa": {
+      "source": "ОСНОВНИ ВЪЗЛИ, АГРЕГАТИ И УРЕДБИ НА ТРАМВАЙНАТА МОТРИСА",
+      "text": "Main components, assemblies and systems of the tram motor car"
+    },
+    "osnovni-vidove-tegleshti-motorni-prevozni-sredstva-vlekachi-a7dbdc": {
+      "source": "ОСНОВНИ ВИДОВЕ ТЕГЛЕЩИ МОТОРНИ ПРЕВОЗНИ СРЕДСТВА (ВЛЕКАЧИ), ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+      "text": "Main types of towing motor vehicles (tractor units), their names and purpose"
+    },
+    "osnovnite-pravila-po-tehnika-na-bezopasnost": {
+      "source": "ОСНОВНИТЕ ПРАВИЛА ПО ТЕХНИКА НА БЕЗОПАСНОСТ",
+      "text": "Basic rules of occupational safety"
+    },
+    "osnovnite-vidove-remarketa-naimenovanie-i-prednaznachenie": {
+      "source": "ОСНОВНИТЕ ВИДОВЕ РЕМАРКЕТА, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+      "text": "Main types of trailers, names and purpose"
+    },
+    "osnovnite-vidove-remarketa-tyahnoto-naimenovanie-i-prednaznachenie": {
+      "source": "ОСНОВНИТЕ ВИДОВЕ РЕМАРКЕТА, ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+      "text": "Main types of trailers, their names and purpose"
+    },
+    "poddarzhane-na-avtomobila-v-tehnicheska-izpravnost": {
+      "source": "ПОДДЪРЖАНЕ НА АВТОМОБИЛА В ТЕХНИЧЕСКА ИЗПРАВНОСТ",
+      "text": "Keeping the vehicle in good technical condition"
+    },
+    "poddarzhane-na-troleybusa-v-tehnicheska-izpravnost": {
+      "source": "ПОДДЪРЖАНЕ НА ТРОЛЕЙБУСА В ТЕХНИЧЕСКА ИЗПРАВНОСТ",
+      "text": "Keeping the trolleybus in good technical condition"
+    },
+    "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-386e8b": {
+      "source": "ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ СЛЕД ИНЦИДЕНТ. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА",
+      "text": "Conduct in a road traffic accident and the measures to be taken after an incident. Precautions when removing and changing wheels"
+    },
+    "povedenie-pri-patnotransportno-proizshestvie-i-merkite-koito-f3ed92": {
+      "source": "ПОВЕДЕНИЕ ПРИ ПЪТНОТРАНСПОРТНО ПРОИЗШЕСТВИЕ И МЕРКИТЕ, КОИТО ТРЯБВА ДА СЕ ПРЕДПРИЕМАТ ВЪВ ВРЪЗКА С ВИДА И ХАРАКТЕРА НА ПРЕВОЗВАНИЯ ТОВАР. ПРЕДПАЗНИ МЕРКИ ПРИ СВАЛЯНЕ И СМЯНА НА КОЛЕЛА",
+      "text": "Conduct in a road traffic accident and the measures to be taken according to the type and nature of the goods carried. Precautions when removing and changing wheels"
+    },
+    "pravila-za-dvizhenieto-po-patishtata": {
+      "source": "ПРАВИЛА ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА",
+      "text": "Road traffic rules"
+    },
+    "prevoz-na-patnitsi-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz": {
+      "source": "ПРЕВОЗ НА ПЪТНИЦИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ",
+      "text": "Carriage of passengers within the country and in international carriage"
+    },
+    "prevoz-na-tovari-na-teritoriyata-na-stranata-i-pri-mezhdunaroden-prevoz": {
+      "source": "ПРЕВОЗ НА ТОВАРИ НА ТЕРИТОРИЯТА НА СТРАНАТА И ПРИ МЕЖДУНАРОДЕН ПРЕВОЗ",
+      "text": "Carriage of goods within the country and in international carriage"
+    },
+    "prevozvane-na-patnitsi-s-masov-gradski-transport-iziskvania-kam-02f8a7": {
+      "source": "ПРЕВОЗВАНЕ НА ПЪТНИЦИ С МАСОВ ГРАДСКИ ТРАНСПОРТ. ИЗИСКВАНИЯ КЪМ ТРОЛЕЙБУСА ВЪВ ВРЪЗКА С ПРЕВОЗА. ОБХВАТ НА ВИДИМОСТТА В ЗАВИСИМОСТ ОТ ГАБАРИТИТЕ",
+      "text": "Carriage of passengers by urban public transport. Requirements for the trolleybus in connection with the carriage. Field of vision depending on the dimensions"
+    },
+    "sistemi-za-prikachvane-naimenovanie-i-prednaznachenie": {
+      "source": "СИСТЕМИ ЗА ПРИКАЧВАНЕ, НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+      "text": "Coupling systems, names and purpose"
+    },
+    "sistemi-za-prikachvane-tyahnoto-naimenovanie-i-prednaznachenie": {
+      "source": "СИСТЕМИ ЗА ПРИКАЧВАНЕ, ТЯХНОТО НАИМЕНОВАНИЕ И ПРЕДНАЗНАЧЕНИЕ",
+      "text": "Coupling systems, their names and purpose"
+    },
+    "sredstva-za-organizatsia-i-regulirane-na-dvizhenieto": {
+      "source": "СРЕДСТВА ЗА ОРГАНИЗАЦИЯ И РЕГУЛИРАНЕ НА ДВИЖЕНИЕТО",
+      "text": "Means of organising and regulating traffic"
+    },
+    "vidove-avtobusni-prevozi-transportni-shemi": {
+      "source": "ВИДОВЕ АВТОБУСНИ ПРЕВОЗИ. ТРАНСПОРТНИ СХЕМИ",
+      "text": "Types of bus services. Transport schemes"
+    },
+    "vidove-tovari-i-spetsifichnite-osobenosti-okazvashti-vliyanie-5abc99": {
+      "source": "ВИДОВЕ ТОВАРИ И СПЕЦИФИЧНИТЕ ОСОБЕНОСТИ, ОКАЗВАЩИ ВЛИЯНИЕ ВЪРХУ БЕЗОПАСНОТО ИМ ТРАНСПОРТИРАНЕ",
+      "text": "Types of goods and the specific features that affect their safe transport"
+    },
+    "zadalzhenia-i-otgovornosti-na-vodachite-na-prevoznite-sredstva": {
+      "source": "ЗАДЪЛЖЕНИЯ И ОТГОВОРНОСТИ НА ВОДАЧИТЕ НА ПРЕВОЗНИТЕ СРЕДСТВА",
+      "text": "Duties and responsibilities of vehicle drivers"
+    },
+    "zapoznavane-s-patishtata-prevoznite-sredstva-i-uchastnitsite-v-patnoto-dvizhenie": {
+      "source": "ЗАПОЗНАВАНЕ С ПЪТИЩАТА, ПРЕВОЗНИТЕ СРЕДСТВА И УЧАСТНИЦИТЕ В ПЪТНОТО ДВИЖЕНИЕ",
+      "text": "Introduction to roads, vehicles and road users"
+    }
+  }
+}
