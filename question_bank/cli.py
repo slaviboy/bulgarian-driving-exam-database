@@ -340,6 +340,24 @@ def cmd_rules_methodology(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_translations_prepare(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.translations.prepare import prepare
+
+    index = prepare(settings.exports_dir, settings.media_dir, args.out, parts=args.parts)
+    print(
+        f"{index['questions']} questions, {index['text_answers']} text answers "
+        f"in {len(index['parts'])} parts → {args.out / 'source'}"
+    )
+    return 0
+
+
+def cmd_translations_lint(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.translations import lint
+
+    argv = ["--work", str(args.work), "--lang", args.lang, *args.rest]
+    return lint.main(argv)
+
+
 # ----------------------------------------------------------------------------- parser
 
 
@@ -394,6 +412,22 @@ def build_parser() -> argparse.ArgumentParser:
     rules_sub.add_parser(
         "methodology", help="extract the per-section quota tables from the ИААА methodology PDF (dev extra)"
     ).set_defaults(func=cmd_rules_methodology)
+
+    translations = sub.add_parser("translations", help="work packages and checks for translations")
+    tr_sub = translations.add_subparsers(dest="translations_command", required=True)
+    prep = tr_sub.add_parser(
+        "prepare", help="split the exported question bank into translation work packages"
+    )
+    prep.add_argument("--out", type=Path, required=True, help="work folder (source/ is written inside it)")
+    prep.add_argument("--parts", type=int, default=25, help="number of parts (default 25)")
+    prep.set_defaults(func=cmd_translations_prepare)
+    lint_p = tr_sub.add_parser("lint", help="check a language in a work folder (same as tools/lint.py)")
+    lint_p.add_argument("--work", type=Path, required=True)
+    lint_p.add_argument("--lang", required=True)
+    lint_p.add_argument(
+        "rest", nargs=argparse.REMAINDER, help="--part N | --labels | --ui | --all | --coverage"
+    )
+    lint_p.set_defaults(func=cmd_translations_lint)
     return parser
 
 
