@@ -36,6 +36,17 @@ by the Executive Director of ИААА. Every record in the dataset keeps its ori
 * The MIT licence in `LICENSE` applies only to the code, schemas and
   documentation written for this repository.
 
+## Translations
+
+The dataset also contains **unofficial translations** of the questions, the answers and their labels into ten
+languages (`translation-<lang>.json`, see docs/translations.md):
+* they were made with AI from the Bulgarian original and checked automatically and by an independent AI review;
+* they are not approved by ИААА and may contain errors;
+* **the Bulgarian original prevails.**
+
+As derivative works of the same content, they have the same redistribution status: published by the maintainer's
+decision, with no licence granted.
+
 ## Not affiliated
 
 This project is independent and is **not affiliated with, endorsed by or

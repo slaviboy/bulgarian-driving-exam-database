@@ -39,6 +39,9 @@ verify and import a dataset release. It complements `data-contract.md`; MUST/SHO
   exam `status` ∈ {official, unofficial}; `scoring` = all_or_nothing. Unknown enum values MUST fail the
   import of that dataset (not crash the app).
 
+Translation files are listed in `files[]` like the other JSON files and are verified the same way. The
+manifest's `languages[]` names them (`file`).
+
 ## 5. Semantic checks before writing anything
 
 1. Counts equal `manifest.counts` (categories, variants, sections, questions, answers, assignments,
@@ -49,6 +52,15 @@ verify and import a dataset release. It complements `data-contract.md`; MUST/SHO
 4. Every media reference (question media and picture answers) exists in `questions.json → media`.
 5. Every exam config references an existing variant; when `section_quotas` is present it sums to
    `question_count`; when `points_mix` is present it sums to `question_count` and `max_points`.
+6. Translations (when `languages[]` is present):
+   * exactly one source language;
+   * every translation file belongs to a `translation` entry, whose `questions` equals the number of translated
+     questions;
+   * every translated question exists and its `source_hash` equals its `content_hash`;
+   * its answers are exactly the question's answers with text;
+   * no text is blank;
+   * every label ID exists.
+   A violation fails the import of the whole dataset.
 
 ## 6. Mapping to Room
 
@@ -65,6 +77,10 @@ verify and import a dataset release. It complements `data-contract.md`; MUST/SHO
 | assignments | `content_variant_question` | (`variant_id`, `question_id`), FK `section_id` |
 | exam configs | `content_exam_config` | `id`, FK `variant_id` |
 | manifest data | `dataset_info` | single row |
+| `languages[]` | `content_language` | `code` |
+| translated questions | `content_question_translation` | (`question_id`, `language`), `source_hash` |
+| translated answers | `content_answer_translation` | (`answer_id`, `language`), `question_id` |
+| translated labels | `content_label_translation` | (`kind`, `label_id`, `language`) |
 
 Room's generated schema is the app's own; `master.sqlite` is **not** opened as a Room database
 (Room validates its own identity hash). The importer reads the JSON files (or `master.sqlite` with
@@ -91,6 +107,13 @@ plain SQLite APIs) and inserts rows into the Room tables.
   practice and shown as "no longer in the official bank".
 * Exam sessions SHOULD store a snapshot of the questions they contained so past results stay
   reviewable regardless of later content changes.
+
+## 8b. Showing translations
+
+* Bulgarian is the source. A translation is shown only if its `source_hash` equals the `content_hash` of the
+  Bulgarian text being shown, including the snapshot of a stored exam. Otherwise the Bulgarian text is shown,
+  with a note.
+* Translations SHOULD be labelled unofficial, and the Bulgarian text SHOULD stay one tap away.
 
 ## 9. Exam simulation
 

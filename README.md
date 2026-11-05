@@ -25,6 +25,7 @@ it up to date.
 | Answers | 7,893 — multi-correct questions included, every question has ≥ 1 correct answer |
 | Media | 830 pictures (234 MB PNG / 20 MB WebP) and 57 videos (350 MB) |
 | Exam rules | official parameters for all 23 variants, each value cited (Наредба № 38, ИААА methodology, simulator observation) |
+| Translations (from v1.1.0) | unofficial translations of every question and answer into English, Russian, Spanish, German, French, Hindi, Portuguese, Greek, Turkish and Romanian — the Bulgarian original prevails ([docs/translations.md](docs/translations.md)) |
 
 Download the latest release:
 
@@ -38,6 +39,7 @@ https://github.com/slaviboy/bulgarian-driving-exam-database/releases/latest/down
 | `categories.json` | categories → exam variants → sections, topics |
 | `questions.json` | questions with answers, media references, per-variant points/section/position; media metadata |
 | `exam-configs.json` | exam rules per variant (questions, points, pass mark, duration, quotas, evidence) |
+| `translation-<lang>.json` | unofficial translation into one language (questions, answers, labels), only of the current Bulgarian text |
 | `master.sqlite` | the same data in plain SQLite (schema in [docs/data-contract.md](docs/data-contract.md)) |
 | `dataset-core-vX.Y.Z.zip` | all of the above in one archive |
 
@@ -72,6 +74,7 @@ and a constructive feasibility proof of every exam configuration) — see `repor
 | [docs/source-investigation.md](docs/source-investigation.md) | what the sources contain and how they behave |
 | [docs/licensing.md](docs/licensing.md) | licensing findings and the publication decision |
 | [docs/exam-rules.md](docs/exam-rules.md) | official exam parameters with citations |
+| [docs/translations.md](docs/translations.md) | the unofficial translations: how they are made, checked and kept current |
 | [docs/releasing.md](docs/releasing.md) | how releases are made |
 
 ## Using the tools

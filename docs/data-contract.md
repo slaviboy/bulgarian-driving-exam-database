@@ -12,7 +12,7 @@ the schemas win and this document is a bug.
 | Field | Meaning | Changes when |
 |---|---|---|
 | `schema_version` (integer) | Shape of the files and tables below | A consumer would mis-read the data (field removed/renamed/re-typed, semantics changed). Consumers MUST refuse a `schema_version` they do not support. |
-| `dataset_version` (semver `MAJOR.MINOR.PATCH`) | One published build | MAJOR = `schema_version` change; MINOR = new official edition or questions added/removed; PATCH = corrections, metadata, rule fixes. |
+| `dataset_version` (semver `MAJOR.MINOR.PATCH`) | One published build | MAJOR = `schema_version` change; MINOR = new official edition, questions added/removed, or translations added; PATCH = corrections (also of translations), metadata, rule fixes. |
 | `source_edition` (ISO date) | Date in the official file names (`…_01.10.2026.html` → `2026-10-01`) | ИААА publishes a new array. |
 | `rules_version` (ISO date) | Version of the curated exam rules | A legal/methodology change is reflected. |
 
@@ -72,6 +72,10 @@ All text is UTF-8. Booleans are `INTEGER` 0/1. No SQLite extensions, no
 | `question_media` | `question_id` FK + `media_id` FK + `role` PK, `position` | `role` = `image` or `video` |
 | `variant_questions` | `variant_id` FK + `question_id` FK PK, `section_id` FK, `points` (1–3), `position` | `position` = order inside the official file |
 | `exam_configs` | `id` TEXT PK, `variant_id` FK, `status` (`official`/`unofficial`), `question_count`, `max_points`, `pass_points`, `duration_minutes`, `video_questions`, `max_video_plays`, `scoring`, `show_correct_count`, `section_quotas_json`, `points_mix_json`, `verification_json`, `evidence_json`, `notes_json` | JSON columns hold the same values as `exam-configs.json` |
+| `languages` | `code` TEXT PK, `tag`, `native_name`, `english_name`, `kind` (`source`/`translation`), `status` (`official`/`unofficial`), `questions`, `coverage` | Bulgarian and the translations (§5.4) |
+| `question_translations` | `question_id` FK + `language` FK PK, `source_hash`, `question_text` | only translations of the current Bulgarian text |
+| `answer_translations` | `answer_id` FK + `language` FK PK, `answer_text` | every answer with text of a translated question |
+| `label_translations` | `kind` + `label_id` + `language` FK PK, `label_text` | `kind` ∈ `category`, `variant_description`, `variant_note`, `topic` |
 
 Indexes: every foreign-key column (as the first column of an index), plus
 `answers(question_id, position)`.
@@ -83,6 +87,7 @@ manifest.json          entry point; checksums of everything else
 categories.json        sources, categories → variants → sections, topics
 questions.json         questions with answers, media references and assignments; media metadata
 exam-configs.json      exam rules per variant with citations and verification status
+translation-<lang>.json  unofficial translation into one language (§5.4), one file per language
 master.sqlite          the same data in the tables above
 ```
 
@@ -132,6 +137,10 @@ videos are `<media id>.mp4`), `media_packs[]` {`id`, `kind`, `url`, `bytes`, `sh
 `file_count`}, `licensing` {`attribution`, `license`, `redistribution_status`,
 `notice_url`}, `completeness` {`status` = `complete`/`partial`, `checks[]`}.
 
+Optional (since 1.1.0, ignore if unknown): `languages[]` {`code`, `tag`, `native_name`, `english_name`, `kind`
+(`source`/`translation`), `status` (`official`/`unofficial`), `file` (the `files[].path` of the translation, `null`
+for Bulgarian), `questions`, `coverage`}. Bulgarian is listed as the source.
+
 ### 5.3 `content_hash`
 
 `content_hash` = lower-case hex SHA-256 of the UTF-8 bytes of the canonical JSON
@@ -150,6 +159,27 @@ characters written as-is (not `\u` escaped). Test vectors live in
 `tests/data/content_hash_vectors.json`. `content_fingerprint` is the SHA-256 of
 the sorted list of `"<question id>:<content_hash>"` lines plus the canonical JSON
 of all assignments and exam configs — it does not depend on build time.
+
+### 5.4 `translation-<lang>.json`
+
+Unofficial translations (docs/translations.md); the Bulgarian original prevails.
+
+```json
+{ "schema_version": 1, "dataset_version": "1.1.0", "language": "en", "language_tag": "en-GB",
+  "source_language": "bg",
+  "translation": { "status": "unofficial", "method": "…", "authoritative": "…" },
+  "categories": [ { "id": "TTM", "text": "Ttm" } ],
+  "variants": [ { "id": "B.bez-…", "description": "…", "effective_note": "After 12.12.24" } ],
+  "topics": [ { "id": "pravila-za-dvizhenieto-po-patishtata", "text": "Rules of the road" } ],
+  "questions": [ { "id": "iaaa-5145", "source_hash": "…", "text": "Road users are:",
+                   "answers": [ { "id": "iaaa-5145-a1", "text": "drivers" } ] } ] }
+```
+
+* A question is only included when its `source_hash` equals the current `content_hash`. Stale and untranslated
+  questions are absent, and consumers show the Bulgarian text for them.
+* `answers` contains every answer of the question that has text, in position order. Picture-only answers are never
+  listed.
+* Missing labels fall back to the Bulgarian names.
 
 ## 6. Releases and URLs
 
