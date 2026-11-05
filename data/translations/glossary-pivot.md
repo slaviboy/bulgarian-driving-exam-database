@@ -30,8 +30,8 @@ Inflected forms appear in the questions:
 | второстепенен път | minor road (road without priority) | |
 | равнозначни пътища | roads of equal priority | the right-hand rule applies |
 | автомагистрала | motorway | |
-| скоростен път | expressway (road reserved for motor vehicles) | |
-| автомобилен път | public road (outside built-up areas) | road between settlements |
+| скоростен път | expressway | separate carriageways, motor vehicles only, 120 km/h for category B (iaaa-11712); a different class from «автомобилен път», so never give the two the same term |
+| автомобилен път | road for motor vehicles | **not a generic or interurban road**: a signed road class (white car on blue, Vienna Convention sign E,6a; iaaa-5334) closed to mopeds, tractors and bicycles (iaaa-5391); stopping only at marked places, no U-turns, reversing or crossing the median (iaaa-5411…5418, 11354); the general 90 km/h limit outside built-up areas applies (iaaa-11711). Use your traffic code's name of that sign, e.g. Kraftfahrstraße, vía para automóviles, дорога для автомобилей |
 | населено място | built-up area | marked by signs for its beginning and end |
 | извън населено място | outside a built-up area | |
 | жилищна зона | residential zone | |
