@@ -6357,7 +6357,7 @@
     },
     "iaaa-6111": {
       "source_hash": "7ec122e9742e680bc73b2eeb915ed104e6a16b478ce9e44529add079707fb5b8",
-      "text": "¿Influye el tiempo de reacción del conductor en una frenada de emergencia en la distancia de frenado del automóvil?",
+      "text": "¿Influye el tiempo de reacción del conductor en una frenada de emergencia en la distancia de detención del automóvil?",
       "answers": {
         "iaaa-6111-a1": "sí",
         "iaaa-6111-a2": "no"

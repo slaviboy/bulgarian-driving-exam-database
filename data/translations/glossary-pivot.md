@@ -113,7 +113,7 @@ Inflected forms appear in the questions:
 | съобразена скорост | appropriate (adapted) speed | |
 | максимално разрешена скорост | maximum permitted speed | |
 | дистанция | following distance | the gap to the vehicle in front |
-| спирачен път; опасна зона за спиране | braking distance; stopping distance | |
+| спирачен път; опасна зона за спиране | braking distance; stopping distance | iaaa-6111 uses «спирачен път» for the whole stopping distance (its key counts the driver's reaction time): translate that one as stopping distance |
 | време за реакция | reaction time | |
 | занасяне; поднасяне | skid; skidding of the rear | |
 | аквапланинг | aquaplaning | |

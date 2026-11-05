@@ -168,3 +168,6 @@ Open questions and decisions for the reviewer. Format: id — problem — decisi
   Lint exceptions added (check "cyrillic"), as in English.
 * feature_settings_update_auto_summary: «verifica-se se existe» → «a aplicação verifica se existe» (Android lint
   read «se se» as a typo; same meaning).
+
+Main-agent gate: iaaa-6111 says «distância de paragem» (stopping distance), not the braking distance: the key counts the
+driver's reaction time, so the Bulgarian «спирачен път» is meant as the whole stopping distance there.

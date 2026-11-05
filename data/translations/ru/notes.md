@@ -472,3 +472,6 @@ adjective, so the stem says "моторными" (BRIEF #3). 2, 3, 4, 5, 6 — k
 Main-agent gate: "УПК" is the driver's certificate of professional competence (Directive 2003/59/EC; Bulgarian
 "удостоверение за професионална компетентност"), so the label writes it out with the glossary term
 "удостоверение о профессиональной компетентности".
+
+Main-agent gate: iaaa-6111 says «остановочный путь» (stopping distance), not the braking distance: the key counts the
+driver's reaction time, so the Bulgarian «спирачен път» is meant as the whole stopping distance there.

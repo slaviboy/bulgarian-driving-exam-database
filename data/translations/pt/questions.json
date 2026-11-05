@@ -6357,7 +6357,7 @@
     },
     "iaaa-6111": {
       "source_hash": "7ec122e9742e680bc73b2eeb915ed104e6a16b478ce9e44529add079707fb5b8",
-      "text": "O tempo de reação do condutor numa travagem de emergência influencia a distância de travagem do automóvel?",
+      "text": "O tempo de reação do condutor numa travagem de emergência influencia a distância de paragem do automóvel?",
       "answers": {
         "iaaa-6111-a1": "sim",
         "iaaa-6111-a2": "não"

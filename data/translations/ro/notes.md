@@ -271,3 +271,6 @@ Open questions and decisions for the reviewer. Format: id — problem — decisi
 * iaaa-5295, iaaa-5296: the picture labels are the Cyrillic letters «б» and «в», exactly as printed in the diagrams
   (m-cb1c77ae4c1579b5, m-5079445745749caf); a transliterated or positional letter cannot be found in the picture.
   Lint exceptions added (check "cyrillic"), as in English.
+
+Main-agent gate: iaaa-6111 says «distanța de oprire» (stopping distance), not the braking distance: the key counts the
+driver's reaction time, so the Bulgarian «спирачен път» is meant as the whole stopping distance there.

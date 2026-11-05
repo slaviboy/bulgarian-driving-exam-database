@@ -545,3 +545,6 @@ Open questions and decisions, by id. Format: **id** — problem → decision.
 - Early in the work, one content search over `translation-work/*.md` also matched a few lines of `out/ru/notes.md`.
   Nothing from it was used, and from then on every search was limited to `out/es`, `source`, `tools/lint.py` and the
   root briefing files by explicit path. No other language folder was read or changed.
+
+Main-agent gate: iaaa-6111 says «distancia de detención» (stopping distance), not the braking distance: the key counts the
+driver's reaction time, so the Bulgarian «спирачен път» is meant as the whole stopping distance there.
