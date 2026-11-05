@@ -15,7 +15,8 @@ Inflected forms appear in the questions:
 |---|---|---|
 | път | road | any area or structure used for traffic of vehicles and/or pedestrians |
 | пътища, отворени за обществено ползване | roads open to public traffic | |
-| платно за движение (пътно платно) | carriageway | the part of the road for vehicles (excludes the shoulder and the pavement) |
+| платно за движение | carriageway | the part of the road for moving vehicles (excludes the shoulder and the pavement) |
+| пътно платно | roadway (carriageway + shoulders + islands) | **broader than «платно за движение»**: it includes the shoulders, the carriageway and its islands (iaaa-5230), and the pavement and the shoulder are part of it (iaaa-5231, 5232). Some questions offer both as different answers (iaaa-5412, 5413), so give the two distinct terms everywhere |
 | пътна лента | (traffic) lane | one longitudinal strip of the carriageway for a single line of vehicles |
 | най-дясната / дясната пътна лента | the right-most / right-hand lane | |
 | лента за принудително спиране | emergency lane (hard shoulder) | marked strip outside the carriageway for emergency stops |
@@ -47,7 +48,7 @@ Inflected forms appear in the questions:
 | Bulgarian | English pivot | Meaning / notes |
 |---|---|---|
 | пътно превозно средство (ППС) | road vehicle | any vehicle on wheels, tracks or rails, motorised or not |
-| моторно превозно средство (МПС) | motor vehicle | a road vehicle with an engine, **except** rail vehicles and mopeds |
+| моторно превозно средство (МПС) | motor vehicle | a road vehicle with an engine, **except** rail vehicles and mopeds. The plain adjective «моторни» (motorised) is broader: iaaa-5176/5177 count mopeds, tractors and trolleybuses among the «моторни» vehicles, so translate it as written |
 | автомобил | motor car (automobile) | a motor vehicle with at least four wheels |
 | лек автомобил | passenger car | |
 | товарен автомобил | goods vehicle (lorry, truck) | |
