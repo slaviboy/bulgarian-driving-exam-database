@@ -161,7 +161,9 @@ def cmd_verify(settings: Settings, args: argparse.Namespace) -> int:
 def cmd_build(settings: Settings, args: argparse.Namespace) -> int:
     from question_bank.build import run_build
 
-    result = run_build(settings, args.dataset_version, webp=not args.no_webp)
+    result = run_build(
+        settings, args.dataset_version, webp=not args.no_webp, translations_dir=args.translations_dir
+    )
     m = result.manifest
     print(f"dataset {m.dataset_version} · edition {m.source_edition} · completeness: {m.completeness.status}")
     print("counts: " + ", ".join(f"{k}={v}" for k, v in m.counts.items()))
@@ -363,7 +365,14 @@ def cmd_translations_merge(settings: Settings, args: argparse.Namespace) -> int:
 
     try:
         for code in args.lang.split(","):
-            stats = merge(args.work, code.strip(), settings.exports_dir)
+            kwargs = {"curated_dir": args.curated_dir} if args.curated_dir else {}
+            stats = merge(
+                args.work,
+                code.strip(),
+                settings.exports_dir,
+                allow_incomplete=args.allow_incomplete,
+                **kwargs,
+            )
             print(
                 f"{stats['language']}: {stats['questions']} questions, {stats['answers']} answers merged "
                 f"({stats['warnings']} lint warnings, {stats['accepted_exceptions']} accepted exceptions)"
@@ -420,6 +429,11 @@ def build_parser() -> argparse.ArgumentParser:
     build = sub.add_parser("build", help="build exports, media packs, manifest and reports; validate")
     build.add_argument("--dataset-version", required=True, help="semantic version of this dataset build")
     build.add_argument("--no-webp", action="store_true", help="skip WebP derivatives (faster, for testing)")
+    build.add_argument(
+        "--translations-dir",
+        type=Path,
+        help="curated translations to use instead of data/translations (testing)",
+    )
     build.set_defaults(func=cmd_build)
     sub.add_parser("capture", help="record the source pages' network requests (Playwright)").set_defaults(
         func=cmd_capture
@@ -465,6 +479,12 @@ def build_parser() -> argparse.ArgumentParser:
     merge_p = tr_sub.add_parser("merge", help="write data/translations/<lang>/ from a finished work package")
     merge_p.add_argument("--work", type=Path, required=True)
     merge_p.add_argument("--lang", required=True, help="language code(s), comma-separated")
+    merge_p.add_argument("--curated-dir", type=Path, help="write here instead of data/translations (testing)")
+    merge_p.add_argument(
+        "--allow-incomplete",
+        action="store_true",
+        help="merge finished parts only (test builds, never releases)",
+    )
     merge_p.set_defaults(func=cmd_translations_merge)
     tr_sub.add_parser("status", help="current, stale and missing translations per language").set_defaults(
         func=cmd_translations_status

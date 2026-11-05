@@ -69,13 +69,28 @@ def _numeric_id(question_id: str) -> tuple[int, str]:
     return (int(match.group(1)) if match else 0, question_id)
 
 
-def merge(work: Path, code: str, exports_dir: Path, curated_dir: Path = CURATED_DIR) -> dict:
-    """Write the curated files of one language from a finished work package (``out/<code>/``)."""
+def merge(
+    work: Path,
+    code: str,
+    exports_dir: Path,
+    curated_dir: Path = CURATED_DIR,
+    *,
+    allow_incomplete: bool = False,
+) -> dict:
+    """Write the curated files of one language from a finished work package (``out/<code>/``).
+
+    ``allow_incomplete`` merges only the finished parts, for test builds; releases use complete packages.
+    """
     language = lint.LANGUAGES[code]
     out = work / "out" / code
+    parts = [
+        p
+        for p in lint.part_numbers(work)
+        if not allow_incomplete or (out / "questions" / f"part-{p:02d}.json").exists()
+    ]
     result = lint.Result()
     result.extend(lint.lint_labels(work, language))
-    for part in lint.part_numbers(work):
+    for part in parts:
         result.extend(lint.lint_part(work, language, part))
     lint.apply_exceptions(result, lint.load_exceptions(out))
     if result.errors:
@@ -85,7 +100,7 @@ def merge(work: Path, code: str, exports_dir: Path, curated_dir: Path = CURATED_
     bank = {q["id"]: q for q in read_json(exports_dir / "questions.json")["questions"]}
     catalogue = read_json(exports_dir / "categories.json")
     questions: dict[str, dict] = {}
-    for part in lint.part_numbers(work):
+    for part in parts:
         translated = read_json(out / "questions" / f"part-{part:02d}.json")
         for qid, entry in translated.items():
             q = bank[qid]
@@ -97,7 +112,7 @@ def merge(work: Path, code: str, exports_dir: Path, curated_dir: Path = CURATED_
                     aid: nfc(entry["answers"][aid]) for aid in sorted(entry["answers"], key=order.get)
                 },
             }
-    if set(questions) != set(bank):
+    if set(questions) != set(bank) and not allow_incomplete:
         raise MergeRefused(f"{code}: {len(set(bank) - set(questions))} questions are not translated")
 
     translated_labels = read_json(out / "labels.json")

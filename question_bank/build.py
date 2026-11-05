@@ -71,7 +71,9 @@ class BuildResult:
     release_dirs: list[Path]
 
 
-def run_build(settings: Settings, dataset_version: str, *, webp: bool = True) -> BuildResult:
+def run_build(
+    settings: Settings, dataset_version: str, *, webp: bool = True, translations_dir: Path | None = None
+) -> BuildResult:
     extracted = load_extracted(settings)
     if not extracted:
         raise SystemExit("run `qb extract` first")
@@ -92,7 +94,9 @@ def run_build(settings: Settings, dataset_version: str, *, webp: bool = True) ->
         retrieved_at=max(e.source.fetched_at for e in extracted),
     )
     paths = write_json_exports(dataset, exports)
-    translations, translation_issues, translation_checked = build_translations(dataset)
+    translations, translation_issues, translation_checked = (
+        build_translations(dataset, translations_dir) if translations_dir else build_translations(dataset)
+    )
     translation_paths = write_translation_exports(translations, exports)
     languages = language_infos(dataset, translations)
     sqlite_path = exports / FILE_NAMES["sqlite"]
