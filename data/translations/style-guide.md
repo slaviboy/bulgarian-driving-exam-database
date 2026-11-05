@@ -134,7 +134,9 @@ can make a correct answer wrong. When fluency and precision conflict, choose pre
   * All other languages write Tkt, Ttb, Ttm.
 * **Bus classes:** "клас А/В" is class A/B (Latin). Roman numerals I, II, III stay.
 * **Picture labels:** a letter that marks something in a picture (e.g. „А") is written with the visually identical
-  letter of your script, so it matches the picture: Latin A, Greek Α, Cyrillic А in Russian.
+  letter of your script, so it matches the picture: Latin A, Greek Α, Cyrillic А in Russian. A letter with no
+  visually identical letter in your script (б, в, г …) stays in Cyrillic exactly as printed (iaaa-5295, 5296: «б»,
+  «в»). Never transliterate it or replace it by its position (b/v, b/c): the reader could not find it in the picture.
 * **Latin acronyms** stay exactly as written: ABS, ESP, ASR, BUS (the word painted on the lane), IRU, LED, ADR, CMR,
   TIR.
 * **Bulgarian abbreviations** become your language's full term or its standard abbreviation. Decide once, in your
