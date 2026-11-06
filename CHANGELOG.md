@@ -2,9 +2,36 @@
 
 All notable changes to the tooling, the data contract and the published datasets. Versions follow
 [Semantic Versioning](https://semver.org/): dataset MAJOR = contract `schema_version` change, MINOR =
-new official edition or questions added/removed, PATCH = corrections and metadata.
+new official edition, questions added/removed or translations added, PATCH = corrections and metadata.
 
 ## [Unreleased]
+
+### Dataset
+
+* **Unofficial translations** of all 2,476 questions, the 7,465 answers that have text and the labels
+  (categories, the candidate's situation of each variant and its "След …" note, topic titles) into nine
+  languages:
+  * English (British), Russian, Spanish (Spain), German, French, Portuguese (Portugal), Greek, Turkish and
+    Romanian.
+  * Each was translated from the Bulgarian with AI under `data/translations/style-guide.md`, linted, and
+    checked by an independent review (changes in `data/translations/<lang>/review.json`).
+  * They are labelled unofficial; the Bulgarian text prevails.
+* The Bulgarian content is unchanged from 1.0.0 (edition 2026-10-01).
+
+### Contract
+
+* `schema_version` stays 1; the additions are optional for consumers:
+  * `translation-<lang>.json` in the core package and the manifest's `files[]`;
+  * the manifest's `languages[]` (the source and each translation, with coverage);
+  * the `master.sqlite` tables `languages`, `question_translations`, `answer_translations` and
+    `label_translations`.
+* Only translations whose `source_hash` equals the current `content_hash` are exported; stale and missing
+  ones are reported and left out, so consumers show the Bulgarian text for them.
+
+### Tooling
+
+* `qb translations prepare | lint | merge | status`, translation checks in the build, and the release
+  notes list the translated languages.
 
 ## [1.0.0] — 2026-11-04
 
