@@ -16,12 +16,18 @@ release by URL and SHA-256, so a media release is reused by every dataset versio
 * **MINOR** — a new official edition, or questions added/removed.
 * **PATCH** — corrections, metadata, exam-rule fixes with the same questions.
 
-## Option A — release workflow (recommended for later releases)
+## Option A — release workflow (used for v1.1.0)
 
 Actions → **release** → *Run workflow* with the version. The workflow extracts the official source
 (incrementally, with a cache), downloads and verifies media, builds and validates, runs the licensing
 gate (`qb verify`), publishes the media release if the edition is new, publishes `vX.Y.Z`, and opens a
 pull request with the updated exports and reports.
+
+* The run takes about 40 minutes without a cache, most of it the polite media download.
+* Opening the pull request needs *Allow GitHub Actions to create and approve pull requests* (Settings →
+  Actions → General). Without it, the workflow pushes the branch `release/vX.Y.Z`, warns, and the
+  maintainer opens the pull request from that branch.
+* Merge the pull request after its checks pass, so `main` holds the published exports.
 
 ## Option B — from a maintainer machine (used for v1.0.0)
 
