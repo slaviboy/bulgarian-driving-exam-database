@@ -1037,6 +1037,112 @@
           "reason": "No lorry in the 8 or the 15 dense frames; the text states the rule (speed to stop before any foreseeable obstacle, lateral distance when passing) for a narrow winding road without claiming the scene."
         }
       ]
+    },
+    "B-13": {
+      "part": 13,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5688",
+          "change": "[legal reference] The quote of ЗДвП чл. 70, ал. 2, т. 1 is now the whole point instead of „при разминаване; в този случай превключването от дълги на къси светлини става“.",
+          "reason": "The old quote stopped in the middle of the sentence (whole sentences, quote whole points)."
+        },
+        {
+          "id": "iaaa-5699",
+          "change": "[legal reference] Added why „паркирането“ is wrong: ЗДвП sets no general ban on parking in reduced visibility but requires a vehicle stopped on the carriageway outside a settlement to show its parking lights; added ЗДвП чл. 73 as a fourth reference.",
+          "reason": "Tempting wrong answer left unexplained. Searched „намалена видимост“ in all acts: the bans tied to it are чл. 39, 87, т. 4 and 131 (oversize vehicles and dangerous goods only); чл. 98, ал. 1, т. 3 bans parking at „ограничена видимост“, which § 6, т. 56 defines differently (slopes, bends, obstacles). Phrased like the existing text of iaaa-5705."
+        },
+        {
+          "id": "iaaa-5703",
+          "change": "[legal reference] Added why „изпреварването“ is wrong: the ban is not tied to 50 m but applies when the visibility, reduced by fog, snowfall and the like, is shorter than the overtaking needs at the chosen speed; added ЗДвП чл. 43 (lead-in) and чл. 43, т. 1.",
+          "reason": "Tempting wrong answer left unexplained; чл. 43, т. 1 states exactly the condition and agrees with the official answer. Note for the maintainer: ППЗДвП чл. 90, т. 1 still bans overtaking „при ограничена или намалена видимост“ without condition, which would make „изпреварването“ correct; following ЗДвП as the briefs require, no conflict is written. „движението на самоходни машини“ has no provision and stays unexplained."
+        },
+        {
+          "id": "iaaa-5704",
+          "change": "[legal reference] Same clause on „изпреварването“ as in iaaa-5703, with ЗДвП чл. 43 and чл. 43, т. 1.",
+          "reason": "Same tempting wrong answer; same note on ППЗДвП чл. 90, т. 1."
+        },
+        {
+          "id": "iaaa-5705",
+          "change": "[factual] „ЗДвП не въвежда такава забрана“ for stopping in reduced visibility became „не въвежда обща забрана“.",
+          "reason": "ЗДвП чл. 131 does forbid oversize vehicles and vehicles with dangerous goods to stop on the carriageway (the official answer of iaaa-5704 rests on it), so an unqualified „no such ban“ was too broad."
+        },
+        {
+          "id": "iaaa-5707",
+          "change": "[legal reference] The quote of signs чл. 49, ал. 1 (А37) now runs to the end of the sentence („със скорост, по-голяма от скоростта, посочена в приложение № 17“).",
+          "reason": "The quote cut off the condition of the sign's use mid-sentence (quote conditions, whole sentences)."
+        },
+        {
+          "id": "iaaa-5746",
+          "change": "[style] The words on the missing exception for medical prescriptions now belong to the ban of чл. 5, ал. 3, т. 1 („без да прави изключение за взетите по лекарско предписание“), and the penalty of чл. 181, т. 4 is named in full („в болестно или друго състояние“).",
+          "reason": "In the old sentence „без изключение за лекарско предписание“ grammatically qualified the penalty provision, which says nothing about prescriptions."
+        },
+        {
+          "id": "iaaa-6111",
+          "change": "[legal reference] general → law. The text now says that the distance covered during the reaction time is added to the way to a full stop, so the „спирачен път“ counted from noticing the danger is longer; added the duty of ЗДвП чл. 20, ал. 2 to slow down at once and brake in an emergency („Когато възникне опасност за движението, водачите са длъжни незабавно да намалят скоростта, а при необходимост – да предприемат аварийно спиране“).",
+          "reason": "The old text spoke only of „пътят до пълното спиране“ and so avoided the official wording („дължината на спирачния път“); it now uses it without contradicting the physics. чл. 20, ал. 2 states the duty to react at once and names the emergency braking of the question (physics questions are often law)."
+        },
+        {
+          "id": "iaaa-11633",
+          "change": "[legal reference] Rewritten on the definition of ЗДвП § 6, т. 59 („\"Дневни светлини\" са светлини, предназначени за подобряване на възприемането и видимостта на предната част на пътно превозно средство при движението му.“), which is word for word the correct answer; чл. 70, ал. 1 kept for the night; чл. 70, ал. 3 dropped.",
+          "reason": "The old text derived the purpose from чл. 70, ал. 3 („Затова ЗДвП ги допуска през деня…“), an argument the provision does not make; the corpus defines the term directly."
+        },
+        {
+          "id": "iaaa-11639",
+          "change": "[style] The conclusion now reads „Затова без издадено разрешение спряното от движение превозно средство не може да се управлява и твърдението е „правилно“.“",
+          "reason": "Links the permission in чл. 177, ал. 1, т. 4 („разрешение на службата за контрол на МВР“) with the one in the question without claiming that the two names are the same. Checked: „разрешение за временно движение“ appears only in ЗДвП чл. 141а (unregistered vehicles with temporary plates); the ban itself (чл. 5, ал. 3, т. 2) has no exception, and the penalty applies without the MVR permission, so the statement is correct either way."
+        },
+        {
+          "id": "iaaa-12070",
+          "change": "[legal reference] „при видимост, намалена под 50 m, се използва допълнителната задна светлина за мъгла“ became „допълнителната задна светлина за мъгла се използва само когато видимостта е намалена под 50 m, какъвто е този случай“.",
+          "reason": "ЗДвП чл. 74, ал. 2 says „се използва само когато“; say what the provision says. The 50 m come from the question. Frames checked: thick fog, a speed-limit sign in frame 1, cars overtaking on the left, red rear lights of a vehicle ahead in the lane in frames 5 and 8."
+        },
+        {
+          "id": "iaaa-5305",
+          "change": "[factual] „се срещат много по-рядко“ became „водят до по-малко произшествия“.",
+          "reason": "„Много по-рядко“ is a statistic that neither the question nor plain knowledge supports; the official answer only says that speed and right of way cause the most accidents."
+        },
+        {
+          "id": "iaaa-5308",
+          "change": "[factual] Removed „макар често да са по-тежки поради високата скорост“.",
+          "reason": "A claim about the severity of accidents outside settlements that the question does not give; nothing invented."
+        },
+        {
+          "id": "iaaa-6109",
+          "change": "[factual] Removed the uphill case from „На тесен път, при изкачване по наклон или в последователни завои обектите са близо…“.",
+          "reason": "On a steep climb the objects are not necessarily close to the driver; the reason given did not fit that wrong answer."
+        },
+        {
+          "id": "iaaa-6115",
+          "change": "[factual] „водачът подценява скоростта“ became „водачът преценява неточно скоростта“ (and „нарушава възприятията и преценката“ became „нарушава възприятията“ to avoid the repetition).",
+          "reason": "The answer says only „няма реална преценка за скоростта“; the direction of the error (underestimating) is not certain knowledge."
+        },
+        {
+          "id": "iaaa-5739",
+          "change": "[checked, no change] ЗДвП чл. 181 (lead-in) and чл. 181, т. 4 (second clause, „водач, който управлява моторно превозно средство в болестно или друго състояние, което създава опасност за движението“) accepted as the basis for medicine and health (also iaaa-5740, 5741, 5743, 5744, 5746).",
+          "reason": "Searched for a more direct duty: ЗДвП чл. 5, ал. 3 covers only alcohol, drugs and vehicles stopped from traffic (used in 5740 and 5746 where drugs are concerned); чл. 150 and 150а concern the licence; чл. 152а only delegates physical fitness to an ordinance of the health minister that is not in the corpus; ППЗДвП has no rule on fatigue, illness or medicines („болестно“, „умора“, „уморен“, „лекарств“, „сънлив“ give no other hit). чл. 181, т. 4 is the only provision that names driving in such a state; the texts present it as a penalty („ЗДвП наказва…“), not as a duty, and quote the lead-in with the point."
+        },
+        {
+          "id": "iaaa-6125",
+          "change": "[checked, no change] ЗДвП чл. 181, т. 4 accepted for a driver who feels he may fall asleep at the wheel.",
+          "reason": "Feeling about to fall asleep is clearly „друго състояние, което създава опасност за движението“; no other provision covers it. iaaa-6126 and 6127 (fatigue in general, how often to rest) stay general, because the law does not say that every fatigue is such a state."
+        },
+        {
+          "id": "iaaa-12068",
+          "change": "[checked, no change] Frames checked: the yellow square sign with a white frame standing on its corner (Б3) at the right in frames 6–8, the light green car by the buildings on the right behind snowbanks in frames 6 and 8, tractors only in the oncoming lane (frames 1–2 and 6–8), a blue car in the rear-view mirror in frames 6–8.",
+          "reason": "Everything the text names is visible; „може да излезе на пътя или да не успее да спре навреме“ is stated as a possibility, not as a movement seen in the stills. Signs чл. 56, т. 3 and чл. 58, ал. 2 are quoted for Б3; no number is claimed."
+        },
+        {
+          "id": "iaaa-6132",
+          "change": "[checked, no change] The answer is quoted as „да предвижда възможните опасности в пътното движение“ although the source reads „предвижва“.",
+          "reason": "Obvious typo in the official answer; the corrected word is clearer and the lint accepts it."
+        },
+        {
+          "id": "iaaa-5729",
+          "change": "[checked, no change] The 61 remaining general entries (fatigue and its signs, posture, habituation, effects of alcohol, night vision, fuel consumption, tyre pressure, the sinking brake pedal, smoking when refuelling, accident statistics) stay general.",
+          "reason": "Searched the four acts for each topic („умора“, „седалка“, „гориво“, „покрива“, „налягане“, „пуше“, „музика“, „вниманието“, „реакция“, „спирачн“ and others). No provision states these effects: ППЗДвП чл. 10, ал. 1, т. 9 only lists a wrong tyre pressure as a fault, not its effect on handling or fuel use (approved iaaa-5431, 5432, 5446 are general as well); ППЗДвП чл. 190 names the engine and ignition but not smoking. The alcohol-effect questions ask about physiology, not the ban of чл. 5, ал. 3, т. 1, which is already cited where the answer is a duty (5737, 5738, 11638). Every number in these texts comes from the question or its answers."
+        }
+      ]
     }
   }
 }
