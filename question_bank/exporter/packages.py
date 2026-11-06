@@ -91,6 +91,8 @@ def build_core_package(
 ) -> Path:
     tag = f"v{dataset_version}"
     out = release_root / tag
+    if out.exists():
+        shutil.rmtree(out)  # a rebuilt release holds only this build's files (SHA256SUMS lists the folder)
     names = [
         "manifest.json",
         "categories.json",

@@ -13,6 +13,7 @@ from question_bank.build import write_schemas
 from question_bank.database.sqlite_builder import write_sqlite
 from question_bank.exporter.json_export import write_json_exports
 from question_bank.exporter.media import prepare_media
+from question_bank.exporter.packages import build_core_package
 from question_bank.extractor.downloaders.state import FetchRecord
 from question_bank.extractor.parsers.official_html import parse_variant_file
 from question_bank.extractor.pipeline import ExtractedFile, SourceFileInfo
@@ -177,3 +178,22 @@ def test_conflicting_duplicate_ids_fail_the_build(built, fixtures_dir):
     )
     with pytest.raises(DeduplicationConflict):
         build_dataset([extracted, other], prepared, RULES, dataset_version="0.0.1-test")
+
+
+def test_a_rebuilt_core_package_lists_only_its_own_files(tmp_path):
+    exports = tmp_path / "exports"
+    exports.mkdir()
+    names = ["manifest.json", "categories.json", "questions.json", "exam-configs.json", "translation-en.json"]
+    for name in [*names, "master.sqlite"]:
+        (exports / name).write_text("{}", encoding="utf-8")
+    # A file left by an earlier build of the same version.
+    stale = tmp_path / "release" / "v9.9.9" / "translation-xx.json"
+    stale.parent.mkdir(parents=True)
+    stale.write_text("{}", encoding="utf-8")
+
+    build_core_package(exports, tmp_path / "release", "9.9.9", [], ["translation-en.json"])
+
+    sums = (stale.parent / "SHA256SUMS").read_text(encoding="utf-8")
+    listed = [line.split("  ", 1)[1] for line in sums.splitlines()]
+    assert not stale.exists() and "translation-xx.json" not in listed
+    assert sorted(listed) == sorted([*names, "master.sqlite", "dataset-core-v9.9.9.zip"])
