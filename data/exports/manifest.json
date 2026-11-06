@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "source_edition": "2026-10-01",
   "rules_version": "2024-12-12",
-  "built_at": "2026-11-04T21:04:43+00:00",
+  "built_at": "2026-11-06T02:16:35+00:00",
   "generator": {
     "name": "bulgarian-driving-exam-database",
     "version": "0.1.0",
-    "git_commit": "b892fd41cac2f1bdff1a8655ff4307b28c28fa43"
+    "git_commit": "8c72d982d5f33cd89515c5f87e740051d4b88b0c"
   },
   "content_fingerprint": "2206aa6d2156ebd65fa42a07167e47a7c02e9ffe2dd8d8cb984937a7b97948e1",
   "sources": [
@@ -18,7 +18,7 @@
       "attribution": "Източник: Изпълнителна агенция „Автомобилна администрация“ — https://public-eis.rta.government.bg/exam-questions/",
       "license": "none granted by source",
       "redistribution_status": "published_by_maintainer_decision",
-      "retrieved_at": "2026-11-04T20:23:37+00:00"
+      "retrieved_at": "2026-11-06T01:42:14+00:00"
     }
   ],
   "source_snapshot": [
@@ -279,30 +279,84 @@
     "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": 680,
     "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78": 48
   },
-  "dataset_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/v1.0.0/",
+  "dataset_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/v1.1.0/",
   "files": [
     {
       "path": "categories.json",
       "bytes": 93701,
-      "sha256": "ed00dd0bc9c62eef1f8b03c0675580f4b1e3d2f8f5de956e127e972fed1ba302",
+      "sha256": "0e26c640e435ee53ceaf87e84d8d095fb7e2dde558760d76d16c583604c8a119",
       "media_type": "application/json"
     },
     {
       "path": "questions.json",
       "bytes": 7673337,
-      "sha256": "1ff51fd70e16f6c3d2cfb937c4fbb5b289c3608c6c6de6827b3d50d4c61b6507",
+      "sha256": "819770e6cf1af14460a768adc3ceac8d1dc1497c7d4b97d8c16a1944c39c8a17",
       "media_type": "application/json"
     },
     {
       "path": "exam-configs.json",
       "bytes": 58759,
-      "sha256": "9b9b5a53fa3d7676d5109f84917b2643a2359c2ac5721143a69bdc2bd550904e",
+      "sha256": "6c569888253d09541fa036bd2892f0fc512922a815babc17e76bdc87605caa13",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-en.json",
+      "bytes": 1436276,
+      "sha256": "a8d42f24381e0e196c1425c7f88d8b556537cfc9cb0bfadfd03051682e4b668b",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-ru.json",
+      "bytes": 1862780,
+      "sha256": "25a5af0d7b6ad435934072ca6d566f4bbcce38271b6ee2c7f16470defa450b18",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-es.json",
+      "bytes": 1487711,
+      "sha256": "0bdb357f73b395fcdb6c583a476863b29a740c54cc6409c5b1249c3841b58a2a",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-de.json",
+      "bytes": 1505374,
+      "sha256": "3ae29b16053e9a68e80d3f8869a6a234533df1c13e4dc3b19f0ddf8357321f60",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-fr.json",
+      "bytes": 1529020,
+      "sha256": "5f62256f2da104426fec786d0ae12eeabcd70f631d7d05fcfa0f94bbde7348ab",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-pt.json",
+      "bytes": 1477379,
+      "sha256": "0f7ad30027d82bd1d26e80ea5db544dae3e1cc34f3d65e5b31e86081c2b4b803",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-el.json",
+      "bytes": 1913238,
+      "sha256": "5842f67bc7c27dc38219931b3f60cf145387efd4e8d5542f3d28ae3934c6fc7b",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-tr.json",
+      "bytes": 1442712,
+      "sha256": "1b087277138b0c1c5c2af06c8b7371ee20674efc97a7cd137dee54f3cd80f19a",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-ro.json",
+      "bytes": 1495742,
+      "sha256": "6982b052bff616e916402901333b754899dfd7a03e758f22816bfdd11eb05876",
       "media_type": "application/json"
     },
     {
       "path": "master.sqlite",
-      "bytes": 7979008,
-      "sha256": "dde954f003b449d8ded6d6c6ea742b7b5789665ba51f14934975f36dd84c1593",
+      "bytes": 20234240,
+      "sha256": "12b663a50be6c2350c65eb62baa38bc5bbcb0ef403c51e120dd07fe9045a749e",
       "media_type": "application/vnd.sqlite3"
     }
   ],
@@ -390,6 +444,11 @@
         "detail": "23 checked, 0 errors, 0 warnings — every exam configuration can be generated (20 seeds each)"
       },
       {
+        "name": "translations",
+        "passed": true,
+        "detail": "22284 checked, 0 errors, 0 warnings — translations match the current Bulgarian text (stale or missing ones are left out)"
+      },
+      {
         "name": "json_schema",
         "passed": true,
         "detail": "3 checked, 0 errors, 0 warnings — exports conform to contract/schemas"
@@ -398,6 +457,11 @@
         "name": "sqlite_integrity",
         "passed": true,
         "detail": "1 checked, 0 errors, 0 warnings — master.sqlite integrity, foreign keys, user_version"
+      },
+      {
+        "name": "translation_schema",
+        "passed": true,
+        "detail": "9 checked, 0 errors, 0 warnings — translation files conform to contract/schemas"
       },
       {
         "name": "all_official_files_extracted",
@@ -415,5 +479,117 @@
         "detail": "536 copies in other variant directories compared, 0 mismatches"
       }
     ]
-  }
+  },
+  "languages": [
+    {
+      "code": "bg",
+      "tag": "bg-BG",
+      "native_name": "Български",
+      "english_name": "Bulgarian",
+      "kind": "source",
+      "status": "official",
+      "file": null,
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "en",
+      "tag": "en-GB",
+      "native_name": "English",
+      "english_name": "English",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-en.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "ru",
+      "tag": "ru-RU",
+      "native_name": "Русский",
+      "english_name": "Russian",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-ru.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "es",
+      "tag": "es-ES",
+      "native_name": "Español",
+      "english_name": "Spanish",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-es.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "de",
+      "tag": "de-DE",
+      "native_name": "Deutsch",
+      "english_name": "German",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-de.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "fr",
+      "tag": "fr-FR",
+      "native_name": "Français",
+      "english_name": "French",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-fr.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "pt",
+      "tag": "pt-PT",
+      "native_name": "Português",
+      "english_name": "Portuguese",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-pt.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "el",
+      "tag": "el-GR",
+      "native_name": "Ελληνικά",
+      "english_name": "Greek",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-el.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "tr",
+      "tag": "tr-TR",
+      "native_name": "Türkçe",
+      "english_name": "Turkish",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-tr.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "ro",
+      "tag": "ro-RO",
+      "native_name": "Română",
+      "english_name": "Romanian",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-ro.json",
+      "questions": 2476,
+      "coverage": 1.0
+    }
+  ]
 }
