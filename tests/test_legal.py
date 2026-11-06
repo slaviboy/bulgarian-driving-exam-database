@@ -22,7 +22,7 @@ PDF_LAYOUT = """ЗАКОН ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА
 1. ги поддържат изправни; 19/04/2024 г.
 2. организират движението по тях;
 3. (отм. - ДВ, бр. 64 от 2025 г.).
-4. почистват пътното платно.
+4. почистват пътното платно с поголяма грижа, полека и подобряват настилката.
 (2) (Отм. - ДВ, бр. 51 от 2007 г.)
 Редакция към ДВ, бр. 23 от 19 Март 2021 г.
 Чл. 3. (1) Лицата, които стопанисват пътищата, ги поддържат по стария начин.
@@ -88,7 +88,10 @@ def test_pdf_layout_keeps_only_the_current_text_of_the_act():
     )
     assert act.units["чл. 3, ал. 1, т. 1"] == "ги поддържат изправни;"
     assert act.units["чл. 3, ал. 1, т. 2"] == "организират движението по тях;"
-    assert act.units["чл. 3, ал. 1, т. 4"] == "почистват пътното платно."
+    # A comparative's lost hyphen is put back; words that only begin like one are left alone.
+    assert act.units["чл. 3, ал. 1, т. 4"] == (
+        "почистват пътното платно с по-голяма грижа, полека и подобряват настилката."
+    )
     assert "чл. 3, ал. 1, т. 3" in act.repealed and "чл. 3, ал. 2" in act.repealed
     assert "стария начин" not in act.units["чл. 3"]
     # A heading that wraps onto the next line and the page furniture (also the print date) are not part of any

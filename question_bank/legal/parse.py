@@ -34,6 +34,11 @@ _FURNITURE = [
 ]
 # The same print date when the extraction put it at the end of a line of text.
 _PRINT_DATE = re.compile(r"\s+\d{2}/\d{2}/\d{4} г\.\s*$")
+# Comparatives whose hyphen the published files lost ("поголяма" for "по-голяма"; the same files write
+# "по-голяма" elsewhere). Only stems after which "по" + stem is never a word of its own.
+_LOST_HYPHEN = re.compile(
+    r"(?i)(?<![а-я])(по|най)(?=(?:голям|голем|малк|висок|ниск|дълг|къс|широк|тесн|бърз|бавн|тежк)[а-я]*)"
+)
 # Final provisions ("Допълнителни разпоредби", "ПРЕХОДНИ И ЗАКЛЮЧИТЕЛНИ РАЗПОРЕДБИ", "Заключителна …").
 _FINAL = re.compile(r"(?i)^\s*(допълнителн|преходн|заключителн)\w*(?:\s+и\s+(\w+))?\s+разпоредб[аи]\b(.*)$")
 _ANNEX = re.compile(r"^\s*Приложение №")
@@ -204,7 +209,11 @@ def _drop_redactions(lines: list[str]) -> list[str]:
 
 def parse(text: str) -> ParsedAct:
     raw = text.replace("\f", "\n").replace("­", "").replace(" ", " ").split("\n")
-    lines = [_PRINT_DATE.sub("", line).strip() for line in raw if not any(p.match(line) for p in _FURNITURE)]
+    lines = [
+        _LOST_HYPHEN.sub(r"\1-", _PRINT_DATE.sub("", line)).strip()
+        for line in raw
+        if not any(p.match(line) for p in _FURNITURE)
+    ]
     # The header: everything before the first chapter, section or article.
     first = next(
         (i for i, line in enumerate(lines) if _is_heading(line) or _TOP_LINE.match(line)), len(lines)
