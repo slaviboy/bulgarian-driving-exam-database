@@ -36,9 +36,7 @@ _ANNEX = re.compile(r"^\s*Приложение №")
 _REDACTION = re.compile(r"^\s*Редакция към ДВ")
 # Chapter and section headings: "Глава втора. ПРАВИЛА …" on one line, or "Глава втора" / "Раздел I" with
 # the title on the next line. Latin and Cyrillic look-alikes occur in section numbers ("Раздел ХIV", "IXa").
-_CHAPTER = re.compile(
-    r"(?i)^\s*(?:Глава\s+\S+(?:\s+\"?[а-я]\"?)?|Раздел\s+[IVXLCХІ]+[a-zа-я]?)(?:\.|\s*$)"
-)
+_CHAPTER = re.compile(r"(?i)^\s*(?:Глава\s+\S+(?:\s+\"?[а-я]\"?)?|Раздел\s+[IVXLCХІ]+[a-zа-я]?)(?:\.|\s*$)")
 _TOP = re.compile(
     r"(?:(?<=\n)|(?<=^)|(?<=[.;:!?\"”“»)]\s))(?:Чл\.\s(?P<art>\d+[а-я]?)\.|§\s(?P<par>\d+[а-я]?)\.)\s"
 )
