@@ -594,6 +594,122 @@
           "reason": "Exact visual wording, as in the approved iaaa-6224 and iaaa-11886: the plate shows an upward arrow on each side of „200 м“, which is what tells Т2 from Т1."
         }
       ]
+    },
+    "B-10": {
+      "part": 10,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-6475",
+          "change": "[conflict] Rewrote the description: ЗДвП чл. 63, т. 1 repealed (ДВ бр. 60/2012); what remains (ЗДвП чл. 63, т. 2–3 and чл. 64, ППЗДвП чл. 124–125) has no gap rule; Д9 is for tunnels over 70 m (signs чл. 117, ал. 1) and В20 sets a minimum gap only where it is placed (signs чл. 81). Kept as a conflict.",
+          "reason": "Searched all four acts: `тунел` and its forms, `дистанция`, `разстояние`, `секунди`, `500 m`, `500 м`, ЗДвП чл. 23 and 62–65, ППЗДвП чл. 75 and 122–126, the signs act on А38 (чл. 50), Д9/Д10 (чл. 117–118), В20 (чл. 81) and В24 (чл. 83). ЗДвП чл. 63, т. 1 is listed as repealed in the corpus (the caller confirmed ДВ бр. 60/2012 in the source file). Nothing left in the corpus gives a tunnel gap in metres or seconds or any rule for tunnels longer than 500 m (500 m appears only as a sign-placement distance in signs чл. 50, ал. 3), so the conflict stays. The old description named only ППЗДвП чл. 124; the new one names the repealed point and every provision that remains."
+        },
+        {
+          "id": "iaaa-6477",
+          "change": "[conflict] Rewrote the description in the same way and kept the general rule: ЗДвП чл. 23, ал. 1 (ППЗДвП чл. 75, ал. 1) asks only for a gap that lets the driver stop, not for two seconds; В20 only where placed. Kept as a conflict.",
+          "reason": "Searched all four acts: `тунел` and its forms, `дистанция`, `разстояние`, `секунди`, `500 m`, `500 м`, ЗДвП чл. 23 and 62–65, ППЗДвП чл. 75 and 122–126, the signs act on А38 (чл. 50), Д9/Д10 (чл. 117–118), В20 (чл. 81) and В24 (чл. 83). ЗДвП чл. 63, т. 1 is listed as repealed in the corpus (the caller confirmed ДВ бр. 60/2012 in the source file). Nothing left in the corpus gives a tunnel gap in metres or seconds or any rule for tunnels longer than 500 m (500 m appears only as a sign-placement distance in signs чл. 50, ал. 3), so the conflict stays. The old description named only ППЗДвП чл. 124; the new one names the repealed point and every provision that remains."
+        },
+        {
+          "id": "iaaa-6546",
+          "change": "[conflict] Rewrote the description: names ЗДвП чл. 37, ал. 1 with ППЗДвП чл. 84, ал. 2 and ЗДвП чл. 48 with ППЗДвП чл. 103, т. 1, explains the circle and says that „да премина преди синия автомобил“ agrees with чл. 48 while „да премина преди червения автомобил“ contradicts чл. 37, ал. 1. Kept as a conflict.",
+          "reason": "Picture checked (also enlarged): unmarked junction, no priority signs; the driver turns left (left indicator, curved arrow), the red car comes the other way, the blue van comes from the left and crosses to the right. So the blue van must give way to the driver (ЗДвП чл. 48, ППЗДвП чл. 103, т. 1), the red car must give way to the blue van (it is on the red car's right), and the driver must give way to the oncoming red car (ЗДвП чл. 37, ал. 1, ППЗДвП чл. 84, ал. 2). Searched all four acts for a rule that breaks such a circle or ranks чл. 37 below чл. 48 (`взаимно`, `помежду си`, `едновременно`, `първи`, `предимство`, ЗДвП чл. 25, 37, 46–50, ППЗДвП чл. 84, 102–105, § 6, т. 31): none exists, so the corpus keeps the driver's duty towards the red car and the conflict stays. The description now names both acts, says which official answer agrees with the corpus and which contradicts it. iaaa-6543 (same scene) is kept: it only says that going straight gives no priority and that the red car must give way to the blue one, which agrees with чл. 48 and does not deny чл. 37."
+        },
+        {
+          "id": "iaaa-6550",
+          "change": "[conflict] Same rewrite; the description now says that „да премина преди двата автомобила“ agrees with чл. 48 for the blue van and contradicts чл. 37, ал. 1 for the red car. Kept as a conflict.",
+          "reason": "Picture checked (also enlarged): unmarked junction, no priority signs; the driver turns left (left indicator, curved arrow), the red car comes the other way, the blue van comes from the left and crosses to the right. So the blue van must give way to the driver (ЗДвП чл. 48, ППЗДвП чл. 103, т. 1), the red car must give way to the blue van (it is on the red car's right), and the driver must give way to the oncoming red car (ЗДвП чл. 37, ал. 1, ППЗДвП чл. 84, ал. 2). Searched all four acts for a rule that breaks such a circle or ranks чл. 37 below чл. 48 (`взаимно`, `помежду си`, `едновременно`, `първи`, `предимство`, ЗДвП чл. 25, 37, 46–50, ППЗДвП чл. 84, 102–105, § 6, т. 31): none exists, so the corpus keeps the driver's duty towards the red car and the conflict stays. The description now names both acts, says which official answer agrees with the corpus and which contradicts it. iaaa-6543 (same scene) is kept: it only says that going straight gives no priority and that the red car must give way to the blue one, which agrees with чл. 48 and does not deny чл. 37."
+        },
+        {
+          "id": "iaaa-6442",
+          "change": "[legal reference] Added ЗДвП чл. 41, ал. 2 (when overtaking the driver leaves his lane and enters the adjacent one); the text now derives „маневра, свързана с отклонение встрани“ from it instead of asserting it.",
+          "reason": "The reason why overtaking needs the left indicator under чл. 26 is that overtaking is a lateral manoeuvre; that step had no basis. Picture checked: one-way road with Д4, red car ahead in the right lane."
+        },
+        {
+          "id": "iaaa-6454",
+          "change": "[legal reference] Rewrote the text so that it rests first on the positive rule ЗДвП чл. 40, ал. 1 (reversing is a manoeuvre the law allows on conditions) and then on the express limit of чл. 38, ал. 4 to junctions; the references are reordered accordingly.",
+          "reason": "The old text started from 'the ban applies only at a junction', an argument from silence. Searched ЗДвП чл. 38–40, 45 and ППЗДвП чл. 85–94 (`назад`, `движение назад`): no provision expressly permits reversing in a U-turn outside a junction, so the best basis is чл. 40, which regulates reversing as a lawful manoeuvre, together with the wording „на кръстовище“ of чл. 38, ал. 4."
+        },
+        {
+          "id": "iaaa-6455",
+          "change": "[legal reference] Added ЗДвП § 6, т. 11 (motor vehicle) for the clause that the ban also covers buses and cars with trailers; that clause now says why.",
+          "reason": "The text applied В6 to buses and cars because they are motor vehicles without citing the definition. Sign code checked: the picture shows only a trailer (single axle) in a white circle with a red border and the plate Т9 over the middle lane. The corpus does not describe the images of В5 and В6, but by their names (signs чл. 73, ал. 1; ППЗДвП чл. 47, ал. 3) В5 exempts semi-trailers and single-axle trailers and В6 bans all motor vehicles with trailers; only В6 fits the official answers (semi-trailers banned, buses and cars with trailers not allowed), so В6 is kept."
+        },
+        {
+          "id": "iaaa-6455",
+          "change": "[style] „в бял кръг с червен кант“ → „на бял кръг с червена гранична ивица“.",
+          "reason": "The signs act calls the border „червена гранична ивица“ (чл. 66, ал. 1)."
+        },
+        {
+          "id": "iaaa-6476",
+          "change": "[picture] Rewrote the text so that it no longer depends on the officer's arm: whatever the signal, the driver behind his back may not pass (arms sideways: only the drivers at his shoulders; right arm forward: only the drivers at his left shoulder; right arm raised: „Внимание, спри!“). References now ЗДвП чл. 10, ал. 2, т. 1, т. 2 and т. 3 (twice).",
+          "reason": "The officer is seen from behind (picture enlarged); his right arm is bent in front of him and its exact position cannot be read with certainty. The red car on the left is at his left shoulder. Under every point of чл. 10, ал. 2 a driver behind the officer's back is not allowed to pass, so the answer holds regardless."
+        },
+        {
+          "id": "iaaa-6479",
+          "change": "[style] The first quote „дясна ръка, протегната хоризонтално напред, означава: а) …“ became „\"ПРЕМИНАВАНЕТО Е РАЗРЕШЕНО\" за водачите на пътни превозни средства, които се намират срещу лявото рамо на регулировчика“ (same unit, чл. 10, ал. 2, т. 3).",
+          "reason": "Quotes leave out part numbers; no approved quote contains a letter subdivision. The entry already had four references, and the text names the gesture. Picture checked: officer faces left, right arm with baton forward, driver at his left shoulder, blue car behind his back, Б2 for the driver."
+        },
+        {
+          "id": "iaaa-6483",
+          "change": "[style] Split the quote with „а)“ into two quotes from чл. 10, ал. 2, т. 3: the gesture („дясна ръка, протегната хоризонтално напред, означава“) and the permission for the drivers at the left shoulder.",
+          "reason": "Quotes leave out part numbers (style guide § 4), as in the approved iaaa-5948. Picture checked."
+        },
+        {
+          "id": "iaaa-6485",
+          "change": "[style] Same split of the quote as in iaaa-6483.",
+          "reason": "Quotes leave out part numbers (style guide § 4). Picture checked: same scene as iaaa-6483."
+        },
+        {
+          "id": "iaaa-6484",
+          "change": "[factual] „показва накъде и на какво разстояние се намира най-близкият авариен изход“ → „показва посоката и разстоянието до авариен изход“.",
+          "reason": "The sign shows a direction and 100 м to an emergency exit; that it is the nearest one is not visible and not in the corpus. The signs act has no tunnel emergency-exit sign (searched `авари`, `изход`, `SOS`, `пожар`, `телефон`, `спешн`, `евакуа`, all Д-, Е- and Ж-signs), so the entry stays `general`."
+        },
+        {
+          "id": "iaaa-6534",
+          "change": "[legal reference] Extended the quote of signs чл. 94, ал. 1 from the bare name of Г3 to the whole sentence, which says that after these signs „движението задължително продължава в предписаната посока“.",
+          "reason": "The text says that Г3 obliges the driver to turn left; the quote must show that duty. Picture checked: Б3 with Г3 below it; the oncoming blue car is on the same road (back of a Б3 at the far left), the red van on the right comes from a road with Б1 (triangle back)."
+        },
+        {
+          "id": "iaaa-6536",
+          "change": "[legal reference] Same extension of the Г3 quote as in iaaa-6534.",
+          "reason": "Same picture as iaaa-6534; the text relies on the duty to turn left."
+        },
+        {
+          "id": "iaaa-6521",
+          "change": "[style] „под знака Б1 пред …“ → „под знака Б1 „Пропусни движещите се по пътя с предимство“ пред …“.",
+          "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
+        },
+        {
+          "id": "iaaa-6522",
+          "change": "[style] „под знака Б1 пред …“ → „под знака Б1 „Пропусни движещите се по пътя с предимство“ пред …“.",
+          "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
+        },
+        {
+          "id": "iaaa-6541",
+          "change": "[style] „под знака Б1 пред …“ → „под знака Б1 „Пропусни движещите се по пътя с предимство“ пред …“.",
+          "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
+        },
+        {
+          "id": "iaaa-6542",
+          "change": "[style] „под знака Б1 пред …“ → „под знака Б1 „Пропусни движещите се по пътя с предимство“ пред …“.",
+          "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
+        },
+        {
+          "id": "iaaa-6544",
+          "change": "[style] „под знака Б1 пред …“ → „под знака Б1 „Пропусни движещите се по пътя с предимство“ пред …“.",
+          "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
+        },
+        {
+          "id": "iaaa-6545",
+          "change": "[style] „под знака Б1 пред …“ → „под знака Б1 „Пропусни движещите се по пътя с предимство“ пред …“.",
+          "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
+        },
+        {
+          "id": "iaaa-6547",
+          "change": "[style] „под знака Б1 пред …“ → „под знака Б1 „Пропусни движещите се по пътя с предимство“ пред …“.",
+          "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
+        }
+      ]
     }
   }
 }
