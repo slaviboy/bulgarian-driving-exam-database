@@ -82,6 +82,12 @@ jobs:
               print("Translations (unofficial, made with AI and independently reviewed; the Bulgarian text prevails): "
                     + ", ".join(f"{l['english_name']} {l['coverage']:.0%}" for l in t))
               print()
+          e = m.get("explanations", [])
+          if e:
+              print("Explanations (unofficial, in Bulgarian, written with AI from the law and independently reviewed; "
+                    "the official question bank and the law prevail): "
+                    + ", ".join(f"{x['questions']} questions ({x['language']})" for x in e))
+              print()
           print(f"Completeness: **{m['completeness']['status']}**. {m['licensing']['attribution']}")
           print()
           print("The source grants no licence; read DATA_NOTICE.md before reusing the content.")

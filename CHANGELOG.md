@@ -4,7 +4,18 @@ All notable changes to the tooling, the data contract and the published datasets
 [Semantic Versioning](https://semver.org/): dataset MAJOR = contract `schema_version` change, MINOR =
 new official edition, questions added/removed or translations added, PATCH = corrections and metadata.
 
-## [Unreleased]
+## [1.2.0] — 2026-11-07
+
+### Dataset
+
+* **Explanations (i) in Bulgarian** for all 1,440 questions of category B: 1,433 explanations (1,304 quoting the
+  law word for word, 129 general) and 7 conflicts left out for the maintainer (`docs/explanations.md`). Shared
+  questions give other categories explanations too.
+  * Written with AI from the current texts of ЗДвП (ДВ бр. 55/2026), its Правилник and the ordinances on road
+    signs and markings, under `data/explanations/style-guide.md`; every part linted and reviewed independently
+    (`data/explanations/bg/review.json`).
+  * Unofficial; the official question bank and the law prevail.
+* The questions, answers and translations are unchanged from 1.1.0 (edition 2026-10-01).
 
 ### Tooling
 
@@ -17,8 +28,10 @@ new official edition, questions added/removed or translations added, PATCH = cor
   * The lint checks that every quote is word for word in the cited unit.
   * Conflicts with the official answer are listed for the maintainer instead of being explained.
   * `qb verify` repeats the quote check.
+* The legal parser drops page furniture (print dates), repairs comparatives' hyphens, and leaves out text struck
+  down by the Constitutional Court and editor's notes.
 
-### Contract (for the next dataset release)
+### Contract
 
 * `schema_version` stays 1; the additions are optional for consumers:
   * `explanation-bg.json` in the core package and `files[]`;
