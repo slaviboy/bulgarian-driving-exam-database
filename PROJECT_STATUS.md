@@ -1,11 +1,12 @@
 # Project status — bulgarian-driving-exam-database
 
-_Last updated: 2026-11-05_
+_Last updated: 2026-11-06_
 
 ## Current phase
 
-**Phases 1–5 complete.** The dataset `v1.0.0` is published. The Android application (separate private
-repository, Phases 6–10) consumes it; see "Consumers" below.
+**Phases 1–5 complete, and translations added.** The dataset `v1.1.0` (latest) adds unofficial, reviewed
+translations into nine languages to the unchanged Bulgarian question bank of `v1.0.0`. The Android application
+(separate private repository, Phases 6–10) consumes it; see "Consumers" below.
 
 ## Completed work
 
@@ -29,26 +30,41 @@ repository, Phases 6–10) consumes it; see "Consumers" below.
     (latest): 10 assets.
   * Verified anonymously: `releases/latest/download/manifest.json` → v1.0.0; every data file, the
     WebP pack and sample videos match their checksums. CI `tests` and `validation` green.
+* **Translations — dataset v1.1.0:** unofficial translations of every question, text answer and label into
+  English, Russian, Spanish, German, French, Portuguese, Greek, Turkish and Romanian.
+  * Process (`docs/translations.md`): work packages, a binding style guide and pivot glossary, one AI
+    translator per language, `qb translations lint` after every part, then an independent AI review per
+    language (logged in `data/translations/<lang>/review.json`, 19–57 fixes each).
+  * Export: `translation-<lang>.json`, the manifest's `languages[]` and four `master.sqlite` tables;
+    `schema_version` stays 1. 9 × 2,476 questions current, 0 stale, 0 missing.
+  * Dataset release [`v1.1.0`](https://github.com/slaviboy/bulgarian-driving-exam-database/releases/tag/v1.1.0)
+    (latest), published by the `release` workflow: 18 assets, the media release `media-2026.10.01` reused.
+  * Verified anonymously: `releases/latest/download/manifest.json` → v1.1.0 with 10 languages; the core
+    package matches `SHA256SUMS`.
 
 ## Consumers
 
-* The Android application bundles `v1.0.0` (core package and WebP images pinned by SHA-256) and installs newer
+* The Android application bundles `v1.1.0` (core package and WebP images pinned by SHA-256) and installs newer
   releases from `releases/latest/download/manifest.json`, verifying the core package against `SHA256SUMS`. Its
-  tests import the real `v1.0.0` and a synthetic `v1.0.1` derived from it; on devices it reported 2,476 questions,
-  23 variants and 830 verified pictures, matching this repository's counts.
+  tests import the real `v1.1.0` (including 9 × 2,476 translations) and a synthetic next patch release derived
+  from it; on devices it reported 2,476 questions, 23 variants and 830 verified pictures, matching this
+  repository's counts.
 * Compatibility promise for consumers: `schema_version` 1 stays readable; a breaking change increases it (MAJOR
   release), which the app reports as "app update required" instead of installing.
 
 ## Pending work
 
-* None for this repository's first release. Future editions: the daily `validation` job opens an
-  issue when ИААА publishes a new array; then run the `release` workflow (docs/releasing.md).
+* Merge [#1](https://github.com/slaviboy/bulgarian-driving-exam-database/pull/1), the exports and reports of
+  v1.1.0, after review (the workflow could not open it itself; see docs/releasing.md).
+* Future editions: the daily `validation` job opens an issue when ИААА publishes a new array; then run the
+  `release` workflow (docs/releasing.md). Questions that change need their translations updated (stale ones
+  fall back to Bulgarian).
 
 ## Tests
 
-* Passed: 105 (HTTP client, discovery, normalisation/IDs, parser on real excerpt, generator over
+* Passed: 126 (HTTP client, discovery, normalisation/IDs, parser on real excerpt, generator over
   many seeds, offline end-to-end build, content-hash vectors, Room-compatibility conventions, media
-  copy checks).
+  copy checks, translation work packages, lint, merge, export and SQLite tables, release packaging).
 * Failed: none.
 
 ## Data counts (edition 2026-10-01, measured by the pipeline)
@@ -66,6 +82,8 @@ repository, Phases 6–10) consumes it; see "Consumers" below.
 * C1 and D (103) section quotas follow the live simulator (the draft methodology differs).
 * C1+E has no AvtoIzpit counterpart: law-only parameters, no observed points mix.
 * No explanations exist in the source.
+* The translations are unofficial and made with AI (then reviewed); the Bulgarian text prevails. Pictures that
+  contain Bulgarian text are not translated.
 
 ## Next actions
 

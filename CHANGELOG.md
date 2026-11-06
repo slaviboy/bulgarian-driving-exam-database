@@ -6,6 +6,8 @@ new official edition, questions added/removed or translations added, PATCH = cor
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-11-06
+
 ### Dataset
 
 * **Unofficial translations** of all 2,476 questions, the 7,465 answers that have text and the labels
