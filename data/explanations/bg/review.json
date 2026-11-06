@@ -1,0 +1,51 @@
+{
+  "language": "bg",
+  "parts": {
+    "B-01": {
+      "part": 1,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5222",
+          "change": "[picture] Rewrote the text: the correct sign is now identified by its slope rising to the right; the A5 sign is described as the one with the same 10 % whose slope falls to the right.",
+          "reason": "Both slope signs in the answers show 10 %, so 'the similar sign with 10 % is A5' did not tell the learner which picture is A6. The pictures confirm the official answer: the first sign rises to the right (A6), the second falls to the right (A5)."
+        },
+        {
+          "id": "iaaa-5239",
+          "change": "[factual] Rewrote the text: the sign is recognised by the letter Е before the number, and the text now says that the sign „А 2“ is green as well, but is Ж20.1. Kept the three references.",
+          "reason": "In the picture „Е 79“ is green too, so calling „А 2“ 'the green sign' did not tell the two apart. Under чл. 146, ал. 3, т. 8 of the signs ordinance, Ж21 is green on motorways and expressways. The letter Е for roads of the international (European) network is not in the corpus, but it is plain, certain common knowledge and it is the only thing that tells the signs apart."
+        },
+        {
+          "id": "iaaa-5472",
+          "change": "[picture] 'Синият символ на фар' became 'Символът на фар …, показан на син фон'. The clause on switching to low beam is now a short behavioural reminder.",
+          "reason": "The picture shows a white symbol on a blue field. The shorter clause avoids restating чл. 70, ал. 2 ЗДвП without a reference in a general entry."
+        },
+        {
+          "id": "iaaa-5483",
+          "change": "[factual] 'а тези неизправности не повреждат пряко двигателя' became 'и не означават пряка опасност за двигателя'.",
+          "reason": "An applied parking brake, one of the other indicators, is not a fault."
+        },
+        {
+          "id": "iaaa-6156",
+          "change": "[legal reference] Added the lead-in чл. 5, ал. 2 ЗДвП („Водачът на пътно превозно средство е длъжен“) before the existing quote from т. 2. Kept kind law.",
+          "reason": "The text says that ЗДвП obliges the driver, and the т. 2 quote alone does not contain the duty. The provision expressly treats vehicle noise as a burden on other road users and on people living by the road and requires the noise norms to be met, so it is a fitting basis and the entry stays law (style guide: prefer law when a provision fits)."
+        },
+        {
+          "id": "iaaa-6158",
+          "change": "[style] The three correct answers are now named by their own words in „…“ („загуба на енергия“, „увеличаване на разхода на гориво“, „износване на автомобилните гуми“) instead of a loose paraphrase without quotation marks („увеличен разход на гориво“, „износване на гумите“).",
+          "reason": "Style guide: answers are referred to by their words in „…“."
+        },
+        {
+          "id": "iaaa-11880",
+          "change": "[style] '1,6 мм' became '1,6 mm'.",
+          "reason": "The same text, and the answers, write 'mm'; the units are now consistent."
+        },
+        {
+          "id": "iaaa-5242",
+          "change": "[legal reference] The junction sign is now named А27 „Кръстовище с път без предимство отдясно“, with a reference to чл. 41 of the signs ordinance.",
+          "reason": "Style guide: signs are named by their code and name from the ordinance. The picture shows a thick vertical line with a thinner road joining from the right, i.e. А27."
+        }
+      ]
+    }
+  }
+}
