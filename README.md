@@ -10,13 +10,14 @@ This repository turns the official theory-exam question array of the Executive A
 "Automobile Administration" (**ИААА**,
 [public-eis.rta.government.bg/exam-questions](https://public-eis.rta.government.bg/exam-questions/))
 into a validated, versioned dataset — JSON, SQLite and media packs — with full provenance, and keeps
-it up to date.
+it up to date. It adds unofficial translations into nine languages and unofficial Bulgarian explanations of the
+correct answers, written from the text of the law.
 
 > **Read [DATA_NOTICE.md](DATA_NOTICE.md) before reusing the question content.** ИААА publishes the
 > array without a licence; it is republished here with attribution by decision of the maintainer.
 > This project is not affiliated with ИААА. The MIT licence covers the code only.
 
-## The dataset (v1.0.0, edition 2026-10-01)
+## The dataset (v1.2.0, edition 2026-10-01)
 
 | | |
 |---|---|
@@ -26,6 +27,7 @@ it up to date.
 | Media | 830 pictures (234 MB PNG / 20 MB WebP) and 57 videos (350 MB) |
 | Exam rules | official parameters for all 23 variants, each value cited (Наредба № 38, ИААА methodology, simulator observation) |
 | Translations (from v1.1.0) | unofficial translations of every question and answer into English, Russian, Spanish, German, French, Portuguese, Greek, Turkish and Romanian — the Bulgarian original prevails ([docs/translations.md](docs/translations.md)) |
+| Explanations (from v1.2.0) | unofficial Bulgarian explanations of why the correct answers are correct, for all 1,440 questions of category B (1,433 explanations, 7 conflicts with the current law left out) and the questions other categories share with it; each quotes ЗДвП, its Правилник or the ordinances on signs and markings word for word — the official bank and the law prevail ([docs/explanations.md](docs/explanations.md)) |
 
 Download the latest release:
 
@@ -40,6 +42,7 @@ https://github.com/slaviboy/bulgarian-driving-exam-database/releases/latest/down
 | `questions.json` | questions with answers, media references, per-variant points/section/position; media metadata |
 | `exam-configs.json` | exam rules per variant (questions, points, pass mark, duration, quotas, evidence) |
 | `translation-<lang>.json` | unofficial translation into one language (questions, answers, labels), only of the current Bulgarian text |
+| `explanation-bg.json` | unofficial explanations with their quoted provisions and the acts' consolidation dates, only of the current Bulgarian text |
 | `master.sqlite` | the same data in plain SQLite (schema in [docs/data-contract.md](docs/data-contract.md)) |
 | `dataset-core-vX.Y.Z.zip` | all of the above in one archive |
 
@@ -63,6 +66,8 @@ and a constructive feasibility proof of every exam configuration) — see `repor
   [category-counts.json](reports/category-counts.json) · [dataset-diff.md](reports/dataset-diff.md)
 * [source-comparison.md](reports/source-comparison.md): 44 test sets of ИААА's online simulator
   (avtoizpit.com) — 1,166 questions compared, **0 differences**.
+* Explanations: every quote is checked word for word against the cited unit of the act at lint, merge, build and
+  `qb verify`; each part of 100 questions was reviewed independently (`data/explanations/bg/review.json`).
 
 ## Documentation
 
@@ -75,6 +80,7 @@ and a constructive feasibility proof of every exam configuration) — see `repor
 | [docs/licensing.md](docs/licensing.md) | licensing findings and the publication decision |
 | [docs/exam-rules.md](docs/exam-rules.md) | official exam parameters with citations |
 | [docs/translations.md](docs/translations.md) | the unofficial translations: how they are made, checked and kept current |
+| [docs/explanations.md](docs/explanations.md) | the unofficial explanations: the legal corpus, how they are written and reviewed, the conflicts with the law |
 | [docs/releasing.md](docs/releasing.md) | how releases are made |
 
 ## Using the tools
@@ -86,9 +92,19 @@ pip install -r requirements-dev.txt && pip install -e .
 qb discover            # list the official files of the current edition
 qb extract             # download (incremental, resumable, 1 request/s) and parse them
 qb media               # download pictures and videos, verify copies in other directories
-qb build --dataset-version 1.0.0
-qb verify              # re-verify exports, schemas, SQLite and the licensing gate
+qb build --dataset-version 1.2.0
+qb verify              # re-verify exports, schemas, SQLite, explanation quotes and the licensing gate
 pytest -q
+```
+
+The legal corpus and the explanations:
+
+```
+qb legal status                                   # the acts, their units and consolidation dates
+qb legal search --act zdvp пропусне пешеходците   # units that contain all the words
+qb legal show --act zdvp "чл. 50, ал. 1"           # one unit
+qb explanations status                            # coverage per category
+qb explanations lint --work explanation-work/B --part 1
 ```
 
 Opt-in research commands: `qb capture` (Playwright network capture), `qb avtoizpit metadata|sample|summarize`
