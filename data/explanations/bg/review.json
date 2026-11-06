@@ -209,6 +209,77 @@
           "reason": "The picture shows two lanes in the same direction (all arrows point forward) separated by a broken line; signs act чл. 111 describes Д3 for a road with at least two lanes in one direction. The broken line is a lane line, not the road axis."
         }
       ]
+    },
+    "B-05": {
+      "part": 5,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-6241",
+          "change": "[legal reference] Replaced ППЗДвП чл. 59, ал. 1 (red line of Т7 and Т16) with signs чл. 177, ал. 2 („Различно от оформянето по ал. 1 има табела Т16 \"Неработни дни\", която е с червена лента, диагонално разположена от горен десен към долен ляв ъгъл“); in the text 'червена диагонална линия' became 'червена диагонална лента'.",
+          "reason": "The signs act has a provision that describes Т16 alone and by name, so it is the most specific basis for the picture reading; the picture shows the red band from the upper right to the lower left corner, as that provision says."
+        },
+        {
+          "id": "iaaa-6280",
+          "change": "[style] The reason now rests on the plate's name: 'Тя указва, че забраната важи при сняг и зимни условия, а в населените места се поставя под В28 сезонно, през зимния период, за да се улесни почистването на снега от платното. Затова забраната трябва да се спазва …'.",
+          "reason": "The old text derived all three correct answers (including icing temperatures) from the seasonal placement for snow clearing, which does not follow; the name Т14 „При сняг и зимни условия“ (signs чл. 190, ал. 1, already cited) is what covers snowfall, snow on the road and winter (icing) conditions."
+        },
+        {
+          "id": "iaaa-6296",
+          "change": "[style] 'забранителният знак В24 за изпреварване' became 'знакът В24 „Забранено е изпреварването на моторни превозни средства, с изключение на мотоциклети без кош и мотопеди“'; added signs чл. 83, ал. 1 as a reference.",
+          "reason": "Signs are named with their code and their name from the ordinance, with the article that names them (lessons from the reviews). The picture (А8 above В24) was checked."
+        },
+        {
+          "id": "iaaa-6322",
+          "change": "[factual] 'Линията за изчакване М7 е широка прекъсната линия, без триъгълници.' became '… широка прекъсната линия, пред която може да има само един триъгълник с връх, насочен срещу движението.'; added ППЗДвП чл. 64, т. 2 („Преди линията за изчакване върху платното за движение може да бъде нанесен триъгълник, върхът на който е насочен срещу движението“).",
+          "reason": "ППЗДвП чл. 64, т. 2 and Наредба № 2/2001 чл. 23, ал. 3 allow a triangle before the give-way line, so 'без триъгълници' was misleading. The difference that is visible is the number and direction of the triangles: М17 is a row of triangles pointing in the direction of travel (marking чл. 37, ал. 2), the М7 triangle is a single one pointing against it."
+        },
+        {
+          "id": "iaaa-6327",
+          "change": "[legal reference] The ППЗДвП чл. 66, т. 11 quote 'отличителни знаци за слепи пешеходци - С11: а) С11.1 \"Бял бастун\"' was split into two quotes without the point letter: 'отличителни знаци за слепи пешеходци - С11' and 'С11.1 \"Бял бастун\"'.",
+          "reason": "Quotes leave out part numbers and letters (style guide § 4); no approved quote contains one."
+        },
+        {
+          "id": "iaaa-9842",
+          "change": "[picture] 'а синият знак със стрелки, които се отклоняват наляво и надясно, не показва нова лента' became 'а на синия знак с две ленти стрелките само се отклоняват встрани – наляво и надясно, без да продължават успоредно като нова лента'.",
+          "reason": "On that sign the right arrow also has a branch from a common stem, as on Ж14, so 'не показва нова лента' was a claim about its meaning that the corpus does not support. The new wording names only what is visible and what tells it apart from Ж14. The sign itself is left unnamed: its scheme (two lanes, left arrow bending left, right arrow straight with a branch to the right) fits the description of Д3 „Предварителен избор на пътна лента“ (signs чл. 111), but the corpus has no pictures, so the code is not certain."
+        },
+        {
+          "id": "iaaa-11683",
+          "change": "[picture] The text now says that the blue circle with a white border and the number 30 on the other lane's arrow is an image of Г17 „Задължителна минимална скорост“, not a speed limit of 30 km/h; added signs чл. 91, ал. 1 (blue round signs with white border and symbols) and чл. 101, ал. 1 (Г17 name and meaning).",
+          "reason": "The enlarged picture shows a blue circle with a white border and white numerals, i.e. the look of a sign with a mandatory instruction (чл. 91, ал. 1), which чл. 110, ал. 3, т. 2 allows on Д2 as Г17. Saying so explains why the tempting wrong answer „ограничение на скоростта до 30 km/h“ is wrong. The same check for iaaa-9848 (circle with 40) confirmed the writer's Г17 reading there."
+        },
+        {
+          "id": "iaaa-11863",
+          "change": "[factual] 'В34 … който отменя забраните на В24, В25 и В26' became 'В34 … с който се отменят едновременно две или повече от забраните на В24, В25 и В26'.",
+          "reason": "Signs чл. 90, ал. 4 (already quoted) says В34 is used only when two or more bans of В24, В25 or В26 are cancelled at once; the text now says so. The official answer (В31, В32, В34) is not contradicted: В31 is the end of 'the overtaking ban introduced with a sign' (чл. 90, ал. 1), В32 names the lorry ban, and В34 cancels it together with other bans; чл. 90, ал. 3 does not tie В31 to В24 only. No conflict."
+        },
+        {
+          "id": "iaaa-5334",
+          "change": "[legal reference] The signs чл. 113 quote was extended to '… правилата за движение по автомагистрала съгласно глава втора, раздел XIII от ЗДвП'.",
+          "reason": "The text says that after Д7 the rules of the same section of ЗДвП apply as after Д5; only with the end of чл. 113 does the quote show that Д5 refers to глава втора, раздел XIII, as чл. 115 does for Д7."
+        },
+        {
+          "id": "iaaa-5350",
+          "change": "[legal reference] Added ЗДвП чл. 21, ал. 1 with the quote 'Категория В 50 90 140 120' (the row of the table).",
+          "reason": "The 140 km/h for category В on a motorway is in the table of чл. 21, ал. 1 (columns: населено място, извън населено място, автомагистрала, скоростен път), but only the lead-in was quoted. The approved iaaa-11696 quotes the same row."
+        },
+        {
+          "id": "iaaa-5374",
+          "change": "[picture] 'а лентите вляво от него са свободни' became 'а лентата вляво от него е свободна'.",
+          "reason": "The picture shows two lanes in the car's direction (the car is in the right one) plus the emergency lane right of the edge line; only one lane is to its left."
+        },
+        {
+          "id": "iaaa-5375",
+          "change": "[picture] 'макар лентите вдясно от него да са свободни' became 'макар лентата вдясно от него да е свободна'.",
+          "reason": "The picture shows two lanes; the car is in the left one, and right of the right lane is the emergency lane, which is not a lane for driving."
+        },
+        {
+          "id": "iaaa-5376",
+          "change": "[legal reference] The ЗДвП чл. 15, ал. 2, т. 2 quote was extended to the end of the point ('… със скорост не по-голяма от 80 кm/h'); the example in the text now reads 'в населено място, на платно с две и повече пътни ленти в една посока, по които е разрешена скорост до 80 km/h'.",
+          "reason": "The text mentioned 80 km/h, which was not in the quoted part of the point; the quote now shows it, and the text keeps both conditions of the exception."
+        }
+      ]
     }
   }
 }
