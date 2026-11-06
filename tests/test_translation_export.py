@@ -123,7 +123,7 @@ def test_export_keeps_current_translations_and_drops_stale_ones(merged, tmp_path
     write_schemas(schemas)
     assert validate_translation_exports(paths, schemas) == []
     exported = json.loads(paths[0].read_text(encoding="utf-8"))
-    assert exported["language_tag"] == "en" and exported["translation"]["status"] == "unofficial"
+    assert exported["language_tag"] == "en-GB" and exported["translation"]["status"] == "unofficial"
 
 
 def test_sqlite_holds_the_translations(merged, tmp_path):

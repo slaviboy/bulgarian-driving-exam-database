@@ -52,7 +52,7 @@ class Language:
 
 LANGUAGES: dict[str, Language] = {
     "bg": Language("bg", "bg-BG", "Български", "Bulgarian", "cyrillic", ",", ("one", "other")),
-    "en": Language("en", "en", "English", "English", "latin", ".", ("one", "other")),
+    "en": Language("en", "en-GB", "English", "English", "latin", ".", ("one", "other")),
     "ru": Language("ru", "ru-RU", "Русский", "Russian", "cyrillic", ",", ("one", "few", "many", "other")),
     "es": Language("es", "es-ES", "Español", "Spanish", "latin", ",", ("one", "many", "other")),
     "de": Language("de", "de-DE", "Deutsch", "German", "latin", ",", ("one", "other")),
