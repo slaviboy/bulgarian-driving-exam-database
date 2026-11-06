@@ -710,6 +710,117 @@
           "reason": "Signs are named with code and name from the ordinance (BRIEF, lessons). The Т13 reading was checked on the enlarged plate and agrees with the text."
         }
       ]
+    },
+    "B-11": {
+      "part": 11,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-6576",
+          "change": "[conflict] Kept the conflict unchanged.",
+          "reason": "Picture checked: the driver goes straight, the oncoming red car has its left indicator on and turns left (into the road on the right), the blue lorry comes from the right and goes straight; no priority signs. Driver yields to the lorry (чл. 48 ЗДвП), the lorry to the red car on its right (чл. 48), the red car to the driver (чл. 37, ал. 1 ЗДвП, чл. 84, ал. 2 ППЗДвП): a circle. Searched again (кръг, взаимно, помежду, първ + премине, задръстване; ЗДвП чл. 25, 37, 47–50; ППЗДвП чл. 84, 102–104): no provision resolves it or exempts the left-turning car. The wording matches the merged iaaa-6546 and 6550 and names the provisions and both official answers."
+        },
+        {
+          "id": "iaaa-6593",
+          "change": "[picture] Rewrote the text: the Т13 plate shows the priority road coming from below and turning LEFT, so both the yellow car (turning right) and the red car from the left are on it; the red car yields to the yellow one on its right (чл. 50, ал. 2 and чл. 48 ЗДвП). Replaced the reference чл. 50, ал. 1 with чл. 50, ал. 2 and чл. 48.",
+          "reason": "Zoomed the plate: the thick line runs from the bottom and bends to the left, the thin lines go up and right. The old text said the priority road turns right and the red car is on a road without priority. The official answer stays „неправилно“, but for the right-hand rule between two cars on the priority road."
+        },
+        {
+          "id": "iaaa-9839",
+          "change": "[picture] Only the green car is oncoming; the red car is ahead in the same lane as the silver car.",
+          "reason": "Zoomed: the green car shows its front, the red car its rear lights and number plate. The old text put both in the oncoming lane."
+        },
+        {
+          "id": "iaaa-6601",
+          "change": "[picture] The tram is seen to the left of the tram line (not on the line the blue car would use); the pedestrian stands ahead on the roadway between the line and the red car. Rephrased the tram-track rule in the words of ППЗДвП чл. 72.",
+          "reason": "Zoomed the picture: one track between the two directions, the tram beyond it on the left, the woman on the hatched area next to the rails. The text now rests only on what is visible (pedestrian in the overtaking path, tram nearby) and on the cited rules; it no longer suggests where the tram runs."
+        },
+        {
+          "id": "iaaa-6681",
+          "change": "[factual] Removed the claim that hazard lights are more effective by day because a flashing light draws attention and the triangle only reflects light. The text now rests on чл. 86 ЗДвП (hazard lights or a rear triangle on the towed vehicle) and on чл. 31 ЗДвП (hazard lights = all indicators on, to warn of danger); added чл. 31.",
+          "reason": "No provision compares the two ways; the comparison was the writer's own."
+        },
+        {
+          "id": "iaaa-6696",
+          "change": "[factual] Removed „многократно“ (wet roads, worn tread and wrong tyre pressure reduce grip „many times“).",
+          "reason": "Not certain knowledge for every listed condition and not in the corpus; the claim that these states reduce grip is enough."
+        },
+        {
+          "id": "iaaa-6707",
+          "change": "[factual] „всички моторни превозни средства с конструктивна максимална скорост над 70 km/h“ → motor vehicles and combinations with a design speed over 70 km/h are allowed.",
+          "reason": "ЗДвП чл. 55, ал. 1 also bans vehicles excluded in чл. 21, ал. 1, so „всички“ overstated it."
+        },
+        {
+          "id": "iaaa-8264",
+          "change": "[factual] Same correction as iaaa-6707 („всички“ removed, combinations added).",
+          "reason": "ЗДвП чл. 55, ал. 1."
+        },
+        {
+          "id": "iaaa-6716",
+          "change": "[factual] Б2 above the light „не действа, докато светофарът работи“ → regulates traffic only when the light is off or flashes yellow.",
+          "reason": "Signs чл. 58, ал. 3: the priority signs also apply when the light works in flashing-yellow mode."
+        },
+        {
+          "id": "iaaa-11590",
+          "change": "[factual] The text said boarding and alighting are not allowed after В27, without exceptions. Now: as a rule not allowed; the only exceptions are vehicles serving persons with a disability document (for престой) and vehicles carrying sick people to or from a health establishment while they get on or off. Added signs чл. 75, ал. 2 and 3; dropped the shape reference signs чл. 66, ал. 2, т. 4 to stay within four references.",
+          "reason": "Read signs чл. 75 in full: ал. 2 exempts vehicles serving disabled persons from the престой ban of В27, ал. 3 exempts carrying the sick. The old wording contradicted them."
+        },
+        {
+          "id": "iaaa-6602",
+          "change": "[legal reference] The wrong answer names light and sound signals; the text now says that switching the lights and the horn are additional signals for a manoeuvre (чл. 28, ал. 2 ЗДвП) and that the horn is banned in settlements except to prevent an accident (чл. 30). Added чл. 28, ал. 2; dropped ППЗДвП чл. 102 (same duty as ЗДвП чл. 47, which covers all road users with priority).",
+          "reason": "The old reason (horn banned in settlements) did not cover light signals or roads outside settlements."
+        },
+        {
+          "id": "iaaa-6604",
+          "change": "[legal reference] The quote of ППЗДвП чл. 31, ал. 7, т. 3 now starts at the start of the point and keeps its condition „Но когато този сигнал е подаден на кръстовище“.",
+          "reason": "The old quote began mid-sentence at „той не разрешава…“ and left out the condition (quote whole points, quote conditions)."
+        },
+        {
+          "id": "iaaa-6679",
+          "change": "[legal reference] Replaced ЗДвП чл. 48 („кръстовище на равнозначни пътища“) with ППЗДвП чл. 103 (lead-in „На кръстовище, на което няма сигнализиран път с предимство“) and чл. 103, т. 1; reworded the text: only Г12 is on the post, with no priority sign above it (signs чл. 98, ал. 2), so the right-hand rule applies and the yellow car entering has priority over the red car circulating on its left.",
+          "reason": "Read signs чл. 98 in full and searched „кръгово“ in all acts: ЗДвП and ППЗДвП have no roundabout priority rule; the picture shows no priority sign, which is exactly the condition of ППЗДвП чл. 103. Official answer confirmed."
+        },
+        {
+          "id": "iaaa-8284",
+          "change": "[legal reference] References are now чл. 98, ал. 1, т. 2 and т. 3, the lead-in of ал. 2 („Освен в посочените в ал. 1 случаи паркирането е забранено“) and ал. 2, т. 4; the text speaks only of parking.",
+          "reason": "Point 4 of ал. 2 was quoted without its lead-in, so no quote stated the ban for the disabled spaces. The ал. 2 lead-in states it for ал. 2 and also confirms the parking ban in the ал. 1 cases, which keeps four references."
+        },
+        {
+          "id": "iaaa-8263",
+          "change": "[legal reference] The quote of ЗДвП чл. 55, ал. 1 now gives the whole second sentence instead of starting at „както и движението на пешеходци“.",
+          "reason": "Whole sentences in quotes."
+        },
+        {
+          "id": "iaaa-8279",
+          "change": "[legal reference] Same change of the чл. 55, ал. 1 quote as iaaa-8263.",
+          "reason": "Whole sentences in quotes."
+        },
+        {
+          "id": "iaaa-6588",
+          "change": "[style] Named Б1 with its name from the signs act.",
+          "reason": "Name every sign mentioned (signs чл. 56, т. 1)."
+        },
+        {
+          "id": "iaaa-6592",
+          "change": "[style] Named Б2 and added ППЗДвП чл. 46, ал. 2 as the basis of the stop duty given for the wrong answer.",
+          "reason": "Name every sign; a reason needs a basis."
+        },
+        {
+          "id": "iaaa-6594",
+          "change": "[style] Named Б2 and Б1 and added ППЗДвП чл. 46, ал. 2 and ал. 1 as the basis of the two wrong answers.",
+          "reason": "Name every sign; a reason needs a basis."
+        },
+        {
+          "id": "iaaa-6596",
+          "change": "[style] Named Б2.",
+          "reason": "Name every sign (its stop duty was already quoted)."
+        },
+        {
+          "id": "iaaa-6608",
+          "change": "[style] „При работещ светофар знаците … регулират движението само когато той е изключен“ → „Когато има светофар, знаците … регулират движението само ако той е изключен или работи в режим на жълта мигаща светлина“.",
+          "reason": "The old sentence contradicted itself and paraphrased signs чл. 58, ал. 3 loosely."
+        }
+      ]
     }
   }
 }
