@@ -1264,6 +1264,57 @@
           "reason": "Flagged. The comparison comes from the question; the reasons (later noticing, judging distances, dazzle) are plain knowledge. For 112 and phone reports searched „112“, „спешн“, „уведоми“ and ЗДвП чл. 123–125, ППЗДвП чл. 199–204: the law requires notifying the МВР (чл. 123, ал. 1, т. 2, б. „а“; чл. 124, т. 2) but says nothing about 112, the emergency services or the content of the call. The claims are plain knowledge (112 is the free European emergency number reaching police, fire and rescue, emergency medical aid and civil protection) or come from the official answers."
         }
       ]
+    },
+    "B-15": {
+      "part": 15,
+      "reviewed": 21,
+      "changes": [
+        {
+          "id": "iaaa-11738",
+          "change": "[conflict] Kept the conflict and made the description precise: it now quotes чл. 182, ал. 2, т. 6 ЗДвП in full („с глоба 600 лв. и два месеца лишаване от право да управлява моторно превозно средство, като за всеки следващи 5 km/h превишаване над 50 km/h глобата се увеличава с 50 лв.“), says that the deprivation applies already to the first offence, and lists both aggravations: a repeated offence (чл. 182, ал. 4: double fine and three months) and a systematic one (чл. 182, ал. 5: triple fine and 6 months), with the definition of § 6, т. 62.",
+          "reason": "The whole of чл. 182 and § 6, т. 62 were read. Ал. 2, т. 6 imposes deprivation for every offence over 50 km/h outside a settlement; „системно“ only raises it to 6 months (ал. 5), and already a repeated offence is aggravated (ал. 4). The law clearly contradicts the official answer „когато нарушението е системно“. The sibling iaaa-11728 (in a settlement, чл. 182, ал. 1, т. 6: 700 лв. and three months) agrees with its official answer and stays unchanged."
+        },
+        {
+          "id": "iaaa-11429",
+          "change": "[legal reference] The references are now ЗДвП чл. 123, ал. 1, т. 2 (the condition „когато при произшествието са пострадали хора“), чл. 123, ал. 1, т. 2 („да уведоми компетентната служба на Министерството на вътрешните работи“), чл. 123, ал. 1, т. 3 (no agreement between the participants) and чл. 123, ал. 2 (the owners of damaged property). The lead-in of ал. 1 („… е длъжен“) was dropped. Text unchanged.",
+          "reason": "Five provisions, at most four references. The text states the т. 2 condition and the first correct answer contains it, so a quote must show it; the т. 3 and ал. 2 quotes carry their own verbs („уведомяват“, „е длъжен“), so the lead-in is the one piece no correct answer needs."
+        },
+        {
+          "id": "iaaa-11448",
+          "change": "[style] „… в срок до 12 часа от установяване на нарушението“ became „…, като срокът за това е до 12 часа от установяване на нарушението“. References unchanged (ЗДвП чл. 172, ал. 7).",
+          "reason": "The question asks within what term the vehicle „трябва да бъде транспортирано“; the law says it „може да бъде транспортирано … в срок до 12 часа“. Stating the 12 hours as the term keeps the text faithful to the law without reading against the official answer."
+        },
+        {
+          "id": "iaaa-12059",
+          "change": "[picture] „автомобили, сред които се издига дим“ became „автомобили, между които има бял облак“. The rest is kept: two lanes for the driver's direction, people by the guardrail, the triangle С13 (ППЗДвП чл. 66, т. 13), passing on the left (ЗДвП чл. 43б, ал. 1 with § 6, т. 80) and slowing down (чл. 20, ал. 2).",
+          "reason": "All 8 frames opened and frames 6-8 enlarged: the cars on the right with a white cloud between them, three people by the guardrail and the red triangle in the right lane are visible; whether the cloud is smoke, steam or dust cannot be told from stills."
+        },
+        {
+          "id": "iaaa-11690",
+          "change": "[checked, no change] The 70-word quote of чл. 171, т. 2а (б. „б“) covers both correct answers (refusing the technical check for alcohol; not following the prescription for a medical test for drugs); the wrong answer rests on чл. 171, т. 2, б. „л“ (over 40 km/h in a settlement: temporary suspension for one month), which also covers „над 50 km/h“.",
+          "reason": "Every condition and number checked against the units. No provision terminates the registration for racing (searched „нерегламентирани“ and „прекратяване регистрацията“), so the official answers stand."
+        },
+        {
+          "id": "iaaa-11649",
+          "change": "[checked, no change] Same reasoning as the approved iaaa-5321: ППЗДвП чл. 18, ал. 1, т. 11 (the plate is placed on vehicles carrying dangerous goods) and ЗДвП чл. 125, т. 3 (the МВР services must visit the scene).",
+          "reason": "Nothing goes beyond the quotes and plain knowledge (dangerous goods may be flammable, explosive or toxic; moving the vehicle or removing or covering the load would expose the helpers)."
+        },
+        {
+          "id": "iaaa-11736",
+          "change": "[checked, no change] Rests on ЗДвП чл. 137а, ал. 1 („когато са в движение“).",
+          "reason": "The exemptions of чл. 137а, ал. 2 concern particular persons (pregnant women, people whose condition does not allow a belt, adapted vehicles, taxi drivers with passengers in a settlement, instructors), not the ordinary driver of the question. The text does not claim that there are no exceptions, so it does not contradict ал. 2, and the official answer is not in conflict."
+        },
+        {
+          "id": "iaaa-11737",
+          "change": "[checked, no change] Same basis as iaaa-11736.",
+          "reason": "As for iaaa-11736."
+        },
+        {
+          "id": "iaaa-11853",
+          "change": "[checked, no change] Rests on ЗДвП чл. 133, ал. 2 (children up to 12 years on the front seat only with a special seat).",
+          "reason": "ППЗДвП чл. 180, ал. 2 still says 10 years and is outdated; ЗДвП prevails. ЗДвП чл. 137в (restraint systems for children under 150 cm) does not make the 120 cm answer right."
+        }
+      ]
     }
   }
 }
