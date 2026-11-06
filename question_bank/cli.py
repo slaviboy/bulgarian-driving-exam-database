@@ -401,6 +401,57 @@ def cmd_translations_status(settings: Settings, args: argparse.Namespace) -> int
     return 0
 
 
+def cmd_legal_import(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.legal.corpus import write_act
+    from question_bank.legal.extract import text_of
+    from question_bank.legal.parse import parse
+
+    parsed = parse(text_of(args.file))
+    entry = write_act(parsed, args.act, args.file)
+    print(
+        f"{entry['short']}: {entry['units']} units, consolidated to {entry['consolidated_to']}, "
+        f"{len(parsed.repealed)} repealed → data/legal/{args.act}.json"
+    )
+    return 0
+
+
+def cmd_legal_status(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.legal.corpus import load
+
+    corpus = load()
+    for entry in corpus.meta["acts"]:
+        act = corpus.acts.get(entry["id"])
+        units = len(act.units) if act else 0
+        consolidated = entry.get("consolidated_to") or "-"
+        print(f"{entry['id']:<8} {entry['short']:<26} {units:>5} units  {consolidated}")
+        print(f"{'':<8} later amendments: {entry.get('later_amendments', '-')}")
+    return 0
+
+
+def cmd_legal_show(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.legal.corpus import load
+
+    act = load().acts[args.act]
+    found = act.resolve(args.unit)
+    if found is None:
+        print(f"{act.short}: {args.unit} does not exist")
+        return 1
+    unit, text = found
+    print(f"{act.short}, {unit}: {text}")
+    return 0
+
+
+def cmd_legal_search(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.legal.corpus import load
+
+    corpus = load()
+    acts = [args.act] if args.act else list(corpus.acts)
+    for act_id in acts:
+        for unit, text in corpus.search(act_id, args.words, limit=args.limit):
+            print(f"[{act_id}] {unit}: {text[:300]}")
+    return 0
+
+
 # ----------------------------------------------------------------------------- parser
 
 
@@ -489,6 +540,24 @@ def build_parser() -> argparse.ArgumentParser:
     tr_sub.add_parser("status", help="current, stale and missing translations per language").set_defaults(
         func=cmd_translations_status
     )
+
+    legal = sub.add_parser("legal", help="the legal corpus the explanations quote (data/legal)")
+    legal_sub = legal.add_subparsers(dest="legal_command", required=True)
+    imp = legal_sub.add_parser("import", help="split an act's published file (docx, pdf or txt) into units")
+    imp.add_argument("--act", required=True, help="act id from data/legal/sources.json")
+    imp.add_argument("--file", type=Path, required=True, help="the file downloaded from source_url")
+    imp.set_defaults(func=cmd_legal_import)
+    legal_status = legal_sub.add_parser("status", help="acts, units and consolidation dates")
+    legal_status.set_defaults(func=cmd_legal_status)
+    show = legal_sub.add_parser("show", help="print one unit, e.g. 'чл. 50, ал. 1'")
+    show.add_argument("--act", required=True)
+    show.add_argument("unit")
+    show.set_defaults(func=cmd_legal_show)
+    search = legal_sub.add_parser("search", help="units containing all the given words")
+    search.add_argument("--act", help="limit to one act")
+    search.add_argument("--limit", type=int, default=30)
+    search.add_argument("words", nargs="+")
+    search.set_defaults(func=cmd_legal_search)
     return parser
 
 

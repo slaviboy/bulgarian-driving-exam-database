@@ -65,3 +65,23 @@ documentation only.
 
 Anyone reusing the dataset must keep the attribution and make their own assessment of the
 licensing situation described above.
+
+## 6. Legal texts (corpus of the explanations)
+
+_Recorded 2026-11-06._ The explanations quote the acts in `data/legal/`. Each one is stored with its
+source URL and SHA-256 in `data/legal/sources.json`:
+
+* the Закон за движението по пътищата;
+* its Правилник;
+* Наредба № РД-02-21-1/2023 on road signs;
+* Наредба № 2/2001 on road markings.
+
+* **ЗАПСП, чл. 4, т. 1:** normative acts of state bodies are not subject to copyright, so their text may
+  be quoted and redistributed.
+* **Sources:** only files published on government sites, namely the Ministry of Transport (the ЗДвП,
+  consolidated to ДВ бр. 55/2026), the Ministry of the Interior (the Правилник) and the State Agency
+  for Road Safety (the two ordinances).
+  * Some of these files are exports of a commercial legal information system; their footer names it.
+  * Only the wording of the acts is used: no annotations, case law or editorial content of that system.
+* **Not used:** textbooks, driving-school material and other apps' explanations. They are protected
+  works; explanations are written from the acts alone.

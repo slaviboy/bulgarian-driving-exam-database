@@ -1,0 +1,57 @@
+{
+  "description": "Current texts of the acts the explanations quote. Each act is taken from a file published on a Bulgarian government site, split into units (articles, paragraphs, points, §) and stored as data/legal/<id>.json by `qb legal import`. Legal acts are not subject to copyright (ЗАПСП, чл. 4, т. 1).",
+  "acts": [
+    {
+      "id": "zdvp",
+      "short": "ЗДвП",
+      "title": "Закон за движението по пътищата",
+      "publisher": "Министерство на транспорта и съобщенията",
+      "source_page": "https://www.mtc.government.bg/bg/category/162/zakon-za-dvizhenieto-po-ptishchata",
+      "source_url": "https://www.mtc.government.bg/sites/default/files/documents/2026-06/ZAKON_za_dvijenieto_po_pytisata16062026.docx",
+      "later_amendments": "None found on 2026-11-06 (State Gazette and web search). Check dv.parliament.bg before every release.",
+      "source_sha256": "185cc3a5fc18b3cf0446470918b5feca85a619776d9567ceb78b01860d11a11e",
+      "consolidated_to": "ДВ, бр. 55 от 16.06.2026 г.",
+      "units": 2063,
+      "retrieved": "2026-11-06"
+    },
+    {
+      "id": "ppzdvp",
+      "short": "ППЗДвП",
+      "title": "Правилник за прилагане на Закона за движението по пътищата",
+      "publisher": "Министерство на вътрешните работи",
+      "source_page": "https://www.mvr.bg/",
+      "source_url": "https://www.mvr.bg/upload/293251/%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BD%D0%B8%D0%BA-%D0%B7%D0%B0-%D0%BF%D1%80%D0%B8%D0%BB%D0%B0%D0%B3%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0-%D0%B7%D0%B0-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D1%82%D0%BE-%D0%BF%D0%BE-%D0%BF%D1%8A%D1%82%D0%B8%D1%89%D0%B0%D1%82%D0%B0-%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D0%BD%D0%BE%D1%81%D1%82-19-03-2024.pdf",
+      "later_amendments": "Unknown: no newer consolidated text was found on a government site on 2026-11-06. A repeal of the Правилник has been proposed; check before every release.",
+      "source_sha256": "9f6bd903d2dca8c4f295c13b276deace4fb71ed6e2ae65572bcf7fd1c0ac072f",
+      "consolidated_to": "ДВ, бр. 23 от 19.03.2024 г.",
+      "units": 904,
+      "retrieved": "2026-11-06"
+    },
+    {
+      "id": "signs",
+      "short": "Наредба № РД-02-21-1/2023",
+      "title": "Наредба № РД-02-21-1 от 23 ноември 2023 г. за сигнализация на пътищата с пътни знаци",
+      "publisher": "Държавна агенция „Безопасност на движението по пътищата“",
+      "source_page": "https://www.sars.gov.bg/en/normativna-uredba/bg-zakonodatelstvo/",
+      "source_url": "https://www.sars.gov.bg/wp-content/uploads/2024/07/%D0%9D%D0%90%D0%A0%D0%95%D0%94%D0%91%D0%90-%E2%84%96-%D0%A0%D0%94-02-21-1-%D0%9E%D0%A2-23-%D0%9D%D0%9E%D0%95%D0%9C%D0%92%D0%A0%D0%98-2023-%D0%93.-%D0%97%D0%90-%D0%A1%D0%98%D0%93%D0%9D%D0%90%D0%9B%D0%98%D0%97%D0%90%D0%A6%D0%98%D0%AF-%D0%9D%D0%90-%D0%9F%D0%AA%D0%A2%D0%98%D0%A9%D0%90%D0%A2%D0%90-%D0%A1-%D0%9F%D0%AA%D0%A2%D0%9D%D0%98-%D0%97%D0%9D%D0%90%D0%A6%D0%98.pdf",
+      "later_amendments": "Unknown: the published text is the original of ДВ бр. 101/2023 (in force since 07.08.2024); check before every release. It replaced Наредба № 18 от 2001 г.",
+      "source_sha256": "4c8885b0e03d0477dcce7358a493de19bf2b7b2ee6afe09aeec9b176d0af39d2",
+      "consolidated_to": "ДВ, бр. 101 от 05.12.2023 г.",
+      "units": 906,
+      "retrieved": "2026-11-06"
+    },
+    {
+      "id": "marking",
+      "short": "Наредба № 2/2001",
+      "title": "Наредба № 2 от 17 януари 2001 г. за сигнализация на пътищата с пътна маркировка",
+      "publisher": "Държавна агенция „Безопасност на движението по пътищата“",
+      "source_page": "https://www.sars.gov.bg/en/normativna-uredba/bg-zakonodatelstvo/",
+      "source_url": "https://www.sars.gov.bg/wp-content/uploads/documents/test/Naredba-No-2-ot-17-yanuari-2001-g.-za-signalizatsiya.pdf",
+      "later_amendments": "Unknown after ДВ бр. 32/2019; check before every release.",
+      "source_sha256": "aec6bcdc19e81d06c42ec1983424dc94911388381ff737e62580a319ca8e8843",
+      "consolidated_to": "ДВ, бр. 32 от 16.04.2019 г.",
+      "units": 363,
+      "retrieved": "2026-11-06"
+    }
+  ]
+}
