@@ -97,6 +97,62 @@
           "reason": "Same as iaaa-6038: the text states a duty, and the quote now contains it."
         }
       ]
+    },
+    "B-03": {
+      "part": 3,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-11816",
+          "change": "[picture] The correct signs are now named by the slanted red and yellow stripes first („верни са двата знака, чиито табели са с наклонени червени и жълти ленти – с две вертикални и с четири табели“) instead of „знаците с двете вертикални табели и с четирите табели с наклонени ленти“.",
+          "reason": "The wrong answers show the same layouts (two vertical and four plain yellow plates with a red border), so 'the sign with the two vertical plates' did not tell the correct picture from the wrong one. Only the stripes do."
+        },
+        {
+          "id": "iaaa-11817",
+          "change": "[picture] Same rewording: the two correct signs are identified by the slanted stripes (one long horizontal plate, two horizontal plates).",
+          "reason": "The wrong answers also show one long horizontal plate and two horizontal plates, only plain yellow with a red border."
+        },
+        {
+          "id": "iaaa-11818",
+          "change": "[picture] Same rewording: the two correct signs are identified by the slanted stripes (one long horizontal plate, four plates).",
+          "reason": "A wrong answer also shows one long horizontal plate (plain yellow with a red border), so the layout alone did not identify the correct picture."
+        },
+        {
+          "id": "iaaa-11819",
+          "change": "[picture] Same rewording: the two correct signs are identified by the slanted stripes (four plates, two horizontal plates).",
+          "reason": "A wrong answer also shows four plates (plain yellow with a red border), so the layout alone did not identify the correct picture."
+        },
+        {
+          "id": "iaaa-5859",
+          "change": "[picture] 'е протегнал ръка хоризонтално напред' became 'е протегнал дясната си ръка хоризонтално напред'.",
+          "reason": "The picture shows the controller in profile facing the yellow car, with the near (left) arm hanging down and the right arm extended forward; the text then cites the rule for the right arm, so the picture description should name it."
+        },
+        {
+          "id": "iaaa-12004",
+          "change": "[legal reference] Replaced § 6, т. 75 ЗДвП with чл. 5, ал. 2 (lead-in „Водачът на пътно превозно средство е длъжен“) + чл. 5, ал. 2, т. 1 ЗДвП. 'трябва да е особено внимателен' became 'е длъжен да бъде внимателен и предпазлив'; 'Когато това не е сигурно' became 'Докато не е сигурно, че изпреварването е безопасно'.",
+          "reason": "The text invokes the driver's duty of care toward the cyclist; that duty is чл. 5, ал. 2, т. 1, which also names drivers of two-wheelers as vulnerable. § 6, т. 75 is only the definition and does not contain the duty (same distinction as in the part-02 review). The video is not described."
+        },
+        {
+          "id": "iaaa-6055",
+          "change": "[factual] 'извън населените места знак В30 … я забранява' became 'в участъците извън населените места, сигнализирани със знак В30 …, звуковият сигнал е забранен'.",
+          "reason": "The old wording could be read as В30 forbidding the horn everywhere outside settlements; under чл. 48, ал. 4 ППЗДвП and чл. 89 of the signs ordinance it applies only to the sections where the sign is placed."
+        },
+        {
+          "id": "iaaa-9853",
+          "change": "[factual] Added the condition of § 6, т. 54 ЗДвП (the carriageway has no more than one lane in each direction) to the text and extended the quote to include it.",
+          "reason": "The answer rests on the sidewalk continuations being a pedestrian crossing. § 6, т. 54 makes them crossings only on a carriageway with at most two lanes, one per direction; without the condition the text overgeneralised. The picture fits the condition (narrow street without lane markings)."
+        },
+        {
+          "id": "iaaa-11807",
+          "change": "[style] 'ремарке над 3500 kg, чиято допустима максимална маса не надвишава 12 000 kg' became 'ремарке над 3500 kg … когато допустимата максимална маса на състава не надвишава 12 000 kg'.",
+          "reason": "'чиято' could be read as the trailer's mass; in чл. 150а, ал. 2, т. 9, б) the 12 000 kg limit is the mass of the combination."
+        },
+        {
+          "id": "iaaa-6054",
+          "change": "[style] Rewrote the first sentence into two: the general ban (except to prevent an accident) applies in settlements, outside them there is no such ban, and ЗДвП expressly allows the horn there also as an additional maneuver signal. References unchanged.",
+          "reason": "The old text did not say why the horn may be used outside settlements 'to warn of a possible danger'; no provision states this directly, so the text now spells out the inference from чл. 30 (ban limited to settlements) and чл. 28, ал. 2. The writer's inference itself was sound and needs no conflict."
+        }
+      ]
     }
   }
 }
