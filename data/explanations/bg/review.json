@@ -1315,6 +1315,47 @@
           "reason": "ППЗДвП чл. 180, ал. 2 still says 10 years and is outdated; ЗДвП prevails. ЗДвП чл. 137в (restraint systems for children under 150 cm) does not make the 120 cm answer right."
         }
       ]
+    },
+    "B-16": {
+      "part": 16,
+      "reviewed": 7,
+      "changes": [
+        {
+          "id": "iaaa-12021",
+          "change": "[legal reference] Rewrote: the text now names what the frames show (right indicator, junction with sign Б1 „Пропусни движещите се по пътя с предимство“, a cyclist on the right) and rests the cyclist answer on the duty of Б1: ППЗДвП чл. 46, ал. 1 and ЗДвП чл. 50, ал. 1, with § 6, т. 19 ЗДвП (a bicycle is a road vehicle). The definition of „Предимство“ (§ 6, т. 31) was removed; ЗДвП чл. 20, ал. 2 stays for the visibility answer.",
+          "reason": "Frames 6-8 and dense frames 10-15 show Б1 on the right of the driver's road, the right indicator and a cyclist beyond the corner on the right. The old text gave the cyclist priority only conditionally („когато той е с предимство“) and supported it with a definition, which is not a duty; the frames allow the positive rule, as in the approved iaaa-12035."
+        },
+        {
+          "id": "iaaa-12022",
+          "change": "[legal reference] The § 6, т. 75 quote „както и водачите на двуколесни пътни превозни средства“ was replaced by the whole definition, from „\"Уязвими участници в движението\" са …“. Text unchanged.",
+          "reason": "A quote starts at the start of the point and shows the defined term. Frames checked: a narrow cobbled street, a white car ahead in the driver's direction and a cyclist on the left facing the driver; the text (lateral distance when passing or overtaking, ЗДвП чл. 44, ал. 1 and чл. 42, ал. 2, т. 1) fits."
+        },
+        {
+          "id": "iaaa-12004",
+          "change": "[checked, no change] Frames checked: a cyclist directly ahead in the driver's lane, parked cars on the right, a continuous line on the left with vehicles facing the driver beyond it, then a junction.",
+          "reason": "The text (overtake only with a free road long enough, ЗДвП чл. 42, ал. 1, т. 2; care for vulnerable road users, чл. 5, ал. 2, т. 1; the horn does not oblige the cyclist to make way) contradicts nothing in the frames."
+        },
+        {
+          "id": "iaaa-12020",
+          "change": "[checked, no change] Frames checked: a child running across the road towards an ice-cream van on the left (frames 6-7), an oncoming motorcycle (frame 4), a white car parked on the right (frame 8).",
+          "reason": "The text (ЗДвП чл. 117, § 6, т. 75) fits the scene; the child is on the road, which чл. 117 covers („на пътя или в близост до него“)."
+        },
+        {
+          "id": "iaaa-12023",
+          "change": "[checked, no change] Frames checked: sign А18 early on, then a zebra crossing with signs Д17 and, on the right, a person running across the grass towards it (frame 8 and dense frame 15).",
+          "reason": "The text (ЗДвП чл. 119, ал. 1 and чл. 116) fits the scene."
+        },
+        {
+          "id": "iaaa-12024",
+          "change": "[checked, no change] Frames checked: the driver overtakes in the left lane of a road with two lanes for its direction; in the right lane ahead are the red van and, further on, the blue car; a white car follows closely and brakes hard (mirror, frames 7-8).",
+          "reason": "The text (ЗДвП чл. 15, ал. 1: the rightmost free lane; чл. 24, ал. 2: no significant slowing down that endangers or hinders others) contradicts nothing in the frames."
+        },
+        {
+          "id": "iaaa-12025",
+          "change": "[checked, no change] Frames checked: tram rails on the left, an oncoming lorry, a pick-up with two workers standing on the cycle path on the right and a cyclist on that path riding towards it (frame 8).",
+          "reason": "The text (ЗДвП чл. 20, ал. 2: slow down and if necessary brake, without manoeuvres that endanger others) fits the scene and explains why swerving left is wrong."
+        }
+      ]
     }
   }
 }
