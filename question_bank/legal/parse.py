@@ -29,7 +29,11 @@ from dataclasses import dataclass, field
 _FURNITURE = [
     re.compile(r"^\s*Страница \d+ от \d+\s*$"),
     re.compile(r"^\s*Източник: Правно-информационни системи .*$"),
+    # The print date in the page header of a PDF export ("19/04/2024 г."); acts write dates as 19.04.2024 г.
+    re.compile(r"^\s*\d{2}/\d{2}/\d{4} г\.\s*$"),
 ]
+# The same print date when the extraction put it at the end of a line of text.
+_PRINT_DATE = re.compile(r"\s+\d{2}/\d{2}/\d{4} г\.\s*$")
 # Final provisions ("Допълнителни разпоредби", "ПРЕХОДНИ И ЗАКЛЮЧИТЕЛНИ РАЗПОРЕДБИ", "Заключителна …").
 _FINAL = re.compile(r"(?i)^\s*(допълнителн|преходн|заключителн)\w*(?:\s+и\s+(\w+))?\s+разпоредб[аи]\b(.*)$")
 _ANNEX = re.compile(r"^\s*Приложение №")
@@ -200,7 +204,7 @@ def _drop_redactions(lines: list[str]) -> list[str]:
 
 def parse(text: str) -> ParsedAct:
     raw = text.replace("\f", "\n").replace("­", "").replace(" ", " ").split("\n")
-    lines = [line.strip() for line in raw if not any(p.match(line) for p in _FURNITURE)]
+    lines = [_PRINT_DATE.sub("", line).strip() for line in raw if not any(p.match(line) for p in _FURNITURE)]
     # The header: everything before the first chapter, section or article.
     first = next(
         (i for i, line in enumerate(lines) if _is_heading(line) or _TOP_LINE.match(line)), len(lines)

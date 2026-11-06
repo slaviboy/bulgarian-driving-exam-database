@@ -9,7 +9,8 @@ from question_bank.legal.corpus import load, normalize, write_act
 from question_bank.legal.extract import docx_text
 from question_bank.legal.parse import parse
 
-# The layout of the PDF exports: one article per line, earlier wordings after "Редакция към".
+# The layout of the PDF exports: one article per line, earlier wordings after "Редакция към", the print date
+# of the page header on a line of its own or at the end of a line.
 PDF_LAYOUT = """ЗАКОН ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА
 В сила от 01.09.1999 г.
 Обн. ДВ. бр.20 от 5 Март 1999г., изм. ДВ. бр.43 от 26 Април 2002г., изм. и доп. ДВ. бр.64 от 5 Август 2025г.
@@ -18,7 +19,7 @@ PDF_LAYOUT = """ЗАКОН ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА
 (2) (Изм. - ДВ, бр. 43 от 2002 г., в сила от 26.04.2002 г.) Всеки има право да се движи по пътищата.
 Страница 1 от 3
 Чл. 3. (1) (Доп. - ДВ, бр. 85 от 2004 г.) Лицата, които стопанисват пътищата:
-1. ги поддържат изправни;
+1. ги поддържат изправни; 19/04/2024 г.
 2. организират движението по тях;
 3. (отм. - ДВ, бр. 64 от 2025 г.).
 4. почистват пътното платно.
@@ -29,6 +30,7 @@ PDF_LAYOUT = """ЗАКОН ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА
 Раздел II. Сигнали за регулиране на движението от упълномощените длъжностни лица. Пътни
 сигнали
 Чл. 50. (1) На кръстовище водачите са длъжни да пропуснат пътните превозни средства,
+19/04/2024 г.
 които се движат по пътя с предимство.
 Източник: Правно-информационни системи "Сиела"
 Допълнителни разпоредби
@@ -84,11 +86,13 @@ def test_pdf_layout_keeps_only_the_current_text_of_the_act():
     assert act.units["чл. 3, ал. 1"].startswith(
         "Лицата, които стопанисват пътищата: 1. ги поддържат изправни;"
     )
+    assert act.units["чл. 3, ал. 1, т. 1"] == "ги поддържат изправни;"
     assert act.units["чл. 3, ал. 1, т. 2"] == "организират движението по тях;"
     assert act.units["чл. 3, ал. 1, т. 4"] == "почистват пътното платно."
     assert "чл. 3, ал. 1, т. 3" in act.repealed and "чл. 3, ал. 2" in act.repealed
     assert "стария начин" not in act.units["чл. 3"]
-    # A heading that wraps onto the next line and the page furniture are not part of any article.
+    # A heading that wraps onto the next line and the page furniture (also the print date) are not part of any
+    # article.
     assert act.units["чл. 50, ал. 1"] == (
         "На кръстовище водачите са длъжни да пропуснат пътните превозни средства, които се движат по пътя"
         " с предимство."
