@@ -153,6 +153,62 @@
           "reason": "The old text did not say why the horn may be used outside settlements 'to warn of a possible danger'; no provision states this directly, so the text now spells out the inference from чл. 30 (ban limited to settlements) and чл. 28, ал. 2. The writer's inference itself was sound and needs no conflict."
         }
       ]
+    },
+    "B-04": {
+      "part": 4,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5888",
+          "change": "[style] 'Сигналът не се отнася само за водачите, които след разрешено преминаване са толкова близо…' became 'Изключение има само за водачите, които в момента на сигнала, след като им е било разрешено преминаването, са толкова близо…'.",
+          "reason": "'не се отнася само за' can be read as 'applies not only to', the opposite of the intended exception in чл. 10, ал. 2, т. 1 ЗДвП. The new wording states the exception unambiguously and follows the quoted provision."
+        },
+        {
+          "id": "iaaa-5925",
+          "change": "[factual] 'при приближаване на влак тя изгасва и започват да мигат червените светлини' became 'при приближаване на влак се включват мигащите червени светлини'. The entry stays `general`.",
+          "reason": "No unit of ЗДвП, ППЗДвП, the signs or the marking ordinance mentions the moon-white light at a level crossing (searched луннобял, лунно бял, бяла/бял светлина, бавно мигаща, изправност, прелез); the only moon-white lights in the corpus are the public-transport signals of чл. 34 ППЗДвП. So `general` is right. The claim that the white light goes out is not in the corpus; ППЗДвП чл. 36, ал. 1 only says that the red-light signal is switched on when a train approaches, so the text now says only that."
+        },
+        {
+          "id": "iaaa-5965",
+          "change": "[legal reference] Replaced ЗДвП чл. 92, ал. 1 (lead-in) + чл. 92, ал. 1, т. 3 with ППЗДвП чл. 159, ал. 1 (lead-in) + чл. 159, ал. 1, т. 3 („да не се съобразява с организацията на движението, въведена с пътни светофари, пътни знаци, пътна маркировка и други средства, когато това се отнася до посока на движение“); the text now says 'организацията на движението, въведена с пътни знаци'.",
+          "reason": "The answer rests on a special-regime vehicle being allowed to disregard a sign. ЗДвП чл. 92, т. 3 speaks only of 'организацията на движението'; ППЗДвП чл. 159, т. 3 names road signs explicitly, so it supports the claim more directly. The paraphrase of the misspelt official answer ('леки автомоби') is kept."
+        },
+        {
+          "id": "iaaa-5966",
+          "change": "[legal reference] Same replacement as iaaa-5965 (ЗДвП чл. 92 → ППЗДвП чл. 159, ал. 1 + т. 3), with 'въведена с пътни знаци' added to the text.",
+          "reason": "ППЗДвП чл. 159, ал. 1, т. 3 explicitly covers organisation introduced with road signs, which is what В1 is."
+        },
+        {
+          "id": "iaaa-5970",
+          "change": "[legal reference] Same replacement (ЗДвП чл. 92 → ППЗДвП чл. 159, ал. 1 + т. 3). The last sentence now reads: '…може да не се съобразява с организацията на движението, въведена с пътни знаци, когато тя се отнася до посоката на движение, а забраната на знака засяга именно двете посоки на движение.'",
+          "reason": "For В2 the link between the sign and the exemption was implicit. ППЗДвП чл. 159, т. 3 names road signs, and В2 is defined (signs act чл. 72, ал. 1) as closing the section 'и в двете посоки', so the text now ties the closure to the direction-of-movement exemption. No more specific provision on special-regime vehicles and В2 exists in the corpus; the reading is reasonable and does not contradict the official answer, so no conflict."
+        },
+        {
+          "id": "iaaa-5971",
+          "change": "[legal reference] Same replacement (ЗДвП чл. 92 → ППЗДвП чл. 159, ал. 1 + т. 3); the sentence now ends '…въведена с пътни знаци, когато тя се отнася до посоката на движение – в случая до забраната за влизане в двете посоки.'",
+          "reason": "As for iaaa-5970: the provision that names road signs, and an explicit link to В2's ban in both directions."
+        },
+        {
+          "id": "iaaa-5974",
+          "change": "[legal reference] Added ЗДвП § 6, т. 12 („\"Автомобил\" е недвуколесно безрелсово моторно превозно средство“) as a fourth reference.",
+          "reason": "The text says lorries and cars are motor vehicles, which is why В3 bans them; only the tractor (§ 6, т. 15) had a basis for that."
+        },
+        {
+          "id": "iaaa-5986",
+          "change": "[style] 'Товарните автомобили и превозните средства, теглени от животни, се спират с други знаци' became 'Влизането на товарни автомобили и на превозни средства, теглени от животни, се забранява с други знаци'.",
+          "reason": "Signs В4 and В10 ban entry; they do not 'stop' vehicles. The new wording matches the signs' names."
+        },
+        {
+          "id": "iaaa-5988",
+          "change": "[style] 'Велосипедите се спират с друг знак … а самоходните машини – със знак В7' became 'Влизането на велосипеди се забранява с друг знак … а на самоходни машини – със знак В7'.",
+          "reason": "Same imprecise 'се спират' as iaaa-5986; В9 and В7 ban entry."
+        },
+        {
+          "id": "iaaa-6202",
+          "change": "[picture] 'стрелките от двете страни на пътната ос показват посоките, разрешени от отделните ленти' became 'две пътни ленти са разделени с прекъсната линия, а стрелките показват посоките за продължаване от всяка от тях – наляво от лявата и направо или надясно от дясната'.",
+          "reason": "The picture shows two lanes in the same direction (all arrows point forward) separated by a broken line; signs act чл. 111 describes Д3 for a road with at least two lanes in one direction. The broken line is a lane line, not the road axis."
+        }
+      ]
     }
   }
 }
