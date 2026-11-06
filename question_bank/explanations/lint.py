@@ -73,7 +73,8 @@ LATIN_ALLOWED = {
     "o3",
     "o4",
 }
-_LETTER_REFERENCE = re.compile(r"(?i)отговор(?:и)?\s*[„\"(]?\s*[абвг]\s*[“\")]?(?:[\s,.;:]|$)")
+# "отговор „а“", "отговори а и б" — but not the word "отговора" (its ending is not a letter of an answer).
+_LETTER_REFERENCE = re.compile(r"(?i)(?<![а-я])отговор(?:и|ът)?\s+[„\"(]?[абвг][“\")]?(?=[\s,.;:)]|$)")
 _LATIN_WORD = re.compile(r"[A-Za-z][A-Za-z0-9]*")
 _CYRILLIC = re.compile(r"[А-Яа-яЁёЪъЬьЮюЯя]")
 

@@ -139,6 +139,9 @@ def test_general_explanations_short_texts_letters_and_conflicts(setup):
         {"iaaa-1": dict(general, text=GOOD_TEXT + " Затова отговор „а“ е верен.")}, setup.bank, setup.corpus
     )
     assert levels(letter) == [("warning", "iaaa-1")]
+    # "отговора" is a word, not a letter reference.
+    word = dict(general, text=GOOD_TEXT + " И трите отговора за свързаните превозни средства са верни.")
+    assert check_all({"iaaa-1": word}, setup.bank, setup.corpus) == []
     conflict = check_all(
         {"iaaa-1": {"conflict": "чл. 50, ал. 1 казва друго от официалния отговор."}}, setup.bank, setup.corpus
     )
