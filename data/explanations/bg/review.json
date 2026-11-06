@@ -46,6 +46,57 @@
           "reason": "Style guide: signs are named by their code and name from the ordinance. The picture shows a thick vertical line with a thinner road joining from the right, i.e. А27."
         }
       ]
+    },
+    "B-02": {
+      "part": 2,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5291",
+          "change": "[legal reference] The reference for А35.2 is now ППЗДвП чл. 44, ал. 5 („Пътни знаци А35.1, А35.2 и А35.3 указват разстоянието от мястото, където са поставени, до железопътен прелез …“) in place of the signs ordinance чл. 47, ал. 1, т. 2 („на 160 m - пътен знак А35.2“). Text unchanged.",
+          "reason": "The text says the balise 'shows the distance to the crossing'; the old quote only gave the 160 m placement, which the text does not mention. ППЗДвП чл. 44, ал. 5 states exactly what the text claims."
+        },
+        {
+          "id": "iaaa-5382",
+          "change": "[legal reference] Extended the quote of the signs ordinance чл. 35, ал. 1 to the end of the sentence („… в който е възможна внезапна поява на деца върху платното за движение“).",
+          "reason": "The text says that А19 warns of children who may appear on the carriageway; the old quote stopped at „се използва за сигнализиране на пътен участък“ and did not show that."
+        },
+        {
+          "id": "iaaa-5541",
+          "change": "[legal reference] Rewrote the text and replaced чл. 5, ал. 2 + т. 1 ЗДвП with § 6, т. 75 ЗДвП (children and drivers of two-wheelers are vulnerable road users) and чл. 80, ал. 1 + т. 2 ЗДвП (the cyclist must ride as close as possible to the right edge of the carriageway). The text now names both reasons: the children are vulnerable road users, and riding next to the middle leaves little lateral distance when passing.",
+          "reason": "The question asks whether there is a danger, not what the driver must do. § 6, т. 75 names children expressly as vulnerable road users, which is the direct basis for „да, защото велосипедистите са деца“; чл. 80, ал. 1, т. 2 shows why a cyclist riding next to the middle (as in the picture) is out of the expected place. The old references only covered two-wheelers in general, and the children-specific reason rested on no provision."
+        },
+        {
+          "id": "iaaa-5768",
+          "change": "[factual] Rewrote the text: ЗДвП чл. 28, ал. 2 allows the horn as an additional manoeuvre signal only outside settlements and even there does not make it obligatory („може“); inside settlements чл. 30 forbids it except to prevent an accident. Same two references, чл. 28, ал. 2 now first.",
+          "reason": "The statement is that the driver 'must' sound the horn before overtaking. The old text rested only on the scene being inside a settlement, which the picture suggests (buildings on both sides) but no sign shows. The 'may, never must' point of чл. 28, ал. 2 makes the answer „неправилно“ correct regardless of that assumption."
+        },
+        {
+          "id": "iaaa-5778",
+          "change": "[picture] 'пред автомобила вдясно се движи дете с велосипед' became 'автомобилът се движи по улица в населено място: вдясно пред него кара велосипедист'.",
+          "reason": "Nothing in the picture shows that the cyclist on the right is a child (the question does not say so either). The residential street with houses and parked cars supports the settlement, on which the later horn clause (чл. 30) rests."
+        },
+        {
+          "id": "iaaa-5787",
+          "change": "[legal reference] Replaced чл. 5, ал. 2 + т. 1 ЗДвП with the definition § 6, т. 75 ЗДвП („\"Уязвими участници в движението\" са … както и водачите на двуколесни пътни превозни средства“). Text unchanged.",
+          "reason": "The text says that ЗДвП classifies drivers of two-wheelers as vulnerable road users; that is the definition in § 6, т. 75. чл. 5, ал. 2, т. 1 is the driver's duty of care, which the text does not invoke."
+        },
+        {
+          "id": "iaaa-6032",
+          "change": "[legal reference] Added ЗДвП чл. 116 („… длъжен да бъде внимателен и предпазлив към пешеходците, особено към децата“) and a clause on that duty in the text, so that „преминаване на възможно по-голямо разстояние от тях“ has a basis.",
+          "reason": "чл. 117 (reduce speed, emergency stop if needed) covered „движение с готовност за спиране“ and „намаляване на скоростта“, but not the larger distance; the duty of care towards children on the pavement (чл. 116) does."
+        },
+        {
+          "id": "iaaa-6038",
+          "change": "[legal reference] Extended the quote of ППЗДвП чл. 77, ал. 1 to the whole sentence, from „Водач, който има намерение да извърши маневра, е длъжен …“.",
+          "reason": "The text says the driver 'е длъжен' to signal; the old quote („преди да започне маневрата - да подаде …“) left out the duty."
+        },
+        {
+          "id": "iaaa-6040",
+          "change": "[legal reference] Extended the quote of ППЗДвП чл. 77, ал. 1 to the whole sentence, from „Водач, който има намерение да извърши маневра, е длъжен …“.",
+          "reason": "Same as iaaa-6038: the text states a duty, and the quote now contains it."
+        }
+      ]
     }
   }
 }
