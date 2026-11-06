@@ -41,6 +41,20 @@ _LOST_HYPHEN = re.compile(
 )
 # The same comparatives with a space after the hyphen ("по- малко"), unlike a suspended hyphen ("дву- или").
 _SPACED_HYPHEN = re.compile(r"(?i)(?<![а-я])(по|най)- (?!(?:и|или)\b)(?=[а-я])")
+# Text the Constitutional Court struck down stays in the files between two lines of dashes, after a note
+# such as "(…; обявена за противоконституционна от КС на РБ - бр. 20 от 2012 г.)". It is no longer law: a
+# whole provision goes (and so counts as repealed); "относно предл. второ" removes that sentence and
+# "в частта "28 и"" those words.
+_FRAME = re.compile(r"^\s*[—–]{8,}\s*$")
+_STRUCK = re.compile(r"(?i)обяв\w+ за противоконституцион\w+ от КС(?P<scope>.*?)\s+-\s+бр\.")
+_STRUCK_SENTENCE = re.compile(r"(?i)относно предл\.\s*(\w+)")
+_STRUCK_WORDS = re.compile(r'в частта\s+["„“]([^"“”]+)["”“]')
+_ORDINALS = {"първо": 1, "второ": 2, "трето": 3, "четвърто": 4, "пето": 5}
+# A letter whose whole text was struck down: only its marker and note are left ("д) (нова - …)").
+_LETTER_NOTE_ONLY = re.compile(r"^\s*[а-я]\)\s*\(.*\)\s*$")
+# Editor's notes of the files ("(*) Бел. ред. - …") and their "(*)" markers are not text of the act.
+_EDITOR_NOTE = re.compile(r"^\s*(?:\(\*\)\s*)?Бел\. ред\.")
+_STAR = re.compile(r"\s*\(\*\)")
 # Final provisions ("Допълнителни разпоредби", "ПРЕХОДНИ И ЗАКЛЮЧИТЕЛНИ РАЗПОРЕДБИ", "Заключителна …").
 _FINAL = re.compile(r"(?i)^\s*(допълнителн|преходн|заключителн)\w*(?:\s+и\s+(\w+))?\s+разпоредб[аи]\b(.*)$")
 _ANNEX = re.compile(r"^\s*Приложение №")
@@ -209,6 +223,48 @@ def _drop_redactions(lines: list[str]) -> list[str]:
     return kept
 
 
+def _valid_part(text: str, scope: str) -> str:
+    """What remains of struck-down text: nothing, or the text without the sentence or words it names."""
+    sentence = _STRUCK_SENTENCE.search(scope)
+    if sentence and sentence.group(1).lower() in _ORDINALS:
+        number = _ORDINALS[sentence.group(1).lower()]
+        sentences = re.split(r"(?<=\.)\s+(?=[А-Я])", text)
+        return " ".join(s for i, s in enumerate(sentences, 1) if i != number)
+    words = _STRUCK_WORDS.search(scope)
+    if words:
+        return re.sub(r"\s*" + re.escape(words.group(1)) + r"\s*", " ", text, count=1).strip()
+    return ""
+
+
+def _drop_struck_down(lines: list[str]) -> list[str]:
+    """The lines without struck-down text, frames, editor's notes and their markers."""
+    out: list[str] = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if _EDITOR_NOTE.match(line):
+            i += 1
+            continue
+        if not _FRAME.match(line):
+            out.append(_STAR.sub("", line))
+            i += 1
+            continue
+        close = next((j for j in range(i + 1, len(lines)) if _FRAME.match(lines[j])), None)
+        note_at = next((k for k in range(len(out) - 1, -1, -1) if out[k].strip()), None)
+        struck = _STRUCK.search(out[note_at]) if note_at is not None else None
+        if close is None or struck is None:  # a separator line, not a frame around struck-down text
+            i += 1
+            continue
+        framed = " ".join(x.strip() for x in lines[i + 1 : close] if x.strip())
+        valid = _valid_part(framed, struck.group("scope"))
+        if valid:
+            out.append(valid)
+        elif _LETTER_NOTE_ONLY.match(out[note_at]):
+            del out[note_at]
+        i = close + 1
+    return out
+
+
 def parse(text: str) -> ParsedAct:
     raw = text.replace("\f", "\n").replace("­", "").replace(" ", " ").split("\n")
     lines = [
@@ -216,6 +272,7 @@ def parse(text: str) -> ParsedAct:
         for line in raw
         if not any(p.match(line) for p in _FURNITURE)
     ]
+    lines = _drop_struck_down(lines)
     # The header: everything before the first chapter, section or article.
     first = next(
         (i for i, line in enumerate(lines) if _is_heading(line) or _TOP_LINE.match(line)), len(lines)

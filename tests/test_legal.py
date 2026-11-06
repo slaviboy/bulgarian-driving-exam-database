@@ -77,6 +77,41 @@ INLINE = "\n".join(
 )
 
 
+# Text struck down by the Constitutional Court stays in the Ministry's DOCX between two lines of dashes.
+STRUCK = "\n".join(
+    [
+        "ЗАКОН за движението по пътищата",
+        "Обн., ДВ, бр. 20 от 5.03.1999 г., изм., бр. 55 от 16.06.2026 г.",
+        " Чл. 143. (1) (Изм. - ДВ, бр. 51 от 2007 г.; обявена за противоконституционна от КС на РБ"
+        " относно предл. второ - бр. 84 от 2021 г.) ",
+        "FRAME",
+        "Превозното средство се регистрира на името на собственика. Някои се регистрират само от фирма.",
+        "FRAME",
+        " (2) Забранява се подправянето на номера.",
+        " Чл. 171. 1. временно отнемане на свидетелството на водач: а) който не отговаря на изискванията;",
+        " д) (нова - ДВ, бр. 51 от 2007 г.; обявена за противоконституционна от КС на РБ"
+        " - бр. 26 от 2021 г.) ",
+        "FRAME",
+        "който управлява с незаплатена глоба;",
+        "FRAME",
+        " е) който е лишен от право да управлява;",
+        " Чл. 189. (1) Актовете се съставят от длъжностните лица.",
+        " (2) (Нова - ДВ, бр. 51 от 2007 г.; обявена за противоконституционна от КС на РБ"
+        " - бр. 20 от 2012 г.) ",
+        "FRAME",
+        "Не подлежат на обжалване фишове с глоба до 50 лв. включително.",
+        "FRAME",
+        " (3) Влезлият в сила фиш се смята за постановление.",
+        " Чл. 189з. (*) (Нов – ДВ, бр. 109 от 2020 г.; обявен за противоконституционен от КС на РБ"
+        ' в частта "28 и" - бр. 38 от 2025 г.) ',
+        "FRAME",
+        "За нарушенията по този закон не се прилагат чл. 28 и 58г от Закона за административните нарушения.",
+        "FRAME",
+        "(*) Бел. ред. - Относно допустимостта, виж РЕШЕНИЕ НА СЪДА от 21 ноември 2024 година.",
+    ]
+).replace("FRAME", "————————————————————————————————")
+
+
 def test_pdf_layout_keeps_only_the_current_text_of_the_act():
     act = parse(PDF_LAYOUT)
     assert act.title == "ЗАКОН ЗА ДВИЖЕНИЕТО ПО ПЪТИЩАТА"
@@ -109,6 +144,24 @@ def test_pdf_layout_keeps_only_the_current_text_of_the_act():
     # The provisions of amending acts end the act.
     assert "§ 1" not in act.units
     assert "Текст на изменящ закон" not in " ".join(act.units.values())
+
+
+def test_struck_down_text_and_editors_notes_are_not_law():
+    act = parse(STRUCK)
+    # Only the sentence the ruling names goes; a whole paragraph or letter goes and counts as repealed.
+    assert act.units["чл. 143, ал. 1"] == "Превозното средство се регистрира на името на собственика."
+    assert act.units["чл. 171, т. 1"] == (
+        "временно отнемане на свидетелството на водач: а) който не отговаря на изискванията;"
+        " е) който е лишен от право да управлява;"
+    )
+    assert "чл. 189, ал. 2" in act.repealed
+    assert act.units["чл. 189, ал. 3"] == "Влезлият в сила фиш се смята за постановление."
+    # Only the words the ruling names go; the editor's note and its marker are not text of the act.
+    assert act.units["чл. 189з"] == (
+        "За нарушенията по този закон не се прилагат чл. 58г от Закона за административните нарушения."
+    )
+    text = " ".join(act.units.values())
+    assert "—" not in text and "Бел. ред" not in text and "(*)" not in text
 
 
 def test_docx_layout_with_bare_headings_and_repealed_points():
