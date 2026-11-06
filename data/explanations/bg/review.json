@@ -553,6 +553,47 @@
           "reason": "The officer in the picture stands with his right shoulder to the driver and his arms lowered; the meaning of lowered arms rests on that clause, as in iaaa-5942 and the approved iaaa-5876. Picture checked (zoomed): he faces right, so the driver is opposite his right shoulder, and the pedestrian crosses in front of his chest."
         }
       ]
+    },
+    "B-09": {
+      "part": 9,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-6331",
+          "change": "[legal reference] Added ЗДвП чл. 53, ал. 2 (the driver may begin crossing only if sure he will not have to stop on the rails or less than 2 m from them); the text now says that the driver already on the crossing must clear it „а не да спира върху релсите“ on that basis. ППЗДвП чл. 36, ал. 1 and ЗДвП чл. 39 are kept.",
+          "reason": "The old text said stopping would keep the vehicle on the rails without a basis. No provision says directly what to do when the signals switch on during the crossing: ЗДвП чл. 51–54 and ППЗДвП чл. 106–113 contain no duty to clear a level crossing (the duties to clear are only for intersections: ЗДвП чл. 10, ал. 2, т. 1 and ППЗДвП чл. 31, ал. 7, т. 4). чл. 53, ал. 2 is the provision that shows a stop on the rails must be avoided; чл. 39 covers the U-turn answer."
+        },
+        {
+          "id": "iaaa-6346",
+          "change": "[picture] „регулировчикът е с лявото рамо към синия автомобил и трамвая“ → „стои странично, със спуснати ръце, така че синият автомобил е срещу дясното му рамо, а трамваят се движи по успоредните релси вдясно“; the permission now names both the car and the tram.",
+          "reason": "Zoomed picture: the officer stands in profile facing right (cap brim, face and shoes point right) and holds the baton in the near hand, so his right side faces the blue car coming from behind. The tram runs on rails parallel to the car's road, so it is also opposite one of his shoulders; this matters because ЗДвП чл. 8, ал. 2 applies when both are allowed to pass."
+        },
+        {
+          "id": "iaaa-6356",
+          "change": "[factual] „Завиващият наляво водач е длъжен да пропусне…“ → „Водачът на нерелсово превозно средство, който завива наляво, е длъжен да пропусне…“.",
+          "reason": "ЗДвП чл. 37, ал. 1 imposes the duty on the driver of a non-rail vehicle and extends it to rail vehicles only among themselves; the condition is the point of the question, so it must stay in the text."
+        },
+        {
+          "id": "iaaa-6387",
+          "change": "[legal reference] ЗДвП чл. 20, ал. 2 (speed allowing a stop before any foreseeable obstacle) replaced by ЗДвП чл. 44, ал. 2 (when passing cannot be done safely because of a narrowing, the driver whose lane is occupied must slow down or stop to let the oncoming vehicles pass); the text says the red car „заема пътя“ through the narrow section and states that rule. Signs чл. 64 (Б6) is kept.",
+          "reason": "чл. 44, ал. 2 is the provision on passing at a narrowing and states the duty directly; чл. 20, ал. 2 is only a general duty. The signs act gives no rule for the case of an oncoming car already inside the section: чл. 56, т. 4–5 describe the shapes, чл. 58, ал. 6 and чл. 63–65 the placing and who gets priority. Б6's name „Премини, ако пътят е свободен!“ stays as the other reason. Picture checked: Б6 on the right, the red car inside the underpass."
+        },
+        {
+          "id": "iaaa-6388",
+          "change": "[legal reference] Same as iaaa-6387: ЗДвП чл. 44, ал. 2 replaces чл. 20, ал. 2, and the text says the red car „заема пътя“.",
+          "reason": "Same situation and picture layout (Б6 on the right, the red car inside the narrow section ahead of the blue car)."
+        },
+        {
+          "id": "iaaa-6432",
+          "change": "[factual] Removed „Затова водачът не може да остане в нея“; the text now gives the meaning of the signal in the words of ППЗДвП чл. 33, ал. 4, т. 1 (movement in the lane is forbidden) and contrasts it with the ordinary red light, which only forbids passing the stop line (ППЗДвП чл. 31, ал. 7, т. 1, added as a fourth reference). That is why both continuing in the lane and stopping in it before the signal are violations.",
+          "reason": "ППЗДвП чл. 33 does not say that the driver must leave the lane; it says „Движението по лентата е забранено“. The contrast with чл. 31, ал. 7, т. 1 explains, with a provision, why stopping before the signal is not enough. Picture checked: middle lane between two М4 lines, red crossed bands lit above it; М4 may be crossed only when it is on the right (ППЗДвП чл. 63, ал. 2, т. 4; marking act чл. 15, ал. 2)."
+        },
+        {
+          "id": "iaaa-6436",
+          "change": "[picture] „табела Т2 с „200 м“ между две стрелки“ → „… между две стрелки, насочени нагоре“.",
+          "reason": "Exact visual wording, as in the approved iaaa-6224 and iaaa-11886: the plate shows an upward arrow on each side of „200 м“, which is what tells Т2 from Т1."
+        }
+      ]
     }
   }
 }
