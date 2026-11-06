@@ -280,6 +280,102 @@
           "reason": "The text mentioned 80 km/h, which was not in the quoted part of the point; the quote now shows it, and the text keeps both conditions of the exception."
         }
       ]
+    },
+    "B-06": {
+      "part": 6,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5380",
+          "change": "[legal reference] Replaced ППЗДвП чл. 119, т. 3 (quote cut after „Тази забрана се отнася и за случаите“) with ЗДвП чл. 58, т. 4 („да се движи в платното за насрещно движение или в лентата за принудително спиране“); the text now names the plates' meaning fully („товарен автомобил с максимално допустима маса над 3,5 т и дължина над 7 м“) and says the ban on the emergency lane is a motorway rule.",
+          "reason": "The law itself (ЗДвП чл. 58, т. 4) states the ban, as in the approved iaaa-5377/5378; the old ППЗДвП quote ended mid-thought. The picture was checked: Д5, three lanes, the truck with two plates with slanted red and yellow stripes in the leftmost lane, the car in the middle lane with the right lane free, the tractor right of the solid edge line. Each vehicle's violation rests on a quote (чл. 57 with the plate of чл. 18, ал. 1, т. 12 ППЗДвП; чл. 15, ал. 1; чл. 58, т. 4)."
+        },
+        {
+          "id": "iaaa-5390",
+          "change": "[legal reference] Bicycles now rest on § 6, т. 19 ЗДвП („се привежда в движение с мускулната сила на лицето, което го управлява“) instead of an unsupported 'не е моторно превозно средство'; the two quotes of чл. 55, ал. 1 were merged into one to make room.",
+          "reason": "§ 6 ЗДвП defines the bicycle as moved by the rider's muscle power, so its exclusion by чл. 55, ал. 1 (only motor vehicles over 70 km/h) has a basis in the corpus (as in the approved iaaa-5178). Mopeds (§ 6, т. 14) and tractors (table of чл. 21, ал. 1, row Ткт) were checked and are right."
+        },
+        {
+          "id": "iaaa-5391",
+          "change": "[style] The bicycle clause now says why a bicycle is not a motor vehicle („се задвижва с мускулна сила, без двигател“), and the tractor clause says that Ткт is among the vehicles for which the table of чл. 21, ал. 1 provides a ban (the table has no column for автомобилен път).",
+          "reason": "Checked: ППЗДвП § 1, т. 13 defines the автомобилен път as a road „предназначен за движение само на моторни превозни средства, с изключение на самоходните машини“; it adds nothing that чл. 60 + чл. 55, ал. 1 ЗДвП do not already give (only motor vehicles, and over 70 km/h), and it does not exclude tractors (a tractor is a motor vehicle, § 6, т. 15). No provision bans tractors on an автомобилен път more directly than чл. 60 → чл. 55, ал. 1 → the table of чл. 21, ал. 1, so the writer's chain stays; with four references used, the bicycle (no engine, § 6, т. 19 confirms muscle power) is stated as plain knowledge."
+        },
+        {
+          "id": "iaaa-5546",
+          "change": "[legal reference] The quote of signs чл. 87, ал. 1 with both names was split into the sign's own name „В28 „Забранено е паркирането““ and, for the contrast, „Пътен знак В27 „Забранени са престоят и паркирането““.",
+          "reason": "The correct answer must rest on В28's own name, not on a passage covering both signs; the picture (one red band from upper left to lower right on blue) was checked."
+        },
+        {
+          "id": "iaaa-5549",
+          "change": "[legal reference] „Той забранява паркирането, а за забрана и на престоя се използва знакът В27 с две кръстосани червени ленти“ became „Според името си той забранява само паркирането, а престоят и паркирането заедно се забраняват със знака В27 „Забранени са престоят и паркирането““; the quote of чл. 87, ал. 1 was split into В28's own name and В27's name.",
+          "reason": "„Престой allowed, parking banned“ must rest on В28's own name; the visual detail of В27 (not in the picture) had no reference. Picture checked: В28 on the right of the street."
+        },
+        {
+          "id": "iaaa-5592",
+          "change": "[legal reference] „Той забранява паркирането, но не и престоя“ became „Според името си той забранява паркирането, но не и престоя“; the quote of чл. 87, ал. 1 is now В28's own name „В28 „Забранено е паркирането““ instead of both names.",
+          "reason": "The answer rests on В28's own name and the definition of престой (чл. 93, ал. 1); picture checked (В28 on the right, the arrow to the right edge)."
+        },
+        {
+          "id": "iaaa-5551",
+          "change": "[picture] Removed „на тази улица в населено място и успоредно на оста на пътя“ and the reference ЗДвП чл. 94, ал. 3; the answer now rests on Т5 alone (both cars stopped after the plate, at the right edge).",
+          "reason": "The picture shows no sign of a settlement, only buildings; the answer does not depend on it, because the question is whether the cars are inside the zone of В27, and Т5 (signs чл. 182, ал. 1, т. 3) ends it. Checked in the picture: the plate with the downward arrow under В27, the blue car's rear level with the post, the red car further on."
+        },
+        {
+          "id": "iaaa-5590",
+          "change": "[picture] Removed „на улицата в населено място и успоредно на оста на пътя“ and the reference ЗДвП чл. 94, ал. 3; the answer rests on Т5.",
+          "reason": "Same picture as iaaa-5551: a settlement is not shown and the answer does not need it; both cars are after the Т5 plate, where the ban of В27 ends."
+        },
+        {
+          "id": "iaaa-5553",
+          "change": "[picture] „черен тролейбус с два токоприемника над покрива“ became „черен тролейбус с токоприемник към проводника над него“.",
+          "reason": "The sign shows one pole from the roof to the wire above, not two."
+        },
+        {
+          "id": "iaaa-5563",
+          "change": "[legal reference] Replaced the general duty ЗДвП чл. 5, ал. 1, т. 1 with чл. 98, ал. 1, т. 2 („до престояващо или паркирано пътно превозно средство от страната на движението“); the text no longer defines „пречка“ itself and names the case of shutting another car in.",
+          "reason": "Searched ППЗДвП чл. 96–101, ЗДвП чл. 94 and 98 and the marking act (М13): no provision speaks of letting others leave a parking place. The most specific basis is чл. 98, ал. 1: the obstacle of т. 1 and the ban of т. 2 on stopping beside a parked vehicle on the traffic side, which is the case where a vehicle shuts another in."
+        },
+        {
+          "id": "iaaa-5579",
+          "change": "[picture] The rule is stated with its condition („покрай превозно средство, спряло на означена с пътен знак спирка“); „с включен десен пътепоказател, а пред него по платното има пешеходци“ became „а пред автомобила по платното пресичат пешеходци“.",
+          "reason": "ЗДвП чл. 65 applies to a stop marked with a road sign; the picture shows no sign (the stop comes from the question), so the text no longer states the rule without its condition and claims nothing about a sign. Two pedestrians are visibly crossing the carriageway."
+        },
+        {
+          "id": "iaaa-5583",
+          "change": "[factual] „При преминаване покрай спрял на спирка тролейбус водачът трябва…“ became „Покрай превозно средство, спряло на означена с пътен знак спирка, водачът е длъжен…“. The quote of чл. 65 now starts with the condition („При движение в пътна лента покрай спиращо, спряло или потеглящо пътно превозно средство от означена с пътен знак … спирка“).",
+          "reason": "ЗДвП чл. 65 covers stops marked with a road sign; the text keeps that condition and, since no sign is visible, describes only the stop named in the question."
+        },
+        {
+          "id": "iaaa-5587",
+          "change": "[factual] „При движение покрай спряло на спирка превозно средство от редовните линии…“ became „Покрай превозно средство, спряло на означена с пътен знак спирка…“.",
+          "reason": "The condition of ЗДвП чл. 65 belongs in the text; the picture (a shelter with a plate above it, people boarding, snow) is described only as far as it is visible, and чл. 20, ал. 2 covers the snow independently."
+        },
+        {
+          "id": "iaaa-5586",
+          "change": "[legal reference] Replaced ППЗДвП чл. 132 with the same rule in the law, ЗДвП чл. 67; „Водачът е длъжен“ became „Водачът на нерелсово превозно средство е длъжен“ and „ускоряването е опасно“ became „увеличаването на скоростта е обратното на това задължение“.",
+          "reason": "ЗДвП чл. 67 states the duty word for word (with „нерелсово“), so the law is cited rather than the regulation; the wrong answer is now explained by the rule instead of a general remark. Picture checked: oncoming articulated bus of line 11 with a flashing indicator leaving the stop."
+        },
+        {
+          "id": "iaaa-5615",
+          "change": "[legal reference] Replaced ППЗДвП чл. 132 with ЗДвП чл. 67; „Водачът е длъжен“ became „Водачът на нерелсово превозно средство е длъжен“.",
+          "reason": "The law (ЗДвП чл. 67) states the same duty; picture checked (bus at the stop with Д24, left indicator on)."
+        },
+        {
+          "id": "iaaa-5588",
+          "change": "[legal reference] „да намали скоростта и при необходимост да спре“ now follows чл. 66, ал. 2 literally („и в случай на необходимост да спре“); added „а изпреварването и заобикалянето на трамвая отляво е забранено“ with ЗДвП чл. 43а („Забранено е изпреварването и заобикалянето на релсово превозно средство от лявата страна“).",
+          "reason": "ЗДвП чл. 43а states the rule that makes „заобикалям трамвая отляво“ wrong. Checked чл. 66 completely (ал. 1: stop 1 m behind a tram when approaching it from the right; ал. 2: island stop, reduce speed and stop if necessary) and the island definition (marking § 1, т. 14: also an area „очертана с пътна маркировка“); the text claims no more than ал. 2 and the definition say. Picture: Д22, painted island between the track and the car's path."
+        },
+        {
+          "id": "iaaa-5598",
+          "change": "[legal reference] Added „а изпреварването и заобикалянето на трамвая отляво е забранено“ with ЗДвП чл. 43а.",
+          "reason": "The corpus does state on which side a tram is passed: ЗДвП чл. 43а forbids overtaking and passing a rail vehicle on the left, which is why „заобикалям трамвая отляво“ is wrong."
+        },
+        {
+          "id": "iaaa-5606",
+          "change": "[legal reference] Added the sentence „Заобикалянето отляво също не е разрешено, защото изпреварването и заобикалянето на релсово превозно средство от лявата страна е забранено.“ with ЗДвП чл. 43а.",
+          "reason": "ЗДвП чл. 43а makes the tempting wrong answer „заобикалям трамвая отляво“ wrong; the writer had said the corpus has no such rule."
+        }
+      ]
     }
   }
 }
