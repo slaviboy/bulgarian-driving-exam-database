@@ -6,6 +6,25 @@ new official edition, questions added/removed or translations added, PATCH = cor
 
 ## [Unreleased]
 
+### Tooling
+
+* **Legal corpus** (`data/legal/`, `qb legal import|status|show|search`): the current text of ЗДвП
+  (consolidated to ДВ бр. 55/2026), its Правилник, and the ordinances on road signs (2023) and markings
+  (2001). Each act is taken from a government site with its checksum and split into articles, paragraphs,
+  points and §; earlier wordings, amending acts, annexes and amendment notes are removed.
+* **Explanations** (`qb explanations prepare|lint|merge|status`, `data/explanations/style-guide.md`,
+  `docs/explanations.md`): unofficial Bulgarian explanations of the correct answers, written from the law.
+  * The lint checks that every quote is word for word in the cited unit.
+  * Conflicts with the official answer are listed for the maintainer instead of being explained.
+  * `qb verify` repeats the quote check.
+
+### Contract (for the next dataset release)
+
+* `schema_version` stays 1; the additions are optional for consumers:
+  * `explanation-bg.json` in the core package and `files[]`;
+  * the manifest's `explanations[]`;
+  * the `master.sqlite` tables `legal_acts`, `question_explanations` and `explanation_references`.
+
 ## [1.1.0] — 2026-11-06
 
 ### Dataset
