@@ -376,6 +376,92 @@
           "reason": "ЗДвП чл. 43а makes the tempting wrong answer „заобикалям трамвая отляво“ wrong; the writer had said the corpus has no such rule."
         }
       ]
+    },
+    "B-07": {
+      "part": 7,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5631",
+          "change": "[legal reference] The quote of чл. 15, ал. 5 ЗДвП now starts with its condition („Когато няма специално предназначена за тях пътна лента или алея, …“), and the text says that mopeds may use the fit shoulder on the right only when there is no lane or path for them.",
+          "reason": "The rule on the shoulder applies only under that condition; a quote must carry the condition of the rule. The main reason (чл. 81 with т. 3) and the moped wording („двуколесен мотопед“, consistent with § 6, т. 14: „дву- или триколесно“) were checked; a moped has an engine and is a motor vehicle under § 6, т. 11, so чл. 70, ал. 3 applies to it."
+        },
+        {
+          "id": "iaaa-5691",
+          "change": "[legal reference] Same as iaaa-5631: the quote of чл. 15, ал. 5 includes its condition and the text names it.",
+          "reason": "The shoulder may be used by mopeds only when there is no lane or path for them; the quote must show the condition."
+        },
+        {
+          "id": "iaaa-5650",
+          "change": "[style] The quote of чл. 98, ал. 1, т. 3 is the whole point („в тунели и подлези, на мостове, надлези, стеснени участъци …“) instead of a fragment starting with „надлези,“.",
+          "reason": "A quote should not begin in the middle of a list so that it reads as a different rule; the approved iaaa-5613 quotes the whole point. Checked: no provision of ЗДвП or ППЗДвП bans stopping in road works (searched „ремонт“ in both acts); the conditions in the text (danger or obstacle, narrowed section) are in чл. 98, ал. 1, т. 1 and т. 3."
+        },
+        {
+          "id": "iaaa-5651",
+          "change": "[style] Same as iaaa-5650: the whole т. 3 is quoted.",
+          "reason": "As for iaaa-5650; the reasoning from what чл. 98, ал. 1 and ал. 2 do not list matches the approved iaaa-5613."
+        },
+        {
+          "id": "iaaa-5763",
+          "change": "[factual] The clause on ППЗДвП now reads „ППЗДвП забранява само превозването на пътници в автобус и в каросерията на товарен автомобил, когато те се използват за теглене“ instead of „… само когато за теглене се използва автобус или каросерията на товарен автомобил“.",
+          "reason": "The old wording made the body of a truck the towing vehicle and could be read as banning all passengers of a towing truck; ППЗДвП чл. 154, т. 2 bans only passengers in a bus and in the body of a truck used for towing. ЗДвП чл. 87, т. 1 (passengers in the towed vehicle only) was checked and supports „да“."
+        },
+        {
+          "id": "iaaa-5795",
+          "change": "[legal reference] The text now states the full condition of signs чл. 68, ал. 3 („до следващото кръстовище с републикански или общински път, или улица“) and the earlier end by a cancel sign, with two added quotes of чл. 68, ал. 4 (lead-in) and ал. 4, т. 1 („пътен знак, който отменя въведената забрана“).",
+          "reason": "The old text („до следващото кръстовище или до знак за отмяна“) dropped the condition of ал. 3 and had no basis for the cancel sign. Picture checked: В26 with 50 on the right of the road."
+        },
+        {
+          "id": "iaaa-5800",
+          "change": "[legal reference] ППЗДвП чл. 157 was replaced by ЗДвП чл. 90 („Забранява се на останалите участници в движението да пресичат шествие“); the text now names ЗДвП.",
+          "reason": "When ЗДвП and ППЗДвП state the same duty, the law is cited."
+        },
+        {
+          "id": "iaaa-5806",
+          "change": "[style] The text now says that after В33 the general speed limits of ЗДвП apply and the driver chooses his speed within them, which ties in the cited чл. 21, ал. 1.",
+          "reason": "The quote of чл. 21, ал. 1 was not reflected in the text. Picture checked: В33 with 40 on the right."
+        },
+        {
+          "id": "iaaa-5813",
+          "change": "[legal reference] Added ЗДвП чл. 6, т. 1 („съобразяват своето поведение със сигналите на длъжностните лица, упълномощени да регулират …“) as the positive basis that the regulator's signals bind every participant, including the special-regime driver; the quote of чл. 10, ал. 2, т. 2 on the permitted drivers was dropped to stay within four references (the text still names them, the unit is cited). The text now says the signal forbids passage to the fire engine, which may pass a red traffic light (чл. 92, ал. 1, т. 1) but not a regulator's stop.",
+          "reason": "The old text rested only on what чл. 92 does not list. Picture checked: the regulator stands sideways to the yellow car (his right side towards it), back to the fire engine with blue lights, arms lowered with the baton; under чл. 10, ал. 2, т. 2 the lowered arms keep the meaning of arms extended sideways, so the fire engine behind his back may not pass. No provision exempts special-regime vehicles from regulator signals (ЗДвП чл. 92 and ППЗДвП чл. 159 list only lights, signs, speed, direction and parking)."
+        },
+        {
+          "id": "iaaa-5822",
+          "change": "[legal reference] The clause on the wrong answer „да не спазва сигналите на регулировчика“ now adds that all participants follow the regulator's signals, with ЗДвП чл. 6, т. 1 as a fourth reference.",
+          "reason": "A reason needs a basis: the claim rested only on the absence of regulator signals from чл. 92, ал. 1."
+        },
+        {
+          "id": "iaaa-5840",
+          "change": "[legal reference] general → law: added that sections with a danger of skidding from contamination, wetting or icing of the surface are marked with А15 „Опасност от хлъзгане“, quoting signs чл. 31, ал. 1.",
+          "reason": "A provision of the corpus states that a wet or icy surface creates a danger of skidding, so the entry is not pure physics; the physics claims (dry is best, ice is worst) are plain knowledge."
+        },
+        {
+          "id": "iaaa-5844",
+          "change": "[legal reference] general → law with signs чл. 31, ал. 1 (А15 „Опасност от хлъзгане“, danger of skidding from contamination, wetting or icing of the surface).",
+          "reason": "The corpus states that the state of the surface causes skidding, which is the rule the answer „да“ rests on."
+        },
+        {
+          "id": "iaaa-5846",
+          "change": "[legal reference] general → law with signs чл. 31, ал. 1 (danger of skidding from wetting of the surface).",
+          "reason": "The corpus states that a wet surface creates a danger of skidding, i.e. less grip than a dry one."
+        },
+        {
+          "id": "iaaa-5849",
+          "change": "[legal reference] general → law: added that ЗДвП requires choosing the speed according to the state of the road and of the vehicle so as to be able to stop before any foreseeable obstacle, quoting чл. 20, ал. 2.",
+          "reason": "ЗДвП чл. 20, ал. 2 links the ability to stop with speed, the road and the vehicle; the physics (kinetic energy grows with the square of the speed, grip depends on tyres and surface) is plain knowledge."
+        },
+        {
+          "id": "iaaa-5852",
+          "change": "[legal reference] general → law with ЗДвП чл. 20, ал. 2 (speed adapted to the weather and to the state of the road and of the vehicle in order to be able to stop); the stray comma before „и спирачният път“ was removed.",
+          "reason": "The duty to adapt the speed to wet roads and worn tyres is stated in чл. 20, ал. 2."
+        },
+        {
+          "id": "iaaa-5854",
+          "change": "[legal reference] general → law: added that ЗДвП requires adapting the speed also to the load carried in order to be able to stop, quoting чл. 20, ал. 2.",
+          "reason": "чл. 20, ал. 2 names „с превозвания товар“ among what the speed must be adapted to so that the driver can stop; this is the legal side of the answer „да“."
+        }
+      ]
     }
   }
 }
