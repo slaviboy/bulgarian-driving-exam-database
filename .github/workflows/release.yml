@@ -77,6 +77,11 @@ jobs:
           print(f"{c['questions']} questions · {c['answers']} answers · {c['variants']} exam variants "
                 f"in {c['categories']} categories · {c['images']} images · {c['videos']} videos")
           print()
+          t = [l for l in m.get("languages", []) if l["kind"] == "translation"]
+          if t:
+              print("Translations (unofficial, made with AI and independently reviewed; the Bulgarian text prevails): "
+                    + ", ".join(f"{l['english_name']} {l['coverage']:.0%}" for l in t))
+              print()
           print(f"Completeness: **{m['completeness']['status']}**. {m['licensing']['attribution']}")
           print()
           print("The source grants no licence; read DATA_NOTICE.md before reusing the content.")
