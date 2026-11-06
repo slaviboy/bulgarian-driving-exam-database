@@ -1143,6 +1143,127 @@
           "reason": "Searched the four acts for each topic („умора“, „седалка“, „гориво“, „покрива“, „налягане“, „пуше“, „музика“, „вниманието“, „реакция“, „спирачн“ and others). No provision states these effects: ППЗДвП чл. 10, ал. 1, т. 9 only lists a wrong tyre pressure as a fault, not its effect on handling or fuel use (approved iaaa-5431, 5432, 5446 are general as well); ППЗДвП чл. 190 names the engine and ignition but not smoking. The alcohol-effect questions ask about physiology, not the ban of чл. 5, ал. 3, т. 1, which is already cited where the answer is a duty (5737, 5738, 11638). Every number in these texts comes from the question or its answers."
         }
       ]
+    },
+    "B-14": {
+      "part": 14,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5319",
+          "change": "[style] „Следователно преместването е разрешено „да, когато …“ и „да, когато пречи на движението““ became „Затова верни са отговорите „да, когато …“ и „да, когато пречи на движението““. References unchanged.",
+          "reason": "The answers were built into the sentence so that it did not read grammatically."
+        },
+        {
+          "id": "iaaa-5321",
+          "change": "[factual] Removed „Преместването на превозното средство и отстраняването на товара се оставят на компетентните служби“; the text now says that moving the vehicle or removing the load would expose the driver and the people around to the same danger, and keeps that the МВР services must visit the scene (ЗДвП чл. 125, т. 3). The nature of dangerous goods is now worded as a possibility („такъв товар може да е запалим, взривоопасен, отровен или разяждащ“).",
+          "reason": "No provision of the corpus leaves moving the vehicle or removing the load to the services (searched „опасен товар“ in all acts: ЗДвП чл. 125, 130, 131, 171; ППЗДвП чл. 18, 201, 209). The remaining reasons are plain knowledge or rest on the quotes (ППЗДвП чл. 18, ал. 1, т. 11; ЗДвП чл. 125, т. 3)."
+        },
+        {
+          "id": "iaaa-5333",
+          "change": "[factual] „Първото задължение на водача … е да вземе мерки …“ became „Сред задълженията на водача … ЗДвП посочва първо мерките за осигуряване безопасността на движението“.",
+          "reason": "ЗДвП чл. 124 lists the duties; it does not rank them. The text now states what the law does (lists safety first) and gives the reason for the priority as reasoning."
+        },
+        {
+          "id": "iaaa-5335",
+          "change": "[factual] The participant's duty is now stated with its condition: „водачът, който е участник в произшествие с пострадали хора“, and „Съобразно необходимостта“ was added. References unchanged.",
+          "reason": "The quoted duty of ЗДвП чл. 123, ал. 1, т. 2, б. „в“ applies only „когато при произшествието са пострадали хора“; the text applied it to every accident. With four references the condition is kept in the text. The answer „да, във всички случаи“ is about participants and non-participants alike, which чл. 124 covers."
+        },
+        {
+          "id": "iaaa-5338",
+          "change": "[legal reference] general → law. The text now rests on ЗДвП чл. 123, ал. 1, т. 3 (property damage only; when the participants agree on the circumstances they move the vehicles and fill in their data in a двустранен констативен протокол), quoted in two references. Removed the claim that the protocol later serves before the insurer.",
+          "reason": "The description of the protocol is a legal rule stated in чл. 123, ал. 1, т. 3, б. „б“ and must not appear unreferenced in a general entry. No provision speaks of corrections (searched „протокол“ in all acts: ЗДвП чл. 123, 125а; ППЗДвП чл. 185, 201, 202, 209), so the invalidity is explained by the signatures confirming the written text. The insurer claim was not in the corpus."
+        },
+        {
+          "id": "iaaa-5339",
+          "change": "[factual] The text now starts „Когато при произшествието има пострадали хора, …“. [style] The second answer is quoted corrected: „да сигнализира мястото на произшествието“ (source „сигнализара“).",
+          "reason": "The participant's duty of ЗДвП чл. 123, ал. 1, т. 2, б. „в“ applies only when people are injured; the answers (help to the injured) presuppose it. Typos in official answers are corrected when quoted, as in parts 8 and 13."
+        },
+        {
+          "id": "iaaa-5340",
+          "change": "[factual] Rewrote: the participant's duty is stated for an accident with injured people („съобразно необходимостта“), the non-participant's under чл. 124; the conclusion is that the duty does not depend on being a participant. References unchanged.",
+          "reason": "Same condition as iaaa-5335: the quoted ЗДвП чл. 123, ал. 1, т. 2 applies only „когато при произшествието са пострадали хора“."
+        },
+        {
+          "id": "iaaa-5448",
+          "change": "[factual] „наказва с глоба превишаването ѝ … още при превишаване с 10 km/h“ became „наказва превишаването ѝ … с глоба, чийто размер зависи от това с колко е превишена скоростта: най-ниската глоба е 20 лв. за превишаване с 10 km/h, а с по-голямото превишаване глобата расте“.",
+          "reason": "„още при превишаване с 10 km/h“ suggested that smaller excesses are not fined; чл. 182, ал. 1, т. 1 and ал. 2, т. 1 set 20 лв. „за превишаване с 10 km/h“ as the lowest step."
+        },
+        {
+          "id": "iaaa-5468",
+          "change": "[factual] „ако е създадена непосредствена опасност …, глобата е 200 лв., а иначе се прилага общата глоба от 50 лв.“ became „при създадена непосредствена опасност за движението глобата е 200 лв., а и без такава опасност нарушителят се наказва с общата глоба от 50 лв. за нарушенията, за които не е предвидено друго наказание“.",
+          "reason": "„иначе“ also covered the case of a caused accident, for which чл. 179, ал. 2 sets 300 лв. Checked the reasoning: the duty of чл. 97, ал. 3 is unconditional, чл. 179, ал. 1, т. 1 fines only the case with immediate danger, and чл. 185 fines every violation for which no other penalty is provided, so the violation exists in all cases."
+        },
+        {
+          "id": "iaaa-5509",
+          "change": "[legal reference] Replaced ЗДвП чл. 101, ал. 2 with ППЗДвП чл. 11, ал. 2 (in the other cases, when the fault cannot be removed on the spot, the driver may drive to a garage or service only after ensuring safety), quoted in full; the text says „до гараж или сервиз, но само ако е осигурил необходимата безопасност на движението“. The other three references (ППЗДвП чл. 11, ал. 1 twice, чл. 10, ал. 1, т. 9) are unchanged.",
+          "reason": "ЗДвП чл. 101, ал. 2 is limited by ал. 3 (it does not apply to dangerous faults, whose classification is in an ordinance outside the corpus), so quoting ал. 2 alone overstated it. The rule the answers rest on is ППЗДвП чл. 11: ал. 1 lists the faults that require stopping (т. 9, б. „в“ is the rim fastening), ал. 2 allows driving to the repair place for all others. Checked the correct answers against чл. 10, ал. 1: speedometer т. 6, б. „к“, indicators т. 12, б. „г“, cooling system not listed; none is in чл. 11, ал. 1."
+        },
+        {
+          "id": "iaaa-5536",
+          "change": "[style] The first answer is quoted corrected: „не трябва да изхвърля и да оставя предмети на пътя“ (source „трябвада“). [factual] „трябва да вземе мерки за отстраняването им, когато застрашават другите“ became „трябва да вземе мерки за отстраняването им или за предупреждаване на останалите участници, когато това ги застрашава“; the last clause now names the wrong statement („твърдението, че водачът не е задължен да отстранява падналите предмети, е грешно“).",
+          "reason": "Typos in official answers are corrected when quoted. ЗДвП чл. 5, ал. 1, т. 2 (quoted) allows removal or warning; the text dropped the second option."
+        },
+        {
+          "id": "iaaa-6019",
+          "change": "[factual] „… категории, сред които са автомобилите и триколесните и четириколесните моторни превозни средства“ became „Според чл. 139, ал. 8 ЗДвП с пожарогасители се оборудват превозните средства от изброените в него категории, сред които са моторните превозни средства, проектирани и конструирани основно за превоз на пътници или на товари“. [legal reference] Added ЗДвП чл. 149, ал. 1, т. 2 and т. 3 (categories М and N). Added that the towing rope is not among the required equipment.",
+          "reason": "чл. 139, ал. 8 covers М1–N3, О2–О4 and L5e, L6e, L7e only, not every three- or four-wheeled motor vehicle (e.g. not the three-wheeled mopeds L2e); the old text claimed all of them. The meaning of the categories М and N comes from чл. 149, ал. 1. Checked чл. 139, ал. 2: т. 3 (extinguisher) is repealed, so only the lead-in can be quoted (the remaining points have 1–2 words)."
+        },
+        {
+          "id": "iaaa-6021",
+          "change": "[factual] Same change of the extinguisher sentence as in iaaa-6019. [legal reference] Added ЗДвП чл. 149, ал. 1, т. 2 and т. 3. Added that the towing rope and repair tools are not among the required equipment.",
+          "reason": "Same as iaaa-6019: the text must not claim more than чл. 139, ал. 8 says."
+        },
+        {
+          "id": "iaaa-8292",
+          "change": "[factual] The qualifier is now a clause of its own: „и „е технически неизправно“, като за техническата неизправност ЗДвП прилага тази мярка, когато неизправността е опасна“ (was „„е технически неизправно“ – при опасна неизправност“). References unchanged.",
+          "reason": "Flagged possible conflict. ЗДвП чл. 171, т. 2, б. „а“ stops a vehicle for an „опасна неизправност“ (also чл. 165, ал. 2, т. 4 with чл. 101, ал. 3; чл. 143, ал. 17). A vehicle with a dangerous fault is technically faulty, so the official answer can be read consistently with the provision as naming the category of the ground; kept as an explanation with the condition stated clearly (the maintainer notes already list the difference)."
+        },
+        {
+          "id": "iaaa-8294",
+          "change": "[factual] Removed „Обжалването не е обвързано с размера на глобата“; the text now says only that the right of appeal does not depend on whether the owner drove. References unchanged (чл. 189, ал. 4 and ал. 8).",
+          "reason": "The corpus text of ЗДвП чл. 189, ал. 13 reads „Не подлежат на обжалване наказателни постановления и електронни фишове, с които е наложена глоба до 50 лв. включително“, framed by lines of dashes, the same frame as чл. 143, ал. 1 (2nd sentence), чл. 159, ал. 2 and чл. 171, т. 1, б. „д“ and т. 2, б. „к“; the frame probably marks text no longer applied (e.g. declared unconstitutional), but the corpus does not say so. The explanation must not contradict the literal text either way. The official answer rests on ал. 8 and stays explained; the wrong answer about 50 лв. is left unexplained. Note for the maintainer: if ал. 13 applies, that wrong answer would be right for fines up to 50 лв."
+        },
+        {
+          "id": "iaaa-8299",
+          "change": "[factual] The conclusion is now conditional: „затова, когато второто нарушение е извършено в този срок, верен е отговорът …“; the penalty for a repeated violation now names the amount („с глоба 300 лв. и лишаване … за срок един месец“).",
+          "reason": "Flagged. § 6, т. 33 makes a violation repeated when it is committed within one year from the entry into force of the decree for the same kind of violation; „two decrees in force within one year“ (the question) does not always mean that. The text keeps the definition's condition (lesson: conditions of a definition) without contradicting the official answer, which matches чл. 183, ал. 6."
+        },
+        {
+          "id": "iaaa-5311",
+          "change": "[checked, no change] Kept `law` with ЗДвП чл. 123, ал. 1 and т. 2.",
+          "reason": "Flagged. The quotes state the duties (notify, take safety measures, help the injured) that make the wrong answers „не предприема нищо до идването на помощните екипи“ and „се справя … винаги сам“ wrong, and the text keeps their condition (injured people). Calm and no panic are explained as what those duties need; a `general` entry would have to drop the legal duties."
+        },
+        {
+          "id": "iaaa-5344",
+          "change": "[checked, no change] The text states the duty with its condition (accident with injured people).",
+          "reason": "Flagged. Searched чл. 123 in full and ППЗДвП чл. 199–204: only чл. 123, ал. 1, т. 2, б. „г“ and „д“ forbid changing the vehicle's state before the МВР arrive and require preserving traces; т. 3, б. „в“ (disagreement) only requires staying and following instructions. The text keeps the condition and does not contradict the answer „не“."
+        },
+        {
+          "id": "iaaa-5341",
+          "change": "[checked, no change] The text keeps the condition (accident with injured people) and uses § 6, т. 27 to show that participants are not only the guilty ones.",
+          "reason": "Flagged. Searched „следи“ in all acts: ЗДвП чл. 123, ал. 1, т. 2, б. „д“ and ППЗДвП чл. 200, т. 3 (injured people or danger created) both address the driver of the accident; no provision names witnesses or all road users. The reasoning answers the contrast of the official answers (all participants, not only the guilty)."
+        },
+        {
+          "id": "iaaa-5478",
+          "change": "[checked, no change] Reasoning via ЗДвП чл. 180, ал. 1, т. 1 (100 лв. with immediate danger) and чл. 185 (general fine 50 лв.) accepted.",
+          "reason": "Flagged. No other penalty provision names the use of lights (checked чл. 179–183), so a violation without danger falls under чл. 185; the answer „във всички случаи“ follows."
+        },
+        {
+          "id": "iaaa-6004",
+          "change": "[checked, no change] The text rests on ЗДвП чл. 133, ал. 1, § 6, т. 26 and чл. 181, т. 7 and does not quote ППЗДвП чл. 180, ал. 1.",
+          "reason": "Flagged. ППЗДвП чл. 180, ал. 1 still allows two extra children up to 7 or one up to 14 on the rear seat; ЗДвП чл. 133, ал. 1 has no such exception. The text follows ЗДвП and does not present the outdated rule as current."
+        },
+        {
+          "id": "iaaa-6020",
+          "change": "[checked, no change] Only the lead-in of ЗДвП чл. 139, ал. 2 is quoted; the text names the three items of т. 1, 2 and 4.",
+          "reason": "Flagged. The points have one or two words each (below the 3-word minimum); the extinguisher (т. 3) is repealed and not claimed here."
+        },
+        {
+          "id": "iaaa-5310",
+          "change": "[checked, no change] Stays general (also iaaa-5354, 5355, 5357, 5358).",
+          "reason": "Flagged. The comparison comes from the question; the reasons (later noticing, judging distances, dazzle) are plain knowledge. For 112 and phone reports searched „112“, „спешн“, „уведоми“ and ЗДвП чл. 123–125, ППЗДвП чл. 199–204: the law requires notifying the МВР (чл. 123, ал. 1, т. 2, б. „а“; чл. 124, т. 2) but says nothing about 112, the emergency services or the content of the call. The claims are plain knowledge (112 is the free European emergency number reaching police, fire and rescue, emergency medical aid and civil protection) or come from the official answers."
+        }
+      ]
     }
   }
 }
