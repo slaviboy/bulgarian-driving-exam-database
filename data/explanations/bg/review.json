@@ -821,6 +821,222 @@
           "reason": "The old sentence contradicted itself and paraphrased signs чл. 58, ал. 3 loosely."
         }
       ]
+    },
+    "B-12": {
+      "part": 12,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-11821",
+          "change": "[conflict] Kept the conflict and rewrote it precisely: names ЗДвП чл. 17 (and ППЗДвП чл. 70) with the quoted condition, the blue Д1 (signs чл. 105, ал. 1, т. 1, б), the rows of the table of чл. 21, ал. 1 for А/А2, В and А1, the conclusion (only А1 and motorcycles that cannot reach the speed are banned), all three official answers and the outdated ППЗДвП чл. 73, ал. 1 table (А 80, В 90 outside settlements).",
+          "reason": "Checked the rows myself: „Категория А, А2 50 90 140 120“ equals „Категория В 50 90 140 120“ on every kind of road; only „Категория А1 50 80 …“ is lower. чл. 17 bans the leftmost lane only for vehicles that cannot or may not reach the maximum speed for the road, so an unqualified „мотоциклети“ contradicts ЗДвП and matches only ППЗДвП чл. 73, ал. 1. The answer „леки автомобили с ремаркета над 750 kg“ is left without a doubt: such a combination is a ВЕ combination (чл. 150а, ал. 2, т. 7; 80 km/h), and the overlap with т. 6 (B up to 4250 kg) is not settled by the corpus, so it is not added to the entry. „мотопеди“ (АМ 45 km/h) agrees with ЗДвП."
+        },
+        {
+          "id": "iaaa-11997",
+          "change": "[picture] The green car is now described as seen in the mirrors, behind on the left; the tractor „се вижда“ in the oncoming lane instead of „приближава“.",
+          "reason": "Frames 1–7 show the green car only in the mirrors; the tractor appears only in frames 7–8. The text said it drives „отляво“."
+        },
+        {
+          "id": "iaaa-12003",
+          "change": "[picture] „по улица“ replaced by „по платно с по една лента за всяка посока“.",
+          "reason": "„Улица“ implies a settlement, which the frames don't prove; the frames do show one lane per direction with a broken centre line and cars parked on both sides."
+        },
+        {
+          "id": "iaaa-12003",
+          "change": "[legal reference] Added the lead-in of ЗДвП чл. 16, ал. 1 („На пътно платно с двупосочно движение … е забранено“) before т. 1.",
+          "reason": "The prohibition is in the lead-in; т. 1 alone does not contain it (duty and point)."
+        },
+        {
+          "id": "iaaa-12008",
+          "change": "[picture] „по насрещната лента непрекъснато идват автомобили“ → „идват няколко автомобила“.",
+          "reason": "Stills show several oncoming cars but cannot prove an uninterrupted stream."
+        },
+        {
+          "id": "iaaa-12050",
+          "change": "[picture] „по насрещната лента непрекъснато идват автомобили“ → „идват няколко автомобила“.",
+          "reason": "Stills show several oncoming cars but cannot prove an uninterrupted stream."
+        },
+        {
+          "id": "iaaa-12009",
+          "change": "[legal reference] The quote of ЗДвП чл. 20, ал. 2 is now the whole first sentence, starting with „Водачите на пътни превозни средства са длъжни …“.",
+          "reason": "The old quote began mid-sentence („с конкретните условия на видимост, …“) and left out the duty."
+        },
+        {
+          "id": "iaaa-12033",
+          "change": "[legal reference] The quote of ЗДвП чл. 20, ал. 2 is now the whole first sentence, starting with „Водачите на пътни превозни средства са длъжни …“.",
+          "reason": "The old quote began mid-sentence („с конкретните условия на видимост, …“) and left out the duty."
+        },
+        {
+          "id": "iaaa-12045",
+          "change": "[legal reference] The quote of ЗДвП чл. 20, ал. 2 is now the whole first sentence, starting with „Водачите на пътни превозни средства са длъжни …“.",
+          "reason": "The old quote began mid-sentence („с конкретните условия на видимост, …“) and left out the duty."
+        },
+        {
+          "id": "iaaa-12054",
+          "change": "[legal reference] The quote of ЗДвП чл. 20, ал. 2 is now the whole first sentence, starting with „Водачите на пътни превозни средства са длъжни …“.",
+          "reason": "The old quote began mid-sentence („с конкретните условия на видимост, …“) and left out the duty."
+        },
+        {
+          "id": "iaaa-12026",
+          "change": "[picture] Rewrote the scene: the driver passes road works and approaches a junction with traffic lights; the rule (чл. 20, ал. 2, чл. 24, ал. 1) is stated for „такава опасност“ without naming its cause.",
+          "reason": "Checked the 8 and the 15 dense frames: nothing clearly calls for an emergency stop (the pedestrians stay on the pavement, a blue car is on the cross road at the end). The old text implied that the road works and pedestrians were the danger."
+        },
+        {
+          "id": "iaaa-12028",
+          "change": "[picture] The figure in front of the oncoming white car is „човек“, not „пешеходец“; „Ако насрещният водач го заобиколи“ → „мине покрай него“.",
+          "reason": "Dense frames s14–s15: a small figure at the edge of the road in front of the white car; it cannot be told whether it walks or rides. Passing a moving road user is not „заобикаляне“ (ППЗДвП чл. 91, ал. 1: a stationary participant or obstacle)."
+        },
+        {
+          "id": "iaaa-12028",
+          "change": "[legal reference] The quote of ЗДвП чл. 15, ал. 1 is the whole sentence.",
+          "reason": "Whole sentences, as in all approved explanations citing чл. 15, ал. 1."
+        },
+        {
+          "id": "iaaa-12034",
+          "change": "[legal reference] The quote of ЗДвП чл. 35, ал. 2 now includes „но водачът на завиващото превозно средство е длъжен да пропусне пътните превозни средства, преминаващи от дясната му страна“, and the text states this duty.",
+          "reason": "The old quote stopped in the middle of the sentence before the duty, which also supports „ще спре“. Frames: the lorry straddles the lane line before the junction, a pedestrian is at the right corner; the conclusion stays conditional on the lorry turning right."
+        },
+        {
+          "id": "iaaa-12035",
+          "change": "[picture] Rewrote the scene: tram rails ahead, then the road with Б1; a cyclist on the right of that road; the green car stands at the same place in the right corner. The text now says why the green car is no reason to stop.",
+          "reason": "Frame 8 (zoomed) shows the cyclist behind the green car; frames 6–8 and s13–s15 show the green car at the same spot next to the sign post while the driver slows to a stop. The old text said the driver „пресича“ the rails and that the cyclist „се движи“."
+        },
+        {
+          "id": "iaaa-12035",
+          "change": "[legal reference] ЗДвП § 6, т. 10 replaced by ППЗДвП § 1, т. 32 („„Велосипед“ е пътно превозно средство …“).",
+          "reason": "The reason is that a bicycle is a road vehicle; § 6 ЗДвП has no bicycle definition and т. 10 does not name bicycles."
+        },
+        {
+          "id": "iaaa-12038",
+          "change": "[factual] „Ако товарният автомобил заобиколи велосипедиста“ → „изпревари велосипедиста“.",
+          "reason": "The cyclist rides in front of the lorry; passing a moving vehicle is overtaking, not „заобикаляне“."
+        },
+        {
+          "id": "iaaa-12038",
+          "change": "[legal reference] The quote of ЗДвП чл. 15, ал. 1 is the whole sentence.",
+          "reason": "Whole sentences."
+        },
+        {
+          "id": "iaaa-12039",
+          "change": "[picture] „отзад … се приближава червен автомобил“ → „се вижда червен автомобил“.",
+          "reason": "A movement that stills cannot prove; frame 8 shows the red car in the mirror."
+        },
+        {
+          "id": "iaaa-12040",
+          "change": "[legal reference] Added ЗДвП чл. 47 (approaching a junction at a speed that allows stopping and yielding) as the main reference and rewrote the text around it; чл. 20, ал. 2 stays.",
+          "reason": "чл. 47 is the provision for exactly this situation. Frames (and dense s13–s15): the tractor with its trailer is on the side road on the right, facing away from the main road; the oncoming blue car, red lorry and two white cars do not show a clear reason, so the text names only what is visible."
+        },
+        {
+          "id": "iaaa-12041",
+          "change": "[legal reference] The quote of ЗДвП чл. 15, ал. 1 is the whole sentence.",
+          "reason": "Whole sentences."
+        },
+        {
+          "id": "iaaa-12043",
+          "change": "[legal reference] Added the lead-in of ЗДвП чл. 28, ал. 1 (signals given to warn of the intended manoeuvre) before т. 1.",
+          "reason": "The point alone does not say that the indicator announces the driver's own manoeuvre; frames 7–8 (zoomed) show the tractor's left indicator lit."
+        },
+        {
+          "id": "iaaa-12046",
+          "change": "[picture] „една след друга идват коли“ → „идват няколко автомобила“.",
+          "reason": "Timing claim; frame 8 shows the tyre in the driver's lane and several oncoming cars over the frames."
+        },
+        {
+          "id": "iaaa-12047",
+          "change": "[picture] „в средната лента на автомагистралата“ → „в средната от трите ленти в своята посока“.",
+          "reason": "No sign in the frames shows a motorway; three lanes and the lorry drifting to the lane line are visible."
+        },
+        {
+          "id": "iaaa-12048",
+          "change": "[picture] Removed „на автомагистралата“.",
+          "reason": "No sign in the frames shows a motorway."
+        },
+        {
+          "id": "iaaa-12052",
+          "change": "[picture] „в средната лента на автомагистралата“ → „в средната от трите ленти в своята посока“.",
+          "reason": "No motorway sign; the direction sign in frame 1 is blue."
+        },
+        {
+          "id": "iaaa-12067",
+          "change": "[picture] „движението по автомагистралата се забавя и … се образува колона“ → „пред водача, на платното с няколко ленти в неговата посока, има колона“.",
+          "reason": "No motorway sign in the 8 or 15 dense frames; the queue and the motorcyclist ahead on the left are visible, no emergency vehicle appears."
+        },
+        {
+          "id": "iaaa-12067",
+          "change": "[legal reference] The quote of ЗДвП чл. 15, ал. 1 is the whole sentence.",
+          "reason": "Whole sentences."
+        },
+        {
+          "id": "iaaa-12051",
+          "change": "[picture] „синият автомобил и товарен автомобил“ → „синият автомобил и други превозни средства“.",
+          "reason": "Only the green roof of the vehicle in front of the blue car is visible; it is not clearly a lorry."
+        },
+        {
+          "id": "iaaa-12056",
+          "change": "[legal reference] Added ЗДвП чл. 8, ал. 2 (the non-rail vehicle yields to the rail vehicle regardless of its position and direction) and rewrote the text around it; чл. 25, ал. 1 stays, чл. 25, ал. 2 (adjacent lane) removed.",
+          "reason": "Searched for a tram-specific rule (ЗДвП чл. 8, ал. 2, 19, 37; ППЗДвП чл. 72): чл. 8, ал. 2 states exactly the duty towards a tram coming from behind; чл. 37 covers only oncoming vehicles and ППЗДвП чл. 72 driving along the tram track."
+        },
+        {
+          "id": "iaaa-12056",
+          "change": "[picture] „трамвай, който приближава отзад“ → „в огледалото отзад по релсите се вижда трамвай“.",
+          "reason": "Movement claim; the tram is visible in the mirror in all frames."
+        },
+        {
+          "id": "iaaa-12058",
+          "change": "[factual] The stopping place before the crossing is now stated with both cases of ЗДвП чл. 51, ал. 4 (2 m before the first rail, 1 m from barriers), and the quote is the whole sentence.",
+          "reason": "Frame 8 (zoomed) shows raised barrier arms at the crossing, so „2 метра преди първата релса“ alone was wrong for this scene; the old quote began mid-sentence."
+        },
+        {
+          "id": "iaaa-12060",
+          "change": "[picture] „хора вървят към зелените знаци за авариен изход“ → „по платното пеша има хора, а по стените се виждат зелени знаци за авариен изход“.",
+          "reason": "Movement claim; frame 8 shows people on foot near the left wall and green exit signs. Kept „general“: searched ЗДвП чл. 59, 63, 64, 104, ППЗДвП чл. 120, 124, 125 and the signs act (изход, авариен, евакуац, тунел, принудително спиране); no provision deals with emergency exits in tunnels or with keeping the forced-stopping lane free there."
+        },
+        {
+          "id": "iaaa-12081",
+          "change": "[factual] The text no longer implies that towing by a vehicle with a special device is allowed for vehicles over 5 t; it says чл. 83, ал. 2 allows only the two named ways.",
+          "reason": "чл. 83, ал. 2 allows only a rigid link or a special-purpose vehicle; the special device belongs to ал. 1 (general towing). The old text said the special device „не е единственият разрешен начин“."
+        },
+        {
+          "id": "iaaa-12032",
+          "change": "[checked, no change] Only чл. 42 is cited for overtaking the cyclist.",
+          "reason": "чл. 43 begins „Изпреварването на моторни превозни средства … е забранено“; a bicycle is not a motor vehicle, so чл. 43 does not apply."
+        },
+        {
+          "id": "iaaa-12044",
+          "change": "[checked, no change] Only чл. 42 is cited.",
+          "reason": "Same as iaaa-12032. Dense frames: an oncoming dark car early (s04) and a small rider in the oncoming lane at the end (s14), so „по насрещната лента минават превозни средства“ holds."
+        },
+        {
+          "id": "iaaa-12065",
+          "change": "[checked, no change] чл. 66, ал. 1 explains why „трябва да спра зад автобуса“ is wrong.",
+          "reason": "The 1 m stopping duty applies to a tram at a signed stop; for a bus at a signed stop чл. 65 requires slowing down. Frame 8 shows Д24 at the stop."
+        },
+        {
+          "id": "iaaa-12066",
+          "change": "[checked, no change] чл. 65 stays conditional („Когато спирката е означена с пътен знак“).",
+          "reason": "The red bus stops at the stop on the oncoming side; Д24 is seen only at the stop on the driver's side (frame 3)."
+        },
+        {
+          "id": "iaaa-11687",
+          "change": "[checked, no change] The partial quote „разрешено за автомобили обозначени с опознавателен знак“ is exact.",
+          "reason": "Words copied exactly from the official answer; the inner „бавнодвижещи се ППС“ follows outside the quote."
+        },
+        {
+          "id": "iaaa-11688",
+          "change": "[checked, no change] The partial quote „разрешено за автомобили обозначени с опознавателен знак“ is exact.",
+          "reason": "Words copied exactly from the official answer; the inner „бавнодвижещи се ППС“ follows outside the quote."
+        },
+        {
+          "id": "iaaa-12061",
+          "change": "[checked, no change] The text does not mention the tractor.",
+          "reason": "Dense s12–s15: the tractor comes from the right on the far lane of the cross road, facing left; why no priority is due to it is not visible, and the text does not deny the official answer."
+        },
+        {
+          "id": "iaaa-12007",
+          "change": "[checked, no change] The lorry is not claimed to be seen.",
+          "reason": "No lorry in the 8 or the 15 dense frames; the text states the rule (speed to stop before any foreseeable obstacle, lateral distance when passing) for a narrow winding road without claiming the scene."
+        }
+      ]
     }
   }
 }
