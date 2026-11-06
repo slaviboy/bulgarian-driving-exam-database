@@ -21,6 +21,8 @@ data/media/
 data/raw/
 data/avtoizpit/
 release/
+# Work packages of the explanation writers (merged into data/explanations when finished)
+explanation-work/
 
 # OS / IDE
 .DS_Store

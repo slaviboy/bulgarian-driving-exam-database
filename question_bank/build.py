@@ -10,6 +10,12 @@ from pathlib import Path
 
 from question_bank.config import REPO_ROOT, Settings
 from question_bank.database.sqlite_builder import write_sqlite
+from question_bank.explanations.export import (
+    build_explanations,
+    explanation_sets,
+    validate_explanation_exports,
+    write_explanation_export,
+)
 from question_bank.exporter.json_export import FILE_NAMES, write_json_exports
 from question_bank.exporter.manifest import build_manifest, dataset_fingerprint
 from question_bank.exporter.media import prepare_media
@@ -99,6 +105,8 @@ def run_build(
     )
     translation_paths = write_translation_exports(translations, exports)
     languages = language_infos(dataset, translations)
+    explanations, explanation_issues, explanation_checked = build_explanations(dataset)
+    explanation_paths = write_explanation_export(explanations, exports)
     sqlite_path = exports / FILE_NAMES["sqlite"]
     write_sqlite(
         dataset,
@@ -112,6 +120,7 @@ def run_build(
         },
         languages=languages,
         translations=translations,
+        explanations=explanations,
     )
     paths["sqlite"] = sqlite_path
 
@@ -130,6 +139,18 @@ def run_build(
         "translation files conform to contract/schemas",
         len(translation_paths),
         validate_translation_exports(translation_paths, SCHEMAS_DIR),
+    )
+    report.run(
+        "explanations",
+        "explanations match the current Bulgarian text and every quote is still in the cited act",
+        explanation_checked,
+        explanation_issues,
+    )
+    report.run(
+        "explanation_schema",
+        "explanation files conform to contract/schemas",
+        len(explanation_paths),
+        validate_explanation_exports(explanation_paths, SCHEMAS_DIR),
     )
 
     release_root = settings.data_dir.parent / "release"
@@ -164,7 +185,14 @@ def run_build(
     manifest = build_manifest(
         dataset,
         extracted,
-        [paths["categories"], paths["questions"], paths["exam_configs"], *translation_paths, paths["sqlite"]],
+        [
+            paths["categories"],
+            paths["questions"],
+            paths["exam_configs"],
+            *translation_paths,
+            *explanation_paths,
+            paths["sqlite"],
+        ],
         exports,
         media_release.packs,
         dataset_base_url=release_download_base(f"v{dataset_version}"),
@@ -172,6 +200,7 @@ def run_build(
         report=report,
         coverage_checks=coverage,
         languages=languages,
+        explanations=explanation_sets(dataset, explanations),
     )
     write_json(exports / FILE_NAMES["manifest"], manifest.model_dump(mode="json"))
 
@@ -186,5 +215,6 @@ def run_build(
         dataset_version,
         extra=[REPO_ROOT / "DATA_NOTICE.md", reports / "validation-report.md"],
         translations=[p.name for p in translation_paths],
+        explanations=[p.name for p in explanation_paths],
     )
     return BuildResult(manifest, report, diff, [media_release.directory, core.parent])

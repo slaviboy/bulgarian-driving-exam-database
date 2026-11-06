@@ -10,7 +10,7 @@ from importlib import resources
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from question_bank.models import SCHEMA_VERSION, LanguageInfo
+from question_bank.models import SCHEMA_VERSION, ExplanationFile, LanguageInfo
 from question_bank.processor.builder import Dataset
 
 if TYPE_CHECKING:
@@ -42,6 +42,7 @@ def write_sqlite(
     info: dict[str, str],
     languages: Sequence[LanguageInfo] = (),
     translations: Sequence[LanguageExport] = (),
+    explanations: ExplanationFile | None = None,
 ) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_name(dest.name + ".tmp")
@@ -236,6 +237,24 @@ def write_sqlite(
                     + [("topic", t.id, code, t.text) for t in export.file.topics]
                 )
                 con.executemany("INSERT INTO label_translations VALUES (?, ?, ?, ?)", labels)
+            if explanations is not None:
+                con.executemany(
+                    "INSERT INTO legal_acts VALUES (?, ?, ?, ?, ?)",
+                    [(a.id, a.short, a.title, a.consolidated_to, a.source_url) for a in explanations.acts],
+                )
+                lang = explanations.language
+                con.executemany(
+                    "INSERT INTO question_explanations VALUES (?, ?, ?, ?, ?)",
+                    [(q.id, lang, q.source_hash, q.kind, q.text) for q in explanations.questions],
+                )
+                con.executemany(
+                    "INSERT INTO explanation_references VALUES (?, ?, ?, ?, ?, ?)",
+                    [
+                        (q.id, lang, i, r.act, r.unit, r.quote)
+                        for q in explanations.questions
+                        for i, r in enumerate(q.references, 1)
+                    ],
+                )
         problems = con.execute("PRAGMA foreign_key_check").fetchall()
         if problems:
             raise ValueError(f"foreign key violations: {problems[:5]}")

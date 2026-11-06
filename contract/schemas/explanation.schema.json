@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/slaviboy/bulgarian-driving-exam-database/contract/schemas/explanation.schema.json",
+  "$defs": {
+    "ExplainedQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source_hash": {
+          "description": "content_hash of the Bulgarian question that was explained",
+          "title": "Source Hash",
+          "type": "string"
+        },
+        "kind": {
+          "description": "law: rests on the cited provisions; general: technical or safety knowledge that no provision of the cited acts states",
+          "enum": [
+            "law",
+            "general"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "description": "why the correct answers are correct, in Bulgarian",
+          "title": "Text",
+          "type": "string"
+        },
+        "references": {
+          "description": "empty for kind 'general'",
+          "items": {
+            "$ref": "#/$defs/ExplanationReference"
+          },
+          "title": "References",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "source_hash",
+        "kind",
+        "text",
+        "references"
+      ],
+      "title": "ExplainedQuestion",
+      "type": "object"
+    },
+    "ExplanationInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "const": "unofficial",
+          "default": "unofficial",
+          "title": "Status",
+          "type": "string"
+        },
+        "method": {
+          "description": "how the explanations were written and checked",
+          "title": "Method",
+          "type": "string"
+        },
+        "authoritative": {
+          "description": "what prevails when an explanation differs",
+          "title": "Authoritative",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "authoritative"
+      ],
+      "title": "ExplanationInfo",
+      "type": "object"
+    },
+    "ExplanationReference": {
+      "additionalProperties": false,
+      "properties": {
+        "act": {
+          "description": "id of an act in `acts[]`",
+          "title": "Act",
+          "type": "string"
+        },
+        "unit": {
+          "description": "article, paragraph and point, e.g. 'чл. 50, ал. 1' or '§ 6, т. 21'",
+          "title": "Unit",
+          "type": "string"
+        },
+        "quote": {
+          "description": "the words of the act the explanation rests on, word for word",
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "act",
+        "unit",
+        "quote"
+      ],
+      "title": "ExplanationReference",
+      "type": "object"
+    },
+    "LegalAct": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "short": {
+          "description": "short name, e.g. 'ЗДвП'",
+          "title": "Short",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "consolidated_to": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "the last State Gazette issue in the quoted text",
+          "title": "Consolidated To"
+        },
+        "source_url": {
+          "description": "the government file the text was taken from",
+          "title": "Source Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "short",
+        "title",
+        "consolidated_to",
+        "source_url"
+      ],
+      "title": "LegalAct",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Explanations of why the correct answers are correct, in Bulgarian only. Only explanations of the\ncurrent Bulgarian content are exported: a question whose content_hash changed is left out until it is\nexplained again.",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "language": {
+      "const": "bg",
+      "default": "bg",
+      "title": "Language",
+      "type": "string"
+    },
+    "language_tag": {
+      "const": "bg-BG",
+      "default": "bg-BG",
+      "title": "Language Tag",
+      "type": "string"
+    },
+    "explanation": {
+      "$ref": "#/$defs/ExplanationInfo"
+    },
+    "acts": {
+      "items": {
+        "$ref": "#/$defs/LegalAct"
+      },
+      "title": "Acts",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "$ref": "#/$defs/ExplainedQuestion"
+      },
+      "title": "Questions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "dataset_version",
+    "explanation",
+    "acts",
+    "questions"
+  ],
+  "title": "ExplanationFile",
+  "type": "object"
+}

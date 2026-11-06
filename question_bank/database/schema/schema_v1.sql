@@ -197,3 +197,33 @@ CREATE TABLE label_translations (
     PRIMARY KEY (kind, label_id, language)
 );
 CREATE INDEX idx_label_translations_language ON label_translations (language);
+
+-- Explanations (unofficial, Bulgarian only) of why the correct answers are correct, written from the cited acts.
+-- source_hash equals the content_hash of the question that was explained; quotes are word for word.
+CREATE TABLE legal_acts (
+    id              TEXT NOT NULL PRIMARY KEY,
+    short_name      TEXT NOT NULL,
+    title           TEXT NOT NULL,
+    consolidated_to TEXT,
+    source_url      TEXT NOT NULL
+);
+
+CREATE TABLE question_explanations (
+    question_id      TEXT NOT NULL REFERENCES questions (id),
+    language         TEXT NOT NULL CHECK (language = 'bg'),
+    source_hash      TEXT NOT NULL,
+    kind             TEXT NOT NULL CHECK (kind IN ('law', 'general')),
+    explanation_text TEXT NOT NULL,
+    PRIMARY KEY (question_id, language)
+);
+
+CREATE TABLE explanation_references (
+    question_id TEXT    NOT NULL REFERENCES questions (id),
+    language    TEXT    NOT NULL CHECK (language = 'bg'),
+    position    INTEGER NOT NULL,
+    act_id      TEXT    NOT NULL REFERENCES legal_acts (id),
+    unit        TEXT    NOT NULL,
+    quote       TEXT    NOT NULL,
+    PRIMARY KEY (question_id, language, position)
+);
+CREATE INDEX idx_explanation_references_act ON explanation_references (act_id);

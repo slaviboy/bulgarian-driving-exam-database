@@ -52,6 +52,42 @@
       "title": "CompletenessCheck",
       "type": "object"
     },
+    "ExplanationSet": {
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "description": "ISO 639-1 code of the explanations' language",
+          "title": "Language",
+          "type": "string"
+        },
+        "file": {
+          "description": "explanation file (a `files[].path`)",
+          "title": "File",
+          "type": "string"
+        },
+        "questions": {
+          "description": "questions with an explanation",
+          "minimum": 0,
+          "title": "Questions",
+          "type": "integer"
+        },
+        "coverage": {
+          "description": "questions / all questions",
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Coverage",
+          "type": "number"
+        }
+      },
+      "required": [
+        "language",
+        "file",
+        "questions",
+        "coverage"
+      ],
+      "title": "ExplanationSet",
+      "type": "object"
+    },
     "Generator": {
       "additionalProperties": false,
       "properties": {
@@ -472,6 +508,14 @@
         "$ref": "#/$defs/LanguageInfo"
       },
       "title": "Languages",
+      "type": "array"
+    },
+    "explanations": {
+      "description": "unofficial explanations of the correct answers (Bulgarian only)",
+      "items": {
+        "$ref": "#/$defs/ExplanationSet"
+      },
+      "title": "Explanations",
       "type": "array"
     }
   },

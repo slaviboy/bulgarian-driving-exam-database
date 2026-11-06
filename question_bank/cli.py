@@ -119,6 +119,28 @@ def cmd_schemas(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def _verify_explanations(exports: Path) -> list[str]:
+    """Every quote of the curated explanations is word for word in the corpus; the export fits its schema."""
+    from question_bank.build import SCHEMAS_DIR
+    from question_bank.explanations import curated
+    from question_bank.explanations.export import FILE_NAME, validate_explanation_exports
+    from question_bank.legal.corpus import load as load_corpus
+
+    problems = []
+    entries = curated.load()
+    if entries:
+        corpus = load_corpus()
+        for question_id, entry in entries.items():
+            for ref in entry["references"]:
+                result = corpus.check(ref["act"], ref["unit"], ref["quote"])
+                if not result.ok:
+                    problems.append(f"explanation {question_id}: {result.message}")
+    exported = exports / FILE_NAME
+    if exported.exists():
+        problems += [i.message for i in validate_explanation_exports([exported], SCHEMAS_DIR)]
+    return problems
+
+
 def cmd_verify(settings: Settings, args: argparse.Namespace) -> int:
     """Offline re-verification of the committed exports (used by CI)."""
     import jsonschema
@@ -149,6 +171,7 @@ def cmd_verify(settings: Settings, args: argparse.Namespace) -> int:
     paths = {k: exports / FILE_NAMES[k] for k in ("categories", "questions", "exam_configs", "sqlite")}
     validate_exports(report, paths, SCHEMAS_DIR)
     problems += [i.message for i in report.issues if i.severity == "error"]
+    problems += _verify_explanations(exports)
     for problem in problems:
         print(f"FAIL {problem}")
     print(
@@ -401,6 +424,97 @@ def cmd_translations_status(settings: Settings, args: argparse.Namespace) -> int
     return 0
 
 
+def cmd_explanations_prepare(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.explanations.prepare import prepare
+
+    only = [s.strip() for s in args.only.split(",")] if args.only else None
+    index = prepare(
+        settings.exports_dir,
+        settings.media_dir,
+        args.out,
+        args.category,
+        part_size=args.part_size,
+        redo=args.redo,
+        only=only,
+    )
+    parts = len(index["parts"])
+    print(f"{index['questions']} questions of category {args.category} in {parts} parts → {args.out}")
+    return 0
+
+
+def _explanation_findings(settings: Settings, entries: dict, expected: list[str] | None):
+    from question_bank.explanations.bank import load_bank
+    from question_bank.explanations.lint import check_all
+    from question_bank.legal.corpus import load
+
+    bank, _, _ = load_bank(settings.exports_dir)
+    return check_all(entries, bank, load(), expected)
+
+
+def cmd_explanations_lint(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.fsutil import read_json
+
+    index = read_json(args.work / "source" / "index.json")
+    parts = [args.part] if args.part else [p["part"] for p in index["parts"]]
+    errors = 0
+    for part in parts:
+        out = args.work / "out" / f"part-{part:02d}.json"
+        source = read_json(args.work / "source" / f"part-{part:02d}.json")
+        if not out.exists():
+            print(f"part {part}: {out.name} not written yet")
+            errors += 1
+            continue
+        entries = read_json(out)["explanations"]
+        findings = _explanation_findings(settings, entries, [q["id"] for q in source["questions"]])
+        part_errors = sum(1 for f in findings if f.level == "error")
+        errors += part_errors
+        for finding in findings:
+            print(f"part {part}: {finding}")
+        print(f"part {part}: {len(entries)} entries, {part_errors} errors")
+    return 1 if errors else 0
+
+
+def cmd_explanations_merge(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.explanations.curated import MergeRefused, merge
+    from question_bank.legal.corpus import load
+
+    try:
+        stats = merge(args.work, settings.exports_dir, load(), [args.part] if args.part else None)
+    except MergeRefused as e:
+        print(f"refused: {e}")
+        return 1
+    print(
+        f"{stats['parts']} parts: {stats['explanations']} explanations, "
+        f"{stats['conflicts']} conflicts merged; "
+        f"{stats['total']} explanations in data/explanations/bg"
+    )
+    return 0
+
+
+def cmd_explanations_status(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.explanations import curated
+    from question_bank.explanations.bank import load_bank
+
+    bank, _, _ = load_bank(settings.exports_dir)
+    explanations, conflicts = curated.load(), curated.load_conflicts()
+    categories = sorted({c for q in bank.values() for c in q.categories})
+    print(f"{'category':<9} {'questions':>9} {'current':>8} {'stale':>6} {'conflicts':>9} {'missing':>8}")
+    for category in categories:
+        ids = [q.id for q in bank.values() if category in q.categories]
+        hashes = {i: explanations[i]["source_hash"] for i in ids if i in explanations}
+        current = sum(1 for i, h in hashes.items() if h == bank[i].content_hash)
+        stale = len(hashes) - current
+        conflict = sum(1 for i in ids if i in conflicts)
+        missing = len(ids) - current - stale - conflict
+        print(f"{category:<9} {len(ids):>9} {current:>8} {stale:>6} {conflict:>9} {missing:>8}")
+    findings = _explanation_findings(settings, explanations, None)
+    errors = [f for f in findings if f.level == "error"]
+    for finding in errors:
+        print(finding)
+    print(f"curated: {len(explanations)} explanations, {len(conflicts)} conflicts, {len(errors)} errors")
+    return 1 if errors else 0
+
+
 def cmd_legal_import(settings: Settings, args: argparse.Namespace) -> int:
     from question_bank.legal.corpus import write_act
     from question_bank.legal.extract import text_of
@@ -539,6 +653,27 @@ def build_parser() -> argparse.ArgumentParser:
     merge_p.set_defaults(func=cmd_translations_merge)
     tr_sub.add_parser("status", help="current, stale and missing translations per language").set_defaults(
         func=cmd_translations_status
+    )
+
+    explanations = sub.add_parser("explanations", help="work packages and checks for the explanations")
+    ex_sub = explanations.add_subparsers(dest="explanations_command", required=True)
+    ex_prep = ex_sub.add_parser("prepare", help="work packages of the questions of a category")
+    ex_prep.add_argument("--out", type=Path, required=True, help="work folder (source/ and out/ inside it)")
+    ex_prep.add_argument("--category", required=True, help="category id, e.g. B")
+    ex_prep.add_argument("--part-size", type=int, default=100)
+    ex_prep.add_argument("--redo", action="store_true", help="include questions that are already explained")
+    ex_prep.add_argument("--only", help="comma-separated question numbers or IDs (a pilot)")
+    ex_prep.set_defaults(func=cmd_explanations_prepare)
+    ex_lint = ex_sub.add_parser("lint", help="check written parts of a work package")
+    ex_lint.add_argument("--work", type=Path, required=True)
+    ex_lint.add_argument("--part", type=int)
+    ex_lint.set_defaults(func=cmd_explanations_lint)
+    ex_merge = ex_sub.add_parser("merge", help="write finished parts into data/explanations/bg")
+    ex_merge.add_argument("--work", type=Path, required=True)
+    ex_merge.add_argument("--part", type=int)
+    ex_merge.set_defaults(func=cmd_explanations_merge)
+    ex_sub.add_parser("status", help="coverage per category; checks the curated explanations").set_defaults(
+        func=cmd_explanations_status
     )
 
     legal = sub.add_parser("legal", help="the legal corpus the explanations quote (data/legal)")

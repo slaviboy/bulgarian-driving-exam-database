@@ -249,6 +249,61 @@ class TranslationFile(_Model):
     questions: list[TranslatedQuestion]
 
 
+# ------------------------------------------------------------------------- explanation-bg.json
+
+
+class ExplanationReference(_Model):
+    act: str = Field(description="id of an act in `acts[]`")
+    unit: str = Field(description="article, paragraph and point, e.g. 'чл. 50, ал. 1' or '§ 6, т. 21'")
+    quote: str = Field(description="the words of the act the explanation rests on, word for word")
+
+
+class ExplainedQuestion(_Model):
+    id: Id
+    source_hash: Sha256 = Field(description="content_hash of the Bulgarian question that was explained")
+    kind: Literal["law", "general"] = Field(
+        description="law: rests on the cited provisions; general: technical or safety knowledge that no "
+        "provision of the cited acts states"
+    )
+    text: str = Field(description="why the correct answers are correct, in Bulgarian")
+    references: list[ExplanationReference] = Field(description="empty for kind 'general'")
+
+
+class LegalAct(_Model):
+    id: str
+    short: str = Field(description="short name, e.g. 'ЗДвП'")
+    title: str
+    consolidated_to: str | None = Field(description="the last State Gazette issue in the quoted text")
+    source_url: str = Field(description="the government file the text was taken from")
+
+
+class ExplanationInfo(_Model):
+    status: Literal["unofficial"] = "unofficial"
+    method: str = Field(description="how the explanations were written and checked")
+    authoritative: str = Field(description="what prevails when an explanation differs")
+
+
+class ExplanationFile(_Model):
+    """Explanations of why the correct answers are correct, in Bulgarian only. Only explanations of the
+    current Bulgarian content are exported: a question whose content_hash changed is left out until it is
+    explained again."""
+
+    schema_version: Literal[1] = SCHEMA_VERSION
+    dataset_version: str
+    language: Literal["bg"] = "bg"
+    language_tag: Literal["bg-BG"] = "bg-BG"
+    explanation: ExplanationInfo
+    acts: list[LegalAct]
+    questions: list[ExplainedQuestion]
+
+
+class ExplanationSet(_Model):
+    language: str = Field(description="ISO 639-1 code of the explanations' language")
+    file: str = Field(description="explanation file (a `files[].path`)")
+    questions: int = Field(ge=0, description="questions with an explanation")
+    coverage: float = Field(ge=0, le=1, description="questions / all questions")
+
+
 # ---------------------------------------------------------------------------------- manifest.json
 
 
@@ -327,6 +382,9 @@ class Manifest(_Model):
     languages: list[LanguageInfo] = Field(
         default_factory=list, description="Bulgarian (the source) and the available translations"
     )
+    explanations: list[ExplanationSet] = Field(
+        default_factory=list, description="unofficial explanations of the correct answers (Bulgarian only)"
+    )
 
 
 SCHEMA_MODELS = {
@@ -334,5 +392,6 @@ SCHEMA_MODELS = {
     "questions": QuestionsFile,
     "exam-configs": ExamConfigsFile,
     "translation": TranslationFile,
+    "explanation": ExplanationFile,
     "manifest": Manifest,
 }

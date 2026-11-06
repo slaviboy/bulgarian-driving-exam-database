@@ -14,6 +14,7 @@ from question_bank.fsutil import sha256_file
 from question_bank.models import (
     Completeness,
     CompletenessCheck,
+    ExplanationSet,
     Generator,
     LanguageInfo,
     Manifest,
@@ -66,6 +67,7 @@ def build_manifest(
     coverage_checks: list[CompletenessCheck],
     built_at: str | None = None,
     languages: list[LanguageInfo] | None = None,
+    explanations: list[ExplanationSet] | None = None,
 ) -> Manifest:
     files = [
         ManifestFile(
@@ -141,4 +143,5 @@ def build_manifest(
             status="complete" if all(c.passed for c in checks) else "partial", checks=checks
         ),
         languages=languages or [],
+        explanations=explanations or [],
     )

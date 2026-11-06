@@ -76,6 +76,9 @@ All text is UTF-8. Booleans are `INTEGER` 0/1. No SQLite extensions, no
 | `question_translations` | `question_id` FK + `language` FK PK, `source_hash`, `question_text` | only translations of the current Bulgarian text |
 | `answer_translations` | `answer_id` FK + `language` FK PK, `answer_text` | every answer with text of a translated question |
 | `label_translations` | `kind` + `label_id` + `language` FK PK, `label_text` | `kind` ∈ `category`, `variant_description`, `variant_note`, `topic` |
+| `legal_acts` | `id` TEXT PK, `short_name`, `title`, `consolidated_to`, `source_url` | acts quoted by the explanations (§5.5) |
+| `question_explanations` | `question_id` FK + `language` PK, `source_hash`, `kind` (`law`/`general`), `explanation_text` | only explanations of the current Bulgarian text; `language` = `bg` |
+| `explanation_references` | `question_id` FK + `language` + `position` PK, `act_id` FK, `unit`, `quote` | the provisions an explanation rests on, quoted word for word |
 
 Indexes: every foreign-key column (as the first column of an index), plus
 `answers(question_id, position)`.
@@ -88,6 +91,7 @@ categories.json        sources, categories → variants → sections, topics
 questions.json         questions with answers, media references and assignments; media metadata
 exam-configs.json      exam rules per variant with citations and verification status
 translation-<lang>.json  unofficial translation into one language (§5.4), one file per language
+explanation-bg.json    unofficial explanations of the correct answers, Bulgarian only (§5.5; since 1.2.0)
 master.sqlite          the same data in the tables above
 ```
 
@@ -141,6 +145,9 @@ Optional (since 1.1.0, ignore if unknown): `languages[]` {`code`, `tag`, `native
 (`source`/`translation`), `status` (`official`/`unofficial`), `file` (the `files[].path` of the translation, `null`
 for Bulgarian), `questions`, `coverage`}. Bulgarian is listed as the source.
 
+Optional (since 1.2.0, ignore if unknown): `explanations[]` {`language` (`bg`), `file` (the `files[].path` of the
+explanation file), `questions`, `coverage`}.
+
 ### 5.3 `content_hash`
 
 `content_hash` = lower-case hex SHA-256 of the UTF-8 bytes of the canonical JSON
@@ -180,6 +187,28 @@ Unofficial translations (docs/translations.md); the Bulgarian original prevails.
 * `answers` contains every answer of the question that has text, in position order. Picture-only answers are never
   listed.
 * Missing labels fall back to the Bulgarian names.
+
+### 5.5 `explanation-bg.json`
+
+Unofficial explanations of why the correct answers are correct, in Bulgarian only (docs/explanations.md). They
+are written from the text of the acts in `data/legal/`; the official question bank and the law prevail.
+
+```json
+{ "schema_version": 1, "dataset_version": "1.2.0", "language": "bg", "language_tag": "bg-BG",
+  "explanation": { "status": "unofficial", "method": "…", "authoritative": "…" },
+  "acts": [ { "id": "zdvp", "short": "ЗДвП", "title": "Закон за движението по пътищата",
+              "consolidated_to": "ДВ, бр. 55 от 16.06.2026 г.", "source_url": "https://www.mtc.government.bg/…" } ],
+  "questions": [ { "id": "iaaa-5145", "source_hash": "…", "kind": "law",
+                   "text": "…",
+                   "references": [ { "act": "zdvp", "unit": "§ 6, т. 26",
+                                     "quote": "…" } ] } ] }
+```
+
+* `kind` is `law` (the explanation rests on the quoted provisions) or `general` (technical or safety knowledge
+  that no provision states; no references).
+* A question is only included when its `source_hash` equals the current `content_hash`. Every `quote` is word for
+  word in the cited `unit` of the act's text; the build fails otherwise.
+* `acts` lists only the acts that are quoted, with the State Gazette issue their text is consolidated to.
 
 ## 6. Releases and URLs
 

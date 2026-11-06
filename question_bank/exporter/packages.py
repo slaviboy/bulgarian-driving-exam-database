@@ -88,6 +88,7 @@ def build_core_package(
     dataset_version: str,
     extra: list[Path],
     translations: list[str] = (),
+    explanations: list[str] = (),
 ) -> Path:
     tag = f"v{dataset_version}"
     out = release_root / tag
@@ -99,6 +100,7 @@ def build_core_package(
         "questions.json",
         "exam-configs.json",
         *translations,
+        *explanations,
         "master.sqlite",
     ]
     entries = [(name, exports_dir / name) for name in names] + [(p.name, p) for p in extra]
