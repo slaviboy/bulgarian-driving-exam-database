@@ -462,6 +462,97 @@
           "reason": "чл. 20, ал. 2 names „с превозвания товар“ among what the speed must be adapted to so that the driver can stop; this is the legal side of the answer „да“."
         }
       ]
+    },
+    "B-08": {
+      "part": 8,
+      "reviewed": 100,
+      "changes": [
+        {
+          "id": "iaaa-5887",
+          "change": "[legal reference] The two references to the marking act (чл. 28, ал. 1 lead-in and т. 2, „зоната за изчакване“) are replaced by ППЗДвП чл. 65, т. 1 („М10. Указва задължителната посока (посоки) на движение от съответната пътна лента“); the text says „Стрелката М10 указва задължителната посока на движение от лентата“ instead of „Стрелката в зоната за изчакване …“. ППЗДвП чл. 31, ал. 4 (arrow light) is kept.",
+          "reason": "ППЗДвП чл. 65, т. 1 states the meaning of М10 directly, without the condition of a zone that the picture does not prove. A search for a more direct rule on U-turns found none: ЗДвП чл. 38–39 and ППЗДвП чл. 85–86 only say that a U-turn is made to the left from the leftmost lane and where it is banned, and В23 is not in the picture; so the lane's arrow and the arrow light remain the basis of the official answer."
+        },
+        {
+          "id": "iaaa-5890",
+          "change": "[legal reference] Same as iaaa-5887: ППЗДвП чл. 65, т. 1 replaces the two marking-act references, and the text no longer speaks of the waiting zone.",
+          "reason": "The regulation names the meaning of М10 without the zone condition."
+        },
+        {
+          "id": "iaaa-5894",
+          "change": "[legal reference] The reasoning no longer rests on чл. 7, ал. 1 ЗДвП (officer before light signals and priority signs, hence „Г1 is a mandatory sign“). It now says that the officer's signal only permits passage and does not oblige the driver to turn, and that road users follow both the officer's signals and the road signs (new reference ЗДвП чл. 6, т. 1). Added the quote of чл. 10, ал. 2, т. 2 on lowering the arms after the horizontal gesture, since the officer in the picture has his arms lowered; the second Г1 quote was dropped to stay within four references (the sign's name „Движение само направо след знака“ states the duty).",
+          "reason": "Concluding from чл. 7, ал. 1 that a sign it does not list keeps applying is an argument from silence. Чл. 7 (all five paragraphs) only settles conflicts between officer and lights/priority signs, lights and priority signs, signs and markings, portable or variable signs, and temporary markings; here there is no conflict, because going straight satisfies both the signal and Г1, and чл. 6, т. 1 is the positive rule. Picture checked: the officer stands side-on with lowered arms."
+        },
+        {
+          "id": "iaaa-5896",
+          "change": "[legal reference] Same reasoning as iaaa-5894: the officer's signal only permits passage, road users follow both signals and signs (ЗДвП чл. 6, т. 1), and the text states what чл. 7, ал. 1 actually covers (conflicts with light signals and priority signs) instead of implying a ranking of other signs. The text now also says that the driver is opposite the officer's left shoulder, which is what makes т. 3 permit passage. The reference to signs чл. 66, ал. 1 (shape of prohibition signs) was dropped to stay within four references.",
+          "reason": "The inference must be stated as what чл. 7 says, with a positive rule for the duty to obey the sign. Picture checked: the officer faces left with his right arm (baton) stretched forward; the red car is opposite his left shoulder; В21 stands on the right."
+        },
+        {
+          "id": "iaaa-5952",
+          "change": "[legal reference] Added ЗДвП чл. 6, т. 1 and the reasoning that green only permits passage and does not conflict with В21, instead of „В21 не е знак относно предимството и забраната му остава“. The second correct answer is now quoted with the typo of the source corrected: „с пътния знак забраняващ завиването надясно“ (was „пьтния“).",
+          "reason": "Чл. 7, ал. 2 explains why green prevails over Б2, but the duty to obey В21 needs a positive rule rather than an argument from the silence of чл. 7. Typos in official answers are corrected when quoted, as elsewhere."
+        },
+        {
+          "id": "iaaa-5948",
+          "change": "[style] „с дясна ръка, протегната напред“ became „с дясна ръка, протегната хоризонтално напред“.",
+          "reason": "Hand signals are named as чл. 10, ал. 2, т. 3 ЗДвП names them. Picture checked (zoomed): the officer has his back to the driver, the left arm hangs down, the right upper arm is at shoulder height with the forearm pointing forward, i.e. the right arm stretched forward; the blue car on the left is opposite his left shoulder. The answer „не“ holds whatever the arm position: for a driver behind the officer's back passage is forbidden under т. 1, т. 2 and т. 3 alike."
+        },
+        {
+          "id": "iaaa-6095",
+          "change": "[factual] The conclusion is now conditional: „Затова при такава разрешена скорост той не е длъжен да премине в крайната дясна лента“. The rule is stated with „скорост не по-голяма от 80 km/h“ as in the law.",
+          "reason": "The settlement is shown by the white Д1 (signs чл. 105, ал. 1, т. 1 – checked: white background of Д1 and Д2 for roads in settlements), but no speed limit is visible, so the 80 km/h condition must not be assumed."
+        },
+        {
+          "id": "iaaa-6097",
+          "change": "[factual] Same as iaaa-6095: „Затова при такава разрешена скорост движението на червения автомобил … е „правилно““.",
+          "reason": "White Д1 shows the settlement, but the speed condition of чл. 15, ал. 2, т. 2 is not visible in the picture."
+        },
+        {
+          "id": "iaaa-6099",
+          "change": "[factual] The text no longer assumes a settlement: it states the rule of чл. 15, ал. 2, т. 2 with its conditions and concludes „Затова, когато участъкът е в населено място, водачът на червения автомобил „може …“ и „може …““. The 60 km/h limit (В26) is still named as meeting the speed condition.",
+          "reason": "Neither the question nor the picture shows a settlement (only buildings, no white Д1 or settlement sign); unlike iaaa-6098, whose question says „в населено място“. The rule must be stated with its condition."
+        },
+        {
+          "id": "iaaa-6087",
+          "change": "[legal reference] Added signs чл. 109, ал. 1 (the name and use of Д1) and quoted signs чл. 109, ал. 2, т. 1 from its start („броят на стрелките в знака да съответства на броя на пътните ленти; в знака могат да се указват и пътните ленти, предназначени за насрещно движение“) instead of the fragment beginning mid-point.",
+          "reason": "The sign is named in the text and needs its article; a point is quoted from its start. The reasoning was checked against the picture (Д1 with one arrow down and two up; the oncoming lane is separated by a continuous single line М1, the two lanes of the driver's direction by a broken line) and the official answers; avoiding чл. 16, ал. 1, т. 2 is right, because its second half (middle lane only for overtaking) would contradict the correct answer „да се движат в средната пътна лента, когато дясната е заета“ on a road where Д1 assigns the middle lane to the driver's direction."
+        },
+        {
+          "id": "iaaa-5913",
+          "change": "[legal reference] ЗДвП чл. 116 („Водачът на пътно превозно средство е длъжен да бъде внимателен и предпазлив към пешеходците, особено към децата“) replaces чл. 5, ал. 2 with т. 1; the text speaks of care for pedestrians.",
+          "reason": "Чл. 116 is the specific duty of care toward pedestrians (lessons from the reviews). No provision on splashing or puddles exists in the corpus (searched изпръск-, пръска-, локв-, кал-, мокр-)."
+        },
+        {
+          "id": "iaaa-5907",
+          "change": "[legal reference] The quote of § 6, т. 75 ЗДвП is now the whole point („\"Уязвими участници в движението\" са … както и водачите на двуколесни пътни превозни средства“) instead of the fragment „както и водачите на двуколесни пътни превозни средства“.",
+          "reason": "A point is quoted from its start; the fragment alone did not show that it defines vulnerable road users."
+        },
+        {
+          "id": "iaaa-5899",
+          "change": "[picture] „по платното пред автомобила се движат двама велосипедисти, близо до средата на пътя“ became „насреща по платното се движат двама велосипедисти, близо до средата му“.",
+          "reason": "In the picture (the same as iaaa-5901) both cyclists face the driver and ride in the oncoming half of the road."
+        },
+        {
+          "id": "iaaa-6077",
+          "change": "[picture] „знакът Д4 … показва еднопосочен път с две ленти, разделени с прекъсната линия“ became „знакът Д4 … въвежда движение в една посока, а платното има две ленти, разделени с прекъсната линия“.",
+          "reason": "Д4 shows a single arrow; the two lanes and the broken line are seen on the road, not on the sign."
+        },
+        {
+          "id": "iaaa-6226",
+          "change": "[legal reference] The quote of чл. 25, ал. 2 ЗДвП now includes its second sentence (the right-lane priority applies when two vehicles from adjacent lanes make the manoeuvre at the same time), as in iaaa-6223.",
+          "reason": "The text explains that being on the right gives the red car no priority; that reason needs the second sentence of the paragraph."
+        },
+        {
+          "id": "iaaa-6234",
+          "change": "[style] „Кой пръв е подал сигнал или кой е по-напред, няма значение, защото сигналът за маневра не дава предимство.“ became „Правилото не зависи от това кой е по-напред, а подаденият сигнал за маневра не дава предимство.“",
+          "reason": "The old sentence gave the signal rule (ППЗДвП чл. 79) as the reason why being ahead does not matter; the two wrong answers have separate reasons."
+        },
+        {
+          "id": "iaaa-6261",
+          "change": "[legal reference] Added the quote of чл. 10, ал. 2, т. 2 on lowering the arms after the horizontal gesture.",
+          "reason": "The officer in the picture stands with his right shoulder to the driver and his arms lowered; the meaning of lowered arms rests on that clause, as in iaaa-5942 and the approved iaaa-5876. Picture checked (zoomed): he faces right, so the driver is opposite his right shoulder, and the pedestrian crosses in front of his chest."
+        }
+      ]
     }
   }
 }
