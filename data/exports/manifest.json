@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.2.0",
   "source_edition": "2026-10-01",
   "rules_version": "2024-12-12",
-  "built_at": "2026-11-04T21:04:43+00:00",
+  "built_at": "2026-11-07T00:07:31+00:00",
   "generator": {
     "name": "bulgarian-driving-exam-database",
     "version": "0.1.0",
-    "git_commit": "b892fd41cac2f1bdff1a8655ff4307b28c28fa43"
+    "git_commit": "dd5f203707e370a2398df474370d416d6d5dd626"
   },
   "content_fingerprint": "2206aa6d2156ebd65fa42a07167e47a7c02e9ffe2dd8d8cb984937a7b97948e1",
   "sources": [
@@ -18,7 +18,7 @@
       "attribution": "Източник: Изпълнителна агенция „Автомобилна администрация“ — https://public-eis.rta.government.bg/exam-questions/",
       "license": "none granted by source",
       "redistribution_status": "published_by_maintainer_decision",
-      "retrieved_at": "2026-11-04T20:23:37+00:00"
+      "retrieved_at": "2026-11-06T23:33:15+00:00"
     }
   ],
   "source_snapshot": [
@@ -279,30 +279,90 @@
     "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": 680,
     "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78": 48
   },
-  "dataset_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/v1.0.0/",
+  "dataset_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/v1.2.0/",
   "files": [
     {
       "path": "categories.json",
       "bytes": 93701,
-      "sha256": "ed00dd0bc9c62eef1f8b03c0675580f4b1e3d2f8f5de956e127e972fed1ba302",
+      "sha256": "9d087a472645651e13d62090a600809943e2b7abc7cca490a258a129fc597ac9",
       "media_type": "application/json"
     },
     {
       "path": "questions.json",
       "bytes": 7673337,
-      "sha256": "1ff51fd70e16f6c3d2cfb937c4fbb5b289c3608c6c6de6827b3d50d4c61b6507",
+      "sha256": "075cb4140db4ad982cc45e89ace45d007d351097d84df0ac97bd6fb9ef46be63",
       "media_type": "application/json"
     },
     {
       "path": "exam-configs.json",
       "bytes": 58759,
-      "sha256": "9b9b5a53fa3d7676d5109f84917b2643a2359c2ac5721143a69bdc2bd550904e",
+      "sha256": "e4c5432c9c3d90f33d2437e266f2dc7610c3dd55fc8a5d2657b2a5249e052b23",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-en.json",
+      "bytes": 1436276,
+      "sha256": "c959b07d16e28cf8770243a4d0d72a7512e720db3b69435530af8af4de23e67e",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-ru.json",
+      "bytes": 1862780,
+      "sha256": "190bdae12c709d38b8f32a3b450c6c7cb7cf7dff8809cfc07507ff2ed9a7918a",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-es.json",
+      "bytes": 1487711,
+      "sha256": "778521f65e65a46f71eaac4fd5c2d9b8aa8e860721f2331559b22be7c2ee5d2d",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-de.json",
+      "bytes": 1505374,
+      "sha256": "e808030af9b913d87e8318d4acefb82173ab89c7fa958d48e735ae68eec7cf47",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-fr.json",
+      "bytes": 1529020,
+      "sha256": "db8d6341bba9b21389fa97514e115969d84bb6777c8fb3ddb4ba77cd5949140c",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-pt.json",
+      "bytes": 1477379,
+      "sha256": "525b7848a6475f7c2f8f4514ed9ea329d942002837cfbbebdac1ffddbc76e4f4",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-el.json",
+      "bytes": 1913238,
+      "sha256": "3ef53999f422b91a344fc4fb533bb7ceabf326b29fa051189de0acaff61a6893",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-tr.json",
+      "bytes": 1442712,
+      "sha256": "919b6ad6e4a9757d7d658fa852f42b81a299ab14bbb23938ea8d8290f6e95692",
+      "media_type": "application/json"
+    },
+    {
+      "path": "translation-ro.json",
+      "bytes": 1495742,
+      "sha256": "99c496cddfa7dd4cad9c2d79d123f42d133d9111bf4fc619f6ec88e989668da4",
+      "media_type": "application/json"
+    },
+    {
+      "path": "explanation-bg.json",
+      "bytes": 2438484,
+      "sha256": "a04b8f857373914b6e7d2ef4f467c08da280d2ab80b2eb1bf063a397757eb103",
       "media_type": "application/json"
     },
     {
       "path": "master.sqlite",
-      "bytes": 7979008,
-      "sha256": "dde954f003b449d8ded6d6c6ea742b7b5789665ba51f14934975f36dd84c1593",
+      "bytes": 22683648,
+      "sha256": "db5576643d2f90ea8d952d00ab6d8be0d72938aa10098e6dc25b6939e54490a3",
       "media_type": "application/vnd.sqlite3"
     }
   ],
@@ -390,6 +450,11 @@
         "detail": "23 checked, 0 errors, 0 warnings — every exam configuration can be generated (20 seeds each)"
       },
       {
+        "name": "translations",
+        "passed": true,
+        "detail": "22284 checked, 0 errors, 0 warnings — translations match the current Bulgarian text (stale or missing ones are left out)"
+      },
+      {
         "name": "json_schema",
         "passed": true,
         "detail": "3 checked, 0 errors, 0 warnings — exports conform to contract/schemas"
@@ -398,6 +463,21 @@
         "name": "sqlite_integrity",
         "passed": true,
         "detail": "1 checked, 0 errors, 0 warnings — master.sqlite integrity, foreign keys, user_version"
+      },
+      {
+        "name": "translation_schema",
+        "passed": true,
+        "detail": "9 checked, 0 errors, 0 warnings — translation files conform to contract/schemas"
+      },
+      {
+        "name": "explanations",
+        "passed": true,
+        "detail": "1433 checked, 0 errors, 0 warnings — explanations match the current Bulgarian text and every quote is still in the cited act"
+      },
+      {
+        "name": "explanation_schema",
+        "passed": true,
+        "detail": "1 checked, 0 errors, 0 warnings — explanation files conform to contract/schemas"
       },
       {
         "name": "all_official_files_extracted",
@@ -415,5 +495,125 @@
         "detail": "536 copies in other variant directories compared, 0 mismatches"
       }
     ]
-  }
+  },
+  "languages": [
+    {
+      "code": "bg",
+      "tag": "bg-BG",
+      "native_name": "Български",
+      "english_name": "Bulgarian",
+      "kind": "source",
+      "status": "official",
+      "file": null,
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "en",
+      "tag": "en-GB",
+      "native_name": "English",
+      "english_name": "English",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-en.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "ru",
+      "tag": "ru-RU",
+      "native_name": "Русский",
+      "english_name": "Russian",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-ru.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "es",
+      "tag": "es-ES",
+      "native_name": "Español",
+      "english_name": "Spanish",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-es.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "de",
+      "tag": "de-DE",
+      "native_name": "Deutsch",
+      "english_name": "German",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-de.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "fr",
+      "tag": "fr-FR",
+      "native_name": "Français",
+      "english_name": "French",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-fr.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "pt",
+      "tag": "pt-PT",
+      "native_name": "Português",
+      "english_name": "Portuguese",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-pt.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "el",
+      "tag": "el-GR",
+      "native_name": "Ελληνικά",
+      "english_name": "Greek",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-el.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "tr",
+      "tag": "tr-TR",
+      "native_name": "Türkçe",
+      "english_name": "Turkish",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-tr.json",
+      "questions": 2476,
+      "coverage": 1.0
+    },
+    {
+      "code": "ro",
+      "tag": "ro-RO",
+      "native_name": "Română",
+      "english_name": "Romanian",
+      "kind": "translation",
+      "status": "unofficial",
+      "file": "translation-ro.json",
+      "questions": 2476,
+      "coverage": 1.0
+    }
+  ],
+  "explanations": [
+    {
+      "language": "bg",
+      "file": "explanation-bg.json",
+      "questions": 1433,
+      "coverage": 0.5788
+    }
+  ]
 }

@@ -1,9 +1,9 @@
 {
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.2.0",
   "source_edition": "2026-10-01",
   "summary": {
-    "checks": 13,
-    "checks_passed": 13,
+    "checks": 17,
+    "checks_passed": 17,
     "errors": 0,
     "warnings": 25
   },
@@ -97,6 +97,14 @@
       "warnings": 0
     },
     {
+      "name": "translations",
+      "description": "translations match the current Bulgarian text (stale or missing ones are left out)",
+      "passed": true,
+      "checked": 22284,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
       "name": "json_schema",
       "description": "exports conform to contract/schemas",
       "passed": true,
@@ -107,6 +115,30 @@
     {
       "name": "sqlite_integrity",
       "description": "master.sqlite integrity, foreign keys, user_version",
+      "passed": true,
+      "checked": 1,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "translation_schema",
+      "description": "translation files conform to contract/schemas",
+      "passed": true,
+      "checked": 9,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "explanations",
+      "description": "explanations match the current Bulgarian text and every quote is still in the cited act",
+      "passed": true,
+      "checked": 1433,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "explanation_schema",
+      "description": "explanation files conform to contract/schemas",
       "passed": true,
       "checked": 1,
       "errors": 0,

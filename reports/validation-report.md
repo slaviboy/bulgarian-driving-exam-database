@@ -1,6 +1,6 @@
-# Validation report — dataset 1.0.0 (edition 2026-10-01)
+# Validation report — dataset 1.2.0 (edition 2026-10-01)
 
-**13/13 checks passed** · 0 errors · 25 warnings
+**17/17 checks passed** · 0 errors · 25 warnings
 
 | Check | Result | Items checked | Errors | Warnings | Description |
 |---|---|---|---|---|---|
@@ -15,8 +15,12 @@
 | `incorrect_ordering` | ✅ pass | 13763 | 0 | 0 | answers, questions, sections and variants keep source order |
 | `invalid_attribution` | ✅ pass | 2476 | 0 | 0 | every record has a known, attributed source |
 | `exam_feasibility` | ✅ pass | 23 | 0 | 0 | every exam configuration can be generated (20 seeds each) |
+| `translations` | ✅ pass | 22284 | 0 | 0 | translations match the current Bulgarian text (stale or missing ones are left out) |
 | `json_schema` | ✅ pass | 3 | 0 | 0 | exports conform to contract/schemas |
 | `sqlite_integrity` | ✅ pass | 1 | 0 | 0 | master.sqlite integrity, foreign keys, user_version |
+| `translation_schema` | ✅ pass | 9 | 0 | 0 | translation files conform to contract/schemas |
+| `explanations` | ✅ pass | 1433 | 0 | 0 | explanations match the current Bulgarian text and every quote is still in the cited act |
+| `explanation_schema` | ✅ pass | 1 | 0 | 0 | explanation files conform to contract/schemas |
 
 ## Issues
 
