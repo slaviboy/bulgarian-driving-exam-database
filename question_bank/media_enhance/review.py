@@ -18,6 +18,7 @@ class Row:
     title: str
     images: list[tuple[str, Path]]  # (caption, file)
     notes: list[str] = field(default_factory=list)
+    width: int | None = None  # CSS width of every image of the row at zoom 1× (so versions compare 1:1)
 
 
 _CSS = """
@@ -60,11 +61,8 @@ window.addEventListener('load', () => { document.querySelectorAll('img').forEach
 """
 
 
-def write_sheet(
-    path: Path, title: str, lead: str, rows: list[Row], *, base_width: dict[str, int] | None = None
-) -> None:
-    """Write the sheet; ``base_width`` maps a caption to the CSS width (px) its images get at zoom 1×."""
-    base_width = base_width or {}
+def write_sheet(path: Path, title: str, lead: str, rows: list[Row]) -> None:
+    """Write the sheet to ``path`` (images are referenced relative to it)."""
     parts = [
         "<!doctype html><html lang='en'><head><meta charset='utf-8'>",
         "<meta name='viewport' content='width=device-width, initial-scale=1'>",
@@ -78,8 +76,7 @@ def write_sheet(
         parts.append(f"<section class='row'><h2>{html.escape(row.title)}</h2><div class='imgs'>")
         for caption, file in row.images:
             rel = os.path.relpath(file, path.parent).replace(os.sep, "/")
-            base = base_width.get(caption)
-            data = f" data-base='{base}'" if base else ""
+            data = f" data-base='{row.width}'" if row.width else ""
             parts.append(
                 f"<figure><div class='checker'><img src='{html.escape(rel)}' loading='lazy'{data} "
                 f"alt='{html.escape(caption)}'></div><figcaption>{html.escape(caption)}</figcaption></figure>"

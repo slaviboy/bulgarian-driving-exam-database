@@ -634,31 +634,71 @@ def cmd_enhance_review(settings: Settings, args: argparse.Namespace) -> int:
     from question_bank.media_enhance.review import Row, write_sheet
 
     clean_dir = settings.media_dir / "enhance" / "clean"
+    up_dir = settings.media_dir / "enhance" / "upscaled"
     report = read_json(clean_dir / "report.json")
     detail = {d["media_id"]: d for d in report["pictures_detail"]}
+    up_report = up_dir / "report.json"
+    upscaled = {d["media_id"]: d for d in read_json(up_report)["pictures"]} if up_report.exists() else {}
     ids = [s.strip() for s in args.only.split(",")] if args.only else sorted(detail)
     if args.flagged:
         ids = [f["media_id"] for f in report["flagged"]]
     rows = []
     for mid in ids[: args.limit]:
         d = detail[mid]
-        rows.append(
-            Row(
-                f"{mid} · {d['width']}×{d['height']}",
-                [
-                    ("official", settings.media_dir / "images" / f"{mid}.png"),
-                    ("stamp removed", clean_dir / f"{mid}.png"),
-                ],
-                [
-                    f"stamp score {d['score_before']} → {d['score_after']} · "
-                    f"{d['changed_pixels']} pixels changed"
-                ],
+        images = [
+            ("official", settings.media_dir / "images" / f"{mid}.png"),
+            ("stamp removed", clean_dir / f"{mid}.png"),
+        ]
+        notes = [
+            f"stamp score {d['score_before']} → {d['score_after']} · {d['changed_pixels']} pixels changed"
+        ]
+        if mid in upscaled:
+            u = upscaled[mid]
+            images.append((f"Real-ESRGAN, {u['scale']:g}×", up_dir / f"{mid}.png"))
+            notes.append(
+                f"content check: PSNR {u['blur_psnr']} dB (≥ 30), SSIM {u['ssim']} (≥ 0.9), "
+                f"worst window {u['ssim_worst_window']}"
             )
-        )
+        rows.append(Row(f"{mid} · {d['width']}×{d['height']}", images, notes, width=min(d["width"] * 2, 720)))
     out = settings.media_dir / "enhance" / "review" / f"{args.name}.html"
-    write_sheet(out, args.name, "Official picture next to the cleaned one. Zoom in to check the edges.", rows)
+    lead = (
+        "Official picture, stamp removed and enlarged, all shown at the same size. Zoom in to check details."
+    )
+    write_sheet(out, args.name, lead, rows)
     print(f"{len(rows)} rows → {out}")
     return 0
+
+
+def cmd_enhance_upscale(settings: Settings, args: argparse.Namespace) -> int:
+    from dataclasses import asdict as _asdict
+
+    from question_bank.media_enhance.upscale import UpscaleResult, find_binary, upscale_all
+
+    clean_dir = settings.media_dir / "enhance" / "clean"
+    out = settings.media_dir / "enhance" / "upscaled"
+    ids = [p.stem for p in _picture_paths(settings, args.only)]
+    results = upscale_all(
+        clean_dir, out, find_binary(settings.data_dir), ids, {mid: args.scale for mid in ids}
+    )
+    report_path = out / "report.json"
+    previous = read_json_if_exists(report_path)
+    fields = set(UpscaleResult.__dataclass_fields__)
+    merged = {d["media_id"]: d for d in previous.get("pictures", []) if set(d) == fields}
+    merged.update({r.media_id: _asdict(r) for r in results})
+    flagged = [d for d in merged.values() if not UpscaleResult(**d).ok]
+    pictures = sorted(merged.values(), key=lambda d: d["media_id"])
+    _write_json(report_path, {"flagged": [d["media_id"] for d in flagged], "pictures": pictures})
+    print(
+        f"{len(results)} pictures enlarged {args.scale:g}× → {out}; "
+        f"{len(flagged)} flagged by the content check"
+    )
+    return 0
+
+
+def read_json_if_exists(path: Path) -> dict:
+    from question_bank.fsutil import read_json
+
+    return read_json(path) if path.exists() else {}
 
 
 def cmd_enhance_commons_import(settings: Settings, args: argparse.Namespace) -> int:
@@ -803,6 +843,10 @@ def build_parser() -> argparse.ArgumentParser:
     en_review.add_argument("--flagged", action="store_true", help="only pictures flagged by the stamp score")
     en_review.add_argument("--limit", type=int, default=1000)
     en_review.set_defaults(func=cmd_enhance_review)
+    en_up = en_sub.add_parser("upscale", help="enlarge cleaned pictures with Real-ESRGAN (local GPU)")
+    en_up.add_argument("--only", help="comma-separated media IDs")
+    en_up.add_argument("--scale", type=float, default=2.0, help="final size relative to the original")
+    en_up.set_defaults(func=cmd_enhance_upscale)
     en_commons = en_sub.add_parser(
         "commons-import", help="import the sign SVGs saved by tools/commons-signs-download.html"
     )
