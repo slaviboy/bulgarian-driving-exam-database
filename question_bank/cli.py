@@ -661,6 +661,22 @@ def cmd_enhance_review(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_enhance_commons_import(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.media_enhance.commons import CommonsImportError, import_zip
+
+    cache = settings.cache_dir / "commons"
+    try:
+        stats = import_zip(args.zip, cache)
+    except CommonsImportError as e:
+        print(f"refused: {e}")
+        return 1
+    print(
+        f"{stats['imported']} of {stats['files']} sign drawings imported → {cache} "
+        f"({stats['missing']} not downloaded, {stats['rejected']} rejected)"
+    )
+    return 1 if stats["rejected"] else 0
+
+
 # ----------------------------------------------------------------------------- parser
 
 
@@ -787,6 +803,11 @@ def build_parser() -> argparse.ArgumentParser:
     en_review.add_argument("--flagged", action="store_true", help="only pictures flagged by the stamp score")
     en_review.add_argument("--limit", type=int, default=1000)
     en_review.set_defaults(func=cmd_enhance_review)
+    en_commons = en_sub.add_parser(
+        "commons-import", help="import the sign SVGs saved by tools/commons-signs-download.html"
+    )
+    en_commons.add_argument("zip", type=Path, help="bg-road-signs-commons.zip")
+    en_commons.set_defaults(func=cmd_enhance_commons_import)
 
     legal = sub.add_parser("legal", help="the legal corpus the explanations quote (data/legal)")
     legal_sub = legal.add_subparsers(dest="legal_command", required=True)
