@@ -566,6 +566,101 @@ def cmd_legal_search(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def _enhance_dir(settings: Settings) -> Path:
+    """Committed inputs and decisions of the picture enhancement."""
+    return settings.data_dir / "enhance"
+
+
+def _picture_paths(settings: Settings, only: str | None = None) -> list[Path]:
+    paths = sorted((settings.media_dir / "images").glob("m-*.png"))
+    if only:
+        wanted = {s.strip() for s in only.split(",")}
+        paths = [p for p in paths if p.stem in wanted]
+    return paths
+
+
+def cmd_enhance_stamp_fit(settings: Settings, args: argparse.Namespace) -> int:
+    from PIL import Image
+
+    from question_bank.media_enhance.fit import fit_shifts, measure_tile, refine_tile
+    from question_bank.media_enhance.stamp import StampModel, save_shifts
+
+    out = _enhance_dir(settings) / "stamp"
+    paths = _picture_paths(settings)
+    tile, stats = measure_tile(paths)
+    print(
+        f"tile: {stats['stamp_pixels']} stamp pixels, opacity ≤ {stats['max_opacity']}/255, "
+        f"{stats['pictures']} pictures, exact agreement {stats['exact_agreement_median_stamp_pixels']:.0%}"
+    )
+    groups: dict[tuple[int, int], list[Path]] = {}
+    for path in paths:
+        with Image.open(path) as image:
+            groups.setdefault(image.size, []).append(path)
+    model = StampModel(tile)
+    model.shifts = {(e["row"], e["col"], e["element"]): (e["dy"], e["dx"]) for e in fit_shifts(groups, model)}
+    refined, refine_stats = refine_tile(paths, model)
+    print(f"refined tile: {refine_stats['refined_pixels_changed']} pixels changed")
+    model = StampModel(refined)
+    entries = fit_shifts(groups, model)
+    model.save_tile(out)
+    save_shifts(out, entries, {"tile_statistics": stats, "refinement": refine_stats})
+    moved = len({(e["row"], e["col"]) for e in entries if (e["dy"], e["dx"]) != (0, 0)})
+    tiles = len({(e["row"], e["col"]) for e in entries})
+    print(f"shifts: {tiles} tiles measured, {moved} off the regular lattice → {out}")
+    return 0
+
+
+def cmd_enhance_clean(settings: Settings, args: argparse.Namespace) -> int:
+    from dataclasses import asdict as _asdict
+
+    from question_bank.media_enhance.clean import clean_all, summary
+    from question_bank.media_enhance.stamp import StampModel
+
+    model = StampModel.load(_enhance_dir(settings) / "stamp")
+    out = settings.media_dir / "enhance" / "clean"
+    results = clean_all(_picture_paths(settings, args.only), model, out)
+    report = summary(results)
+    _write_json(out / "report.json", {**report, "pictures_detail": [_asdict(r) for r in results]})
+    print(
+        f"{report['pictures']} pictures cleaned → {out}; stamp score median "
+        f"{report['score_before_median']} → {report['score_after_median']}, "
+        f"max |after| {report['score_after_max_abs']}; {len(report['flagged'])} flagged for review"
+    )
+    return 0
+
+
+def cmd_enhance_review(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.fsutil import read_json
+    from question_bank.media_enhance.review import Row, write_sheet
+
+    clean_dir = settings.media_dir / "enhance" / "clean"
+    report = read_json(clean_dir / "report.json")
+    detail = {d["media_id"]: d for d in report["pictures_detail"]}
+    ids = [s.strip() for s in args.only.split(",")] if args.only else sorted(detail)
+    if args.flagged:
+        ids = [f["media_id"] for f in report["flagged"]]
+    rows = []
+    for mid in ids[: args.limit]:
+        d = detail[mid]
+        rows.append(
+            Row(
+                f"{mid} · {d['width']}×{d['height']}",
+                [
+                    ("official", settings.media_dir / "images" / f"{mid}.png"),
+                    ("stamp removed", clean_dir / f"{mid}.png"),
+                ],
+                [
+                    f"stamp score {d['score_before']} → {d['score_after']} · "
+                    f"{d['changed_pixels']} pixels changed"
+                ],
+            )
+        )
+    out = settings.media_dir / "enhance" / "review" / f"{args.name}.html"
+    write_sheet(out, args.name, "Official picture next to the cleaned one. Zoom in to check the edges.", rows)
+    print(f"{len(rows)} rows → {out}")
+    return 0
+
+
 # ----------------------------------------------------------------------------- parser
 
 
@@ -675,6 +770,23 @@ def build_parser() -> argparse.ArgumentParser:
     ex_sub.add_parser("status", help="coverage per category; checks the curated explanations").set_defaults(
         func=cmd_explanations_status
     )
+
+    enhance = sub.add_parser("enhance", help="clean, sharp pictures: stamp removal, review sheets")
+    en_sub = enhance.add_subparsers(dest="enhance_command", required=True)
+    en_sub.add_parser(
+        "stamp-fit", help="measure the ИААА stamp tile and its shifts from the pictures (data/enhance/stamp)"
+    ).set_defaults(func=cmd_enhance_stamp_fit)
+    en_clean = en_sub.add_parser(
+        "clean", help="remove the stamp from every picture (data/media/enhance/clean)"
+    )
+    en_clean.add_argument("--only", help="comma-separated media IDs")
+    en_clean.set_defaults(func=cmd_enhance_clean)
+    en_review = en_sub.add_parser("review", help="HTML sheet: official picture next to the cleaned one")
+    en_review.add_argument("--name", default="stamp", help="sheet name (file name without .html)")
+    en_review.add_argument("--only", help="comma-separated media IDs")
+    en_review.add_argument("--flagged", action="store_true", help="only pictures flagged by the stamp score")
+    en_review.add_argument("--limit", type=int, default=1000)
+    en_review.set_defaults(func=cmd_enhance_review)
 
     legal = sub.add_parser("legal", help="the legal corpus the explanations quote (data/legal)")
     legal_sub = legal.add_subparsers(dest="legal_command", required=True)
