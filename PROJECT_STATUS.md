@@ -61,12 +61,12 @@ dataset; see "Consumers" below.
 
 ## Consumers
 
-* The Android application bundles a pinned release (core package and picture packs by SHA-256: `v1.3.0` with the
-  WebP and SVG packs of r2; it shows the drawings' credits on its licences page) and installs newer releases from
-  `releases/latest/download/manifest.json`, verifying the core package against `SHA256SUMS`. Its
-  tests import the real `v1.1.0` (including 9 × 2,476 translations) and a synthetic next patch release derived
-  from it; on devices it reported 2,476 questions, 23 variants and 830 verified pictures, matching this
-  repository's counts.
+* The Android application carries no dataset. On first start it downloads the latest release from
+  `releases/latest/download/manifest.json` (the core package verified against `SHA256SUMS`, the picture packs and
+  every extracted file by SHA-256) and lets the learner continue only once everything is installed; newer releases
+  arrive the same way. It shows the drawings' credits on its licences page. Its tests import a pinned real release
+  (`v1.3.0` with the packs of r2) and a synthetic next patch release derived from it; on devices it reported 2,476
+  questions, 23 variants and 830 verified pictures, matching this repository's counts.
 * Compatibility promise for consumers: `schema_version` 1 stays readable; a breaking change increases it (MAJOR
   release), which the app reports as "app update required" instead of installing.
 
