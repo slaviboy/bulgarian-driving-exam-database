@@ -5,6 +5,7 @@ A dataset release is **two GitHub releases**:
 | Tag | Contents | Marked latest |
 |---|---|---|
 | `media-YYYY.MM.DD` (one per official edition) | `images-original.zip`, `images-webp.zip`, every video as `<media id>.mp4` | never |
+| `media-YYYY.MM.DD-rN` (media revision, since 1.3.0) | enhanced `images-webp.zip` and `images-svg.zip` | never |
 | `vX.Y.Z` | `manifest.json`, `categories.json`, `questions.json`, `exam-configs.json`, `master.sqlite`, `dataset-core-vX.Y.Z.zip`, `SHA256SUMS`, reports | yes |
 
 Consumers start from `…/releases/latest/download/manifest.json`; the manifest points to the media
@@ -42,6 +43,21 @@ gh release create "$tag" release/$tag/* --latest=false --title "Media $tag" --no
 gh release create vX.Y.Z release/vX.Y.Z/* reports/validation-report.md reports/extraction-report.md \
    --latest --title "Dataset vX.Y.Z" --notes "…"
 ```
+
+## Media revisions (enhanced pictures)
+
+The enhanced pictures (docs/media-enhance.md) are built on a maintainer machine — they need the GPU, the
+Commons drawings and the reviewed recipes — and published **before** the dataset release that uses them:
+
+```
+qb enhance pack --revision N             # release/media-YYYY.MM.DD-rN, data/enhance/{derivatives,pack}.json
+gh release create media-YYYY.MM.DD-rN release/media-YYYY.MM.DD-rN/* --latest=false    --title "Media YYYY.MM.DD-rN (enhanced pictures)" --notes "…"
+git add data/enhance && git commit -m "Pin media revision rN" && git push
+```
+
+From then on every build uses the pinned packs: `qb media` downloads and verifies them, and `qb build` fails if
+a local file differs from the published one (`PinnedPackMismatch`). A new official edition needs a new
+revision of its own (the stamp model, inventory and recipes are reviewed again for changed pictures).
 
 ## After publishing
 

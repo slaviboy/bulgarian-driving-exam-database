@@ -47,6 +47,30 @@ languages (`translation-<lang>.json`, see docs/translations.md):
 As derivative works of the same content, they have the same redistribution status: published by the maintainer's
 decision, with no licence granted.
 
+## Processed pictures (from dataset v1.3.0)
+
+The official pictures carry a tiled, semi-transparent "ИААА" stamp and are small (scenes 712 × 394 px, signs about
+150 px). From dataset v1.3.0 the **WebP pictures for apps** (`images-webp`) are processed, and road signs and
+vehicle markings also come as **vector drawings** (`images-svg`); see docs/media-enhance.md:
+
+* **Stamp removed** — the stamp was measured exactly from the pictures and its alpha compositing inverted; every
+  pixel the stamp does not touch is unchanged. The maintainer decided to remove it (recorded 2026-11-11) and
+  keeps the attribution to ИААА above in every release; the **original pictures, stamp included, stay published
+  unchanged** in `images-original.zip`.
+* **Enlarged** — scenes and photos were enlarged 2–4× with Real-ESRGAN (x4plus); an automatic check rejects any
+  enlargement that changes the picture's structure (labels, arrows, numbers), and flagged ones were reviewed.
+* **Signs as vectors** — each sign picture was matched by hand to a drawing of the same sign; signs that have no
+  drawing (old or special signs, plates, vehicle markings) were traced from the stamp-free picture or drawn
+  for this project. Every derivative records how it was made (`process`).
+
+### Road-sign drawings from Wikimedia Commons
+
+Most sign drawings are files from Wikimedia Commons ("BG road sign …", "Bulgaria road sign …"), used under their
+own licences: **CC0** and public domain for many, **CC BY-SA 4.0** (or CC BY 4.0 / CC BY-SA 3.0) for others.
+Each picture lists the drawings it uses, with author, licence and file page, in its `credits` (questions.json,
+`media_credits` in master.sqlite). Pictures that contain a CC BY-SA drawing are adaptations of it and are shared
+under the same licence; reusers must keep the credits.
+
 ## Not affiliated
 
 This project is independent and is **not affiliated with, endorsed by or
@@ -66,5 +90,7 @@ releases and the request will be documented in `CHANGELOG.md`.
 **Накратко (BG):** Въпросите, отговорите, изображенията и видеоклиповете са от
 официалния масив на ИААА (public-eis.rta.government.bg) и се публикуват тук с
 посочване на източника, без лиценз от ИААА и по решение на поддържащия проекта.
-Проектът не е свързан с ИААА. Притежатели на права могат да поискат премахване
-чрез GitHub issue.
+От версия 1.3.0 картинките за приложения са без воден знак „ИААА“ и уголемени, а
+пътните знаци са векторни рисунки (главно от Wikimedia Commons, с посочени автори и
+лицензи); оригиналите остават публикувани без промяна. Проектът не е свързан с ИААА.
+Притежатели на права могат да поискат премахване чрез GitHub issue.

@@ -68,7 +68,9 @@ All text is UTF-8. Booleans are `INTEGER` 0/1. No SQLite extensions, no
 | `answers` | `id` TEXT PK, `question_id` FK, `position`, `answer_text` (NULL for picture answers), `media_id` FK NULL, `is_correct` | |
 | `media` | `id` TEXT PK, `kind` (`image`/`video`), `original_name`, `relative_path`, `mime_type`, `bytes`, `width`, `height`, `sha256`, `source_url`, `source_id` FK | media may be shared by several questions |
 | `media_aliases` | `media_id` FK + `name` PK | other official file names with byte-identical content (the same picture is published under several names) |
-| `media_derivatives` | `media_id` FK + `format` PK, `relative_path`, `mime_type`, `bytes`, `width`, `height`, `sha256` | e.g. WebP versions of PNG images for the app |
+| `media_derivatives` | `media_id` FK + `format` PK, `relative_path`, `mime_type`, `bytes`, `width`, `height`, `sha256` | `webp` for every picture (from 1.3.0 stamp-free and enlarged), `svg` for road signs and vehicle markings (from 1.3.0) |
+| `media_processing` | `media_id` FK + `format` + `position` PK, `step` | how a derivative was made: `stamp-removed`, `enlarged-2x`…, `vector-commons`, `vector-traced`, `vector-drawn` (since 1.3.0) |
+| `media_credits` | `media_id` FK + `position` PK, `title`, `author`, `license`, `license_url`, `page_url`, `sha1` | Wikimedia Commons drawings in a picture's derivatives; their licences require the credit (since 1.3.0) |
 | `question_media` | `question_id` FK + `media_id` FK + `role` PK, `position` | `role` = `image` or `video` |
 | `variant_questions` | `variant_id` FK + `question_id` FK PK, `section_id` FK, `points` (1–3), `position` | `position` = order inside the official file |
 | `exam_configs` | `id` TEXT PK, `variant_id` FK, `status` (`official`/`unofficial`), `question_count`, `max_points`, `pass_points`, `duration_minutes`, `video_questions`, `max_video_plays`, `scoring`, `show_correct_count`, `section_quotas_json`, `points_mix_json`, `verification_json`, `evidence_json`, `notes_json` | JSON columns hold the same values as `exam-configs.json` |
@@ -107,7 +109,13 @@ master.sqlite          the same data in the tables above
       "bytes": 534212, "width": "…", "height": "…", "sha256": "…",
       "source_url": "https://public-eis.rta.government.bg/exam-questions/…/assets/20243.png",
       "source_id": "iaaa-eis",
-      "derivatives": [ { "format": "webp", "relative_path": "images-webp/m-….webp", "…": "…" } ] }
+      "derivatives": [
+        { "format": "webp", "relative_path": "images-webp/m-….webp", "…": "…",
+          "process": ["vector-commons"] },
+        { "format": "svg", "relative_path": "images-svg/m-….svg", "mime_type": "image/svg+xml", "…": "…",
+          "process": ["vector-commons"] } ],
+      "credits": [ { "title": "BG road sign А13", "author": "…", "license": "CC0", "license_url": "…",
+                     "page": "https://commons.wikimedia.org/wiki/File:…", "sha1": "…" } ] }
   ],
   "questions": [
     { "id": "iaaa-5300", "original_id": "5300", "source_id": "iaaa-eis",
@@ -218,6 +226,10 @@ are written from the text of the acts in `data/legal/`; the official question ba
   `images-webp.zip`, and every video as a single file `<media id>.mp4` (on-demand downloads).
   A dataset manifest references its media packs by absolute URL and SHA-256, so a
   media release is reused until the media change.
+* Media revision tag `media-YYYY.MM.DD-rN` (never *latest*; since 1.3.0): the enhanced
+  `images-webp.zip` (same paths and media ids, better files) and `images-svg.zip` (signs and vehicle
+  markings, SVG). They replace the edition's WebP pack in the manifest (`media_packs[].kind` may be
+  `images-svg`); originals and videos stay in `media-YYYY.MM.DD`. See docs/media-enhance.md.
 * Consumers discover the newest dataset through
   `https://github.com/slaviboy/bulgarian-driving-exam-database/releases/latest/download/manifest.json`
   (a redirect, not the rate-limited REST API).
