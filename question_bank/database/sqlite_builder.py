@@ -140,6 +140,23 @@ def write_sqlite(
                 ],
             )
             con.executemany(
+                "INSERT INTO media_processing VALUES (?, ?, ?, ?)",
+                [
+                    (m.id, d.format, i, step)
+                    for m in dataset.media
+                    for d in m.derivatives
+                    for i, step in enumerate(d.process)
+                ],
+            )
+            con.executemany(
+                "INSERT INTO media_credits VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                [
+                    (m.id, i, c.title, c.author, c.license, c.license_url, c.page, c.sha1)
+                    for m in dataset.media
+                    for i, c in enumerate(m.credits)
+                ],
+            )
+            con.executemany(
                 "INSERT INTO questions VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                 [
                     (

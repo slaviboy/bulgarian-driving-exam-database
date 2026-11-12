@@ -241,6 +241,34 @@ def validate_dataset(
             issues.append(Issue("invalid_attribution", "error", f"{m.id}: missing source", [m.id]))
     report.run("invalid_attribution", "every record has a known, attributed source", len(questions), issues)
 
+    # 8b. enhanced pictures: a WebP for every picture, vector signs that AndroidSVG can draw, complete credits
+    from question_bank.media_enhance.svg import sanitise
+
+    issues = []
+    images = [m for m in media.values() if m.kind == "image"]
+    for m in images:
+        if "webp" not in {d.format for d in m.derivatives}:
+            issues.append(Issue("enhanced_media", "error", f"{m.id}: no WebP derivative", [m.id]))
+        for d in m.derivatives:
+            path = media_dir / d.relative_path
+            if d.format == "svg" and path.exists() and sanitise(path.read_bytes()).issues:
+                issues.append(Issue("enhanced_media", "error", f"{m.id}: SVG fails the lint", [m.id]))
+            if "vector-commons" in d.process and not m.credits:
+                issues.append(
+                    Issue("enhanced_media", "error", f"{m.id}: Commons drawing without credit", [m.id])
+                )
+        for c in m.credits:
+            if not (c.author and c.license and c.page.startswith("https://")):
+                issues.append(
+                    Issue("enhanced_media", "error", f"{m.id}: incomplete credit {c.title}", [m.id])
+                )
+    report.run(
+        "enhanced_media",
+        "every picture has a WebP; vector signs pass the AndroidSVG lint; Commons drawings are credited",
+        len(images),
+        issues,
+    )
+
     # 9. exam configuration feasibility
     report.run(*_feasibility(dataset))
     return report

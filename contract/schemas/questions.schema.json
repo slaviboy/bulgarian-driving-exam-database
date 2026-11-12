@@ -167,6 +167,14 @@
           },
           "title": "Derivatives",
           "type": "array"
+        },
+        "credits": {
+          "description": "third-party drawings in the derivatives (attribution required)",
+          "items": {
+            "$ref": "#/$defs/MediaCredit"
+          },
+          "title": "Credits",
+          "type": "array"
         }
       },
       "required": [
@@ -185,11 +193,61 @@
       "title": "Media",
       "type": "object"
     },
+    "MediaCredit": {
+      "additionalProperties": false,
+      "description": "A third-party drawing used in a derivative (Wikimedia Commons), with what its licence requires.",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "author": {
+          "title": "Author",
+          "type": "string"
+        },
+        "license": {
+          "title": "License",
+          "type": "string"
+        },
+        "license_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Url"
+        },
+        "page": {
+          "title": "Page",
+          "type": "string"
+        },
+        "sha1": {
+          "title": "Sha1",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "author",
+        "license",
+        "page",
+        "sha1"
+      ],
+      "title": "MediaCredit",
+      "type": "object"
+    },
     "MediaDerivative": {
       "additionalProperties": false,
       "properties": {
         "format": {
-          "const": "webp",
+          "enum": [
+            "webp",
+            "svg"
+          ],
           "title": "Format",
           "type": "string"
         },
@@ -230,6 +288,14 @@
         "sha256": {
           "title": "Sha256",
           "type": "string"
+        },
+        "process": {
+          "description": "how the file was made from the original: stamp-removed, enlarged-2x, vector-commons, vector-traced, vector-drawn (empty: format conversion only)",
+          "items": {
+            "type": "string"
+          },
+          "title": "Process",
+          "type": "array"
         }
       },
       "required": [

@@ -45,14 +45,28 @@ class MediaRelease:
     single_files: list[Path]
 
 
+class PinnedPackMismatch(RuntimeError):
+    """The local enhanced media differ from the media revision pinned in data/enhance/pack.json."""
+
+
 def build_media_release(
-    media: list[Media], media_dir: Path, release_root: Path, source_edition: str
+    media: list[Media],
+    media_dir: Path,
+    release_root: Path,
+    source_edition: str,
+    pinned: dict | None = None,
 ) -> MediaRelease:
+    """Packs of the edition's media release, plus the enhanced packs of a pinned media revision.
+
+    ``pinned`` is data/enhance/pack.json: its ``images-webp`` and ``images-svg`` packs replace the edition's
+    WebP pack. They are rebuilt here from the local files (deterministically) and must be byte-identical to
+    the published ones, so the manifest can point to the revision's URLs.
+    """
     tag = media_release_tag(source_edition)
     out = release_root / tag
     base = release_download_base(tag)
     # Videos are published one by one (<media id>.mp4) for on-demand download; no second copy in a zip.
-    groups: dict[str, list[tuple[str, Path]]] = {"images-original": [], "images-webp": []}
+    groups: dict[str, list[tuple[str, Path]]] = {"images-original": [], "images-webp": [], "images-svg": []}
     singles: list[Path] = []
     for m in sorted(media, key=lambda m: m.id):
         if m.kind == "video":
@@ -64,9 +78,30 @@ def build_media_release(
         else:
             groups["images-original"].append((m.relative_path, media_dir / m.relative_path))
             for d in m.derivatives:
-                groups["images-webp"].append((d.relative_path, media_dir / d.relative_path))
+                groups[f"images-{d.format}"].append((d.relative_path, media_dir / d.relative_path))
     packs = []
     for kind, entries in groups.items():
+        if not entries:
+            continue
+        spec = (pinned or {}).get("packs", {}).get(kind)
+        if spec is not None:
+            archive = release_root / pinned["tag"] / f"{kind}.zip"
+            deterministic_zip(archive, entries, compress=kind == "images-svg")
+            if sha256_file(archive) != spec["sha256"]:
+                raise PinnedPackMismatch(
+                    f"{kind}.zip built from the local files differs from {spec['url']} (run `qb media`)"
+                )
+            packs.append(
+                MediaPack(
+                    id=f"{pinned['tag']}/{kind}",
+                    kind=kind,
+                    url=spec["url"],
+                    bytes=spec["bytes"],
+                    sha256=spec["sha256"],
+                    file_count=spec["file_count"],
+                )
+            )
+            continue
         archive = out / f"{kind}.zip"
         deterministic_zip(archive, entries, compress=False)  # PNG, WebP and MP4 are compressed already
         packs.append(

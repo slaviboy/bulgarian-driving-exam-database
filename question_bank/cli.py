@@ -108,6 +108,18 @@ def cmd_media(settings: Settings, args: argparse.Namespace) -> int:
         f"({stats['resumed']} resumed), {stats['cached']} already present; HTTP requests: {requests}"
     )
     print(f"copies verified: {len(checks)}, mismatches: {len(mismatches)}")
+    if (settings.data_dir / "enhance" / "pack.json").exists():
+        from question_bank.media_enhance.pack import install_pinned
+
+        with _client(settings) as client:
+            result = install_pinned(
+                settings.data_dir / "enhance",
+                settings.media_dir,
+                settings.data_dir.parent / "release",
+                settings.cache_dir / "media-packs",
+                client,
+            )
+        print(f"enhanced pictures of {result['tag']}: {result['files']} files verified and installed")
     return 1 if mismatches else 0
 
 
@@ -710,6 +722,33 @@ def read_json_if_exists(path: Path) -> dict:
     return read_json(path) if path.exists() else {}
 
 
+def cmd_enhance_pack(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.exporter.packages import media_release_tag
+    from question_bank.fsutil import read_json
+    from question_bank.media_enhance.commons import load_catalogue
+    from question_bank.media_enhance.pack import build
+
+    edition = read_json(settings.exports_dir / "manifest.json")["source_edition"]
+    tag = f"{media_release_tag(edition)}-r{args.revision}"
+    result = build(
+        _enhance_dir(settings),
+        settings.media_dir,
+        settings.data_dir.parent / "release",
+        tag,
+        commons_catalogue=load_catalogue(settings.cache_dir / "commons"),
+    )
+    for kind, pack in result["packs"].items():
+        print(
+            f"{kind}: {pack['file_count']} files, {pack['bytes'] / 2**20:.1f} MB, "
+            f"sha256 {pack['sha256'][:12]}…"
+        )
+    print(
+        f"{result['media']} pictures ({result['svg']} with SVG) → release/{tag}; "
+        "pinned in data/enhance/pack.json"
+    )
+    return 0
+
+
 def cmd_enhance_signs_build(settings: Settings, args: argparse.Namespace) -> int:
     from question_bank.media_enhance.signs import build_all
 
@@ -907,6 +946,9 @@ def build_parser() -> argparse.ArgumentParser:
     en_signs.add_argument("--only", help="comma-separated media IDs")
     en_signs.add_argument("--sheet", help="also write a review sheet with this name")
     en_signs.set_defaults(func=cmd_enhance_signs_build)
+    en_pack = en_sub.add_parser("pack", help="build the enhanced media packs and pin them (data/enhance)")
+    en_pack.add_argument("--revision", type=int, required=True, help="media revision number (tag suffix -rN)")
+    en_pack.set_defaults(func=cmd_enhance_pack)
     en_commons = en_sub.add_parser(
         "commons-import", help="import the sign SVGs saved by tools/commons-signs-download.html"
     )
