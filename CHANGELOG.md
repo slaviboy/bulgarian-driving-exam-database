@@ -4,7 +4,7 @@ All notable changes to the tooling, the data contract and the published datasets
 [Semantic Versioning](https://semver.org/): dataset MAJOR = contract `schema_version` change, MINOR =
 new official edition, questions added/removed or translations added, PATCH = corrections and metadata.
 
-## [Unreleased] — 1.3.0 (built and validated, not yet published)
+## [1.3.0] — 2026-11-12
 
 ### Dataset
 
