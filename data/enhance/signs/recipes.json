@@ -1,0 +1,181 @@
+{
+  "recipes": {
+    "m-0091d77c5d928d78": {
+      "width": 616,
+      "height": 542,
+      "layers": [
+        {
+          "commons": "File:BG road sign А43.svg",
+          "box": [
+            0,
+            1,
+            616,
+            541
+          ]
+        }
+      ]
+    },
+    "m-10c98a04fd932b17": {
+      "width": 152,
+      "height": 152,
+      "layers": [
+        {
+          "commons": "File:Bulgaria road sign Г1.svg",
+          "box": [
+            1,
+            0,
+            152,
+            152
+          ]
+        }
+      ]
+    },
+    "m-1601de2edb257e51": {
+      "width": 169,
+      "height": 147,
+      "layers": [
+        {
+          "commons": "File:BG road sign А13.svg",
+          "box": [
+            0,
+            1,
+            169,
+            146
+          ]
+        }
+      ]
+    },
+    "m-34cbe9a451a2125e": {
+      "width": 152,
+      "height": 152,
+      "layers": [
+        {
+          "commons": "File:Bulgaria road sign В1.svg",
+          "box": [
+            1,
+            0,
+            152,
+            152
+          ]
+        }
+      ]
+    },
+    "m-5f688911c9b71196": {
+      "width": 154,
+      "height": 225,
+      "layers": [
+        {
+          "commons": "File:Bulgaria road sign В28.svg",
+          "box": [
+            1,
+            0,
+            154,
+            151
+          ]
+        },
+        {
+          "commons": "File:BG road sign Т14.1.svg",
+          "box": [
+            4,
+            153,
+            150,
+            224
+          ]
+        }
+      ]
+    },
+    "m-6dddd25f155ef740": {
+      "width": 138,
+      "height": 216,
+      "layers": [
+        {
+          "commons": "File:BG road sign Д19.svg",
+          "box": [
+            0,
+            1,
+            136,
+            137
+          ]
+        },
+        {
+          "commons": "File:BG road sign Т12.svg",
+          "box": [
+            4,
+            139,
+            138,
+            216
+          ]
+        }
+      ]
+    },
+    "m-98614258a5539f3d": {
+      "width": 152,
+      "height": 152,
+      "layers": [
+        {
+          "commons": "File:Bulgaria road sign Г18(30).svg",
+          "box": [
+            1,
+            0,
+            152,
+            152
+          ]
+        }
+      ]
+    },
+    "m-c272f40ddee08452": {
+      "width": 152,
+      "height": 222,
+      "layers": [
+        {
+          "commons": "File:Bulgaria road sign В27.svg",
+          "box": [
+            1,
+            0,
+            152,
+            151
+          ]
+        },
+        {
+          "commons": "File:BG road sign Т16.svg",
+          "box": [
+            4,
+            153,
+            147,
+            222
+          ]
+        }
+      ]
+    },
+    "m-d7e9791d7489b360": {
+      "width": 139,
+      "height": 137,
+      "layers": [
+        {
+          "commons": "File:BG road sign Ж13.svg",
+          "box": [
+            0,
+            0,
+            138,
+            137
+          ]
+        }
+      ]
+    },
+    "m-f2dea7b0c704192c": {
+      "width": 149,
+      "height": 149,
+      "layers": [
+        {
+          "commons": "File:BG road sign Б3.svg",
+          "box": [
+            0,
+            0,
+            147,
+            148
+          ]
+        }
+      ]
+    }
+  }
+}
