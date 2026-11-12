@@ -1,0 +1,17 @@
+{
+  "tag": "media-2026.10.01-r2",
+  "packs": {
+    "images-webp": {
+      "url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01-r2/images-webp.zip",
+      "bytes": 46885476,
+      "sha256": "0c77cc450236416b1261b8307c4bca616abe4256cfe48a990224e240e12119db",
+      "file_count": 830
+    },
+    "images-svg": {
+      "url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01-r2/images-svg.zip",
+      "bytes": 959222,
+      "sha256": "ea0bf93f1244522bc56136698ebe627bc68ff27e49b6f78358d2a516efc3311f",
+      "file_count": 303
+    }
+  }
+}
