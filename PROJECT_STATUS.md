@@ -72,8 +72,6 @@ dataset; see "Consumers" below.
 
 ## Pending work
 
-* Merge [#1](https://github.com/slaviboy/bulgarian-driving-exam-database/pull/1), the exports and reports of
-  v1.1.0, after review (the workflow could not open it itself; see docs/releasing.md).
 * Future editions: the daily `validation` job opens an issue when ИААА publishes a new array; then run the
   `release` workflow (docs/releasing.md). Questions that change need their translations updated (stale ones
   fall back to Bulgarian).
