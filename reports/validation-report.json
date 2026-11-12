@@ -1,9 +1,9 @@
 {
-  "dataset_version": "1.2.0",
+  "dataset_version": "1.3.0",
   "source_edition": "2026-10-01",
   "summary": {
-    "checks": 17,
-    "checks_passed": 17,
+    "checks": 18,
+    "checks_passed": 18,
     "errors": 0,
     "warnings": 25
   },
@@ -44,7 +44,7 @@
       "name": "missing_media_files",
       "description": "every media file exists with its SHA-256",
       "passed": true,
-      "checked": 1717,
+      "checked": 2020,
       "errors": 0,
       "warnings": 0
     },
@@ -85,6 +85,14 @@
       "description": "every record has a known, attributed source",
       "passed": true,
       "checked": 2476,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "enhanced_media",
+      "description": "every picture has a WebP; vector signs pass the AndroidSVG lint; Commons drawings are credited",
+      "passed": true,
+      "checked": 830,
       "errors": 0,
       "warnings": 0
     },

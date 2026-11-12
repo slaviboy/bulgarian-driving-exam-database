@@ -1,6 +1,6 @@
-# Validation report — dataset 1.2.0 (edition 2026-10-01)
+# Validation report — dataset 1.3.0 (edition 2026-10-01)
 
-**17/17 checks passed** · 0 errors · 25 warnings
+**18/18 checks passed** · 0 errors · 25 warnings
 
 | Check | Result | Items checked | Errors | Warnings | Description |
 |---|---|---|---|---|---|
@@ -8,12 +8,13 @@
 | `missing_answers` | ✅ pass | 2476 | 0 | 0 | every question has ≥2 answers with text or picture |
 | `invalid_correct_answers` | ✅ pass | 2476 | 0 | 0 | ≥1 correct answer, correct_count consistent |
 | `broken_media_references` | ✅ pass | 887 | 0 | 0 | every media reference resolves |
-| `missing_media_files` | ✅ pass | 1717 | 0 | 0 | every media file exists with its SHA-256 |
+| `missing_media_files` | ✅ pass | 2020 | 0 | 0 | every media file exists with its SHA-256 |
 | `duplicate_questions` | ✅ pass | 2476 | 0 | 25 | no identical content under different IDs |
 | `duplicate_answers` | ✅ pass | 2476 | 0 | 0 | no repeated answer inside a question |
 | `invalid_references` | ✅ pass | 13763 | 0 | 0 | assignments point at existing variant/category/section |
 | `incorrect_ordering` | ✅ pass | 13763 | 0 | 0 | answers, questions, sections and variants keep source order |
 | `invalid_attribution` | ✅ pass | 2476 | 0 | 0 | every record has a known, attributed source |
+| `enhanced_media` | ✅ pass | 830 | 0 | 0 | every picture has a WebP; vector signs pass the AndroidSVG lint; Commons drawings are credited |
 | `exam_feasibility` | ✅ pass | 23 | 0 | 0 | every exam configuration can be generated (20 seeds each) |
 | `translations` | ✅ pass | 22284 | 0 | 0 | translations match the current Bulgarian text (stale or missing ones are left out) |
 | `json_schema` | ✅ pass | 3 | 0 | 0 | exports conform to contract/schemas |
