@@ -45,6 +45,14 @@ class UpscaleResult:
         return self.blur_psnr >= MIN_BLUR_PSNR and self.ssim >= MIN_SSIM
 
 
+TARGET_LONG_SIDE = 1400
+
+
+def scale_for_size(width: int, height: int) -> float:
+    """About :data:`TARGET_LONG_SIDE` px on the long side, never below 2× or above the model's 4×."""
+    return round(min(4.0, max(2.0, TARGET_LONG_SIDE / max(width, height))), 2)
+
+
 def find_binary(data_dir: Path) -> Path:
     configured = os.environ.get("QB_REALESRGAN")
     path = Path(configured) if configured else data_dir / "cache" / "tools" / "realesrgan" / BINARY

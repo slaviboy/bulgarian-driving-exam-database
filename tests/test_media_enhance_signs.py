@@ -82,3 +82,27 @@ def test_recipes_round_trip(tmp_path: Path):
     assert list(loaded) == ["m-1", "m-2"]
     assert loaded["m-2"].layers[0].drawing == "markings/x.svg" and loaded["m-2"].reviewed == "2026-11-12"
     assert loaded["m-1"].layers[0].source_key() == "File:BG road sign А1.svg"
+
+
+def test_compose_rotates_fits_exactly_and_covers():
+    src = b'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 10"><rect width="20" height="10"/></svg>'
+    recipe = Recipe(
+        "m-3",
+        40,
+        40,
+        [
+            Layer((0, 0, 10, 20), commons="A", rotate=90),  # a 20 × 10 drawing turned upright fills 10 × 20
+            Layer((20, 0, 40, 10), drawing="t.svg", exact=True, covers=[(1, 2, 3, 4, "#ffffff")]),
+        ],
+    )
+    data = compose(
+        recipe, {"A": src, "project:t.svg": src}, {"A": (0, 0, 20, 10), "project:t.svg": (5, 2, 9, 4)}
+    )
+    root = etree.fromstring(data)
+    groups = [e for e in root if etree.QName(e.tag).localname == "g"]
+    inner = groups[0][0]
+    assert inner.get("transform") == "rotate(90 10.0000 5.0000)"
+    assert groups[0].get("transform") == "matrix(1 0 0 1 -5.0000 5.0000)"
+    assert groups[1].get("transform") == "matrix(1 0 0 1 20.0000 0.0000)"  # whole viewBox, not the content
+    rect = next(e for e in root if etree.QName(e.tag).localname == "rect")
+    assert (rect.get("x"), rect.get("width"), rect.get("fill")) == ("1.00", "2.00", "#ffffff")

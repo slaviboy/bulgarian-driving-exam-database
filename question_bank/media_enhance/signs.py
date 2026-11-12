@@ -27,7 +27,11 @@ _URL_REF = re.compile(r"url\(\s*#([^)\s]+)\s*\)")
 class Layer:
     box: tuple[float, float, float, float]  # x0, y0, x1, y1 in picture pixels
     commons: str | None = None
-    drawing: str | None = None
+    drawing: str | None = None  # below data/enhance/: drawn for the project or traced from the picture
+    rotate: int = 0  # degrees clockwise (0, 90, 180, 270), applied before the drawing is fitted
+    exact: bool = False  # fit the drawing's whole viewBox instead of its visible content (traced pieces)
+    # rectangles painted over this drawing (x0, y0, x1, y1, "#rrggbb"), e.g. its own number or distance panel
+    covers: list[tuple[float, float, float, float, str]] = field(default_factory=list)
 
     def source_key(self) -> str:
         return self.commons or f"project:{self.drawing}"
@@ -50,7 +54,15 @@ def load_recipes(directory: Path) -> dict[str, Recipe]:
     out = {}
     for mid, r in read_json(path)["recipes"].items():
         layers = [
-            Layer(tuple(layer["box"]), layer.get("commons"), layer.get("drawing")) for layer in r["layers"]
+            Layer(
+                tuple(layer["box"]),
+                layer.get("commons"),
+                layer.get("drawing"),
+                layer.get("rotate", 0),
+                layer.get("exact", False),
+                [(*(float(v) for v in c[:4]), c[4]) for c in layer.get("covers", [])],
+            )
+            for layer in r["layers"]
         ]
         out[mid] = Recipe(mid, r["width"], r["height"], layers, r.get("reviewed"), r.get("notes", []))
     return out
@@ -59,7 +71,16 @@ def load_recipes(directory: Path) -> dict[str, Recipe]:
 def save_recipes(directory: Path, recipes: dict[str, Recipe]) -> None:
     def layer_json(layer: Layer) -> dict:
         key = {"commons": layer.commons} if layer.commons else {"drawing": layer.drawing}
-        return {**key, "box": [round(v, 2) for v in layer.box]}
+        extra = {
+            **({"rotate": layer.rotate} if layer.rotate else {}),
+            **({"exact": True} if layer.exact else {}),
+            **(
+                {"covers": [[*(round(float(v), 2) for v in c[:4]), c[4]] for c in layer.covers]}
+                if layer.covers
+                else {}
+            ),
+        }
+        return {**key, "box": [round(float(v), 2) for v in layer.box], **extra}
 
     payload = {
         mid: {
@@ -164,19 +185,140 @@ def compose(
         key = layer.source_key()
         src = etree.fromstring(sources[key], parser)
         _prefix_ids(src, f"l{n}-")
-        s, tx, ty = fit(bounds[key], layer.box)
+        if layer.exact:
+            vx, vy, vw, vh = viewbox(sources[key])
+            b = (vx, vy, vx + vw, vy + vh)
+        else:
+            b = bounds[key]
+        cx, cy = (b[0] + b[2]) / 2, (b[1] + b[3]) / 2
+        if layer.rotate % 180:  # a quarter turn swaps width and height around the centre
+            hw, hh = (b[3] - b[1]) / 2, (b[2] - b[0]) / 2
+            b = (cx - hw, cy - hh, cx + hw, cy + hh)
+        s, tx, ty = fit(b, layer.box)
         group = etree.SubElement(out, f"{{{SVG_NS}}}g")
         group.set("transform", f"matrix({s:.6g} 0 0 {s:.6g} {tx:.4f} {ty:.4f})")
         for attr in ("style", "fill", "stroke"):
             if src.get(attr) is not None:
                 group.set(attr, src.get(attr))
+        target = group
+        if layer.rotate % 360:
+            target = etree.SubElement(group, f"{{{SVG_NS}}}g")
+            target.set("transform", f"rotate({layer.rotate} {cx:.4f} {cy:.4f})")
         for child in list(src):
-            group.append(child)
+            target.append(child)
+        for x0, y0, x1, y1, colour in layer.covers:
+            rect = etree.SubElement(out, f"{{{SVG_NS}}}rect")
+            for name, value in (("x", x0), ("y", y0), ("width", x1 - x0), ("height", y1 - y0)):
+                rect.set(name, f"{value:.2f}")
+            rect.set("fill", colour)
     data = etree.tostring(out, encoding="utf-8")
     check = sanitise(data)
     if check.issues:
         raise ValueError(f"{recipe.media_id}: composed SVG has issues: {check.issues}")
     return check.data
+
+
+Box = tuple[float, float, float, float]
+
+
+def bounds_many(svgs: dict[str, bytes], render_px: int = 1024) -> dict[str, Box]:
+    """:func:`content_bounds` for many drawings in one browser session."""
+    import tempfile
+
+    from PIL import Image
+
+    from question_bank.media_enhance.svg import render_pngs
+
+    if not svgs:
+        return {}
+    with tempfile.TemporaryDirectory() as tmp:
+        jobs, geometry = [], {}
+        for i, (key, svg) in enumerate(svgs.items()):
+            vx, vy, vw, vh = viewbox(svg)
+            scale = render_px / max(vw, vh)
+            w, h = max(1, round(vw * scale)), max(1, round(vh * scale))
+            path = Path(tmp) / f"{i}.png"
+            jobs.append((svg, w, h, path))
+            geometry[key] = (path, vx, vy, vw / w, vh / h)
+        render_pngs(jobs)
+        out = {}
+        for key, (path, vx, vy, sx, sy) in geometry.items():
+            with Image.open(path) as image:
+                alpha = np.asarray(image.convert("RGBA"))[..., 3]
+            ys, xs = np.nonzero(alpha > 8)
+            if len(ys) == 0:
+                bx, by, bw, bh = viewbox(svgs[key])
+                out[key] = (bx, by, bx + bw, by + bh)
+            else:
+                x0, y0 = vx + xs.min() * sx, vy + ys.min() * sy
+                out[key] = (x0, y0, vx + (xs.max() + 1) * sx, vy + (ys.max() + 1) * sy)
+    return out
+
+
+def _attribution(entry: dict) -> str:
+    title = entry["title"].removeprefix("File:")
+    return f"{title} — {entry['license']} — {entry['author']} — {entry['page']}"
+
+
+def build_all(enhance_dir: Path, commons_cache: Path, out_dir: Path, only: set[str] | None = None) -> dict:
+    """Compose every recipe into ``out_dir/svg/<id>.svg`` and a raster fallback ``out_dir/png/<id>.png``
+    (4× the picture, at least 512 px on the long side). Returns a report for review and attribution."""
+    import hashlib
+
+    from question_bank.media_enhance.commons import load_catalogue, svg_path
+    from question_bank.media_enhance.svg import render_pngs
+
+    recipes = load_recipes(enhance_dir / "signs")
+    if only:
+        recipes = {m: r for m, r in recipes.items() if m in only}
+    catalogue = load_catalogue(commons_cache)
+    cache_path = out_dir / "bounds.json"
+    cache = read_json(cache_path) if cache_path.exists() else {}
+    sources: dict[str, bytes] = {}
+    digests: dict[str, str] = {}
+    for recipe in recipes.values():
+        for layer in recipe.layers:
+            key = layer.source_key()
+            if key in sources:
+                continue
+            if layer.commons:
+                raw = svg_path(commons_cache, catalogue[key]).read_bytes()
+            else:
+                raw = (enhance_dir / layer.drawing).read_bytes()
+            sources[key] = sanitise(raw).data
+            digests[key] = hashlib.sha256(sources[key]).hexdigest()
+    missing = {k: v for k, v in sources.items() if digests[k] not in cache}
+    for key, b in bounds_many(missing).items():
+        cache[digests[key]] = [round(v, 4) for v in b]
+    write_json(cache_path, cache)
+    bounds = {k: tuple(cache[digests[k]]) for k in sources}
+
+    rows, jobs = [], []
+    (out_dir / "svg").mkdir(parents=True, exist_ok=True)
+    for mid, recipe in sorted(recipes.items()):
+        row = {
+            "media_id": mid,
+            "width": recipe.width,
+            "height": recipe.height,
+            "sources": [_attribution(catalogue[layer.commons]) for layer in recipe.layers if layer.commons],
+            "project_drawings": sorted({layer.drawing for layer in recipe.layers if layer.drawing}),
+            "notes": recipe.notes,
+            "reviewed": recipe.reviewed,
+        }
+        try:
+            svg = compose(recipe, sources, bounds)
+        except ValueError as exc:
+            row["error"] = str(exc)
+            rows.append(row)
+            continue
+        (out_dir / "svg" / f"{mid}.svg").write_bytes(svg)
+        row["svg_bytes"] = len(svg)
+        scale = max(4.0, 512 / max(recipe.width, recipe.height))
+        size = (round(recipe.width * scale), round(recipe.height * scale))
+        jobs.append((svg, *size, out_dir / "png" / f"{mid}.png"))
+        rows.append(row)
+    render_pngs(jobs)
+    return {"recipes": rows}
 
 
 def split_vertical(rgba: np.ndarray, gap_fraction: float = 0.05) -> list[tuple[int, int, int, int]]:
