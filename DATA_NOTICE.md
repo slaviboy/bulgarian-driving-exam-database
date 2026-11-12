@@ -66,7 +66,7 @@ vehicle markings also come as **vector drawings** (`images-svg`); see docs/media
 ### Road-sign drawings from Wikimedia Commons
 
 Most sign drawings are files from Wikimedia Commons ("BG road sign …", "Bulgaria road sign …"), used under their
-own licences: **CC0** and public domain for many, **CC BY-SA 4.0** (or CC BY 4.0 / CC BY-SA 3.0) for others.
+own licences: 130 files in media revision r2, **CC BY-SA 4.0** (90) or **CC0** (40).
 Each picture lists the drawings it uses, with author, licence and file page, in its `credits` (questions.json,
 `media_credits` in master.sqlite). Pictures that contain a CC BY-SA drawing are adaptations of it and are shared
 under the same licence; reusers must keep the credits.
