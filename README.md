@@ -17,16 +17,17 @@ correct answers, written from the text of the law.
 > array without a licence; it is republished here with attribution by decision of the maintainer.
 > This project is not affiliated with ИААА. The MIT licence covers the code only.
 
-## The dataset (v1.2.0, edition 2026-10-01)
+## The dataset (v1.3.0, edition 2026-10-01)
 
 | | |
 |---|---|
 | Exam variants (official files) | 23 in 11 categories: A, AM, B, C, C+E, C1, C1+E, D, D (103), D+E, Ттм |
 | Questions | 2,476 unique (13,763 question rows across the variants) |
 | Answers | 7,893 — multi-correct questions included, every question has ≥ 1 correct answer |
-| Media | 830 pictures (234 MB PNG / 20 MB WebP) and 57 videos (350 MB) |
+| Media | 830 pictures (234 MB PNG originals; 44.7 MB WebP for apps) and 57 videos (350 MB) |
 | Exam rules | official parameters for all 23 variants, each value cited (Наредба № 38, ИААА methodology, simulator observation) |
 | Translations (from v1.1.0) | unofficial translations of every question and answer into English, Russian, Spanish, German, French, Portuguese, Greek, Turkish and Romanian — the Bulgarian original prevails ([docs/translations.md](docs/translations.md)) |
+| Clean pictures (from v1.3.0) | the WebP pictures for apps are without the tiled ИААА stamp and enlarged; the 303 road signs and vehicle markings are also vector drawings (SVG), mostly made from Wikimedia Commons drawings that are credited per picture — the originals stay published unchanged ([docs/media-enhance.md](docs/media-enhance.md)) |
 | Explanations (from v1.2.0) | unofficial Bulgarian explanations of why the correct answers are correct, for all 1,440 questions of category B (1,433 explanations, 7 conflicts with the current law left out) and the questions other categories share with it; each quotes ЗДвП, its Правилник or the ordinances on signs and markings word for word — the official bank and the law prevail ([docs/explanations.md](docs/explanations.md)) |
 
 Download the latest release:
@@ -47,7 +48,9 @@ https://github.com/slaviboy/bulgarian-driving-exam-database/releases/latest/down
 | `dataset-core-vX.Y.Z.zip` | all of the above in one archive |
 
 Media are published in a separate release per edition (`media-2026.10.01`): `images-original.zip`,
-`images-webp.zip` and every video as `<media id>.mp4`.
+`images-webp.zip` and every video as `<media id>.mp4`. From v1.3.0 the pictures for apps come from a media
+revision (`media-2026.10.01-r2`): `images-webp.zip` (without the stamp, enlarged) and `images-svg.zip` (road signs
+as vectors). The manifest's `media_packs` give the URL and SHA-256 of each pack.
 
 ## Why points live on the variant, not the question
 
@@ -92,7 +95,7 @@ pip install -r requirements-dev.txt && pip install -e .
 qb discover            # list the official files of the current edition
 qb extract             # download (incremental, resumable, 1 request/s) and parse them
 qb media               # download pictures and videos, verify copies in other directories
-qb build --dataset-version 1.2.0
+qb build --dataset-version 1.3.0
 qb verify              # re-verify exports, schemas, SQLite, explanation quotes and the licensing gate
 pytest -q
 ```

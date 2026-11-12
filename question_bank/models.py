@@ -90,13 +90,29 @@ class CategoriesFile(_Model):
 
 
 class MediaDerivative(_Model):
-    format: Literal["webp"]
+    format: Literal["webp", "svg"]
     relative_path: str
     mime_type: str
     bytes: int
     width: int | None
     height: int | None
     sha256: Sha256
+    process: list[str] = Field(
+        default_factory=list,
+        description="how the file was made from the original: stamp-removed, enlarged-2x, vector-commons, "
+        "vector-traced, vector-drawn (empty: format conversion only)",
+    )
+
+
+class MediaCredit(_Model):
+    """A third-party drawing used in a derivative (Wikimedia Commons), with what its licence requires."""
+
+    title: str
+    author: str
+    license: str
+    license_url: str | None = None
+    page: str
+    sha1: str
 
 
 class Media(_Model):
@@ -115,6 +131,9 @@ class Media(_Model):
         default_factory=list, description="other official file names with byte-identical content"
     )
     derivatives: list[MediaDerivative] = Field(default_factory=list)
+    credits: list[MediaCredit] = Field(
+        default_factory=list, description="third-party drawings in the derivatives (attribution required)"
+    )
 
 
 class QuestionMediaRef(_Model):
@@ -330,7 +349,7 @@ class ManifestFile(_Model):
 
 class MediaPack(_Model):
     id: str
-    kind: Literal["images-webp", "images-original"]
+    kind: Literal["images-webp", "images-original", "images-svg"]
     url: str
     bytes: int
     sha256: Sha256

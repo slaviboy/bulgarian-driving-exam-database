@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "dataset_version": "1.2.0",
+  "dataset_version": "1.3.0",
   "source_edition": "2026-10-01",
   "rules_version": "2024-12-12",
-  "built_at": "2026-11-07T00:07:31+00:00",
+  "built_at": "2026-11-12T02:00:43+00:00",
   "generator": {
     "name": "bulgarian-driving-exam-database",
     "version": "0.1.0",
-    "git_commit": "dd5f203707e370a2398df474370d416d6d5dd626"
+    "git_commit": "30842fdc67eba345045b6c2d51262ffb992c5cdf"
   },
   "content_fingerprint": "2206aa6d2156ebd65fa42a07167e47a7c02e9ffe2dd8d8cb984937a7b97948e1",
   "sources": [
@@ -18,7 +18,7 @@
       "attribution": "Източник: Изпълнителна агенция „Автомобилна администрация“ — https://public-eis.rta.government.bg/exam-questions/",
       "license": "none granted by source",
       "redistribution_status": "published_by_maintainer_decision",
-      "retrieved_at": "2026-11-06T23:33:15+00:00"
+      "retrieved_at": "2026-11-04T20:23:37+00:00"
     }
   ],
   "source_snapshot": [
@@ -279,90 +279,90 @@
     "TTM.zaguba-na-pravosposobnost-po-reda-na-chl-157-al-4-zdvp": 680,
     "TTM.pritezhavasht-pravosposobnost-za-kategoria-a-a1-a2-tkt-v1-v-ili-v-78": 48
   },
-  "dataset_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/v1.2.0/",
+  "dataset_base_url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/v1.3.0/",
   "files": [
     {
       "path": "categories.json",
       "bytes": 93701,
-      "sha256": "9d087a472645651e13d62090a600809943e2b7abc7cca490a258a129fc597ac9",
+      "sha256": "67a6119b63de7ceccd3d09fc3f5ce872975cb521d6256be04ebbb7cb76ae99bf",
       "media_type": "application/json"
     },
     {
       "path": "questions.json",
-      "bytes": 7673337,
-      "sha256": "075cb4140db4ad982cc45e89ace45d007d351097d84df0ac97bd6fb9ef46be63",
+      "bytes": 7982736,
+      "sha256": "71ef56027ddf9efcdc12361ef78574b48804254eabbf11fee6fb85062d487e08",
       "media_type": "application/json"
     },
     {
       "path": "exam-configs.json",
       "bytes": 58759,
-      "sha256": "e4c5432c9c3d90f33d2437e266f2dc7610c3dd55fc8a5d2657b2a5249e052b23",
+      "sha256": "ce766b0cb5bd80ef37e1b894f858d5b1c57adbcbaa80648f2b854ac8ea4d2b8e",
       "media_type": "application/json"
     },
     {
       "path": "translation-en.json",
       "bytes": 1436276,
-      "sha256": "c959b07d16e28cf8770243a4d0d72a7512e720db3b69435530af8af4de23e67e",
+      "sha256": "e0f4108edbdfd720745d74ed481759766a16f406463adc58dffd7ac1b9faf26f",
       "media_type": "application/json"
     },
     {
       "path": "translation-ru.json",
       "bytes": 1862780,
-      "sha256": "190bdae12c709d38b8f32a3b450c6c7cb7cf7dff8809cfc07507ff2ed9a7918a",
+      "sha256": "41c54ca3238ed4406f6847fbd4b7a9a8352724355ccfdfeda1b0b585a02dc064",
       "media_type": "application/json"
     },
     {
       "path": "translation-es.json",
       "bytes": 1487711,
-      "sha256": "778521f65e65a46f71eaac4fd5c2d9b8aa8e860721f2331559b22be7c2ee5d2d",
+      "sha256": "8d617809e2658e4eb12da793e8b0563b9478047f876dac539ef00e3cc18cc290",
       "media_type": "application/json"
     },
     {
       "path": "translation-de.json",
       "bytes": 1505374,
-      "sha256": "e808030af9b913d87e8318d4acefb82173ab89c7fa958d48e735ae68eec7cf47",
+      "sha256": "0455ba414abda584f4b9b358d13f861329fc92aa3753d2ec7bae872e44f0f3cf",
       "media_type": "application/json"
     },
     {
       "path": "translation-fr.json",
       "bytes": 1529020,
-      "sha256": "db8d6341bba9b21389fa97514e115969d84bb6777c8fb3ddb4ba77cd5949140c",
+      "sha256": "8c512439faa5aae8ed8a2b17879656746267bb76e7f85ccef1b9a85a5f6180c9",
       "media_type": "application/json"
     },
     {
       "path": "translation-pt.json",
       "bytes": 1477379,
-      "sha256": "525b7848a6475f7c2f8f4514ed9ea329d942002837cfbbebdac1ffddbc76e4f4",
+      "sha256": "e962f201235407efd16b1ea1cc384c1d80f497d9cfb779720a7c7db9244aa5cb",
       "media_type": "application/json"
     },
     {
       "path": "translation-el.json",
       "bytes": 1913238,
-      "sha256": "3ef53999f422b91a344fc4fb533bb7ceabf326b29fa051189de0acaff61a6893",
+      "sha256": "6726e29a1e3be05a1996d9f63f927706371b90ec258330284a2a08e1113f2fe2",
       "media_type": "application/json"
     },
     {
       "path": "translation-tr.json",
       "bytes": 1442712,
-      "sha256": "919b6ad6e4a9757d7d658fa852f42b81a299ab14bbb23938ea8d8290f6e95692",
+      "sha256": "b047412b7e46b01aaf60ac2802d969b05775db2e1223367f5368daf241bdd834",
       "media_type": "application/json"
     },
     {
       "path": "translation-ro.json",
       "bytes": 1495742,
-      "sha256": "99c496cddfa7dd4cad9c2d79d123f42d133d9111bf4fc619f6ec88e989668da4",
+      "sha256": "07819b6b8bfee5b1a344c532a69bfbb122d48424ba0e084d540edbf462440947",
       "media_type": "application/json"
     },
     {
       "path": "explanation-bg.json",
       "bytes": 2438484,
-      "sha256": "a04b8f857373914b6e7d2ef4f467c08da280d2ab80b2eb1bf063a397757eb103",
+      "sha256": "9233dbbff4f4981f649bc92a207fc7a231a80e31b888aaec7bad76634a154644",
       "media_type": "application/json"
     },
     {
       "path": "master.sqlite",
-      "bytes": 22683648,
-      "sha256": "db5576643d2f90ea8d952d00ab6d8be0d72938aa10098e6dc25b6939e54490a3",
+      "bytes": 22990848,
+      "sha256": "5392b1ab2a3aeeb8e5de1e8a37bd795dd454b409e1cb7fc11a8aae642810e266",
       "media_type": "application/vnd.sqlite3"
     }
   ],
@@ -377,12 +377,20 @@
       "file_count": 830
     },
     {
-      "id": "media-2026.10.01/images-webp",
+      "id": "media-2026.10.01-r2/images-webp",
       "kind": "images-webp",
-      "url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01/images-webp.zip",
-      "bytes": 19817012,
-      "sha256": "fc6986e91d3df1eace2f5791cd4b332e91a8c1a86ed7f6010906de300c41b760",
+      "url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01-r2/images-webp.zip",
+      "bytes": 46885476,
+      "sha256": "0c77cc450236416b1261b8307c4bca616abe4256cfe48a990224e240e12119db",
       "file_count": 830
+    },
+    {
+      "id": "media-2026.10.01-r2/images-svg",
+      "kind": "images-svg",
+      "url": "https://github.com/slaviboy/bulgarian-driving-exam-database/releases/download/media-2026.10.01-r2/images-svg.zip",
+      "bytes": 959222,
+      "sha256": "ea0bf93f1244522bc56136698ebe627bc68ff27e49b6f78358d2a516efc3311f",
+      "file_count": 303
     }
   ],
   "licensing": {
@@ -417,7 +425,7 @@
       {
         "name": "missing_media_files",
         "passed": true,
-        "detail": "1717 checked, 0 errors, 0 warnings — every media file exists with its SHA-256"
+        "detail": "2020 checked, 0 errors, 0 warnings — every media file exists with its SHA-256"
       },
       {
         "name": "duplicate_questions",
@@ -443,6 +451,11 @@
         "name": "invalid_attribution",
         "passed": true,
         "detail": "2476 checked, 0 errors, 0 warnings — every record has a known, attributed source"
+      },
+      {
+        "name": "enhanced_media",
+        "passed": true,
+        "detail": "830 checked, 0 errors, 0 warnings — every picture has a WebP; vector signs pass the AndroidSVG lint; Commons drawings are credited"
       },
       {
         "name": "exam_feasibility",

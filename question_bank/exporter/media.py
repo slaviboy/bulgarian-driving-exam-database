@@ -1,8 +1,13 @@
 """Prepare the media tree published in the media packs:
 
     data/media/images/<media-id>.png        original bytes, unchanged
-    data/media/images-webp/<media-id>.webp  WebP derivative for apps (format conversion only)
+    data/media/images-webp/<media-id>.webp  WebP derivative for apps
+    data/media/images-svg/<media-id>.svg    SVG derivative of signs and vehicle markings
     data/media/videos/<media-id>.mp4        original bytes, unchanged
+
+When data/enhance/derivatives.json exists, the derivatives are the published enhanced files (stamp removed,
+enlarged, signs as vectors; fetched by `qb media` from the pinned media revision) and every file is checked
+against its recorded SHA-256; without it, the WebP is a plain conversion of the original.
 
 Media IDs are content-addressed (`m-<sha256[:16]>`), so identical files under different names collapse
 into one record. Every picture is decoded with Pillow; every video must carry an MP4 `ftyp` box.
@@ -78,10 +83,48 @@ def _check_mp4(path: Path) -> None:
         raise MediaError(f"{path.name}: not an MP4 file (missing ftyp box)")
 
 
+def _enhanced_records(settings: Settings) -> dict[str, dict] | None:
+    """data/enhance/derivatives.json: the published enhanced derivatives (media_enhance.pack)."""
+    from question_bank.fsutil import read_json
+
+    path = settings.data_dir / "enhance" / "derivatives.json"
+    return read_json(path)["media"] if path.exists() else None
+
+
+def _enhanced_derivatives(media_dir: Path, mid: str, record: dict) -> tuple[list[MediaDerivative], list]:
+    from question_bank.models import MediaCredit
+
+    out = []
+    for fmt, mime in (("webp", "image/webp"), ("svg", "image/svg+xml")):
+        spec = record.get(fmt)
+        if spec is None:
+            continue
+        path = media_dir / spec["relative_path"]
+        if not path.exists() or sha256_file(path) != spec["sha256"]:
+            raise MediaError(
+                f"{mid}: {spec['relative_path']} is not the published enhanced file (run `qb media` to fetch "
+                "the media revision pinned in data/enhance/pack.json)"
+            )
+        out.append(
+            MediaDerivative(
+                format=fmt,
+                relative_path=spec["relative_path"],
+                mime_type=mime,
+                bytes=spec["bytes"],
+                width=spec["width"],
+                height=spec["height"],
+                sha256=spec["sha256"],
+                process=record["process"],
+            )
+        )
+    return out, [MediaCredit(**{k: c[k] for k in MediaCredit.model_fields}) for c in record["sources"]]
+
+
 def prepare_media(settings: Settings, records: dict[str, FetchRecord], *, webp: bool = True) -> PreparedMedia:
     by_name: dict[str, str] = {}
     media: dict[str, Media] = {}
     duplicates: dict[str, list[str]] = {}
+    enhanced = _enhanced_records(settings) if webp else None
     for name in sorted(records):
         record = records[name]
         src = settings.data_dir / record.path
@@ -122,7 +165,12 @@ def prepare_media(settings: Settings, records: dict[str, FetchRecord], *, webp: 
                 raise MediaError(f"{name}: cannot be decoded: {exc}") from exc
             dest = settings.media_dir / "images" / f"{mid}.png"
             _copy_if_needed(src, dest, record.sha256)
-            derivatives = [_webp(dest, settings.media_dir / "images-webp" / f"{mid}.webp")] if webp else []
+            credits: list = []
+            if enhanced is not None and mid in enhanced:
+                derivatives, credits = _enhanced_derivatives(settings.media_dir, mid, enhanced[mid])
+            else:
+                webp_dest = settings.media_dir / "images-webp" / f"{mid}.webp"
+                derivatives = [_webp(dest, webp_dest)] if webp else []
             media[mid] = Media(
                 id=mid,
                 kind="image",
@@ -136,6 +184,7 @@ def prepare_media(settings: Settings, records: dict[str, FetchRecord], *, webp: 
                 source_url=record.url,
                 source_id=SOURCE_ID,
                 derivatives=derivatives,
+                credits=credits,
             )
         else:
             raise MediaError(f"{name}: unsupported media type")

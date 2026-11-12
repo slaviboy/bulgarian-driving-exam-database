@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulgarian sign SVGs</title>
+<!--
+  Downloads the Bulgarian road-sign drawings from Wikimedia Commons through your own browser, the way any visitor
+  of Wikipedia downloads them: anonymous API requests (origin=*), one request per second, no personal data.
+  Result: bg-road-signs-commons.zip (svg/<sha1>.svg + catalogue.json with author and licence of every file).
+  Import it with:  qb enhance commons-import <path to the zip>
+-->
+<style>
+  :root { color-scheme: light dark; --bg: #f7f7f5; --fg: #1c1c1a; --muted: #686862; --card: #fff; --line: #dcdcd6;
+    --accent: #1f6feb; --bad: #c62828; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #151514; --fg: #ececE8; --muted: #a2a29b; --card: #20201e; --line: #3a3a36; --accent: #5b9bff;
+      --bad: #ff6b6b; }
+  }
+  body { margin: 0; padding: 16px; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  p { margin: 0 0 12px; color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin: 12px 0; }
+  button { font: inherit; padding: 10px 18px; border-radius: 8px; border: 0; background: var(--accent); color: #fff;
+    cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  progress { width: 100%; height: 14px; margin-top: 10px; }
+  #status { margin-top: 8px; font-weight: 600; }
+  #log { font: 12px/1.45 ui-monospace, Consolas, monospace; white-space: pre-wrap; max-height: 320px; overflow: auto;
+    color: var(--muted); }
+  .bad { color: var(--bad); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Bulgarian road-sign SVGs from Wikimedia Commons</h1>
+  <p>One click downloads every SVG of the Commons categories “SVG road signs in Bulgaria” and “Diagrams of road signs
+    of Bulgaria” (route-number and exit plates excluded), plus every SVG shown in the English Wikipedia article
+    “Road signs in Bulgaria”, together with each file’s author and licence. Your browser makes the requests,
+    one per second, like a normal visit to Wikipedia; it takes about 6–8 minutes.</p>
+  <p>The drawings are CC BY-SA licensed: whoever uses them must credit the authors (the catalogue records them).</p>
+  <div class="card">
+    <button id="go">Download all as ZIP</button>
+    <progress id="bar" value="0" max="1"></progress>
+    <div id="status">Ready.</div>
+  </div>
+  <div class="card"><div id="log"></div></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+const COMMONS = 'https://commons.wikimedia.org/w/api.php';
+const ENWIKI = 'https://en.wikipedia.org/w/api.php';
+const ROOTS = ['Category:SVG road signs in Bulgaria', 'Category:Diagrams of road signs of Bulgaria'];
+const EXCLUDED_CATEGORY_WORDS = ['route signs', 'exit signs', 'road number', 'road numbers'];
+const NOT_SIGNS = new Set(['File:Commons-logo.svg', 'File:Symbol category class.svg']);
+const INTERVAL_MS = 1000;
+
+const $ = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+function log(text, bad = false) {
+  const line = document.createElement('div');
+  line.textContent = text;
+  if (bad) line.className = 'bad';
+  $('log').appendChild(line);
+  $('log').scrollTop = $('log').scrollHeight;
+}
+let last = 0;
+async function polite() {
+  const wait = last + INTERVAL_MS - Date.now();
+  if (wait > 0) await sleep(wait);
+  last = Date.now();
+}
+async function api(base, params) {
+  const url = new URL(base);
+  for (const [k, v] of Object.entries({ ...params, format: 'json', formatversion: '2', origin: '*' })) {
+    url.searchParams.set(k, v);
+  }
+  for (let attempt = 0; attempt < 4; attempt++) {
+    await polite();
+    const r = await fetch(url);
+    if (r.ok) return r.json();
+    if (r.status === 429 || r.status >= 500) { await sleep(5000 * (attempt + 1)); continue; }
+    throw new Error(`HTTP ${r.status} for ${url}`);
+  }
+  throw new Error(`gave up on ${url}`);
+}
+const strip = html => (html || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+async function crawl() {
+  const files = new Set();
+  const seen = new Set();
+  const frontier = ROOTS.map(c => [c, 0]);
+  while (frontier.length) {
+    const [cat, depth] = frontier.pop();
+    if (seen.has(cat) || EXCLUDED_CATEGORY_WORDS.some(w => cat.toLowerCase().includes(w))) continue;
+    seen.add(cat);
+    let cont = {};
+    for (;;) {
+      const data = await api(COMMONS, { action: 'query', list: 'categorymembers', cmtitle: cat, cmlimit: '500', ...cont });
+      for (const m of data.query.categorymembers) {
+        if (m.ns === 14 && depth < 3) frontier.push([m.title, depth + 1]);
+        else if (m.ns === 6 && m.title.toLowerCase().endsWith('.svg')) files.add(m.title);
+      }
+      if (!data.continue) break;
+      cont = { cmcontinue: data.continue.cmcontinue };
+    }
+    log(`${cat}: ${files.size} files so far`);
+  }
+  const article = await api(ENWIKI, { action: 'parse', page: 'Road signs in Bulgaria', prop: 'images' });
+  for (const name of article.parse.images) {
+    const title = 'File:' + name.replace(/_/g, ' ');
+    if (name.toLowerCase().endsWith('.svg') && !NOT_SIGNS.has(title)) files.add(title);
+  }
+  log(`with the Wikipedia article: ${files.size} files`);
+  return [...files].sort();
+}
+
+async function describe(titles) {
+  const out = {};
+  for (let i = 0; i < titles.length; i += 50) {
+    const data = await api(COMMONS, {
+      action: 'query', titles: titles.slice(i, i + 50).join('|'), prop: 'imageinfo',
+      iiprop: 'url|size|sha1|timestamp|user|extmetadata',
+      iiextmetadatafilter: 'LicenseShortName|LicenseUrl|Artist|Credit|AttributionRequired|UsageTerms',
+    });
+    for (const page of data.query.pages) {
+      if (page.missing || !page.imageinfo) continue;
+      const info = page.imageinfo[0];
+      const meta = info.extmetadata || {};
+      const text = key => strip(meta[key] && meta[key].value);
+      out[page.title] = {
+        title: page.title, url: info.url, page: info.descriptionurl, sha1: info.sha1, bytes: info.size,
+        width: info.width, height: info.height, timestamp: info.timestamp, uploader: info.user,
+        author: text('Artist'), license: text('LicenseShortName'), license_url: text('LicenseUrl'),
+        attribution_required: text('AttributionRequired'),
+      };
+    }
+    log(`described ${Math.min(i + 50, titles.length)} / ${titles.length}`);
+  }
+  return out;
+}
+
+async function sha1hex(buffer) {
+  if (!(window.crypto && crypto.subtle)) return null;
+  const digest = await crypto.subtle.digest('SHA-1', buffer);
+  return [...new Uint8Array(digest)].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+$('go').addEventListener('click', async () => {
+  $('go').disabled = true;
+  try {
+    $('status').textContent = 'Listing the files…';
+    const titles = await crawl();
+    $('status').textContent = 'Reading authors and licences…';
+    const catalogue = await describe(titles);
+    const entries = Object.values(catalogue);
+    const zip = new JSZip();
+    $('bar').max = entries.length;
+    let done = 0;
+    let failed = 0;
+    for (const entry of entries) {
+      $('status').textContent = `Downloading ${done + 1} / ${entries.length}: ${entry.title}`;
+      try {
+        await polite();
+        const r = await fetch(entry.url);
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const buffer = await r.arrayBuffer();
+        const sha = await sha1hex(buffer);
+        if (sha && sha !== entry.sha1) throw new Error('SHA-1 mismatch');
+        zip.file(`svg/${entry.sha1}.svg`, buffer);
+      } catch (e) {
+        failed++;
+        entry.download_error = String(e.message || e);
+        log(`${entry.title}: ${entry.download_error}`, true);
+      }
+      $('bar').value = ++done;
+    }
+    zip.file('catalogue.json', JSON.stringify(catalogue, null, 2) + '\n');
+    $('status').textContent = 'Packing the ZIP…';
+    const blob = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'bg-road-signs-commons.zip';
+    document.body.appendChild(a);
+    a.click();
+    $('status').textContent = `Done: ${entries.length - failed} files saved as bg-road-signs-commons.zip`
+      + (failed ? ` (${failed} failed, see the log)` : '') + '.';
+  } catch (e) {
+    $('status').textContent = 'Stopped: ' + (e.message || e);
+    $('status').className = 'bad';
+    $('go').disabled = false;
+  }
+});
+</script>
+</body>
+</html>

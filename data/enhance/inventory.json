@@ -1,0 +1,4163 @@
+{
+  "classes": {
+    "scene": "illustrated traffic situation: stamp removed, enlarged 2×",
+    "photo": "photo or rendering of vehicles, people, truck rears: stamp removed, enlarged",
+    "traffic-light": "rendered traffic light: stamp removed, enlarged",
+    "dashboard-symbol": "dashboard warning lamp: stamp removed, enlarged",
+    "drawing": "line drawing: stamp removed, enlarged",
+    "sign": "road sign (with any plates): Wikimedia Commons SVG, composed when needed",
+    "vehicle-marking": "flat vehicle marking or badge: redrawn as SVG"
+  },
+  "pictures": {
+    "m-007d6ba795f1bed0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0091d77c5d928d78": {
+      "class": "sign",
+      "width": 616,
+      "height": 542
+    },
+    "m-00beb1824907f7e9": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-00cd091e5fa8c51e": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-00e1f2598bc05bd4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-00ed1cd498069469": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-015a0b0cb2b2714a": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-0163fd2a94496d83": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-01c4abd5e46588d8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-01f289e7dcf8fd21": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0200ed5f74d8f6e7": {
+      "class": "sign",
+      "width": 113,
+      "height": 152
+    },
+    "m-021852ebf97e7426": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-022733a054d9205d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-02763da2987fdfbd": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-02f9a99001f705f4": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-03518881cef607cd": {
+      "class": "sign",
+      "width": 169,
+      "height": 222
+    },
+    "m-0371809c048b66a5": {
+      "class": "photo",
+      "width": 181,
+      "height": 202
+    },
+    "m-037263d35c5ba32e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-03925defd05f16d5": {
+      "class": "photo",
+      "width": 197,
+      "height": 202
+    },
+    "m-0405447b0b4abfc2": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-0433a68297a105e1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0444aac981cb9a80": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-04f204c7283e4144": {
+      "class": "photo",
+      "width": 186,
+      "height": 202
+    },
+    "m-05744d21b4ae3286": {
+      "class": "traffic-light",
+      "width": 87,
+      "height": 254
+    },
+    "m-058aba1e6a239af9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-05f4ab3a4f56ce39": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-061fa53ec5592296": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-0665c2f1f53184e7": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-06c5baea8f2f24b5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-072daaf5a810e379": {
+      "class": "sign",
+      "width": 123,
+      "height": 157
+    },
+    "m-07df753d453b35b8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0824d4d5a688962b": {
+      "class": "sign",
+      "width": 122,
+      "height": 157
+    },
+    "m-0862a0edfafbb43f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0872557d5bb2c855": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-08eabf07ed6e1ffa": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-091c1e80208c0c21": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0921286298c9cda4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0937cfc3c59d4c4f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-09b20ab1f4b770f0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-09f96cb231207430": {
+      "class": "sign",
+      "width": 138,
+      "height": 90
+    },
+    "m-0a2c78e4dd478c28": {
+      "class": "sign",
+      "width": 144,
+      "height": 188
+    },
+    "m-0a450e0296f7525d": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-0a8ddec766890532": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0aa8b69bb904dd44": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0ab0ce0ec29a2298": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-0ae98957ee567059": {
+      "class": "photo",
+      "width": 186,
+      "height": 202
+    },
+    "m-0aff7ca1d516eb20": {
+      "class": "photo",
+      "width": 139,
+      "height": 84
+    },
+    "m-0b2a4a0d69b18bb7": {
+      "class": "sign",
+      "width": 41,
+      "height": 50
+    },
+    "m-0bc394018a625419": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-0be4013bec65bdac": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-0cdc4f3d2d818ebb": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-0ced4c6b2d836378": {
+      "class": "traffic-light",
+      "width": 87,
+      "height": 254
+    },
+    "m-0d36f2f651cc1dbd": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-0d5c32edc0d16547": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-0ddead2fecc41446": {
+      "class": "sign",
+      "width": 126,
+      "height": 159
+    },
+    "m-0ec9048952e4a89a": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-0eca4c83b6ebd554": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-0f3509ce2ed49eb0": {
+      "class": "sign",
+      "width": 157,
+      "height": 157
+    },
+    "m-0f3a45bf1cfe7fb2": {
+      "class": "photo",
+      "width": 170,
+      "height": 250
+    },
+    "m-0f4fbdbe05be50b6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-10c98a04fd932b17": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-1183304a4840231c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-11ac8653951e4c43": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-11ce31e3dbf9c7e5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1269c20a5ebe7617": {
+      "class": "sign",
+      "width": 198,
+      "height": 123
+    },
+    "m-126fb271637cee06": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1282e2779b393fb4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-129e68457d6080a8": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-12a69a0d0c268f46": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-138506864c1c7ea0": {
+      "class": "photo",
+      "width": 198,
+      "height": 203
+    },
+    "m-13b5b73bf9daf4fe": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-13db9bcecb4c69b2": {
+      "class": "photo",
+      "width": 237,
+      "height": 116
+    },
+    "m-13f77357bb1093e6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-14072f8d0e34c4af": {
+      "class": "dashboard-symbol",
+      "width": 194,
+      "height": 123
+    },
+    "m-14c8487d03e22edd": {
+      "class": "sign",
+      "width": 152,
+      "height": 209
+    },
+    "m-14fd2b398858d120": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-153a6ab59cc5498c": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-15793ef4bdd3d023": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-157b2b4d0db13500": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1601de2edb257e51": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-1633ab4021c10f68": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-164ffaf1d2af1625": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-167671c6b027235c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-16f57d4f26a329e2": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-17093d4295fc1a28": {
+      "class": "sign",
+      "width": 126,
+      "height": 166
+    },
+    "m-170be879032d60f5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1729d1a7ca314a84": {
+      "class": "scene",
+      "width": 718,
+      "height": 394
+    },
+    "m-172a7c8693e9252d": {
+      "class": "sign",
+      "width": 126,
+      "height": 166
+    },
+    "m-1737d27ae0d7fc48": {
+      "class": "photo",
+      "width": 181,
+      "height": 201
+    },
+    "m-173e282c85cde008": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-180572d57a95fb59": {
+      "class": "sign",
+      "width": 140,
+      "height": 138
+    },
+    "m-182bd0e09a73fdef": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-18442eb1d4dbb3c8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1870de7dd798037a": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-18c3462df0716ab5": {
+      "class": "photo",
+      "width": 207,
+      "height": 172
+    },
+    "m-199a165ba09ac4cc": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-19d85213ab86c4bd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-19e2c8e3ff7515f7": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1a150cc5f400e731": {
+      "class": "sign",
+      "width": 43,
+      "height": 43
+    },
+    "m-1a1f35b092875a27": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1a4fe82a7bfbaf3f": {
+      "class": "vehicle-marking",
+      "width": 160,
+      "height": 84
+    },
+    "m-1ac7bcc98e5b1d71": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-1ae6184f1c1f7b5a": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-1aec1b29ef6fb4ea": {
+      "class": "photo",
+      "width": 184,
+      "height": 103
+    },
+    "m-1be7a493f8fb125e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1c25ef06c2477cd7": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1c579eb30dc92955": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-1c733f655b4938db": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1dd47330ce7513ee": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-1dee7464e118ae63": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1eacbe29206be18b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1f08baa1b354ee2a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1f0dde0611e00836": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1f1b389c720f7381": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1f9efba4122517d0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-1fba85b4939a4c02": {
+      "class": "photo",
+      "width": 181,
+      "height": 202
+    },
+    "m-1fe682b5b020a64f": {
+      "class": "photo",
+      "width": 250,
+      "height": 142
+    },
+    "m-1fe9caf0d3348a9e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-203a68d76785dd72": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-203cfe9b0974b81b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-21c473079a7c5df8": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-21db9906aaa3c147": {
+      "class": "vehicle-marking",
+      "width": 157,
+      "height": 157
+    },
+    "m-21f3b9f0fe8924ef": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2254943ef84e5da3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2257edc717f1919f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-22b8b04cc75948a0": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-233ed7ef7b4f7d77": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-236617df3a453a94": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-243c9e6f5ebba8c3": {
+      "class": "sign",
+      "width": 136,
+      "height": 134
+    },
+    "m-2481bf4d0969cb06": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-248ea2042ead006d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-249d99cc886878b7": {
+      "class": "sign",
+      "width": 126,
+      "height": 157
+    },
+    "m-24c65c45c5031c3f": {
+      "class": "sign",
+      "width": 149,
+      "height": 191
+    },
+    "m-24e2417256c9125f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-25eb688fcddb2d39": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-261390b622909353": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-269cca9bb14d932f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-26d1a72353e66352": {
+      "class": "sign",
+      "width": 127,
+      "height": 166
+    },
+    "m-26dff52479ea9bbe": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-272f3e7f6c26058d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2773fd76127d25b0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-27cde0745a937049": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-28822ae475889f31": {
+      "class": "sign",
+      "width": 136,
+      "height": 278
+    },
+    "m-29a46d9a16ff49b2": {
+      "class": "sign",
+      "width": 180,
+      "height": 151
+    },
+    "m-29ad01296db79735": {
+      "class": "traffic-light",
+      "width": 87,
+      "height": 254
+    },
+    "m-29cf5a24f00ef107": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-29edfa2ec2faf913": {
+      "class": "photo",
+      "width": 148,
+      "height": 108
+    },
+    "m-2a26f47531881fe8": {
+      "class": "dashboard-symbol",
+      "width": 187,
+      "height": 119
+    },
+    "m-2aa1359fd9dc3102": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2b10c75dbce14294": {
+      "class": "traffic-light",
+      "width": 132,
+      "height": 166
+    },
+    "m-2b98e501982105ab": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2bb198a33b76b66e": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-2bcfec448a55445e": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-2bfff4bde6465d53": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2c23f50c5d6ee811": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2c738f3182a77713": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-2cfc3a8c2335a774": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-2cfe999bcb0a4347": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2d044c7d03664ed4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2d0d6ac7fbd31baa": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2d354f76f08d3d97": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-2d49d2a6786d24da": {
+      "class": "sign",
+      "width": 426,
+      "height": 542
+    },
+    "m-2defc854fdf88a21": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2e1a76158224e2f2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2ed119ed49425e23": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-2ed1a2b192e85f93": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2f088af96c1d913a": {
+      "class": "scene",
+      "width": 711,
+      "height": 394
+    },
+    "m-2f37dbcef7b3da36": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2fc059cb91360d4a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-2fca82ab5bd074d5": {
+      "class": "sign",
+      "width": 133,
+      "height": 143
+    },
+    "m-303562e2123c9329": {
+      "class": "sign",
+      "width": 150,
+      "height": 132
+    },
+    "m-305cfe4bd13c985b": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-30716648e55bd3b4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-309cb25618e89c69": {
+      "class": "sign",
+      "width": 179,
+      "height": 179
+    },
+    "m-30a335357e65f335": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3114293ccfadf968": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3153f14085e0297c": {
+      "class": "photo",
+      "width": 245,
+      "height": 108
+    },
+    "m-317f9dc4dbb7be2f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-31a66d09aee1c7c7": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3245e729af25c9df": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-329d2d12a6d395e5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-32a94fe462486a3d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-32f9ad66e565a882": {
+      "class": "vehicle-marking",
+      "width": 197,
+      "height": 128
+    },
+    "m-34b9456e0d0d4138": {
+      "class": "sign",
+      "width": 129,
+      "height": 157
+    },
+    "m-34c05a13f96956c4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-34cbe9a451a2125e": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-34f6f88b3bb68463": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-352d2b05fe0c6484": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-352e84cafa1be1fd": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-3532ad2153ad2baa": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-35984566e3da212c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-35abdb320b6cb754": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-35b8999a812830a3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-35d22ce080e39445": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3615a5410379e1c0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-361ffcc656782991": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-362b5b721a963e28": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-369a418216e3e5ba": {
+      "class": "vehicle-marking",
+      "width": 198,
+      "height": 170
+    },
+    "m-3717aa558fdad188": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-373134aa1c5451c9": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-379e50c2ce5c5dc2": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 251
+    },
+    "m-37bdd6458bd73e22": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-37c1b7542d6103c3": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-381ecbcab5c3c9fd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3889bdecbf733009": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 252
+    },
+    "m-38fb0b0d0ef70ab7": {
+      "class": "traffic-light",
+      "width": 87,
+      "height": 254
+    },
+    "m-39cd9e4f56398c83": {
+      "class": "sign",
+      "width": 616,
+      "height": 542
+    },
+    "m-3a2824af6dd1431a": {
+      "class": "photo",
+      "width": 198,
+      "height": 185
+    },
+    "m-3a28f8d625ca9941": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-3a2ff3b0befd4902": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-3a621ca4e7c91819": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-3b263e938bb653f5": {
+      "class": "photo",
+      "width": 171,
+      "height": 251
+    },
+    "m-3b4b8d46cb4ce973": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3b4e820ee0ea25b1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3c0943863c189068": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3c7f53c4d358790f": {
+      "class": "sign",
+      "width": 122,
+      "height": 157
+    },
+    "m-3c9d1e20b098a46a": {
+      "class": "photo",
+      "width": 195,
+      "height": 153
+    },
+    "m-3ca030d628a16546": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3ca8940b650215d8": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-3cb5de0aa942fe90": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3cde801567454595": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-3d2b95d357c81cf7": {
+      "class": "sign",
+      "width": 120,
+      "height": 156
+    },
+    "m-3d55e118887804ae": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3da10c1723731a4b": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-3e512487275d11fa": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3e919e42e04eff42": {
+      "class": "photo",
+      "width": 182,
+      "height": 201
+    },
+    "m-3ef87ebd789fc040": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-3f7c33717ddcfb22": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3fb649233fb1a38e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-3ffa890274bf7202": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-401d2455be6f21b4": {
+      "class": "sign",
+      "width": 157,
+      "height": 157
+    },
+    "m-4063e4e34ebfb6f1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-407981bde0d07ea9": {
+      "class": "sign",
+      "width": 166,
+      "height": 166
+    },
+    "m-40f81120e115095d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4192a567cbef94d9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-41adf7dc887bdc14": {
+      "class": "sign",
+      "width": 137,
+      "height": 276
+    },
+    "m-41c4d34a7e918e6a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-42502aced7f58778": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-42b3f2d14bbf3065": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-42dc79977ce4384b": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-43000989cedba62b": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-4306c59294c6fbd6": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-432ab18cb6801c5f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-437da6f0a03fcb57": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-43e9f54eae27c413": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-448624014e5c3fe8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-44a23030ca84c4f5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-44e30eace2f53d56": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-44f346c4ff68b93e": {
+      "class": "sign",
+      "width": 162,
+      "height": 162
+    },
+    "m-4521c7417cdd4f49": {
+      "class": "sign",
+      "width": 157,
+      "height": 157
+    },
+    "m-453ff3d99d4ee47b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-457593f27ee1ca0e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-45912f88393ffc43": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-459657b7517c6c4a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-45c54343b4d5a5af": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4614042ef0db4cab": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-46bfedb38baa94f0": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-46ea7c6aac1a9a67": {
+      "class": "scene",
+      "width": 712,
+      "height": 393
+    },
+    "m-4772633f796dcf5d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-477748e0d11da4b3": {
+      "class": "photo",
+      "width": 198,
+      "height": 203
+    },
+    "m-47acbd0195eb4153": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-47ae7e7fc69f6aab": {
+      "class": "photo",
+      "width": 181,
+      "height": 201
+    },
+    "m-47e48555216a96fe": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-48555142a56c4642": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-48800e37c4a6206c": {
+      "class": "sign",
+      "width": 124,
+      "height": 156
+    },
+    "m-4881c8634b9514f2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-488553567dd3e60c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-48f74b6340878a7a": {
+      "class": "scene",
+      "width": 723,
+      "height": 399
+    },
+    "m-49a9a31e1ed7c6fc": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-49a9cb5bf3d93805": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-49c066a78c6aa012": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-49ecf04faced5f8e": {
+      "class": "sign",
+      "width": 137,
+      "height": 278
+    },
+    "m-4a21c685ee61accd": {
+      "class": "vehicle-marking",
+      "width": 189,
+      "height": 148
+    },
+    "m-4a30c0da24060553": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4a31b9be335ae232": {
+      "class": "sign",
+      "width": 151,
+      "height": 151
+    },
+    "m-4a404067ceb2a377": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-4b0299229e223283": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4b66d9fe538f8566": {
+      "class": "sign",
+      "width": 155,
+      "height": 155
+    },
+    "m-4c026e101a8512db": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4c1098e693b77fb2": {
+      "class": "drawing",
+      "width": 803,
+      "height": 444
+    },
+    "m-4cb71762051bf756": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4cd4073ecbf48b75": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4d4fb4c8a1db44eb": {
+      "class": "sign",
+      "width": 126,
+      "height": 166
+    },
+    "m-4d87c3bcd553e663": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-4e7034bb2ff83824": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4ebe6c1c775f7b42": {
+      "class": "photo",
+      "width": 169,
+      "height": 215
+    },
+    "m-4ee915bcfc0a81d4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-4f64b3eaa82840d2": {
+      "class": "sign",
+      "width": 123,
+      "height": 169
+    },
+    "m-4fac746981ac756a": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-50132c5cee2999d4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-505393cf7eed8821": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-506659292ec20aee": {
+      "class": "sign",
+      "width": 172,
+      "height": 172
+    },
+    "m-5079445745749caf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-510ebf02634553e0": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-5130a5ec16e55b7f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-514eba2c4db73201": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-51ef6de1cc625ab2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5219b78faed2781a": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-5242588acb525709": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5343e718571fcf03": {
+      "class": "sign",
+      "width": 122,
+      "height": 157
+    },
+    "m-534846133056d5c5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-53b40b4845cc80af": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5482ac64e4939629": {
+      "class": "photo",
+      "width": 181,
+      "height": 201
+    },
+    "m-553ee43f9d065853": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-5576b6de4ac5a0a1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-560c78fac3d0e5fa": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-56158913ca2dc3c8": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-563d953c20105a76": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-565ac160ce141cbf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-56ea4ad0fd18b441": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-56f117f0884f84ea": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5719913a018d6750": {
+      "class": "sign",
+      "width": 127,
+      "height": 204
+    },
+    "m-5799ee8266c4d184": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-57a03fa0ddc4a77a": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-5830e181d51f4089": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5845dfe8c8c28814": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5872d05693a01ebd": {
+      "class": "photo",
+      "width": 182,
+      "height": 176
+    },
+    "m-587b12d06e09fdcc": {
+      "class": "photo",
+      "width": 187,
+      "height": 95
+    },
+    "m-589867b9ddeb01a7": {
+      "class": "sign",
+      "width": 122,
+      "height": 157
+    },
+    "m-58d58886efda0494": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-59ae28845a426c9d": {
+      "class": "sign",
+      "width": 141,
+      "height": 278
+    },
+    "m-59bbcdcf77a1ccfc": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-59d375ec6c3ca8c4": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5a1cbe640de9fe12": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5b80680e33fa5b55": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-5c675d21f3642b3d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5ca99ef2bfd857ad": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5cfc8c8890cd28bd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-5d2a39d51cc267ec": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-5d2e9e7c3489df54": {
+      "class": "sign",
+      "width": 122,
+      "height": 156
+    },
+    "m-5d61a5afb47cbb65": {
+      "class": "sign",
+      "width": 133,
+      "height": 143
+    },
+    "m-5e47e1b7372f5f4d": {
+      "class": "dashboard-symbol",
+      "width": 195,
+      "height": 123
+    },
+    "m-5e873876c8bd3a97": {
+      "class": "photo",
+      "width": 170,
+      "height": 250
+    },
+    "m-5f110c0de45e572d": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-5f688911c9b71196": {
+      "class": "sign",
+      "width": 154,
+      "height": 225
+    },
+    "m-5fcfce9fed61fe52": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-603a2dfe38a22e7b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-60c53d4cbb9c1605": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-613eca6017e4bd6e": {
+      "class": "vehicle-marking",
+      "width": 124,
+      "height": 219
+    },
+    "m-61d22f0a3699029f": {
+      "class": "photo",
+      "width": 193,
+      "height": 107
+    },
+    "m-61fcd219178475e4": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-62084d34be3e414f": {
+      "class": "sign",
+      "width": 150,
+      "height": 132
+    },
+    "m-6279c798a2d0514b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-62fff967cfda59b1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-63109f37a37a7344": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-634584c377648574": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-63eacd19200e7151": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-647e4dcd78bd79df": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-649abab8f5400188": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-667c83704214f73f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-67e25001a2c1a1f8": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-686003b9630e8932": {
+      "class": "sign",
+      "width": 167,
+      "height": 140
+    },
+    "m-689a8d2e5e4eac2b": {
+      "class": "sign",
+      "width": 151,
+      "height": 137
+    },
+    "m-68dda22e9c78b128": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6906d725245f20d2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6963607817f35a8c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-69660f933b5f202b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-696bca68943b5dd1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-69e5c20d4b43c985": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-6a1be9b4d8db871b": {
+      "class": "sign",
+      "width": 126,
+      "height": 164
+    },
+    "m-6aab46f476947dff": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6add48a1469c81a8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6b4a61bfb6f7f555": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6b572b9271d4734b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6b94469873bf8213": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6be12862387a774c": {
+      "class": "photo",
+      "width": 146,
+      "height": 172
+    },
+    "m-6c6e778156bc6f67": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6d3b50022fda9baf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6dbc034747f0a0f7": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-6dddd25f155ef740": {
+      "class": "sign",
+      "width": 138,
+      "height": 216
+    },
+    "m-6ee205e1a7c69034": {
+      "class": "vehicle-marking",
+      "width": 157,
+      "height": 157
+    },
+    "m-6eea2d0c41b82a10": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 252
+    },
+    "m-6f3ae098e93102cd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-6fa789a620f34acb": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-6fe04ee5b7350e5c": {
+      "class": "sign",
+      "width": 138,
+      "height": 90
+    },
+    "m-707956c895111d6c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-708ead914eef5d9c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-71043628550399e3": {
+      "class": "dashboard-symbol",
+      "width": 195,
+      "height": 123
+    },
+    "m-7123deaf71e9dd29": {
+      "class": "sign",
+      "width": 170,
+      "height": 153
+    },
+    "m-7146f3a77a3ad872": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-714b949e917807c2": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-7231d95d655c7b0f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-731eae41368ec6d7": {
+      "class": "sign",
+      "width": 126,
+      "height": 166
+    },
+    "m-732436d1dfaab54b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-73586d1eef1228d3": {
+      "class": "vehicle-marking",
+      "width": 152,
+      "height": 152
+    },
+    "m-74007754f42126d6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-741f3f33855ab002": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-743ee325f7785fd7": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7479b0cc0ea0ec53": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-74b164f132d77147": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-75366564f686fe5f": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-76a5d6e552ee07e4": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-77016d22c93fc818": {
+      "class": "vehicle-marking",
+      "width": 198,
+      "height": 170
+    },
+    "m-7736971a4995d26d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-775f872c4be5692b": {
+      "class": "photo",
+      "width": 198,
+      "height": 203
+    },
+    "m-77fc0094f5cd8f5d": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-78110f3c475f2411": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-781712fea2cd0bd9": {
+      "class": "photo",
+      "width": 198,
+      "height": 203
+    },
+    "m-78830613b2de9c05": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-788d61c1b12f00fd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7930b9bff0d64853": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-797dced5a8047bdd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-799fd7f8e6dcbac3": {
+      "class": "photo",
+      "width": 207,
+      "height": 172
+    },
+    "m-7a20d7ae4149acd5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7a8dfb9b6dbea30c": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-7b221313da64370b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7b9e7f483504fb46": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-7bd2ee9e6a33d682": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7be14e8d8479ae69": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7c3512967f1b21e6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7c5759956966efa2": {
+      "class": "traffic-light",
+      "width": 87,
+      "height": 254
+    },
+    "m-7c576c678315a76a": {
+      "class": "scene",
+      "width": 712,
+      "height": 392
+    },
+    "m-7d1b0a3d7c91f1bd": {
+      "class": "scene",
+      "width": 718,
+      "height": 394
+    },
+    "m-7e71e48c57922297": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7ede551a00c922e7": {
+      "class": "sign",
+      "width": 127,
+      "height": 223
+    },
+    "m-7f069960ef6ae5a8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-7f0ee94c0cb7e081": {
+      "class": "photo",
+      "width": 176,
+      "height": 129
+    },
+    "m-7f39ee77292b0b98": {
+      "class": "sign",
+      "width": 144,
+      "height": 95
+    },
+    "m-7f690f27cf718dc7": {
+      "class": "sign",
+      "width": 227,
+      "height": 141
+    },
+    "m-7f6a95463493da26": {
+      "class": "dashboard-symbol",
+      "width": 193,
+      "height": 122
+    },
+    "m-8081f0a5ed1cc035": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-808318fdef687410": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-80d25e32cdf27c30": {
+      "class": "scene",
+      "width": 715,
+      "height": 394
+    },
+    "m-8149d1b6d30d1bbb": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-8154da543c9e4619": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-816e3d88fa17f306": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-8193d0824fd9f3d0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-81a806a8eeeef06a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-822d0e0747ca85a8": {
+      "class": "traffic-light",
+      "width": 205,
+      "height": 98
+    },
+    "m-82bdcbfb8ea7512f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-82d7506a9a2b6e05": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8324de7d97a965e6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-834a9c95b2285037": {
+      "class": "sign",
+      "width": 228,
+      "height": 110
+    },
+    "m-834e75e6e1cd4e8d": {
+      "class": "scene",
+      "width": 712,
+      "height": 392
+    },
+    "m-835f5fa16d46cea0": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-8422d247c036d8e3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8430d2dd8e571c1f": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-8433f516fff516a5": {
+      "class": "sign",
+      "width": 126,
+      "height": 166
+    },
+    "m-84a04b4bd435071e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-84ad1fe243966372": {
+      "class": "dashboard-symbol",
+      "width": 187,
+      "height": 119
+    },
+    "m-84d9a09e9b97cc31": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8551f6de68d4d7a9": {
+      "class": "sign",
+      "width": 227,
+      "height": 141
+    },
+    "m-856c3b957f30738f": {
+      "class": "photo",
+      "width": 152,
+      "height": 238
+    },
+    "m-85ebaa583fa5a08b": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-864146dc0ebe7dea": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8654c23e3d43d53f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-86608a8c1b52227d": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-86b9b849efe58a5a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-875134196dfd840e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-87cbf027cc8a4cee": {
+      "class": "sign",
+      "width": 180,
+      "height": 151
+    },
+    "m-87dfe1a679f3c1f7": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8801d744ad66e8db": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-880d6440701558a8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-88245b41c522df8d": {
+      "class": "sign",
+      "width": 156,
+      "height": 156
+    },
+    "m-882494d7bddacdae": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8974a375c4a3e535": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8993d20a2c6a6c15": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-89a899a94dad88eb": {
+      "class": "sign",
+      "width": 228,
+      "height": 110
+    },
+    "m-89f0c9b3e0783516": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8a2f3a9b076a9c1f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8a7e1de1b629d495": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8b2c41b0059077dd": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-8be3299d11b872cd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8bfa0b2e0bf8b6dd": {
+      "class": "sign",
+      "width": 129,
+      "height": 158
+    },
+    "m-8c1700581d171e71": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8c5aa5b563769b7e": {
+      "class": "photo",
+      "width": 182,
+      "height": 201
+    },
+    "m-8c9e527c87954de5": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-8ce46e8e41e8510b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8cea07d7f641f6fb": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8cfaf0cd1c65278a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8d4af2d90a45934a": {
+      "class": "sign",
+      "width": 80,
+      "height": 101
+    },
+    "m-8d9c4940b9263312": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8ddf773334bc270b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8de6a22cfb9c7ca0": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-8ed6b4c9fde78085": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8f267c926ec35295": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8f3806e43a0a9943": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-8f3b92b3af068ded": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8f8f68ecd975edb5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-8f97879af82cfce0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-909dda169c6c8bb3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-90eceb821dc80f05": {
+      "class": "vehicle-marking",
+      "width": 157,
+      "height": 157
+    },
+    "m-91002562025cad51": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-91883d0844f5e890": {
+      "class": "sign",
+      "width": 152,
+      "height": 214
+    },
+    "m-91acc20687d64fa2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-920192fa305ee0bc": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9214e404ebeb5cc2": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-92673f59fa1cc12b": {
+      "class": "photo",
+      "width": 198,
+      "height": 203
+    },
+    "m-92f94f451fa2d540": {
+      "class": "sign",
+      "width": 150,
+      "height": 149
+    },
+    "m-9301ed2eb8b7fc8e": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-930869ecebb1a2b6": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-9409ebc3c1bf1cba": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-94537d1b03b46507": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-957b6f995b2836ef": {
+      "class": "dashboard-symbol",
+      "width": 183,
+      "height": 117
+    },
+    "m-95ae9aeaa1193bb9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-96215f9b81fcd85b": {
+      "class": "scene",
+      "width": 715,
+      "height": 394
+    },
+    "m-9631e891ea629b59": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9652fb3b75afedb1": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-965d470c175de403": {
+      "class": "sign",
+      "width": 76,
+      "height": 211
+    },
+    "m-96adeedca77ecfac": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-96c09309a1aea6a5": {
+      "class": "photo",
+      "width": 152,
+      "height": 236
+    },
+    "m-96e0b9f82a421d52": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-96e97f965227e946": {
+      "class": "vehicle-marking",
+      "width": 189,
+      "height": 148
+    },
+    "m-972d46509575126b": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-9738acb2aa3c630a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-97f7d998ae26b51d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-97fd26ce73fa15b1": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-984587ddddd16db6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-98614258a5539f3d": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-987b7a98143b8c31": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-995b0fe224fa0de8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-995b77e4e93fa677": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-99669b3049699dcc": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9990107e35ed97d7": {
+      "class": "sign",
+      "width": 190,
+      "height": 165
+    },
+    "m-9aa5c647b5ac4d2d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9bd2a515e3ed6473": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9ca6016fd3929cb9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9cc6e98624013757": {
+      "class": "photo",
+      "width": 158,
+      "height": 75
+    },
+    "m-9ce96f7c288c938c": {
+      "class": "photo",
+      "width": 244,
+      "height": 152
+    },
+    "m-9ce992674c030eac": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9d42fffeae1239b0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-9de2d262d9b0f17f": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-9df7fa7bcc022b14": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-9e21143a33258154": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-9e9be7c547eb9feb": {
+      "class": "photo",
+      "width": 244,
+      "height": 152
+    },
+    "m-9ee60dba00c61d8e": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-9f2ffbacf2971437": {
+      "class": "vehicle-marking",
+      "width": 198,
+      "height": 170
+    },
+    "m-a087e2e9b245fbec": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-a08e72cfb00de27b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a097f1637a7acb4a": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-a0c37f0b20134bec": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-a0c7e346ff06656e": {
+      "class": "sign",
+      "width": 38,
+      "height": 51
+    },
+    "m-a0d3e751290301a4": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-a1665e378154eb14": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-a1a614af9e7371dd": {
+      "class": "sign",
+      "width": 162,
+      "height": 162
+    },
+    "m-a22dab5487f738aa": {
+      "class": "photo",
+      "width": 197,
+      "height": 202
+    },
+    "m-a2f3e6d9af64c129": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a2f9bed0e937f4d1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a3465cfc36752f87": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a4fbd4030711af6f": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-a501e2061bb94fa5": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-a5e9602356dd1a69": {
+      "class": "photo",
+      "width": 207,
+      "height": 172
+    },
+    "m-a608a59170a079ee": {
+      "class": "photo",
+      "width": 180,
+      "height": 134
+    },
+    "m-a680be7c1816cb0e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a6b29ca347becdd9": {
+      "class": "photo",
+      "width": 198,
+      "height": 185
+    },
+    "m-a6c7874cf0eb2a2e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a7080fca5590142e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a7c988ad2b520cbb": {
+      "class": "sign",
+      "width": 188,
+      "height": 130
+    },
+    "m-a7d589d018038ed9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a82c224d91ae765b": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-a859c085621947a6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a8611dc12a05244c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a86a128a25b2ffb2": {
+      "class": "sign",
+      "width": 162,
+      "height": 161
+    },
+    "m-a882712e06304704": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a88f45dd1d7d7e35": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-a96dad632556dc88": {
+      "class": "photo",
+      "width": 154,
+      "height": 112
+    },
+    "m-a99034bdd6836288": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-a9faf2a3628d02be": {
+      "class": "sign",
+      "width": 144,
+      "height": 265
+    },
+    "m-aa0124da7cf7908e": {
+      "class": "sign",
+      "width": 179,
+      "height": 179
+    },
+    "m-aa2ed22c7afd08de": {
+      "class": "photo",
+      "width": 181,
+      "height": 201
+    },
+    "m-aa73ea27e96f9c7a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-aa9cfe5919077d8e": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-aac6ff813b187b49": {
+      "class": "vehicle-marking",
+      "width": 157,
+      "height": 157
+    },
+    "m-ab981d4e3dba8f7e": {
+      "class": "photo",
+      "width": 152,
+      "height": 235
+    },
+    "m-aba4aa7025e296f9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-abba4d32e3788071": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-abcc04a1e84b6d9e": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-abcd62d521b501d4": {
+      "class": "sign",
+      "width": 157,
+      "height": 157
+    },
+    "m-abf930ea3cab0704": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-acbdb7136f7b1dcf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ace3d57e68675765": {
+      "class": "scene",
+      "width": 733,
+      "height": 404
+    },
+    "m-ada7990c08348f71": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-ae26f984ce1a61ba": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-ae2c60c7a9d032f2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ae9a05dc58a8cd6a": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-af08b6154aea7b21": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-af3a5da3d6280e89": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-af774858ebf0dde5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-affb950eb3417706": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b0215c7617265129": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-b10e4c7868ea7c4a": {
+      "class": "photo",
+      "width": 177,
+      "height": 126
+    },
+    "m-b17e14545a14933b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b1886ca0c1b8677d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b256e401ad2289ab": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b2618012cf67e4d3": {
+      "class": "sign",
+      "width": 143,
+      "height": 94
+    },
+    "m-b2750de32e480fb0": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-b287c790e79e61db": {
+      "class": "sign",
+      "width": 152,
+      "height": 214
+    },
+    "m-b2a31ef5488370c3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b31e00d6da61e7de": {
+      "class": "sign",
+      "width": 190,
+      "height": 165
+    },
+    "m-b3290e0c9805007c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b33614e55a7f79f8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b351fe9bd98a7357": {
+      "class": "sign",
+      "width": 155,
+      "height": 155
+    },
+    "m-b451bc194cadc354": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-b4fa9df1319fc7ed": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b5621fe1fb012377": {
+      "class": "photo",
+      "width": 165,
+      "height": 162
+    },
+    "m-b57552b9623d8de5": {
+      "class": "photo",
+      "width": 199,
+      "height": 117
+    },
+    "m-b626855fb33b7b90": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-b64dc4146dc67563": {
+      "class": "photo",
+      "width": 181,
+      "height": 202
+    },
+    "m-b69913ce951db8c5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b6db4c0f7f266831": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-b6ee7992bec5835c": {
+      "class": "scene",
+      "width": 712,
+      "height": 392
+    },
+    "m-b7388069a7e107f9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b76a38dbf058f929": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b76a56dc483621cf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b7b29a2ebb2c3e9e": {
+      "class": "sign",
+      "width": 131,
+      "height": 165
+    },
+    "m-b847503dc2ef7d11": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-b8d0967c32adbd47": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b93add9952889ef5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-b9875aba4c6fd865": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ba0e1754c5c054fb": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-ba1093e3b72610fc": {
+      "class": "photo",
+      "width": 197,
+      "height": 202
+    },
+    "m-ba2c55bea976f39d": {
+      "class": "photo",
+      "width": 196,
+      "height": 202
+    },
+    "m-bab793b8666c18b0": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-babca6124fb044b8": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 252
+    },
+    "m-badec2dc65b88e8c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bc381384c3403015": {
+      "class": "sign",
+      "width": 162,
+      "height": 162
+    },
+    "m-bc55ba71cdce2323": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bc824494fbf9ad4e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bc8532322db2bdbd": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bc8f9115f5b395cb": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bcaa5af00fabee94": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bd22776c91de1180": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bd4092767cb44c15": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bdafa9a298f157db": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bdc9cfe0eb2e0575": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-bdf672be7a27150b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-be4a83a9fb994cd7": {
+      "class": "sign",
+      "width": 141,
+      "height": 138
+    },
+    "m-bef3a753a41950b2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bf2bb4d124836881": {
+      "class": "dashboard-symbol",
+      "width": 190,
+      "height": 117
+    },
+    "m-bf34fc97e740a6c3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bf4f486f958e4c48": {
+      "class": "photo",
+      "width": 200,
+      "height": 93
+    },
+    "m-bf94b8811f03782c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bf9a99aec39d720f": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-bfa114a1287cf13f": {
+      "class": "scene",
+      "width": 712,
+      "height": 393
+    },
+    "m-bfdfc6246e8b7358": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-bfff6388c4e9d00f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c00cdeeae23753e5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c0292f5b942f3bd8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c06c73909c2300b9": {
+      "class": "scene",
+      "width": 723,
+      "height": 398
+    },
+    "m-c082ed4b378761db": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-c0e6f9e5ef19ab14": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c11cd8145dde3793": {
+      "class": "sign",
+      "width": 167,
+      "height": 166
+    },
+    "m-c1ee1be89e6a5ec3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c1fafc085cef9bad": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c272f40ddee08452": {
+      "class": "sign",
+      "width": 152,
+      "height": 222
+    },
+    "m-c2e1afc812acef46": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-c2e9b9cf0c4e5816": {
+      "class": "dashboard-symbol",
+      "width": 189,
+      "height": 120
+    },
+    "m-c30c9e51b77df449": {
+      "class": "sign",
+      "width": 426,
+      "height": 542
+    },
+    "m-c31e15940ce8b8d6": {
+      "class": "sign",
+      "width": 126,
+      "height": 166
+    },
+    "m-c34b95c2e4603711": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-c34ed94bf78aa5de": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-c3da3a2482fc3ee5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c509f7e5684cb9fa": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c5cdf417744dcea1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c72bb0bdfef068bc": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-c7516ece3a0e7e9f": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-c752b865f595d3f0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c7bba423ce44dc5f": {
+      "class": "dashboard-symbol",
+      "width": 188,
+      "height": 119
+    },
+    "m-c821172116fbfc34": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-c876c437f343202f": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-c8d88c1bb5808948": {
+      "class": "photo",
+      "width": 169,
+      "height": 214
+    },
+    "m-c9348c95d59b5c14": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 253
+    },
+    "m-c9abf101cf6e259f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ca13691e1c4cbb79": {
+      "class": "sign",
+      "width": 149,
+      "height": 191
+    },
+    "m-ca402f0e6ee674d5": {
+      "class": "sign",
+      "width": 120,
+      "height": 156
+    },
+    "m-ca553866e3a30b1c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cac625653efc5d6a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cad48e1c8b0622df": {
+      "class": "sign",
+      "width": 154,
+      "height": 206
+    },
+    "m-cb10fd2cd5769792": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cb1857f40ec2c3b6": {
+      "class": "sign",
+      "width": 142,
+      "height": 93
+    },
+    "m-cb1c77ae4c1579b5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cb2d7d4c7d5bc59f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cbc57209cb6b7d27": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cc62ef80ede09f1e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ccf62f4e8f847186": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cd0ebb7e77fb486d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cd52a22f4a340cae": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-cd560f52cdb53fcc": {
+      "class": "scene",
+      "width": 712,
+      "height": 393
+    },
+    "m-cd6d189e6d38c951": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ce1179510b25cd8c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ce1eaa4173427b0d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ce60ed37200a77dc": {
+      "class": "drawing",
+      "width": 803,
+      "height": 444
+    },
+    "m-cf7113a9e64a2955": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-d0013b065d5f3df8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d03ecf77bd3625c3": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d0a30a133d218a84": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d0cbd6f5556090cc": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-d0d87a334c8ca232": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d1358ca7ca05bd4b": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d25ed81b19e8ace9": {
+      "class": "scene",
+      "width": 714,
+      "height": 394
+    },
+    "m-d345fb0775f6857b": {
+      "class": "traffic-light",
+      "width": 86,
+      "height": 252
+    },
+    "m-d353f641472eff7c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d385f3de3af677ca": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-d3ffac416c8581e3": {
+      "class": "photo",
+      "width": 166,
+      "height": 137
+    },
+    "m-d42753ad51017ed2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d432f2c0bd319ff0": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-d43b13adc102a6cf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d463f704fa4a0706": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-d48fdb97e076dbc1": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-d4d20788e6aa591a": {
+      "class": "sign",
+      "width": 152,
+      "height": 219
+    },
+    "m-d4f69d28768a3ad5": {
+      "class": "photo",
+      "width": 119,
+      "height": 283
+    },
+    "m-d625a0bf785c40a0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d67527762b136394": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-d6b418fecae44922": {
+      "class": "photo",
+      "width": 197,
+      "height": 202
+    },
+    "m-d75b20908476cfa9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d7b17cf13f2d034e": {
+      "class": "photo",
+      "width": 171,
+      "height": 251
+    },
+    "m-d7e9791d7489b360": {
+      "class": "sign",
+      "width": 139,
+      "height": 137
+    },
+    "m-d7fefcc1e2fb908c": {
+      "class": "photo",
+      "width": 198,
+      "height": 194
+    },
+    "m-d8468a9173d88e2a": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-d8eb838bb4b5aac5": {
+      "class": "sign",
+      "width": 616,
+      "height": 542
+    },
+    "m-d9b25e7da8440da7": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d9f428c31dfdbf85": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-d9fec3599fb6cb3c": {
+      "class": "sign",
+      "width": 143,
+      "height": 94
+    },
+    "m-da209d5f7ddec390": {
+      "class": "photo",
+      "width": 244,
+      "height": 152
+    },
+    "m-da46977bba60380e": {
+      "class": "sign",
+      "width": 76,
+      "height": 211
+    },
+    "m-db186d6e27e2ac0b": {
+      "class": "photo",
+      "width": 222,
+      "height": 326
+    },
+    "m-db264add7dae4199": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-dc333139af738c25": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-dc342225b6022265": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-dc4e95a4c7538d3e": {
+      "class": "vehicle-marking",
+      "width": 197,
+      "height": 128
+    },
+    "m-dcb27e16edcd0420": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ddfb664ec918c614": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-de443030e83d72a3": {
+      "class": "photo",
+      "width": 234,
+      "height": 108
+    },
+    "m-decc4ae008474fc2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-deda841ebc1edae8": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-dfb69b6d65aa630d": {
+      "class": "scene",
+      "width": 715,
+      "height": 394
+    },
+    "m-e075f1cb5a5e8643": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e0876d860c7b01bf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e14facccceb9eb88": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e16fedc8f6494187": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-e17b088f97b5084b": {
+      "class": "photo",
+      "width": 181,
+      "height": 202
+    },
+    "m-e19e5b2ddbd1ce44": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e1b89d88a3667bda": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-e1cb4b7e12c5a6d6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e1f0f36f83758b23": {
+      "class": "photo",
+      "width": 186,
+      "height": 202
+    },
+    "m-e236f7b15a598364": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e276e5eebd8b5684": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-e2b7215eed6fbf2c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e2ee1056f854c5a2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e2f297f4669e088d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e3193c139191960a": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e332aa40e40e694e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e3cd3d056d3756fb": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e3d8d72a2797f8a9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e3dd5c98f55cec27": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e4cbe1fbafc8d377": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e5cddd97380f8d65": {
+      "class": "vehicle-marking",
+      "width": 189,
+      "height": 148
+    },
+    "m-e6ce4eb5c3ccb8b1": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-e6d32e270e0176d2": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e6f174ffba954b25": {
+      "class": "photo",
+      "width": 159,
+      "height": 113
+    },
+    "m-e718db811e961282": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e71ea3558ca1fbdf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e7cbff3b81901e1e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e80d4066afb1bb9b": {
+      "class": "photo",
+      "width": 198,
+      "height": 185
+    },
+    "m-e87d6883603c7bab": {
+      "class": "photo",
+      "width": 182,
+      "height": 201
+    },
+    "m-e8cf554cb15ea812": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-e985b50adf4e358e": {
+      "class": "sign",
+      "width": 141,
+      "height": 141
+    },
+    "m-e9f0ae94505d8e16": {
+      "class": "sign",
+      "width": 152,
+      "height": 157
+    },
+    "m-eab00fa59f63f305": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ead8b1b034b57c3a": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-eb2839a5bd558622": {
+      "class": "sign",
+      "width": 167,
+      "height": 166
+    },
+    "m-ebcabc75cdb3ada6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ebd6c0b729e53faf": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ec3e624d38843d29": {
+      "class": "sign",
+      "width": 179,
+      "height": 179
+    },
+    "m-ec895997054baca8": {
+      "class": "sign",
+      "width": 190,
+      "height": 165
+    },
+    "m-ecc26fd0093b507e": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ed3cde2ff03e3f01": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-ed81bf31d554ed5d": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-edc3daf3c0b17da9": {
+      "class": "photo",
+      "width": 198,
+      "height": 203
+    },
+    "m-edecc79bde70cf59": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-ee782d42d3101424": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ee8712c8ad8ef724": {
+      "class": "sign",
+      "width": 259,
+      "height": 70
+    },
+    "m-ef17af452717fd3a": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-ef3b7dfe2f1647db": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ef65523b0df90f32": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ef8a1a2413f29cee": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ef958eb2d1b6619b": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-f007e50b45fefd9d": {
+      "class": "vehicle-marking",
+      "width": 152,
+      "height": 152
+    },
+    "m-f037e9293121bfc6": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f0678e0fc6b900e1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f07d002b5718c430": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f1b6f2394a0c5f1d": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f1cd1e51385d309f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f1cfb37329d6249f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f218af5ae54cc3c0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f28097691bfe1c04": {
+      "class": "sign",
+      "width": 152,
+      "height": 215
+    },
+    "m-f2dea7b0c704192c": {
+      "class": "sign",
+      "width": 149,
+      "height": 149
+    },
+    "m-f32ed3b366c9af4c": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f3e84dce6cbed917": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f40ceb5f6f61adc0": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f443c674d595e3ce": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f48f2c8a97b80062": {
+      "class": "photo",
+      "width": 158,
+      "height": 87
+    },
+    "m-f50605907682acaa": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f53a2aebe760b47f": {
+      "class": "sign",
+      "width": 167,
+      "height": 140
+    },
+    "m-f55fa2ada57d3719": {
+      "class": "sign",
+      "width": 153,
+      "height": 212
+    },
+    "m-f59c303c6b3d32bb": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f59d90371fad4fef": {
+      "class": "sign",
+      "width": 128,
+      "height": 157
+    },
+    "m-f5e9fbc5ebd17f66": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f602e41d11da94b1": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f67d5cb206249367": {
+      "class": "photo",
+      "width": 119,
+      "height": 283
+    },
+    "m-f6a2a796813dd0f8": {
+      "class": "photo",
+      "width": 169,
+      "height": 214
+    },
+    "m-f6c5edda5592cc71": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f6dc33539e1281cd": {
+      "class": "sign",
+      "width": 185,
+      "height": 185
+    },
+    "m-f721af0fc860d019": {
+      "class": "sign",
+      "width": 158,
+      "height": 153
+    },
+    "m-f72f19e15e0d3f02": {
+      "class": "photo",
+      "width": 119,
+      "height": 283
+    },
+    "m-f7530335f2b6ea05": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-f78c344d61bddf89": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-f9b2bbb8cdc4715f": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-fa02bbba48113f62": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-fa2b2b4587e01d6c": {
+      "class": "photo",
+      "width": 170,
+      "height": 250
+    },
+    "m-fa6f7a0c0d804b1e": {
+      "class": "sign",
+      "width": 426,
+      "height": 542
+    },
+    "m-fa73d64b003dd217": {
+      "class": "photo",
+      "width": 444,
+      "height": 249
+    },
+    "m-fad59bfa8af91124": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-fb0cd03f15e5a418": {
+      "class": "photo",
+      "width": 182,
+      "height": 201
+    },
+    "m-fb8e46d596fa15d5": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-fbaf779723d1a6a9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-fbf5e051cf0830ae": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-fc0c881e24b6c383": {
+      "class": "sign",
+      "width": 159,
+      "height": 158
+    },
+    "m-fc272fb8124f2ce6": {
+      "class": "scene",
+      "width": 714,
+      "height": 394
+    },
+    "m-fccc580893c255d5": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-fccc9bc4bb4392c9": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-fcff7881cdd21fd0": {
+      "class": "sign",
+      "width": 152,
+      "height": 220
+    },
+    "m-fd83f65bbc67a3fc": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-fdc02f32aa56afc7": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-fdf83021331caa23": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-fe5e45d2ae25cf45": {
+      "class": "scene",
+      "width": 712,
+      "height": 394
+    },
+    "m-ff4b858132915c4a": {
+      "class": "sign",
+      "width": 169,
+      "height": 147
+    },
+    "m-ff6b621839b610a4": {
+      "class": "sign",
+      "width": 152,
+      "height": 152
+    },
+    "m-ff745a016f9c3a36": {
+      "class": "vehicle-marking",
+      "width": 197,
+      "height": 128
+    },
+    "m-fff8456d30c9ab5c": {
+      "class": "sign",
+      "width": 148,
+      "height": 158
+    }
+  }
+}

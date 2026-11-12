@@ -108,6 +108,18 @@ def cmd_media(settings: Settings, args: argparse.Namespace) -> int:
         f"({stats['resumed']} resumed), {stats['cached']} already present; HTTP requests: {requests}"
     )
     print(f"copies verified: {len(checks)}, mismatches: {len(mismatches)}")
+    if (settings.data_dir / "enhance" / "pack.json").exists():
+        from question_bank.media_enhance.pack import install_pinned
+
+        with _client(settings) as client:
+            result = install_pinned(
+                settings.data_dir / "enhance",
+                settings.media_dir,
+                settings.data_dir.parent / "release",
+                settings.cache_dir / "media-packs",
+                client,
+            )
+        print(f"enhanced pictures of {result['tag']}: {result['files']} files verified and installed")
     return 1 if mismatches else 0
 
 
@@ -566,6 +578,235 @@ def cmd_legal_search(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def _enhance_dir(settings: Settings) -> Path:
+    """Committed inputs and decisions of the picture enhancement."""
+    return settings.data_dir / "enhance"
+
+
+def _picture_paths(settings: Settings, only: str | None = None) -> list[Path]:
+    paths = sorted((settings.media_dir / "images").glob("m-*.png"))
+    if only:
+        wanted = {s.strip() for s in only.split(",")}
+        paths = [p for p in paths if p.stem in wanted]
+    return paths
+
+
+def cmd_enhance_stamp_fit(settings: Settings, args: argparse.Namespace) -> int:
+    from PIL import Image
+
+    from question_bank.media_enhance.fit import fit_shifts, measure_tile, refine_tile
+    from question_bank.media_enhance.stamp import StampModel, save_shifts
+
+    out = _enhance_dir(settings) / "stamp"
+    paths = _picture_paths(settings)
+    tile, stats = measure_tile(paths)
+    print(
+        f"tile: {stats['stamp_pixels']} stamp pixels, opacity ≤ {stats['max_opacity']}/255, "
+        f"{stats['pictures']} pictures, exact agreement {stats['exact_agreement_median_stamp_pixels']:.0%}"
+    )
+    groups: dict[tuple[int, int], list[Path]] = {}
+    for path in paths:
+        with Image.open(path) as image:
+            groups.setdefault(image.size, []).append(path)
+    model = StampModel(tile)
+    model.shifts = {(e["row"], e["col"], e["element"]): (e["dy"], e["dx"]) for e in fit_shifts(groups, model)}
+    refined, refine_stats = refine_tile(paths, model)
+    print(f"refined tile: {refine_stats['refined_pixels_changed']} pixels changed")
+    model = StampModel(refined)
+    entries = fit_shifts(groups, model)
+    model.save_tile(out)
+    save_shifts(out, entries, {"tile_statistics": stats, "refinement": refine_stats})
+    moved = len({(e["row"], e["col"]) for e in entries if (e["dy"], e["dx"]) != (0, 0)})
+    tiles = len({(e["row"], e["col"]) for e in entries})
+    print(f"shifts: {tiles} tiles measured, {moved} off the regular lattice → {out}")
+    return 0
+
+
+def cmd_enhance_clean(settings: Settings, args: argparse.Namespace) -> int:
+    from dataclasses import asdict as _asdict
+
+    from question_bank.media_enhance.clean import clean_all, summary
+    from question_bank.media_enhance.stamp import StampModel
+
+    model = StampModel.load(_enhance_dir(settings) / "stamp")
+    out = settings.media_dir / "enhance" / "clean"
+    results = clean_all(_picture_paths(settings, args.only), model, out)
+    report = summary(results)
+    _write_json(out / "report.json", {**report, "pictures_detail": [_asdict(r) for r in results]})
+    print(
+        f"{report['pictures']} pictures cleaned → {out}; stamp score median "
+        f"{report['score_before_median']} → {report['score_after_median']}, "
+        f"max |after| {report['score_after_max_abs']}; {len(report['flagged'])} flagged for review"
+    )
+    return 0
+
+
+def cmd_enhance_review(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.fsutil import read_json
+    from question_bank.media_enhance.review import Row, write_sheet
+
+    clean_dir = settings.media_dir / "enhance" / "clean"
+    up_dir = settings.media_dir / "enhance" / "upscaled"
+    report = read_json(clean_dir / "report.json")
+    detail = {d["media_id"]: d for d in report["pictures_detail"]}
+    up_report = up_dir / "report.json"
+    upscaled = {d["media_id"]: d for d in read_json(up_report)["pictures"]} if up_report.exists() else {}
+    ids = [s.strip() for s in args.only.split(",")] if args.only else sorted(detail)
+    if args.flagged:
+        ids = [f["media_id"] for f in report["flagged"]]
+    rows = []
+    for mid in ids[: args.limit]:
+        d = detail[mid]
+        images = [
+            ("official", settings.media_dir / "images" / f"{mid}.png"),
+            ("stamp removed", clean_dir / f"{mid}.png"),
+        ]
+        notes = [
+            f"stamp score {d['score_before']} → {d['score_after']} · {d['changed_pixels']} pixels changed"
+        ]
+        if mid in upscaled:
+            u = upscaled[mid]
+            images.append((f"Real-ESRGAN, {u['scale']:g}×", up_dir / f"{mid}.png"))
+            notes.append(
+                f"content check: PSNR {u['blur_psnr']} dB (≥ 30), SSIM {u['ssim']} (≥ 0.9), "
+                f"worst window {u['ssim_worst_window']}"
+            )
+        rows.append(Row(f"{mid} · {d['width']}×{d['height']}", images, notes, width=min(d["width"] * 2, 720)))
+    out = settings.media_dir / "enhance" / "review" / f"{args.name}.html"
+    lead = (
+        "Official picture, stamp removed and enlarged, all shown at the same size. Zoom in to check details."
+    )
+    write_sheet(out, args.name, lead, rows)
+    print(f"{len(rows)} rows → {out}")
+    return 0
+
+
+def cmd_enhance_upscale(settings: Settings, args: argparse.Namespace) -> int:
+    from dataclasses import asdict as _asdict
+
+    from question_bank.fsutil import read_json
+    from question_bank.media_enhance.upscale import UpscaleResult, find_binary, scale_for_size, upscale_all
+
+    clean_dir = settings.media_dir / "enhance" / "clean"
+    out = settings.media_dir / "enhance" / args.into
+    inventory = read_json(_enhance_dir(settings) / "inventory.json")["pictures"]
+    classes = {c.strip() for c in args.classes.split(",")} if args.classes else None
+    ids = [
+        p.stem
+        for p in _picture_paths(settings, args.only)
+        if classes is None or inventory[p.stem]["class"] in classes
+    ]
+    scales = {
+        mid: args.scale or scale_for_size(inventory[mid]["width"], inventory[mid]["height"]) for mid in ids
+    }
+    results = []
+    for start in range(0, len(ids), args.batch):  # batches keep the temporary 4× files small
+        chunk = ids[start : start + args.batch]
+        results += upscale_all(clean_dir, out, find_binary(settings.data_dir), chunk, scales)
+        print(f"  {min(start + args.batch, len(ids))}/{len(ids)}", flush=True)
+    report_path = out / "report.json"
+    previous = read_json_if_exists(report_path)
+    fields = set(UpscaleResult.__dataclass_fields__)
+    merged = {d["media_id"]: d for d in previous.get("pictures", []) if set(d) == fields}
+    merged.update({r.media_id: _asdict(r) for r in results})
+    flagged = [d for d in merged.values() if not UpscaleResult(**d).ok]
+    pictures = sorted(merged.values(), key=lambda d: d["media_id"])
+    _write_json(report_path, {"flagged": [d["media_id"] for d in flagged], "pictures": pictures})
+    print(f"{len(results)} pictures enlarged → {out}; {len(flagged)} flagged by the content check")
+    return 0
+
+
+def read_json_if_exists(path: Path) -> dict:
+    from question_bank.fsutil import read_json
+
+    return read_json(path) if path.exists() else {}
+
+
+def cmd_enhance_pack(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.exporter.packages import media_release_tag
+    from question_bank.fsutil import read_json
+    from question_bank.media_enhance.commons import load_catalogue
+    from question_bank.media_enhance.pack import build
+
+    edition = read_json(settings.exports_dir / "manifest.json")["source_edition"]
+    tag = f"{media_release_tag(edition)}-r{args.revision}"
+    result = build(
+        _enhance_dir(settings),
+        settings.media_dir,
+        settings.data_dir.parent / "release",
+        tag,
+        commons_catalogue=load_catalogue(settings.cache_dir / "commons"),
+    )
+    for kind, pack in result["packs"].items():
+        print(
+            f"{kind}: {pack['file_count']} files, {pack['bytes'] / 2**20:.1f} MB, "
+            f"sha256 {pack['sha256'][:12]}…"
+        )
+    print(
+        f"{result['media']} pictures ({result['svg']} with SVG) → release/{tag}; "
+        "pinned in data/enhance/pack.json"
+    )
+    return 0
+
+
+def cmd_enhance_signs_build(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.media_enhance.signs import build_all
+
+    out = settings.media_dir / "enhance" / "signs"
+    report = build_all(
+        _enhance_dir(settings),
+        settings.cache_dir / "commons",
+        out,
+        only={s.strip() for s in args.only.split(",")} if args.only else None,
+    )
+    _write_json(out / "report.json", report)
+    failed = [r for r in report["recipes"] if r.get("error")]
+    for r in failed:
+        print(f"{r['media_id']}: {r['error']}")
+    composed = len(report["recipes"]) - len(failed)
+    print(f"{composed} sign pictures composed → {out / 'svg'}; {len(failed)} failed")
+    if args.sheet:
+        from question_bank.media_enhance.review import Row, write_sheet
+
+        rows = []
+        for r in report["recipes"]:
+            if r.get("error"):
+                continue
+            mid = r["media_id"]
+            rows.append(
+                Row(
+                    f"{mid} · {r['width']}×{r['height']}",
+                    [
+                        ("official", settings.media_dir / "images" / f"{mid}.png"),
+                        ("stamp removed", settings.media_dir / "enhance" / "clean" / f"{mid}.png"),
+                        ("vector", out / "svg" / f"{mid}.svg"),
+                    ],
+                    r["sources"] + r["notes"],
+                    width=min(r["width"] * 2, 720),
+                )
+            )
+        sheet = settings.media_dir / "enhance" / "review" / f"{args.sheet}.html"
+        write_sheet(sheet, args.sheet, "Official picture, stamp removed, and the vector version.", rows)
+        print(f"review sheet → {sheet}")
+    return 1 if failed else 0
+
+
+def cmd_enhance_commons_import(settings: Settings, args: argparse.Namespace) -> int:
+    from question_bank.media_enhance.commons import CommonsImportError, import_zip
+
+    cache = settings.cache_dir / "commons"
+    try:
+        stats = import_zip(args.zip, cache)
+    except CommonsImportError as e:
+        print(f"refused: {e}")
+        return 1
+    print(
+        f"{stats['imported']} of {stats['files']} sign drawings imported → {cache} "
+        f"({stats['missing']} not downloaded, {stats['rejected']} rejected)"
+    )
+    return 1 if stats["rejected"] else 0
+
+
 # ----------------------------------------------------------------------------- parser
 
 
@@ -675,6 +916,44 @@ def build_parser() -> argparse.ArgumentParser:
     ex_sub.add_parser("status", help="coverage per category; checks the curated explanations").set_defaults(
         func=cmd_explanations_status
     )
+
+    enhance = sub.add_parser("enhance", help="clean, sharp pictures: stamp removal, review sheets")
+    en_sub = enhance.add_subparsers(dest="enhance_command", required=True)
+    en_sub.add_parser(
+        "stamp-fit", help="measure the ИААА stamp tile and its shifts from the pictures (data/enhance/stamp)"
+    ).set_defaults(func=cmd_enhance_stamp_fit)
+    en_clean = en_sub.add_parser(
+        "clean", help="remove the stamp from every picture (data/media/enhance/clean)"
+    )
+    en_clean.add_argument("--only", help="comma-separated media IDs")
+    en_clean.set_defaults(func=cmd_enhance_clean)
+    en_review = en_sub.add_parser("review", help="HTML sheet: official picture next to the cleaned one")
+    en_review.add_argument("--name", default="stamp", help="sheet name (file name without .html)")
+    en_review.add_argument("--only", help="comma-separated media IDs")
+    en_review.add_argument("--flagged", action="store_true", help="only pictures flagged by the stamp score")
+    en_review.add_argument("--limit", type=int, default=1000)
+    en_review.set_defaults(func=cmd_enhance_review)
+    en_up = en_sub.add_parser("upscale", help="enlarge cleaned pictures with Real-ESRGAN (local GPU)")
+    en_up.add_argument("--only", help="comma-separated media IDs")
+    en_up.add_argument("--classes", help="inventory classes to enlarge, comma-separated (default: all)")
+    en_up.add_argument(
+        "--scale", type=float, help="fixed scale (default: about 1400 px on the long side, 2-4×)"
+    )
+    en_up.add_argument("--batch", type=int, default=60, help="pictures per Real-ESRGAN run")
+    en_up.add_argument("--into", default="upscaled", help="output folder below data/media/enhance")
+    en_up.set_defaults(func=cmd_enhance_upscale)
+    en_signs = en_sub.add_parser("signs-build", help="compose the sign recipes into SVGs and raster copies")
+    en_signs.add_argument("--only", help="comma-separated media IDs")
+    en_signs.add_argument("--sheet", help="also write a review sheet with this name")
+    en_signs.set_defaults(func=cmd_enhance_signs_build)
+    en_pack = en_sub.add_parser("pack", help="build the enhanced media packs and pin them (data/enhance)")
+    en_pack.add_argument("--revision", type=int, required=True, help="media revision number (tag suffix -rN)")
+    en_pack.set_defaults(func=cmd_enhance_pack)
+    en_commons = en_sub.add_parser(
+        "commons-import", help="import the sign SVGs saved by tools/commons-signs-download.html"
+    )
+    en_commons.add_argument("zip", type=Path, help="bg-road-signs-commons.zip")
+    en_commons.set_defaults(func=cmd_enhance_commons_import)
 
     legal = sub.add_parser("legal", help="the legal corpus the explanations quote (data/legal)")
     legal_sub = legal.add_subparsers(dest="legal_command", required=True)

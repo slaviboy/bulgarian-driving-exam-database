@@ -82,6 +82,13 @@ jobs:
               print("Translations (unofficial, made with AI and independently reviewed; the Bulgarian text prevails): "
                     + ", ".join(f"{l['english_name']} {l['coverage']:.0%}" for l in t))
               print()
+          svg = [p for p in m.get("media_packs", []) if p["kind"] == "images-svg"]
+          if svg:
+              revision = svg[0]["url"].split("/download/")[1].split("/")[0]
+              print(f"Pictures (media revision {revision}): without the ИААА stamp and enlarged; "
+                    f"{svg[0]['file_count']} road signs and vehicle markings also as vector drawings, with the credits "
+                    "of their Wikimedia Commons drawings. The originals are unchanged in images-original.zip.")
+              print()
           e = m.get("explanations", [])
           if e:
               print("Explanations (unofficial, in Bulgarian, written with AI from the law and independently reviewed; "

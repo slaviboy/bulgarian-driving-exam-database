@@ -23,6 +23,8 @@ dependencies = [
 
 [project.optional-dependencies]
 browser = ["playwright>=1.50"]
+# picture enhancement (qb enhance): stamp removal, sign vectors
+media = ["numpy>=2", "opencv-python-headless>=4.10", "fonttools>=4.55"]
 dev = [
     "pytest>=8",
     "respx>=0.22",

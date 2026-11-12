@@ -154,8 +154,13 @@ def run_build(
     )
 
     release_root = settings.data_dir.parent / "release"
+    pinned_path = settings.data_dir / "enhance" / "pack.json"
     media_release = build_media_release(
-        dataset.media, settings.media_dir, release_root, dataset.source_edition
+        dataset.media,
+        settings.media_dir,
+        release_root,
+        dataset.source_edition,
+        pinned=read_json(pinned_path) if webp and pinned_path.exists() else None,
     )
 
     copy_checks_path = settings.cache_dir / "media-copy-checks.json"

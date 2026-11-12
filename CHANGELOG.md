@@ -4,6 +4,41 @@ All notable changes to the tooling, the data contract and the published datasets
 [Semantic Versioning](https://semver.org/): dataset MAJOR = contract `schema_version` change, MINOR =
 new official edition, questions added/removed or translations added, PATCH = corrections and metadata.
 
+## [1.3.0] — 2026-11-12
+
+### Dataset
+
+* **Clean, sharp pictures** for apps (`images-webp`, media revision `media-2026.10.01-r2`):
+  * the tiled "ИААА" stamp is removed: measured exactly from the pictures and its compositing inverted; pixels it
+    does not touch are unchanged;
+  * scenes and photos are enlarged 2–4× with Real-ESRGAN; a content check rejects any change of structure
+    (labels, arrows, numbers), and the flagged ones were reviewed;
+  * the 303 road signs and vehicle markings are also **vector drawings** (`images-svg`): 267 use drawings of
+    Wikimedia Commons (130 files, CC BY-SA 4.0 or CC0, credited per picture), the others were traced from the
+    picture or drawn for the project.
+* The original pictures stay published unchanged (`images-original.zip` of `media-2026.10.01`).
+* The questions, answers, translations and explanations are unchanged from 1.2.0.
+
+### Tooling
+
+* `qb enhance stamp-fit|clean|review|upscale|commons-import|signs-build|pack` (`question_bank/media_enhance/`,
+  docs/media-enhance.md) and the optional extra `media` (NumPy, OpenCV, fontTools).
+* `tools/commons-signs-download.html`: the maintainer's browser downloads the Commons drawings (no personal
+  data is sent); `qb enhance commons-import` checks their SHA-1.
+* `qb media` installs the pinned media revision (`data/enhance/pack.json`), and `qb build` checks every
+  enhanced file against `data/enhance/derivatives.json` and rebuilds the pinned packs byte for byte.
+* New validation check `enhanced_media`: every picture has a WebP, the SVGs pass the AndroidSVG lint, and
+  every Commons drawing is credited.
+
+### Contract
+
+* `schema_version` stays 1; the additions are optional for consumers:
+  * derivatives of `format` `"svg"` and the derivatives' `process`; the media's `credits[]`;
+  * the media pack kind `images-svg`; the `images-webp` and `images-svg` packs point to the media revision;
+  * the `master.sqlite` tables `media_processing` and `media_credits`.
+* A WebP that would have the same size as the previous one is re-encoded, because apps recognise a new file
+  by its size.
+
 ## [1.2.0] — 2026-11-07
 
 ### Dataset

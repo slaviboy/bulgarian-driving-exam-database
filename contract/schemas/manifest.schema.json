@@ -270,7 +270,8 @@
         "kind": {
           "enum": [
             "images-webp",
-            "images-original"
+            "images-original",
+            "images-svg"
           ],
           "title": "Kind",
           "type": "string"

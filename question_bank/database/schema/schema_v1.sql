@@ -227,3 +227,26 @@ CREATE TABLE explanation_references (
     PRIMARY KEY (question_id, language, position)
 );
 CREATE INDEX idx_explanation_references_act ON explanation_references (act_id);
+
+-- How each derivative was made (stamp removed, enlarged, vector drawing) and the third-party drawings it uses.
+-- Credits are required by the drawings' licences (Wikimedia Commons: CC BY-SA, CC BY, CC0, public domain).
+CREATE TABLE media_processing (
+    media_id TEXT    NOT NULL REFERENCES media (id),
+    format   TEXT    NOT NULL,
+    position INTEGER NOT NULL,
+    step     TEXT    NOT NULL,
+    PRIMARY KEY (media_id, format, position)
+);
+
+CREATE TABLE media_credits (
+    media_id    TEXT    NOT NULL REFERENCES media (id),
+    position    INTEGER NOT NULL,
+    title       TEXT    NOT NULL,
+    author      TEXT    NOT NULL,
+    license     TEXT    NOT NULL,
+    license_url TEXT,
+    page_url    TEXT    NOT NULL,
+    sha1        TEXT    NOT NULL,
+    PRIMARY KEY (media_id, position)
+);
+CREATE INDEX idx_media_credits_title ON media_credits (title);

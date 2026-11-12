@@ -1,12 +1,13 @@
 # Project status — bulgarian-driving-exam-database
 
-_Last updated: 2026-11-06_
+_Last updated: 2026-11-12_
 
 ## Current phase
 
-**Phases 1–5 complete, and translations added.** The dataset `v1.1.0` (latest) adds unofficial, reviewed
-translations into nine languages to the unchanged Bulgarian question bank of `v1.0.0`. The Android application
-(separate private repository, Phases 6–10) consumes it; see "Consumers" below.
+**Phases 1–5 complete; translations (`v1.1.0`), explanations (`v1.2.0`) and clean pictures (`v1.3.0`, latest)
+added.** The pictures for apps are without the ИААА stamp and enlarged, and the road signs are also vectors (media
+revision `media-2026.10.01-r2`). The Android application (separate private repository, Phases 6–10) consumes the
+dataset; see "Consumers" below.
 
 ## Completed work
 
@@ -42,10 +43,27 @@ translations into nine languages to the unchanged Bulgarian question bank of `v1
   * Verified anonymously: `releases/latest/download/manifest.json` → v1.1.0 with 10 languages; the core
     package matches `SHA256SUMS`.
 
+* **Explanations — dataset v1.2.0:** unofficial Bulgarian explanations of 1,433 questions of category B, written
+  from the law (`docs/explanations.md`), with the legal corpus they quote.
+* **Clean pictures — media revision r2, dataset v1.3.0:** docs/media-enhance.md.
+  * Stamp removed from all 830 pictures (stamp score median 0.43 → −0.004); 527 scenes, photos and drawings
+    enlarged with Real-ESRGAN under a content check; 303 signs and markings as SVG (Commons drawings, matched
+    by hand on contact sheets, or traced).
+  * Packs built locally: `images-webp.zip` 830 files, 44.7 MB; `images-svg.zip` 303 files, 0.9 MB; pinned in
+    `data/enhance/pack.json`. `v1.3.0` build: 18/18 checks pass, 0 errors; `qb verify` OK.
+  * Published 2026-11-12 from the maintainer machine (docs/releasing.md, option B): media release
+    [`media-2026.10.01-r2`](https://github.com/slaviboy/bulgarian-driving-exam-database/releases/tag/media-2026.10.01-r2) (2 assets) and dataset release
+    [`v1.3.0`](https://github.com/slaviboy/bulgarian-driving-exam-database/releases/tag/v1.3.0) (latest, 19 assets).
+  * Verified anonymously: `releases/latest/download/manifest.json` → v1.3.0 with the packs of r2; the core package
+    and both packs match their SHA-256.
+  * On the tablet, AndroidSVG (through Coil, as in the app) draws all 303 SVGs; compared with the Chromium
+    renders, only anti-aliasing differs.
+
 ## Consumers
 
-* The Android application bundles `v1.1.0` (core package and WebP images pinned by SHA-256) and installs newer
-  releases from `releases/latest/download/manifest.json`, verifying the core package against `SHA256SUMS`. Its
+* The Android application bundles a pinned release (core package and picture packs by SHA-256: `v1.3.0` with the
+  WebP and SVG packs of r2; it shows the drawings' credits on its licences page) and installs newer releases from
+  `releases/latest/download/manifest.json`, verifying the core package against `SHA256SUMS`. Its
   tests import the real `v1.1.0` (including 9 × 2,476 translations) and a synthetic next patch release derived
   from it; on devices it reported 2,476 questions, 23 variants and 830 verified pictures, matching this
   repository's counts.
@@ -54,24 +72,24 @@ translations into nine languages to the unchanged Bulgarian question bank of `v1
 
 ## Pending work
 
-* Merge [#1](https://github.com/slaviboy/bulgarian-driving-exam-database/pull/1), the exports and reports of
-  v1.1.0, after review (the workflow could not open it itself; see docs/releasing.md).
 * Future editions: the daily `validation` job opens an issue when ИААА publishes a new array; then run the
   `release` workflow (docs/releasing.md). Questions that change need their translations updated (stale ones
   fall back to Bulgarian).
 
 ## Tests
 
-* Passed: 126 (HTTP client, discovery, normalisation/IDs, parser on real excerpt, generator over
+* Passed: 171 (HTTP client, discovery, normalisation/IDs, parser on real excerpt, generator over
   many seeds, offline end-to-end build, content-hash vectors, Room-compatibility conventions, media
-  copy checks, translation work packages, lint, merge, export and SQLite tables, release packaging).
+  copy checks, translation work packages, lint, merge, export and SQLite tables, release packaging, stamp
+  model and removal, upscaling check, SVG sanitising, sign recipes and tracing, pinned media packs).
 * Failed: none.
 
 ## Data counts (edition 2026-10-01, measured by the pipeline)
 
 * 23 exam variants in 11 categories · 103 sections · 30 topics
 * 2,476 unique questions · 13,763 question rows (assignments) · 7,893 answers
-* 830 distinct pictures (925 official file names; 234 MB PNG, 20 MB WebP) · 57 videos (350 MB)
+* 830 distinct pictures (925 official file names; 234 MB PNG, 20 MB WebP; enhanced from v1.3.0: 44.7 MB WebP,
+  303 of them also as SVG, 0.9 MB) · 57 videos (350 MB)
 * 25 groups of identical content under different ИААА IDs (reported, not merged)
 * AvtoIzpit cross-check: 1,166 questions, 0 differences; section quotas observed for 22 variants
 
@@ -84,6 +102,8 @@ translations into nine languages to the unchanged Bulgarian question bank of `v1
 * No explanations exist in the source.
 * The translations are unofficial and made with AI (then reviewed); the Bulgarian text prevails. Pictures that
   contain Bulgarian text are not translated.
+* The enlarged pictures come from an AI upscaler, checked against the stamp-free originals; the original
+  pictures remain the reference. Videos still carry the stamp.
 
 ## Next actions
 
