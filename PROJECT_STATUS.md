@@ -4,10 +4,10 @@ _Last updated: 2026-11-12_
 
 ## Current phase
 
-**Phases 1–5 complete; translations (`v1.1.0`) and explanations (`v1.2.0`, latest) added.** Clean pictures
-(no ИААА stamp, enlarged, road signs as vectors) are built and validated as `v1.3.0` with the media revision
-`media-2026.10.01-r2`; both are published together with the app update that credits the sign drawings. The
-Android application (separate private repository, Phases 6–10) consumes the dataset; see "Consumers" below.
+**Phases 1–5 complete; translations (`v1.1.0`), explanations (`v1.2.0`) and clean pictures (`v1.3.0`, latest)
+added.** The pictures for apps are without the ИААА stamp and enlarged, and the road signs are also vectors (media
+revision `media-2026.10.01-r2`). The Android application (separate private repository, Phases 6–10) consumes the
+dataset; see "Consumers" below.
 
 ## Completed work
 
@@ -45,19 +45,25 @@ Android application (separate private repository, Phases 6–10) consumes the da
 
 * **Explanations — dataset v1.2.0:** unofficial Bulgarian explanations of 1,433 questions of category B, written
   from the law (`docs/explanations.md`), with the legal corpus they quote.
-* **Clean pictures — media revision r2, dataset v1.3.0 (prepared):** docs/media-enhance.md.
+* **Clean pictures — media revision r2, dataset v1.3.0:** docs/media-enhance.md.
   * Stamp removed from all 830 pictures (stamp score median 0.43 → −0.004); 527 scenes, photos and drawings
     enlarged with Real-ESRGAN under a content check; 303 signs and markings as SVG (Commons drawings, matched
     by hand on contact sheets, or traced).
   * Packs built locally: `images-webp.zip` 830 files, 44.7 MB; `images-svg.zip` 303 files, 0.9 MB; pinned in
-    `data/enhance/pack.json`. Local `v1.3.0` build: 18/18 checks pass, 0 errors.
+    `data/enhance/pack.json`. `v1.3.0` build: 18/18 checks pass, 0 errors; `qb verify` OK.
+  * Published 2026-11-12 from the maintainer machine (docs/releasing.md, option B): media release
+    [`media-2026.10.01-r2`](https://github.com/slaviboy/bulgarian-driving-exam-database/releases/tag/media-2026.10.01-r2) (2 assets) and dataset release
+    [`v1.3.0`](https://github.com/slaviboy/bulgarian-driving-exam-database/releases/tag/v1.3.0) (latest, 19 assets).
+  * Verified anonymously: `releases/latest/download/manifest.json` → v1.3.0 with the packs of r2; the core package
+    and both packs match their SHA-256.
+  * On the tablet, AndroidSVG (through Coil, as in the app) draws all 303 SVGs; compared with the Chromium
+    renders, only anti-aliasing differs.
 
 ## Consumers
 
-* The Android application bundles a pinned release (core package and picture packs by SHA-256; its
-  `clean-pictures` branch pins `v1.3.0` with the WebP and SVG packs of r2 and shows the drawings' credits on its
-  licences page) and installs newer releases from `releases/latest/download/manifest.json`, verifying the core
-  package against `SHA256SUMS`. Its
+* The Android application bundles a pinned release (core package and picture packs by SHA-256: `v1.3.0` with the
+  WebP and SVG packs of r2; it shows the drawings' credits on its licences page) and installs newer releases from
+  `releases/latest/download/manifest.json`, verifying the core package against `SHA256SUMS`. Its
   tests import the real `v1.1.0` (including 9 × 2,476 translations) and a synthetic next patch release derived
   from it; on devices it reported 2,476 questions, 23 variants and 830 verified pictures, matching this
   repository's counts.
@@ -66,8 +72,6 @@ Android application (separate private repository, Phases 6–10) consumes the da
 
 ## Pending work
 
-* Publish the media revision `media-2026.10.01-r2` and then `v1.3.0`, at the same time as the app update with the
-  licences page for the sign drawings (docs/releasing.md, "Media revisions").
 * Merge [#1](https://github.com/slaviboy/bulgarian-driving-exam-database/pull/1), the exports and reports of
   v1.1.0, after review (the workflow could not open it itself; see docs/releasing.md).
 * Future editions: the daily `validation` job opens an issue when ИААА publishes a new array; then run the
